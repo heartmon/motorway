@@ -121,7 +121,7 @@
 						<a><i class="icon-road icon-white"></i> 1) เลือกสายทาง</a>
 					</li>
 
-					<select name="expressway" class="input-spanall">
+					<select id="expressway" name="expressway" class="input-spanall">
 							<!--<option value="nothing" id="เลือกสายทาง">เลือกสายทาง</option>-->
 							<option value="05">บูรพาวิถี (บางนา - ตราด)</option>
 							<option value="02">ฉลองรัช</option>
@@ -131,7 +131,7 @@
 							<option value="04">กาญจนาภิเษก (บางพลี-สุขสวัสดิ์)</option>
 							<option value="03" selected>ทางด่วนขั้นที่ 3 สายใต้ S1</option>
 					</select>
-					<select name="exptype" class="input-spanall">
+					<select id="exptype" name="exptype" class="input-spanall">
 							<option value="1">ทางหลัก</option>
 							<option value="2">ทางขึ้นลง</option>
 							<option value="3">ทางเชื่อม</option>
@@ -350,13 +350,13 @@
 						<form class="">
 						
 						<label class="radio">
-							<input name="infotype"value="skid" type="radio"><span>ค่าความฝืด - Skid</span>
+							<input name="infotype" id="ค่าความฝืด - Skid" value="skid" type="radio"><span>ค่าความฝืด - Skid</span>
 						</label>						
 						<label class="radio">
-							<input checked name="infotype" value="roughness" type="radio"><span>ค่าความขรุขระ - IRI</span>
+							<input checked name="infotype" id="ค่าความขรุขระ - IRI" value="roughness" type="radio"><span>ค่าความขรุขระ - IRI</span>
 						</label>
 						<label class="radio">
-							<input name="infotype" value="rutting" type="radio"><span>ค่าร่องล้อ - Rutting</span>
+							<input name="infotype" id="ค่าร่องล้อ - Rutting" value="rutting" type="radio"><span>ค่าร่องล้อ - Rutting</span>
 						</label>
 
 						<div align="right"><button id="search" type="submit" class="btn btn-small btn-primary">เรียกดู</button></div>
@@ -368,7 +368,7 @@
 					</li>
 					<li class="toolbox-content">
 						<form class="">
-						<select name="hdm4type" class="input-spanall">
+						<select id="hdm4type" name="hdm4type" class="input-spanall">
 							<option value="unlimited" >แบบไม่จำกัดงบ</option>
 							<option value="limited_half">แบบครึ่งงบ</option>
 							<option value="limited_full">แบบเต็มงบ</option>
@@ -433,11 +433,11 @@
 
 						<div id="hdm4buttongroup">
 							<a href="#" id="hdm4graph" class="fancyimage btn btn-small"><img src="images/icon_chart.png" title="ดูกราฟ" width=18> กราฟ</a>
-							<form method="POST" style="display:inline-block;" action="topdf.php">
+							<form id="genpdf" method="POST" style="display:inline-block;" action="topdf.php">
 								<a href="#" target="blank" id="hdm4pdf" class="btn btn-small"><img src="images/icon_pdf.png" title="export pdf file" width=18> PDF</a>
 								<input type="hidden" name="pdffilename" value="">
 							</form>
-							<form target="_blank" method="POST" style="display:inline-block;" action="excel.php">
+							<form id="genexcel" target="_blank" method="POST" style="display:inline-block;" action="excel.php">
 								<a href="#" id="hdm4excel" class="btn btn-small"><img src="images/icon_excel.png" title="export excel file" width=18> Excel</a>
 								<input type="hidden" name="head" value="">
 								<input type="hidden" name="exceldata" value="">
@@ -466,9 +466,8 @@
 
 				<!-- Damage Search -->
 				<div id="damagesearch">
-				<div id="breadcrumb" class="alert alert-warning font16">
-					<!-- In Script will use span(eq) instead of classname -->
-					<span ></span> • <span ></span> • <span ></span> • กม.<span ></span>
+				<div id="search-input" class="alert alert-warning font16">
+					<span class="expressway"></span> • <span class="fullname"></span> • <span class="infotype"></span> • กม.<span class="rangekm"></span>
 				</div>
 
 				<div class="row" style="margin-bottom:25px;">
