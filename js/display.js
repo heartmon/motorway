@@ -853,7 +853,7 @@ $(function () {
         //Setting max
         var ymax = parseInt(g_all_result['ymax']);
         if (ymax <= 3) var max = ymax * 2;
-        else var max = ymax + 5;
+        else var max = ymax + 4;
         g_options = {
             series: {
                 lines: {

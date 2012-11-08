@@ -2,9 +2,9 @@
 include_once('../_db.php');
 
 //Get value
-$expressway = $_GET['expressway'];
-$kmstart = $_GET['kmstart'];
-$kmend = $_GET['kmend'];
+//$expressway = $_GET['expressway'];
+//$kmstart = $_GET['kmstart'];
+//$kmend = $_GET['kmend'];
 $infotype = $_GET['infotype'];
 $kmfreq = $_GET['kmfreq'];
 $section = $_GET['section'];
@@ -54,124 +54,87 @@ echo $hdm4abbexp;
 echo $dir;
 echo $lane;*/
 
+
 //Select Column Name for each infotype
 if($infotype == 'roughness')
 	$column_info_name = 'iri_avg';
 elseif($infotype == 'rutting')
 	$column_info_name = 'rut_lane';
-elseif($infotype == 'skid')
-	$column_info_name = 'skid_avg';
+elseif($infotype == 'texture')
+	$column_info_name = 'mpd';
 
 
-if(!$kmend)// || (!$kmstart))
-{
-	$findkm = true;
-	$cond = " WHERE section LIKE '{$section}'";
-	if($kmstart)
-		$cond .= " AND subdistance >= {$kmstart}";
-	if($kmend)
-	{	
-		$kmendpadding = $kmend+1;
-		$cond .= " AND subdistance <= {$kmendpadding}";
-	}
-	//MAX-MIN calculation
-	$sql = "SELECT MIN(subdistance), MAX(subdistance) FROM {$infotype}".$cond;
-	$result = pg_query($sql);
-	$row = pg_fetch_assoc($result);
-	$max = $row['max'];
-	$min = $row['min'];
+// if(!$kmend)// || (!$kmstart))
+// {
+// 	$findkm = true;
+// 	$cond = " WHERE section LIKE '{$section}'";
+// 	if($kmstart)
+// 		$cond .= " AND subdistance >= {$kmstart}";
+// 	if($kmend)
+// 	{	
+// 		$kmendpadding = $kmend+1;
+// 		$cond .= " AND subdistance <= {$kmendpadding}";
+// 	}
+// 	//MAX-MIN calculation
+// 	$sql = "SELECT MIN(subdistance), MAX(subdistance) FROM {$infotype}".$cond;
+// 	$result = pg_query($sql);
+// 	$row = pg_fetch_assoc($result);
+// 	$max = $row['max'];
+// 	$min = $row['min'];
 
-	if($kmstart < $min || !$kmstart)
-		$kmstart = $min;
-	if($kmend > $max || !$kmend)
-		$kmend = $max;
+// 	if($kmstart < $min || !$kmstart)
+// 		$kmstart = $min;
+// 	if($kmend > $max || !$kmend)
+// 		$kmend = $max;
 
-}
+// }
 
-$rangefix = 5;
+$rangefix = 25;
 
-if($max != null || $min != null || !$findkm)
-{
-	if(strrpos($section, '0101100') !== false)
-	{
-		/*$suffix = substr($section,-3);
-		$s = '0101100'.$suffix;
-		$sql2 = "select max(subdistance) from roughness
-		where section = '{$s}'";
-		$result2 = pg_query($sql2);
-		$r = pg_fetch_assoc($result2);*/
-		$maxFromFirstSection = 1;//$r['max'] ;
-		//echo $maxFromFirstSection ;
-		$GLOBALS['kmstart'] += $maxFromFirstSection;
-		$GLOBALS['kmend'] += $maxFromFirstSection;
+//if($max != null || $min != null || !$findkm)
+//{
 
-	}	
-	if(strrpos($section, '0102100') !== false )
-	{
-		/*$suffix = substr($section,-3);
-		$s = '0101100'.$suffix;
-		$sql2 = "select max(subdistance) from roughness
-		where section = '{$s}'";
-		$result2 = pg_query($sql2);
-		$r = pg_fetch_assoc($result2);*/
-		$maxFromFirstSection = 10.0;//$r['max'] ;
-		//echo $maxFromFirstSection ;
-		$GLOBALS['kmstart'] += $maxFromFirstSection;
-		$GLOBALS['kmend'] += $maxFromFirstSection;
-
-	}	
-	if(strrpos($section, '0103100') !== false || strrpos($section, '0103%') !== false)
-	{
-	//	$suffix = substr($section,-3);
-	//	$s = '0101100'.$suffix;
-		// $sql2 = "select min(subdistance) from roughness
-		// where section = '{$section}'";
-		// $result2 = pg_query($sql2);
-		// $r = pg_fetch_assoc($result2);
-		$maxFromFirstSection = 19.5 ;
-		//echo $maxFromFirstSection ;
-		$GLOBALS['kmstart'] += $maxFromFirstSection;
-		$GLOBALS['kmend'] += $maxFromFirstSection;
-	}
-
-		$sql = "SELECT rn.section, rn.distance, rn.subdistance, rn.iri_avg , rn.lat, rn.long , rn.code,  rt.rut_lane, s.skid_avg 
+		$sql = "SELECT rn.section, rn.distance, rn.subdistance, rn.iri_avg , rn.lat, rn.long , rn.code,  rt.rut_lane, t.mpd 
 				FROM (roughness rn LEFT JOIN rutting rt on rn.subdistance = rt.subdistance and rn.section = rt.section)
-						LEFT JOIN skid s on  rt.subdistance = s.subdistance and rt.section     = s.section 
+						LEFT JOIN texture t on  rt.subdistance = t.subdistance and rt.section     = t.section 
 				WHERE   ";
 		
-		if(strrpos($section, '01b') !== false)
-		{
-			$suffix = substr($section,-3);
-			$sect_cond = " (rn.section LIKE '0101%".$suffix."' OR rn.section LIKE '0102%".$suffix."')";
-		}
-		else
+		// if(strrpos($section, '01b') !== false)
+		// {
+		// 	$suffix = substr($section,-3);
+		// 	$sect_cond = " (rn.section LIKE '0101%".$suffix."' OR rn.section LIKE '0102%".$suffix."')";
+		// }
+		// else
 			$sect_cond = " rn.section LIKE '{$section}'";
 
 		$sql .= $sect_cond;
 
 		$sql .= " AND rn.type = '{$exptype}'";
+
 		//Determine frequency
-		$subdistance = $kmend - $kmstart;
-		if($subdistance <= 2)
-			$rangefix = 5;
-		else if($subdistance > 2 && $subdistance <= 4)
-		{
-			$rangefix = 50;
-		}
-		else
-		{
-			$rangefix = 500;
-		}
+		//$subdistance = $kmend - $kmstart;
+		//if($subdistance <= 10)
+			$rangefix = 25;
+		//else if($subdistance > 2 && $subdistance <= 4)
+		//{
+		// 	$rangefix = 50;
+		// }
+		// else
+		// {
+		// 	$rangefix = 500;
+		// }
 		if(!$kmfreq)
 			$kmfreq = $rangefix;
 
 	//Define offset for expanding the kmend range (Ex.search 13-14 with freq.=10, it has to include 14.012 for 13.992-14.012 range)
 //	$kmendpadding = $kmend;
 	//if($kmfreq != 5)
-	$kmendpadding = $kmend+1;
+	//$kmendpadding = $kmend+1;
 
-	$sql .= " AND rn.subdistance >= {$kmstart} AND rn.subdistance <= {$kmendpadding} ORDER BY subdistance ,section";
+	//$sql .= " AND rn.subdistance >= {$kmstart} AND rn.subdistance <= {$kmendpadding}";
+	$sql .= " ORDER BY subdistance ,section";
 	//echo $sql;
+
 	$result = pg_query($sql);
 	$rows = array();
 	$max_distance = 0;
@@ -182,8 +145,8 @@ if($max != null || $min != null || !$findkm)
 		{
 			$c = 0;
 			while($row = pg_fetch_assoc($result)) {
-			if(!(strrpos($section, '0101%') !== false && ($row['subdistance'] > 7.6 )))
-				{
+			//if(!(strrpos($section, '0101%') !== false && ($row['subdistance'] > 7.6 )))
+			//	{
 					$section = $row['section'];
 					if($row['subdistance'] <= $GLOBALS['kmend'])
 						$rows['indexsearch'] = $c;
@@ -195,25 +158,25 @@ if($max != null || $min != null || !$findkm)
 						//$hdm4result = hdm4join($typetable, $hdm4abbexp, $dir, $lane,$row['subdistance']);
 					$row['hdm4result'] = $hdm4result;				
 					//new
-					if(strrpos($section, '0101100') !== false || strrpos($section, '0102100') !== false || strrpos($section, '0103100') !== false)
-						$row['subdistance'] = round($row['subdistance'],3)  - round($maxFromFirstSection,3);
+					//if(strrpos($section, '0101100') !== false || strrpos($section, '0102100') !== false || strrpos($section, '0103100') !== false)
+					//	$row['subdistance'] = round($row['subdistance'],3)  - round($maxFromFirstSection,3);
 
 					$rows[] = $row;
 					if($max_distance < $row['subdistance'])
 						$max_distance = $row['subdistance'];
 					
 					$c++;
-				}
-			else
-				{
-					break;
-				}
+			// 	}
+			// else
+			// 	{
+			// 		break;
+			// 	}
 			}
 
 			$rows['num_rows'] = $num_rows;
 			$rows['rangefix'] = $rangefix;
 			$rows['lastkm'] = $max_distance;
-			$rows['specialcase'] = $maxFromFirstSection;
+			//$rows['specialcase'] = $maxFromFirstSection;
 		}
 		else
 		{
@@ -227,7 +190,7 @@ if($max != null || $min != null || !$findkm)
 	    echo pg_last_error(); 
 		pg_close($dbh);
 	}*/
-}
+//}
 else
 {
 	$type = exptypeToFull($exptype);

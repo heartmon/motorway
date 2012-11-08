@@ -60,18 +60,18 @@ class MYPDF extends TCPDF {
     public function Header() {
         // Logo
         $image_file = K_PATH_IMAGES.'logo.jpg';
-        $this->Image($image_file, 10, 10, 18, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+       //$this->Image($image_file, 10, 10, 18, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
         // Set font
         $this->SetFont('thsarabun', 'B', 24);
         // Title Thai
         $this->setCellMargins(5, 5, '', '');
-        $this->Cell(0, 15, 'การทางพิเศษแห่งประเทศไทย', 0, false, 'L', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 15, 'กองทางหลวงพิเศษระหว่างเมือง กรมทางหลวง', 0, false, 'L', 0, '', 0, false, 'M', 'M');
 		$this->Ln(7.5);
         //Set font
         $this->SetFont('thsarabun', 'B', 18);
  		$this->setCellMargins(18.3, '', '', '');
         //Tital English
-        $this->Cell(0, 15, 'Expressway Authority of Thailand', 0, false, 'L', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 15, 'Department of Highway', 0, false, 'L', 0, '', 0, false, 'M', 'M');
         //Add Horizontal Line
         $style = array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', '', 'phase' => 10, 'color' => array(0, 0, 0));
     	$this->Line(10, 27, 200, 27, $style);
@@ -170,7 +170,7 @@ if($pdftype == "damage")
         // set JPEG quality
         $pdf->setJPEGQuality(100);
         // The '@' character is used to indicate that follows an image data stream and not an image file name
-        $pdf->Image('@'.$unencodedData,'','','','','','','',false,300,'L',false,false,0,'','',false,false);
+       // $pdf->Image('@'.$unencodedData,'','','','','','','',false,300,'L',false,false,0,'','',false,false);
     
     // ----- Axis Data -----
     $pdf->SetFont('thsarabun', '', 12);
@@ -194,38 +194,18 @@ if($pdftype == "damage")
 
     //Image Thumbnail
     // Image example with resizing
-    $imgpath = "../asset_images/".$section."/";
+    //$imgpath = "../asset_images/".$section."/";
 
     if($currentImage)
     {
         $imgpath .= $currentImage;
-        $pdf->Image($imgpath, 150 , 82, 50, '', '', '', '', true, 300, '', false, false, 1, false, false, false);
+       // $pdf->Image($imgpath, 150 , 82, 50, '', '', '', '', true, 300, '', false, false, 1, false, false, false);
         
         $pdf->writeHTMLCell(50,'', 150 , 119, 'ช่วงกม. : '.$currentkm,0,'', false, true, 'R', '');
         $pdf->writeHTMLCell(50,'', 150 , 123, 'Lat : '.$currentlat,0,'', false, true, 'R', '');
         $pdf->writeHTMLCell(50,'', 150 , 127, 'Long : '.$currentlong,0,'', false, true, 'R', '');
         //($currentkm.$currentlat.$currentlong
     }
- /*   elseif($firstImage)
-    {
-        $imgpathfirst = $imgpath.$firstImage;
-        $imgpathlast = $imgpath.$lastImage;
-
-        $pdf->Image($imgpathfirst, 150 , 30, 50, '', '', '', '', true, 300, '', false, false, 1, false, false, false);
-        
-        $pdf->writeHTMLCell(50,'', 150 , 67, 'ช่วงกม. : '.$firstkm,0,'', false, true, 'R', '');
-        $pdf->writeHTMLCell(50,'', 150 , 71, 'Lat : '.$firstlat,0,'', false, true, 'R', '');
-        $pdf->writeHTMLCell(50,'', 150 , 75, 'Long : '.$firstlong,0,'', false, true, 'R', '');
-
-        $pdf->Image($imgpathlast, 150 , 82, 50, '', '', '', '', true, 300, '', false, false, 1, false, false, false);
-        
-        $pdf->writeHTMLCell(50,'', 150 , 119, 'ช่วงกม. : '.$lastkm,0,'', false, true, 'R', '');
-        $pdf->writeHTMLCell(50,'', 150 , 123, 'Lat : '.$lastlat,0,'', false, true, 'R', '');
-        $pdf->writeHTMLCell(50,'', 150 , 127, 'Long : '.$lastlong,0,'', false, true, 'R', '');
-    }*/
-    //$pdf->Image('../images/image_demo.jpg', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
-
-
 
     //Set Y Position to below the chart
     if($currentImage || $firstImage)

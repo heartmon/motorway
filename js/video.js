@@ -5,7 +5,7 @@ var endframe;
 function sliderSyncWithVideo(ui)
 {
 	var l = ui.values[1]*g_all_result['offset']+1;
-	l += g_search_info_level2['kmfreq']/5;
+	l += g_search_info_level2['kmfreq']/25;
    	if(l > g_video['length']+1)
    		l = g_video['length']+1;
    	if(reverse)
@@ -19,7 +19,7 @@ function sliderSyncWithVideo(ui)
 		$('#videoslider').slider( "values" , 1, l);
 	}
 	updateVideoData();
-	updateRange();
+	updateVideoRange();
 	startframe = $('#videoslider').slider( "values" , 0);
 	endframe = $('#videoslider').slider( "values" , 1);
 }
@@ -33,12 +33,12 @@ function updateVideoData() {
 				var index = g_all_result['usedlength'] - $('#videoslider').slider( "values" , 0) + 1;
 			else
 				var index = $('#videoslider').slider( "values" , 0)-1;
-			var damage = parseFloat(g_all_result[index][getInfoType($('input[name="infotype"][id="'+g_search_info.infotype+'"]').val())]).toFixed(4);
+			var damage = parseFloat(g_all_result[index][getInfoType(g_search_info['infotype'])]).toFixed(4);
 			var lat = g_all_result[index]['lat'];
 			var longi = g_all_result[index]['long']; 
 			var km = g_all_result[index]['subdistance'];
 
-			var filename = g_video['first_image'] + index + '.jpg';
+			var filename = ((g_video['first_image'] + index)*5) + '.jpg';
 		//	var numPic = index;
 
 			$('#videoinfo #video_km').html(toKm(km));
@@ -55,10 +55,11 @@ function updateVideoData() {
 		}
 }
 
-function updateRange()
+function updateVideoRange()
 {
-	var start = $('#videoslider').slider( "values" , 0)-1;
+	var start = $('#videoslider').slider( "values" , 0) -1 ;
 	var end = $('#videoslider').slider( "values" , 1)-1;
+
 	if(reverse)
 	{
 		start =  g_all_result['usedlength']  - start;
@@ -78,11 +79,11 @@ function updateRange()
 		var ctrlSection = g_search_info_level2['currentsection'];
 
 		var fromImage = parseInt(g_video['first_image']);
-		var toImage = fromImage+g_video['length'];
+		var toImage = (fromImage+g_video['length'])*5;
 	
 		var folderImage = "asset_images/"+g_search_info_level2['currentsection']+"/";
 
-		var step = 1;
+		var step = 5;
 		
 
 		startUp();
@@ -109,7 +110,7 @@ function updateRange()
 				//$('#videoinfo #video_infotype').html(g_current_var['hdm4']['workdes']);	
 			}
 			else
-				$('#videoinfo #video_infotype_title').html(getAbbInfoType($('input[name="infotype"][id="'+g_search_info.infotype+'"]').val()));
+				$('#videoinfo #video_infotype_title').html(getAbbInfoType(g_search_info['infotype']));
 			$('#videoinfo #current_image').html('Loading');		
 			$('#videoinfo #frameno').html('Loading');	
 		}
@@ -135,6 +136,7 @@ function updateRange()
 	        from: fromImage,
 	        to: toImage,
 	        folder : folderImage,
+	        step: step,
 	        height:320,
 	        width:480,
 	        playOnLoad: false,
@@ -305,11 +307,11 @@ function updateRange()
         	$(this).find('i').removeClass('icon-pause').addClass('icon-play');
 	    });
 
-	   var range = 1+g_video['length'];
+	   var range = g_video['length'];
 
-	   var ncurrentstart = g_data['kmstart']*1000/5;
-	   var ncurrentend = Math.ceil(g_data['kmend']*1000/5);
-	   var nfirst = g_search_info_level2['kmstart']*1000/5;
+	   var ncurrentstart = g_data['kmstart']*1000/25;
+	   var ncurrentend = Math.ceil(g_data['kmend']*1000/25);
+	   var nfirst = g_search_info_level2['kmstart']*1000/25;
 	   if(nfirst != 0)
 	   	{
 	   		var selected_kmstart = (ncurrentstart+1) % nfirst + (Math.floor(ncurrentstart / nfirst)-1) * nfirst ;
@@ -321,7 +323,7 @@ function updateRange()
 	   		var selected_kmend   = (ncurrentend+1);
 	   	}
   
-	   	selected_kmend += g_search_info_level2['kmfreq']/5;
+	   	selected_kmend += g_search_info_level2['kmfreq']/25;
 	   	if(selected_kmend > g_video['length']+1)
 	   		selected_kmend = g_video['length']+1;
 
@@ -356,7 +358,7 @@ function updateRange()
 					endframe = ui.values[1];
 				}
 				updateVideoData();
-				updateRange();
+				updateVideoRange();
 			}
 		});
 

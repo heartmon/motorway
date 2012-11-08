@@ -602,8 +602,17 @@ h1 > div {
 	.pager {
 		clear:both;
 	}
-	#lane_selection .enexname,#lane_selection .mainLane {
+	#lane_selection .enexname{
 		width:210px;
+	}
+	#lane_selection{
+		line-height: 12px;
+		vertical-align: middle;
+	}
+	#lane_selection select{
+		margin-right:10px;
+		margin-top:20px;
+		float:left;
 	}
 	#footer{
 		display: none;
@@ -620,7 +629,7 @@ h1 > div {
 		height: 15px;	
 	}
 	
-	#search-input {
+	#breadcrumb, #search-input {
 		font-size: 1.0em;
 	}
 

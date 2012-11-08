@@ -469,9 +469,9 @@ function addPoints(all_result) {
         });
 
         //last = value['hdm4result'];
-        var feature = poi(index, value['lat'], value['long'], value['subdistance'], value['iri_avg'], value['rut_lane'], value['skid_avg'], value['code'], value['section'], cost, workdes, year);
+        var feature = poi(index, value['lat'], value['long'], value['subdistance'], value['iri_avg'], value['rut_lane'], value['mpd'], value['code'], value['section'], cost, workdes, year);
         qtip.addFeatures(feature);
-        if (index == Math.ceil((all_result['maxdis'] * 1000 - all_result['mindis'] * 1000) / 5)) return false;
+        if (index == Math.ceil((all_result['maxdis'] * 1000 - all_result['mindis'] * 1000) / 25)) return false;
 
     });
 }
@@ -567,8 +567,8 @@ function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, wo
             'iri': iri,
             'rutting': rutting,
             'skid': skid,
-            'code': toFullName(code),
-            'ename': toExpressName(section),
+            //'code': toFullName(code),
+           // 'ename': toExpressName(section),
             'section': section,
             'cost': cost,
             'workdes': workdes,
@@ -581,8 +581,8 @@ function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, wo
             'longitude': long,
             'latitude': lat,
             'var': iri,
-            'code': toFullName(code),
-            'ename': toExpressName(section),
+            //'code': toFullName(code),
+           // 'ename': toExpressName(section),
             'section': section,
             'cost': cost,
             'workdes': workdes,
@@ -595,8 +595,8 @@ function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, wo
             'longitude': long,
             'latitude': lat,
             'var': rutting,
-            'code': toFullName(code),
-            'ename': toExpressName(section),
+           //'code': toFullName(code),
+           // 'ename': toExpressName(section),
             'section': section,
             'cost': cost,
             'workdes': workdes,
@@ -610,8 +610,8 @@ function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, wo
             'longitude': long,
             'latitude': lat,
             'var': skid,
-            'code': toFullName(code),
-            'ename': toExpressName(section),
+           // 'code': toFullName(code),
+           // 'ename': toExpressName(section),
             'section': section,
             'cost': cost,
             'workdes': workdes,
@@ -626,9 +626,9 @@ function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, wo
             'iri': iri,
             'rutting': rutting,
             'skid': skid,
-            'code': toFullName(code),
+            //'code': toFullName(code),
             'var': '',
-            'ename': toExpressName(section),
+           // 'ename': toExpressName(section),
             'section': section,
             'cost': cost,
             'workdes': workdes,
@@ -658,7 +658,7 @@ function zoomCoor() {
             expressway: g_search_info.expressway, //only value number of expressway are sent.
             kmstart: g_search_info.kmstart,
             kmend: g_search_info.kmend,
-            infotype: $('input[name="infotype"][id="' + g_search_info.infotype + '"]').val(),
+            infotype: g_search_info['infotype'],
             exptype: g_search_info['exptype'],
             searchtype: g_search_info['searchtype'],
             section: section
