@@ -14,8 +14,8 @@ function Controller(){
 		{
 			$('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css('border', '').css('background-color', '');
 			g_search_info.expressway = $('#toolbox select[name=expressway]').val();
-            g_search_info.kmstart = kmstart;
-            g_search_info.kmend = kmend;
+            //g_search_info.kmstart = kmstart;
+            //g_search_info.kmend = kmend;
             g_search_info.infotype = $('#toolbox input[name=infotype]:checked').val();
             g_search_info['exptype'] = $('#toolbox select[name=exptype]').val();
             sectionCode = $('#toolbox select[name=mainsection]').val();
@@ -31,7 +31,7 @@ function Controller(){
 	        }
 
        		console.log(g_search_info);
-       		_setupVar;
+       		_setupVar();
 
             this.searchBySectionName(sectionCode);
 		}
@@ -67,7 +67,7 @@ function Controller(){
 
           //  g_search_info_level2['currentsection'] = $('#lane_selection select.mainLane :selected').val();
           //  g_search_info_level2['currentcode'] = $('#lane_selection select.mainLane :selected').prop('title');
-
+            console.log(g_search_info_level2);
             this.getAllLane(true);
         }
     }
@@ -187,7 +187,7 @@ function Controller(){
 
         for (var row = 0; row < last_consider_row; row++) {
             var temp;
-            if (kmfreq != 5) {
+            if (kmfreq != 25) {
                 if (count % index_freq == 0 && parseFloat(g_all_result[row]['subdistance']) <= g_search_info_level2['kmend']) {
                     //console.log(g_all_result[row]['subdistance']);
                     temp = g_all_result[row]['subdistance'];
@@ -231,6 +231,9 @@ function Controller(){
         g_all_result['offset'] = index_freq;
         g_all_result['last_consider_row'] = last_consider_row;
         g_all_result['usedlength'] = Math.ceil((g_all_result['maxdis'] * 1000 - g_all_result['mindis'] * 1000) / 25);
+
+//        g_data['kmstart'] = g_all_result['mindis'];
+  //      g_data['kmend']   = g_all_result['maxdis'];
 
         qtip.removeAllFeatures();
         addPoints(g_all_result);
@@ -532,7 +535,6 @@ function Controller(){
         g_search_info_level2['currentlane'] = '';
         g_search_info_level2['currentsection'] = '';
         g_search_info_level2['kmfreq'] = '';
-        g_imageset = null;
 	}
 
 	_formValidation = function(temp_kms,temp_kme) {

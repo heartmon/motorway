@@ -23,7 +23,7 @@ var g_search_info = {
 var g_search_info_level2 = {
     kmstart: "",
     kmend: "",
-    kmfreq: 5,
+    kmfreq: 25,
     currentlane: "",
     currentsection: "",
     currentcode: ""
@@ -53,7 +53,7 @@ var g_current_var = {
     rangekmend: 0,
     lat: 0,
     longi: 0,
-    skid_avg: 0,
+    mpd: 0,
     iri_avg: 0,
     rut_lane: 0,
     hdm4: ""
@@ -75,12 +75,12 @@ $(function (){
 
     init();
 
-    // $("#video-map-display").hide();
+     $("#video-map-display").hide();
 
-    // $("[type='submit']").click(function () {
+     $("[type='submit']").click(function () {
          $("#placeholder").hide();
-    //     $("#video-map-display").show();
-    // });
+         $("#video-map-display").show();
+     });
 
     // $("#option2").fadeOut();
 
@@ -181,7 +181,7 @@ $(function (){
             var windowHeight = $(window).height();
             $('#container_map, #map').width(windowWidth - 40 + 'px');
             $('#container_map, #map').height(windowHeight - 40 + 'px');
-            //map.updateSize();
+            map.updateSize();
         }
     }
 
@@ -207,7 +207,7 @@ $(function (){
         $(this).children().removeClass('icon-resize-small').addClass('icon-resize-full')
         $('#container_map').parent().css('height', '');
         $(this).attr('title', 'ขยายแผนที่');
-        //map.updateSize();
+        map.updateSize();
 
         if (g_all_result) {
             qtip.removeAllFeatures();
@@ -350,6 +350,12 @@ $(function (){
     $("#maptoolbox #damage").append('<select name="infotype" class="span3 infotype"><option value="texture">ค่าพื้นผิว - Texture</option><option selected value="roughness">ค่าความขรุขระ - IRI</option><option value="rutting">ค่าร่องล้อ - Rutting</option></select>');
     $("#maptoolbox").hide();
 
+    //Sync mainsection
+     $('#maptoolbox select[name=mainsection], #lane_selection select[name=mainsection]').live('change', function () {
+        HTMLselectTagBinding('select[name=mainsection]', $(this), '#lane_selection select[name=mainsection]');
+        controller.damageSearch(); 
+    });
+
     //When change expressway clear kmrange
     $('select[name=expressway]').live('change', function () {
         $('#toolbox input[name=kmstart], #toolbox input[name=kmend]').val('');
@@ -367,7 +373,7 @@ $(function (){
             $('#toolbox input[name=kmstart]').val(0);
             $('#toolbox input[name=kmend]').val(10);
         }   
-        search1();
+        controller.damageSearch(); 
     });
 
     //Sync exenname
@@ -381,23 +387,20 @@ $(function (){
     });
 
     $('#maptoolbox .accessname, #lane_selection .accessname').live('change', function () {
-        g_imageset = "";
-        search1();
+        controller.damageSearch(); 
         zoomCoor();
     });
 
     $('#maptoolbox .enexname, #lane_selection .enexname').live('change', function () {
-        g_imageset = "";
-        search1();
+        controller.damageSearch(); 
     });
 
     $('#maptoolbox select[name=infotype]').live('change', function () {
         if ($("#main_content").is(":hidden")) {
-            g_imageset = "";
-            search1();
+            controller.damageSearch(); 
         } else {
-            g_search_info['infotype'] = $(this).find('option:selected').html();
-            ajaxSearch1();
+            g_search_info['infotype'] = $(this).find('option:selected').val();
+           controller.activatedResult(g_all_result);
         }
     });
 
@@ -408,15 +411,14 @@ $(function (){
             $(this).find('option').eq(index).prop('selected', 'selected');
         });
 
-        $("#fix_range").show();
-        g_search_info_level2['currentsection'] = $(this).val();
-        g_search_info_level2['currentcode'] = $(this).find('option[value="' + $(this).val() + '"]').prop('title');
+       // $("#fix_range").show();
+        g_search_info_level2['currentsection'] = g_search_info_level2['currentsection'].substr(0,9) + $(this).val();
+       // g_search_info_level2['currentcode'] = $(this).find('option[value="' + $(this).val() + '"]').prop('title');
         g_search_info['exptype'] = $('select[name=exptype]').val();
-        g_imageset = "";
         if ($("#main_content").is(":hidden") || g_search_info['searchtype'] == 'overlap') 
-            search1();
+            controller.damageSearch(); 
         else 
-            ajaxSearch1();
+            controller.activatedResult(g_all_result_all_lane[$(this).val()]);
     });
 
     $('select[name=infotype], input[name=infotype]').live('change', function () {
@@ -456,8 +458,7 @@ $(function (){
     });
 
     $('#maptoolbox select[name=exptype]').live('change', function () {
-        g_imageset = "";
-        search1();
+        controller.damageSearch(); 
     });
 
     //Addpoint of lanes
@@ -465,7 +466,7 @@ $(function (){
         qtip.removeAllFeatures();
         var suffix = [];
         $(this).find('option:selected').each(function () {
-            var s = $(this).val().slice(-3);
+            var s = $(this).val();
             addPoints(g_all_result_all_lane[s]);
         });
     });
@@ -601,7 +602,7 @@ function updateVideo(index) {
     $('.control-section').html(ctrlSection);
 
     if ($('#video-player #reel_container').is(":hidden")) {
-        var index_image = index * g_search_info_level2.kmfreq / 25 * 5;
+        var index_image = index * g_search_info_level2.kmfreq / 25 * (g_search_info_level2['kmfreq']/5);
 
         $('#video-player #thumbnail').empty();
         $('#video-player #thumbnail').html('<img src="" />');
@@ -645,7 +646,7 @@ function updateVertical(index) {
         g_current_var['kmend'] = parseFloat(g_all_result[eindex]['subdistance']);
         g_current_var['lat'] = parseFloat(g_all_result[index]['lat']);
         g_current_var['longi'] = parseFloat(g_all_result[index]['long']);
-        g_current_var['skid_avg'] = parseFloat(g_all_result[index]['skid_avg']).toFixed(4);
+        g_current_var['mpd'] = parseFloat(g_all_result[index]['mpd']).toFixed(4);
         g_current_var['iri_avg'] = parseFloat(g_all_result[index]['iri_avg']).toFixed(4);
         g_current_var['rut_lane'] = parseFloat(g_all_result[index]['rut_lane']).toFixed(4);
     }
@@ -751,7 +752,7 @@ function getInfoType(infotype) {
     var column_info_name;
     if (infotype == 'roughness') column_info_name = 'iri_avg';
     else if (infotype == 'rutting') column_info_name = 'rut_lane';
-    else if (infotype == 'skid') column_info_name = 'skid_avg';
+    else if (infotype == 'texture') column_info_name = 'mpd';
     return column_info_name;
 }
 
@@ -823,6 +824,6 @@ function getAbbInfoType(infotype) {
     var column_info_name;
     if (infotype == 'roughness') column_info_name = 'IRI';
     else if (infotype == 'rutting') column_info_name = 'Rutting';
-    else if (infotype == 'skid') column_info_name = 'Skid';
+    else if (infotype == 'mpd') column_info_name = 'MPD';
     return column_info_name;
 }

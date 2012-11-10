@@ -3,8 +3,8 @@ include_once('../_db.php');
 
 //Get value
 //$expressway = $_GET['expressway'];
-//$kmstart = $_GET['kmstart'];
-//$kmend = $_GET['kmend'];
+$kmstart = $_GET['kmstart'];
+$kmend = $_GET['kmend'];
 $infotype = $_GET['infotype'];
 $kmfreq = $_GET['kmfreq'];
 $section = $_GET['section'];
