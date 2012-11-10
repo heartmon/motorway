@@ -53,14 +53,14 @@ var options = {
 
 map = new OpenLayers.Map('map', options);
 
-var centerline = new OpenLayers.Layer.Vector("Centerline EXAT", {
+var centerline = new OpenLayers.Layer.Vector("Centerline MOTORWAY", {
     //Set your projection and strategies//
     projection: new OpenLayers.Projection("EPSG:4326"),
     strategies: [new OpenLayers.Strategy.Fixed()],
     //set the protocol with a url//
     protocol: new OpenLayers.Protocol.HTTP({
         //set the url to your variable//
-        url: "kml/centerline-all.kml",
+        url: "kml/centerline.kml",
         //format this layer as KML//
         format: new OpenLayers.Format.KML({
             //maxDepth is how deep it will follow network links//

@@ -18,7 +18,7 @@ function Controller(){
             //g_search_info.kmend = kmend;
             g_search_info.infotype = $('#toolbox input[name=infotype]:checked').val();
             g_search_info['exptype'] = $('#toolbox select[name=exptype]').val();
-            sectionCode = $('#toolbox select[name=mainsection]').val();
+            sectionCode = $('select.mainsection:visible').val();
 
             if ($("#option2").is(":visible")) {
 	            if ($('#exptype').val() == "2") {
@@ -52,13 +52,13 @@ function Controller(){
             getAllLane(false);
         } else {
         //  $('#lane_selection').append('<br>ตอนควบคุม : ');
-            cloneToMap($("#toolbox select[name=mainsection]"), '#lane_selection', false, false);
+            cloneToMap($("#toolbox select.mainsection:visible"), '#lane_selection', false, false);
         //	$('#lane_selection').append('เลน : ');
             cloneToMap($("#maptoolbox #mainLane"), '#lane_selection', false, false);
             $('#lane_selection #mainLane option:first').prop('selected', 'selected');
             $('#lane_selection #mainLane').addClass('span1').removeClass('span3');
 
-            $('#lane_selection select[name=mainsection]').addClass('span2').removeClass('span3');
+            $('#lane_selection .mainsection').addClass('span2').removeClass('span3');
             
             $('#maptoolbox #mainLane option:first').prop('selected', 'selected');
 
@@ -265,10 +265,9 @@ function Controller(){
             _createGraph();
             view.createDataTable();
             $('#search-input .expressway').html(expcodeToExpressway(g_search_info['expressway']));
-            $('#search-input .infotype').html(g_search_info['infotype']);
+            $('#search-input .infotype').html($('input[name=infotype][value='+g_search_info.infotype+']').next().html());
             $('#search-input .rangekm').html(toKm(g_data['kmstart']) + ' - ' + toKm(g_data['kmend']));
-            $('.fullname').html(toFullName(g_search_info_level2['currentcode']));
-
+            $('.fullname').html(toDir(g_search_info_level2['currentsection'].slice(-2))+' เลน '+g_search_info_level2['currentsection'].slice(-2));
             hideLoading();
 
             this.settingImage();
@@ -504,8 +503,6 @@ function Controller(){
         //Draw
         view.drawGraph();
     }
-
-    
 
     _formSection = function(exp, section, exptype,dirlane){
         switch(exptype){

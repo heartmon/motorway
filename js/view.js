@@ -81,7 +81,7 @@ function View(){
         [g_linedata[selectedIndex][0], 999]
     ];
     //Cutting infotype string Ex From **** - Skid to only Skid
-    var typecut = g_search_info.infotype;//.substr(g_search_info.infotype.indexOf("-") + 2);
+    var typecut = getAbbInfoType(g_search_info.infotype);//.substr(g_search_info.infotype.indexOf("-") + 2);
     //Plot Graph
     if (info == "roughness") {
         plot = $.plot($("#line-chart"), [{

@@ -133,19 +133,25 @@
 					<select name="exptype" class="exptype input-spanall">
 							<option value="1">ทางหลัก M</option>
 							<option value="2">ทางกลับรถ U </option>
-							<option value="3">ทางแยก B + #</option>
+							<option value="3">ทางข้ามแยก B</option>
+							<option value="4">ทางแยก #</option>
 					</select>
 					<li class="divider"></li>
 					<div id="option1">
 						เลือกตอนควบคุม: 
-						<select name="mainsection" class="input-spanall mainsection">
+						<select name="mainsection07" class="input-spanall mainsection">
+							<option value="0102">0102</option>
+							<option value="0101">0101</option>
+							<option value="0200">0200</option>
 							<option value="0301">0301</option>
 							<option value="0302">0302</option>
-							<option value="0200">0200</option>
-							<option value="0101">0101</option>
-							<option value="0600">0600</option>
-							<option value="0500">0500</option>
+							<option value="0401">0401</option>
+						</select>
+						<select name="mainsection09" class="input-spanall mainsection">
+							<option value="0401">0401</option>
 							<option value="0402">0402</option>
+							<option value="0500">0500</option>
+							<option value="0600">0600</option>
 						</select>
 						<div id="fix_range">
 							กำหนดช่วงกม.
@@ -159,64 +165,48 @@
 						
 						<div id="option2">
 						
-							<select name="accessname" class="input-spanall accessname">
-								
-								<option value="0000421F01">ทางเชื่อม ฉลองรัช (ขาเข้า) เฉลิมมหานครช่วงท่าเรือ-บางนา (ขาเข้า) </option>
-								<option value="0000421F06">ทางเชื่อม ฉลองรัช (ขาเข้า) เฉลิมมหานครช่วงท่าเรือ-บางนา (ขาออก) </option>
-								<option value="0000412F01">ทางเชื่อม เฉลิมมหานครช่วงท่าเรือ-บางนา (ขาเข้า) ฉลองรัช (ขาออก)  </option>
-								<option value="0000412F05">ทางเชื่อม เฉลิมมหานครช่วงท่าเรือ-บางนา (ขาออก) ฉลองรัช (ขาออก)  </option>
-								<option value="0000413F01">ทางเชื่อม เฉลิมมหานคร S1</option>
-								<option value="0000431F03">ทางเชื่อม S1 เฉลิมมหานคร</option>
-								
-								<option value="0000411F01">ทางเชื่อม เฉลิมมหานครช่วงท่าเรือ-ดินแดง (ขาเข้า) ฉลิมมหานครช่วงท่าเรือ-ดาวคะนอง (ขาออก)  </option>
-								<option value="0000411F04">ทางเชื่อม เฉลิมมหานครช่วงท่าเรือ-บางนา (ขาเข้า) ฉลิมมหานครช่วงท่าเรือ-ดาวคะนอง (ขาออก)  </option>
-								<option value="0000411R03">ทางเชื่อม เฉลิมมหานครช่วงท่าเรือ-ดาวคะนอง (ขาเข้า) ฉลิมมหานครช่วงท่าเรือ-ดินแดง (ขาออก)  </option>
-								<option value="0000411R06">ทางเชื่อม เฉลิมมหานครช่วงท่าเรือ-ดาวคะนอง (ขาเข้า) ฉลิมมหานครช่วงท่าเรือ-บางนา (ขาออก)  </option>
-								
-								<option value="0000426F02">ทางเชื่อม ฉลองรัช (ขาเข้า) ศรีรัช (ขาเข้า) </option>
-								<option value="0000426F07">ทางเชื่อม ฉลองรัช (ขาเข้า) ศรีรัช (ขาออก) </option>
-								<option value="0000426F03">ทางเชื่อม ฉลองรัช (ขาออก) ศรีรัช (ขาเข้า) </option>
-								<option value="0000426F05">ทางเชื่อม ฉลองรัช (ขาออก) ศรีรัช (ขาออก) </option>
-								
-								<option value="0000462F01">ทางเชื่อม ศรีรัช (ขาเข้า) ฉลองรัช (ขาเข้า) </option>
-								<option value="0000462F07">ทางเชื่อม ศรีรัช (ขาเข้า) ฉลองรัช (ขาออก) </option>
-								<option value="0000462F03">ทางเชื่อม ศรีรัช (ขาออก) ฉลองรัช (ขาเข้า) </option>
-								<option value="0000462F05">ทางเชื่อม ศรีรัช (ขาออก) ฉลองรัช (ขาออก) </option>
-								
-														
-								<option value="0000445F02">ทางเชื่อม กาญจนภิเษก (ขาเข้า) บูรพาวิถี (ขาเข้า)</option>
-								<option value="0000445F03">ทางเชื่อม กาญจนภิเษก (ขาเข้า) บูรพาวิถี (ขาออก)</option>
-								
-								<option value="0000454F03">ทางเชื่อม บุรพาวิถี (ขาออก) กาญจนาภิเษก (ขาออก)</option>
-								<option value="0000454F04">ทางเชื่อม บุรพาวิถี (ขาเข้า) กาญจนาภิเษก (ขาออก)</option>
-																		
+							<select name="accessname07" class="input-spanall accessname">
+								<option value="">ทางแยกต่างระดับศรีนครินทร์</option>
+								<option value="">ทางแยกต่างระดับทับช้าง</option>
+								<option value="">ทางแยกต่างระดับอ่อนนุช</option>
+								<option value="">ทางแยกต่างระดับวัดสลุด</option>
+								<option value="">ทางแยกต่างระดับร่มเกล้า</option>
+								<option value="">สะพานลอยทางเข้า-ออก ท่าอากาศยานสุวรรณภูมิ</option>
+								<option value="">สะพานลอยทางเข้า-ออก สถานีขนส่งสินค้าร่มเกล้า</option>
+								<option value="">ทางแยกต่างระดับลาดกระบัง</option>
+								<option value="">ทางแยกต่างระดับบางบ่อ</option>
+								<option value="">ทางแยกต่างระดับบางควาย</option>
+								<option value="">ทางแยกต่างระดับบางปะกง</option>
+								<option value="">ทางแยกต่างระดับพานทอง</option>
+								<option value="">ทางแยกต่างระดับชลบุรี</option>
+								<option value="">ทางแยกต่างระดับบางพระ</option>										
+							</select>
+							<select name="accessname09" class="input-spanall accessname">
+								<option value="">ทางแยกต่างระดับบางปะอิน</option>
+								<option value="">สะพานลอยทางเข้า-ออก สถานีขนส่งสินค้าคลองหลวง</option>
+								<option value="">สะพาน OVERPASS และทางแยก อ.คลองหลวง</option>
+								<option value="">ทางแยกต่างระดับธัญบุรี</option>	
+								<option value="">ทางแยกต่างระดับลำลูกกา</option>	
+								<option value="">ทางแยกต่างระดับรามอินทรา</option>	
+								<option value="">ทางแยกต่างระดับคลองกุ่ม</option>	
+								<option value="">ทางแยกต่างระดับสุขาภิบาล 3</option>	
+								<option value="">ทางแยกต่างระดับทับช้าง</option>	
 							</select>
 							<select name="enexname07" class="input-spanall enexname">
-								<option value="0101201F08">7777777</option>
-								<option value="0101301R01">ทางลง ด่านดินแดง</option>
-								<option value="0101202F02">ทางขึ้น ด่านเพชรบุรี</option>
-								<option value="0101303R02">ทางลง ด่านเพชรบุรี</option>
-								<option value="0101203R01">ทางขึ้น ด่านสุขุมวิท</option>
-								<option value="0101305F01">ทางลง ด่านสุขุมวิท</option>
-								
-								<option value="0101204R01">ทางขึ้น ด่านพระราม 4 (ถ.พระราม 4 ขาออก)</option>
-								<option value="0101205F04">ทางขึ้น ด่านพระราม 4 (ถ.พระราม 4 ขาเข้า)</option>
-								<option value="0101306F03">ทางลง ด่านพระราม 4 (ถ.พระราม 4 ขาออก)</option>
-								<option value="0101307R01">ทางลง ด่านพระราม 4 (ถ.พระราม 4 ขาเข้า)</option>
+								<option value="">0101U01</option>
+								<option value="">0101U02</option>
+								<option value="">0101U03</option>
+								<option value="">0302U01</option>
+								<option value="">0302U02</option>
 							</select>
 							
 							<select name="enexname09" class="input-spanall enexname">
-								<option value="0101201F08">999999</option>
-								<option value="0101301R01">ทางลง ด่านดินแดง</option>
-								<option value="0101202F02">ทางขึ้น ด่านเพชรบุรี</option>
-								<option value="0101303R02">ทางลง ด่านเพชรบุรี</option>
-								<option value="0101203R01">ทางขึ้น ด่านสุขุมวิท</option>
-								<option value="0101305F01">ทางลง ด่านสุขุมวิท</option>
-								
-								<option value="0101204R01">ทางขึ้น ด่านพระราม 4 (ถ.พระราม 4 ขาออก)</option>
-								<option value="0101205F04">ทางขึ้น ด่านพระราม 4 (ถ.พระราม 4 ขาเข้า)</option>
-								<option value="0101306F03">ทางลง ด่านพระราม 4 (ถ.พระราม 4 ขาออก)</option>
-								<option value="0101307R01">ทางลง ด่านพระราม 4 (ถ.พระราม 4 ขาเข้า)</option>
+								<option value="">0401U01</option>
+								<option value="">0402U01</option>
+								<option value="">0402U02</option>
+								<option value="">0500U01</option>
+								<option value="">0500U04</option>
+								<option value="">0500U05</option>
 							</select>
 						</div>
 
@@ -448,10 +438,6 @@
 										<tr>
 											<td>รหัสตอนควบคุม</td>
 											<td>: <span class="control-section color-orange"></span></td>
-										</tr>
-										<tr>
-											<td>ชื่อย่อการทาง</td>
-											<td>: <span class="code-section color-orange"></span></td>
 										</tr>
 										<tr>
 											<td>ช่วง กม. </td>

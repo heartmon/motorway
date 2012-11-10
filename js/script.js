@@ -95,6 +95,7 @@ $(function (){
        // $(".mainLane").hide();
         $('#fix_range').hide();
         $('#option2').hide();
+        $('select[name=mainsection09]').hide();
 
         $("a.video_lightbox").fancybox({
             'transitionIn': 'none',
@@ -309,8 +310,9 @@ $(function (){
     function showTypeDropdown(exp, exptype) {
         $('.enexname').not('#lane_selection .enexname').hide();
         $('.accessname').not('#lane_selection .accessname').hide();
+        $('.mainsection').not('#lane_selection .mainsection').hide();
         $('#maptoolbox #mainLane').hide();
-        $('#maptoolbox select[name=mainsection]').hide();
+        $('#maptoolbox .mainsection').hide();
         if (exptype == "2") {
 
             var elem = "enexname" + exp;
@@ -321,15 +323,21 @@ $(function (){
             $('select#hdm4type option').not(':first').hide();
 
         } else if (exptype == "3") {
+            var elem = "accessname" + exp;
             $('#maptoolbox .accessname').remove();
-            $('.accessname').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
+            $('select[name=' + elem+']').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
             //$('.accessname').clone().removeClass('input-spanall').addClass('span3').appendTo('#maptoolbox #selectname').find('option').eq(index).prop('selected','selected');
-            cloneToMap($('#toolbox .accessname'), '#maptoolbox #selectname');
+            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
             //Hide Limited_Half and Limited_Full of HDM4
             $('select#hdm4type option').not(':first').hide();
         } else {
             $('#maptoolbox #mainLane').show();
-            $('#maptoolbox select[name=mainsection]').show();
+            var elem = "mainsection" + exp;
+             $('#maptoolbox .mainsection').remove();
+            $('select[name=' + elem+']').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
+            //$('#maptoolbox select[name=mainsection]').show();
+
+            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
             $('#maptoolbox #mainLane').prop('multiple','multiple');
           //  mainLane(exp);
             //Hide Limited_Half and Limited_Full of HDM4
@@ -341,7 +349,7 @@ $(function (){
     //Clone Init
     cloneToMap($("#toolbox select[name=expressway]"), '#maptoolbox #expnametype', true);
     cloneToMap($("#toolbox select[name=exptype]"), '#maptoolbox #expnametype', true);
-    cloneToMap($("#toolbox select[name=mainsection]"), '#maptoolbox #selectname', true);
+    cloneToMap($("#toolbox .mainsection"), '#maptoolbox #selectname', true);
     cloneToMap($("#lane_selection select[name=mainLane]"), '#maptoolbox #selectname', true, true);
     //Initial
     showTypeDropdown($('select[name=expressway]').val(), $("#exptype").val());
@@ -351,8 +359,8 @@ $(function (){
     $("#maptoolbox").hide();
 
     //Sync mainsection
-     $('#maptoolbox select[name=mainsection], #lane_selection select[name=mainsection]').live('change', function () {
-        HTMLselectTagBinding('select[name=mainsection]', $(this), '#lane_selection select[name=mainsection]');
+     $('#maptoolbox .mainsection, #lane_selection .mainsection').live('change', function () {
+        HTMLselectTagBinding('select.mainsection', $(this), '#lane_selection select.mainsection');
         controller.damageSearch(); 
     });
 
@@ -562,8 +570,9 @@ function highlightTable(index) {
         $('#table1 tbody tr.table_highlight').removeClass("table_highlight");
         $('#table1 tbody tr').eq(index).addClass('table_highlight');
 
-        if ($('#current_linedata').is(':hidden')) $('#current_linedata').show();
-        var ydata = g_search_info.infotype.substr(g_search_info.infotype.indexOf("-") + 2) + ": " + $('#table1 tbody tr.table_highlight td:last').html() + " ";
+        if ($('#current_linedata').is(':hidden')) 
+            $('#current_linedata').show();
+        var ydata = getAbbInfoType(g_search_info['infotype']) + ": " + $('#table1 tbody tr.table_highlight td:last').html() + " ";
         var selectedkm = $('#table1 tbody tr.table_highlight td:first').html();
         $('#current_linedata span.selectedkm').html(selectedkm);
         $('#current_linedata span.ydata').html(ydata);
@@ -826,4 +835,11 @@ function getAbbInfoType(infotype) {
     else if (infotype == 'rutting') column_info_name = 'Rutting';
     else if (infotype == 'mpd') column_info_name = 'MPD';
     return column_info_name;
+}
+
+function toDir(lane){
+    if(lane.indexOf('F') != -1)
+        return 'ขาออก';
+    else
+        return 'ขาเข้า';
 }

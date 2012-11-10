@@ -60,7 +60,7 @@ class MYPDF extends TCPDF {
     public function Header() {
         // Logo
         $image_file = K_PATH_IMAGES.'logo.jpg';
-       //$this->Image($image_file, 10, 10, 18, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+       $this->Image($image_file, 10, 10, 18, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
         // Set font
         $this->SetFont('thsarabun', 'B', 24);
         // Title Thai
@@ -170,7 +170,7 @@ if($pdftype == "damage")
         // set JPEG quality
         $pdf->setJPEGQuality(100);
         // The '@' character is used to indicate that follows an image data stream and not an image file name
-       // $pdf->Image('@'.$unencodedData,'','','','','','','',false,300,'L',false,false,0,'','',false,false);
+        $pdf->Image('@'.$unencodedData,'','','','','','','',false,300,'L',false,false,0,'','',false,false);
     
     // ----- Axis Data -----
     $pdf->SetFont('thsarabun', '', 12);
@@ -199,7 +199,7 @@ if($pdftype == "damage")
     if($currentImage)
     {
         $imgpath .= $currentImage;
-       // $pdf->Image($imgpath, 150 , 82, 50, '', '', '', '', true, 300, '', false, false, 1, false, false, false);
+        $pdf->Image($imgpath, 150 , 82, 50, '', '', '', '', true, 300, '', false, false, 1, false, false, false);
         
         $pdf->writeHTMLCell(50,'', 150 , 119, 'ช่วงกม. : '.$currentkm,0,'', false, true, 'R', '');
         $pdf->writeHTMLCell(50,'', 150 , 123, 'Lat : '.$currentlat,0,'', false, true, 'R', '');
