@@ -65,9 +65,9 @@ function Model()
                    openVideo();
                    videoPreloader();
 
-                   //if (!isHDM4) {
+                   if (!g_hdm4search_click) {
                         $('#table1 tr').eq(0).click();
-                   // }
+                    }
                    
                 } else {
                     errorReport(data['error']);

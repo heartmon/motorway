@@ -259,7 +259,7 @@ table thead
 #line-chart
 {
 	height:210px;
-	width:100%;
+	width:97%;
 }
 
 .color-orange
@@ -337,7 +337,7 @@ right: 10px;
 }
 #current_linedata {
   position:absolute;
-  right:0px;
+  right:10px;
   top:90px;
   font-size:15px;
   z-index:998;
@@ -484,7 +484,7 @@ a.dropdown-toggle
 			}
 			#videoplayer .ui-slider .ui-slider-handle {
 				width:0.8em;
-				height:1.7em;
+				height:1.4em;
 			}
 		.infoblock
 		{

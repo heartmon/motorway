@@ -15,7 +15,7 @@ function View(){
         }
         //console.log($('.tablescroll_head'));
         if ($('.tablescroll').length === 0) $('#table1').tableScroll({
-            height: 320,
+            height: 285,
             width: 290
         });
     }

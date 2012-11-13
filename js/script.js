@@ -311,6 +311,7 @@ $(function (){
         $('.enexname').not('#lane_selection .enexname').hide();
         $('.accessname').not('#lane_selection .accessname').hide();
         $('.mainsection').not('#lane_selection .mainsection').hide();
+        $('.intersect').not('#lane_selection .intersect').hide();
         $('#maptoolbox #mainLane').hide();
         $('#maptoolbox .mainsection').hide();
         if (exptype == "2") {
@@ -326,6 +327,14 @@ $(function (){
             var elem = "accessname" + exp;
             $('#maptoolbox .accessname').remove();
             $('select[name=' + elem+']').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
+            //$('.accessname').clone().removeClass('input-spanall').addClass('span3').appendTo('#maptoolbox #selectname').find('option').eq(index).prop('selected','selected');
+            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
+            //Hide Limited_Half and Limited_Full of HDM4
+            $('select#hdm4type option').not(':first').hide();
+        } else if(exptype == "4") {
+            var elem = "intersect" + exp;
+            $('#maptoolbox .intersect').remove();
+            $('select[name=' + elem+']').not('#lane_selection .intersect').show().find('option:first').prop('selected', 'selected');
             //$('.accessname').clone().removeClass('input-spanall').addClass('span3').appendTo('#maptoolbox #selectname').find('option').eq(index).prop('selected','selected');
             cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
             //Hide Limited_Half and Limited_Full of HDM4
@@ -385,13 +394,18 @@ $(function (){
     });
 
     //Sync exenname
-    $('select .enexname').live('change', function () {
-        HTMLselectTagBinding('select[name=' + $(this).prop('id') + ']', $(this), '#lane_selection .enexname');
+    $('select.enexname').live('change', function () {
+        HTMLselectTagBinding('select.enexname', $(this), '#lane_selection .enexname');
     });
 
     //Sync accessname
     $('select[name=accessname]').live('change', function () {
-        HTMLselectTagBinding('select[name=accessname]', $(this), '#lane_selection .accessname');
+        HTMLselectTagBinding('select[name=' + $(this).prop('id') + ']', $(this), '#lane_selection .accessname');
+    });
+
+    //Sync intersect
+    $('select.intersect').live('change', function () {
+        HTMLselectTagBinding('select.intersect', $(this), '#lane_selection .intersect');
     });
 
     $('#maptoolbox .accessname, #lane_selection .accessname').live('change', function () {
@@ -400,6 +414,10 @@ $(function (){
     });
 
     $('#maptoolbox .enexname, #lane_selection .enexname').live('change', function () {
+        controller.damageSearch(); 
+    });
+
+    $('#maptoolbox .intersect, #lane_selection .intersect').live('change', function () {
         controller.damageSearch(); 
     });
 
@@ -833,7 +851,7 @@ function getAbbInfoType(infotype) {
     var column_info_name;
     if (infotype == 'roughness') column_info_name = 'IRI';
     else if (infotype == 'rutting') column_info_name = 'Rutting';
-    else if (infotype == 'mpd') column_info_name = 'MPD';
+    else if (infotype == 'texture') column_info_name = 'MPD';
     return column_info_name;
 }
 

@@ -79,7 +79,7 @@ function updateVideoRange()
 		var ctrlSection = g_search_info_level2['currentsection'];
 
 		var fromImage = parseInt(g_video['first_image']);
-		var toImage = (fromImage+g_video['length'])*5;
+		var toImage = fromImage+((g_video['length']-1)*5);
 	
 		var folderImage = "asset_images/"+g_search_info_level2['currentsection']+"/";
 
