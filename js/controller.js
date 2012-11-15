@@ -380,7 +380,7 @@ function Controller(){
     this.exportPDF = function () {
         //Prepare data
         var expressway = $("#search-input .expressway").html();
-        var infotype = g_search_info['infotype'];
+        var infotype = $('input[name=infotype][value='+g_search_info['infotype']+']').next().html();
         var currentsection = g_search_info_level2['currentsection'];
         var currentcode = g_search_info_level2['currentcode'];
         var fullName = toFullName(currentcode);

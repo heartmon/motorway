@@ -28,8 +28,8 @@ $lastlat =  $_POST['lastlat'];
 $lastlong = $_POST['lastlong'];*/
 
 
-if(isset($_POST["canvasData"]))
-{
+//if(isset($_POST["canvasData"]))
+//{
     // Get the data
     $imageData=$_POST["canvasData"];
     // Remove the headers (data:,) part.  
@@ -37,7 +37,9 @@ if(isset($_POST["canvasData"]))
     $filteredData=substr($imageData, strpos($imageData, ",")+1);
     // Need to decode before saving since the data we received is already base64 encoded
     $unencodedData=base64_decode($filteredData);
-}
+
+ //   echo $unencodedData;
+//}
 
 //Get data of hdm4 result
 $year = $_POST['year'];
@@ -59,8 +61,8 @@ class MYPDF extends TCPDF {
     //Page header
     public function Header() {
         // Logo
-        $image_file = K_PATH_IMAGES.'logo.jpg';
-       //$this->Image($image_file, 10, 10, 18, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+        $image_file = K_PATH_IMAGES.'logo.png';
+       $this->Image($image_file, 10, 10, 18, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
         // Set font
         $this->SetFont('thsarabun', 'B', 24);
         // Title Thai
@@ -150,7 +152,7 @@ if($pdftype == "damage")
         <tr>
             <td width="130">&nbsp;</td>
             <td width="10">:</td>
-            <td align="left" width="400">'.$fullname.' ('.$code.')</td>
+            <td align="left" width="400">'.$code.' ('.$section.')</td>
         </tr>
     	<tr style="line-height:4px;">
     		<td width="130"><b>ช่วง กม.</b></td>
@@ -170,7 +172,7 @@ if($pdftype == "damage")
         // set JPEG quality
         $pdf->setJPEGQuality(100);
         // The '@' character is used to indicate that follows an image data stream and not an image file name
-//        $pdf->Image('@'.$unencodedData,'','','','','','','',false,300,'L',false,false,0,'','',false,false);
+        $pdf->Image('@'.$unencodedData,'','','','','','','',false,300,'L',false,false,0,'','',false,false);
     
     // ----- Axis Data -----
     $pdf->SetFont('thsarabun', '', 12);
@@ -180,7 +182,7 @@ if($pdftype == "damage")
     $pdf->SetXY($startxaxis, 127);
     $pdf->writeHTML($xaxis[0], true, false, true, false, '');
     $xgridpx = pxToMm($xgridpxa[1] - $xgridpxa[0]);
-    for($i=1;$i<sizeof($xaxis);$i++)
+    for($i=1;$i<sizeof($xaxis)-1;$i++)
     {    
         $pdf->SetXY($startxaxis+$i*($xgridpx+1.35), 127);
         $pdf->writeHTML($xaxis[$i], true, false, true, false, '');
