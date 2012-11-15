@@ -18,6 +18,8 @@ function View(){
             height: 285,
             width: 290
         });
+
+        
     }
 
 	//Create slider

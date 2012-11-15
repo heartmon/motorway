@@ -67,7 +67,7 @@ elseif($infotype == 'texture')
 // if(!$kmend)// || (!$kmstart))
 // {
 // 	$findkm = true;
-// 	$cond = " WHERE section LIKE '{$section}'";
+ 	$cond = " WHERE section LIKE '{$section}'";
 // 	if($kmstart)
 // 		$cond .= " AND subdistance >= {$kmstart}";
 // 	if($kmend)
@@ -75,19 +75,19 @@ elseif($infotype == 'texture')
 // 		$kmendpadding = $kmend+1;
 // 		$cond .= " AND subdistance <= {$kmendpadding}";
 // 	}
-// 	//MAX-MIN calculation
-// 	$sql = "SELECT MIN(subdistance), MAX(subdistance) FROM {$infotype}".$cond;
-// 	$result = pg_query($sql);
-// 	$row = pg_fetch_assoc($result);
-// 	$max = $row['max'];
-// 	$min = $row['min'];
+	//MAX-MIN calculation
+	$sql = "SELECT MIN(subdistance), MAX(subdistance) FROM {$infotype}".$cond;
+	$result = pg_query($sql);
+	$row = pg_fetch_assoc($result);
+	$max = $row['max'];
+	$min = $row['min'];
 
-// 	if($kmstart < $min || !$kmstart)
-// 		$kmstart = $min;
-// 	if($kmend > $max || !$kmend)
-// 		$kmend = $max;
+	if($kmstart < $min || !$kmstart)
+		$kmstart = $min;
+	if($kmend > $max || !$kmend)
+		$kmend = $max;
 
-// }
+// // }
 
 $rangefix = 25;
 
@@ -129,9 +129,9 @@ $rangefix = 25;
 	//Define offset for expanding the kmend range (Ex.search 13-14 with freq.=10, it has to include 14.012 for 13.992-14.012 range)
 //	$kmendpadding = $kmend;
 	//if($kmfreq != 5)
-	//$kmendpadding = $kmend+1;
+	$kmendpadding = $kmend+1;
 
-	//$sql .= " AND rn.subdistance >= {$kmstart} AND rn.subdistance <= {$kmendpadding}";
+	$sql .= " AND rn.subdistance >= {$kmstart} AND rn.subdistance <= {$kmendpadding}";
 	$sql .= " ORDER BY subdistance ,section";
 	//echo $sql;
 

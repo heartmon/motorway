@@ -93,7 +93,7 @@ $(function (){
         $('#hdm4result').hide();
         $("#option_lane").hide();
        // $(".mainLane").hide();
-        $('#fix_range').hide();
+       // $('#fix_range').hide();
         $('#option2').hide();
         $('select[name=mainsection09]').hide();
 
@@ -329,6 +329,7 @@ $(function (){
             $('select[name=' + elem+']').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
             //$('.accessname').clone().removeClass('input-spanall').addClass('span3').appendTo('#maptoolbox #selectname').find('option').eq(index).prop('selected','selected');
             cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
+            $('#maptoolbox #mainLane').prop('multiple','multiple');
             //Hide Limited_Half and Limited_Full of HDM4
             $('select#hdm4type option').not(':first').hide();
         } else if(exptype == "4") {
@@ -348,6 +349,7 @@ $(function (){
 
             cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
             $('#maptoolbox #mainLane').prop('multiple','multiple');
+            $('#maptoolbox #mainLane').find('option:first').prop('selected','selected');
           //  mainLane(exp);
             //Hide Limited_Half and Limited_Full of HDM4
             $('select#hdm4type option').not(':first').show();
@@ -370,8 +372,15 @@ $(function (){
     //Sync mainsection
      $('#maptoolbox .mainsection, #lane_selection .mainsection').live('change', function () {
         HTMLselectTagBinding('select.mainsection', $(this), '#lane_selection select.mainsection');
+        $('#toolbox input[name=kmstart]').val(0);
+        $('#toolbox input[name=kmend]').val(2);
         controller.damageSearch(); 
     });
+
+     $('#toolbox .mainsection').live('change',function(){
+        $('#toolbox input[name=kmstart]').val('');
+        $('#toolbox input[name=kmend]').val('');
+     });
 
     //When change expressway clear kmrange
     $('select[name=expressway]').live('change', function () {
@@ -380,6 +389,8 @@ $(function (){
         var expcode = $(this).val();
         showExpType(expcode);
         showTypeDropdown(expcode, $('select[name=exptype]').val());
+        $('#toolbox input[name=kmstart]').val('');
+        $('#toolbox input[name=kmend]').val('');
     });
 
     //autofill KM for #maptoolbox
@@ -388,7 +399,7 @@ $(function (){
         {
             $("#fix_range").show();
             $('#toolbox input[name=kmstart]').val(0);
-            $('#toolbox input[name=kmend]').val(10);
+            $('#toolbox input[name=kmend]').val(2);
         }   
         controller.damageSearch(); 
     });
@@ -437,7 +448,7 @@ $(function (){
             $(this).find('option').eq(index).prop('selected', 'selected');
         });
 
-       // $("#fix_range").show();
+        $("#fix_range").show();
         g_search_info_level2['currentsection'] = g_search_info_level2['currentsection'].substr(0,9) + $(this).val();
        // g_search_info_level2['currentcode'] = $(this).find('option[value="' + $(this).val() + '"]').prop('title');
         g_search_info['exptype'] = $('select[name=exptype]').val();
@@ -467,7 +478,8 @@ $(function (){
             $("#option2").hide();
             $("#maptoolbox .mainLane").show();
             showTypeDropdown($('select[name=expressway]').val(), $(this).val());
-
+            $('#toolbox input[name=kmstart]').val(0);
+            $('#toolbox input[name=kmend]').val(2);
             //Hide Limited_Half and Limited_Full of HDM4
             $('select#hdm4type option').not(':first').show();
         } else {
@@ -475,12 +487,15 @@ $(function (){
             $("#option1").hide();
 
             showTypeDropdown($('select[name=expressway]').val(), $(this).val());
-
+            $('#toolbox input[name=kmstart]').val('');
+            $('#toolbox input[name=kmend]').val('');
             //Hide Limited_Half and Limited_Full of HDM4
             $('select#hdm4type option:first').prop('selected', 'selected');
             $('select#hdm4type option').not(':first').hide();
 
         }
+        if($(this).val() == "3")
+            $("#maptoolbox .mainLane").show();
     });
 
     $('#maptoolbox select[name=exptype]').live('change', function () {
@@ -629,7 +644,8 @@ function updateVideo(index) {
     $('.control-section').html(ctrlSection);
 
     if ($('#video-player #reel_container').is(":hidden")) {
-        var index_image = index * g_search_info_level2.kmfreq / 25 * (g_search_info_level2['kmfreq']/5);
+        //var index_image = index * g_search_info_level2.kmfreq / 25 * (g_search_info_level2['kmfreq']/25);
+        var index_image = (index * (g_search_info_level2.kmfreq / 25 )* 5);
 
         $('#video-player #thumbnail').empty();
         $('#video-player #thumbnail').html('<img src="" />');

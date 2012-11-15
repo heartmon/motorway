@@ -7,6 +7,7 @@ function Controller(){
 
 	//Public Function
 	this.damageSearch = function(){
+
 		g_hdm4search_click = false;
 		var kmstart = $('#fix_range input[name=kmstart]').val();
 		var kmend   = $('#fix_range input[name=kmend]').val();
@@ -14,10 +15,13 @@ function Controller(){
 		{
 			$('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css('border', '').css('background-color', '');
 			g_search_info.expressway = $('#toolbox select[name=expressway]').val();
-            //g_search_info.kmstart = kmstart;
-            //g_search_info.kmend = kmend;
+
             g_search_info.infotype = $('#toolbox input[name=infotype]:checked').val();
             g_search_info['exptype'] = $('#toolbox select[name=exptype]').val();
+          //  if( g_search_info['exptype'] == 1) {
+                g_search_info.kmstart = kmstart;
+                g_search_info.kmend = kmend;
+           // }
             var sectionCode = $('select.mainsection:visible').val();
 
            /* if ($("#option2").is(":visible")) {
@@ -47,17 +51,26 @@ function Controller(){
         if (g_search_info['exptype'] == "2") {
             var sectionCode = $('.enexname:visible').val();
             cloneToMap($("#toolbox .enexname:visible"), '#lane_selection');
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1')
-           // alert('what');
+            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+            g_search_info_level2.currentcode = $('.enexname:visible option[value='+sectionCode+']').html();
             this.getAllLane(false);
         } else if (g_search_info['exptype'] == "3") {
+            var sectionCode = $('.accessname:visible').val();
             cloneToMap($("#toolbox .accessname:visible"), '#lane_selection');
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1')
+            cloneToMap($("#maptoolbox #mainLane"), '#lane_selection', false, false);
+            $('#lane_selection .accessname').addClass('span2').removeClass('span3');
+            $('#lane_selection #mainLane option:first').prop('selected', 'selected');
+            $('#lane_selection #mainLane').addClass('span1').removeClass('span3');
+            $('#lane_selection .mainsection').addClass('span2').removeClass('span3');
+            $('#maptoolbox #mainLane option:first').prop('selected', 'selected');
+            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+            g_search_info_level2.currentcode = $('.accessname:visible option[value='+sectionCode+']').html();
             this.getAllLane(true);
         } else if (g_search_info['exptype'] == "4") {
             var sectionCode = $('.intersect:visible').val();
             cloneToMap($("#toolbox .intersect:visible"), '#lane_selection');
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1')
+            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+            g_search_info_level2.currentcode = $('.intersect:visible option[value='+sectionCode+']').html();
            // alert('what');
             this.getAllLane(false);
         } 
@@ -74,11 +87,12 @@ function Controller(){
             $('#maptoolbox #mainLane option:first').prop('selected', 'selected');
 
             //Formulate Section
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1')
+            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+            g_search_info_level2.currentcode = $('.mainsection:visible option[value='+sectionCode+']').html();
 
           //  g_search_info_level2['currentsection'] = $('#lane_selection select.mainLane :selected').val();
           //  g_search_info_level2['currentcode'] = $('#lane_selection select.mainLane :selected').prop('title');
-            console.log(g_search_info_level2);
+         //   console.log(g_search_info_level2);
             this.getAllLane(true);
         }
     }
@@ -87,8 +101,8 @@ function Controller(){
      this.getAllLane = function (all, isHDM4) {
         showLoading();
         // if (!isHDM4) {
-        //     g_search_info_level2['kmstart'] = g_search_info['kmstart'];
-        //     g_search_info_level2['kmend'] = g_search_info['kmend'];
+             g_search_info_level2['kmstart'] = g_search_info['kmstart'];
+             g_search_info_level2['kmend'] = g_search_info['kmend'];
         //     var section = g_search_info_level2.currentsection;
         // } else 
         if(g_hdm4search_click)
@@ -281,7 +295,10 @@ function Controller(){
             $('#search-input .expressway').html(expcodeToExpressway(g_search_info['expressway']));
             $('#search-input .infotype').html($('input[name=infotype][value='+g_search_info.infotype+']').next().html());
             $('#search-input .rangekm').html(toKm(g_data['kmstart']) + ' - ' + toKm(g_data['kmend']));
-            $('.fullname').html(toDir(g_search_info_level2['currentsection'].slice(-2))+' เลน '+g_search_info_level2['currentsection'].slice(-2));
+            var text = g_search_info_level2.currentcode + ' ' ;
+            if(g_search_info.exptype == 1 || g_search_info.exptype == 3)
+                text +=  toDir(g_search_info_level2['currentsection'].slice(-2))+' เลน '+g_search_info_level2['currentsection'].slice(-2);
+            $('.fullname').html(text);
             hideLoading();
 
             this.settingImage();
@@ -769,8 +786,8 @@ function Controller(){
 	            valid = false;
 	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
 	        }
-	        if (temp_kme - temp_kms > 10 && valid) {
-	            alert('ระยะทางต้องไม่เกิน 10 กม.');
+	        if (temp_kme - temp_kms > 2 && valid) {
+	            alert('ระยะทางต้องไม่เกิน 2 กม.');
 	            valid = false;
 	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
 	        }

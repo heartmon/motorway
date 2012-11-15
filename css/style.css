@@ -259,7 +259,7 @@ table thead
 #line-chart
 {
 	height:210px;
-	width:97%;
+	width:95%;
 }
 
 .color-orange
@@ -337,7 +337,7 @@ right: 10px;
 }
 #current_linedata {
   position:absolute;
-  right:10px;
+  right:20px;
   top:90px;
   font-size:15px;
   z-index:998;

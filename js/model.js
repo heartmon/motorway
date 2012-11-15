@@ -10,8 +10,8 @@ function Model()
             type: 'GET',
             data: {
                 //expressway: g_search_info.expressway, //only value number of expressway are sent.
-                //kmstart: g_search_info_level2['kmstart'],
-                //kmend: g_search_info_level2['kmend'],
+                kmstart: g_search_info_level2['kmstart'],
+                kmend: g_search_info_level2['kmend'],
                 infotype: infotype,
                 kmfreq: kmfreq,
                 section: section,
@@ -53,7 +53,7 @@ function Model()
             success: function (data) {
                 if (!data['error']) {
                     //Set first image to variable
-                    g_video['first_image'] = parseInt(data[0]['frameno']);
+                    g_video['first_image'] = parseInt(data[0]['frameno']) +  (g_all_result['mindis']*1000/5) ;
                     console.log(data);
                     finish_getimage = true;
 
@@ -67,6 +67,7 @@ function Model()
 
                    if (!g_hdm4search_click) {
                         $('#table1 tr').eq(0).click();
+                        scrollTable();
                     }
                    
                 } else {
