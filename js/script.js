@@ -97,6 +97,19 @@ $(function (){
         $('#option2').hide();
         $('select[name=mainsection09]').hide();
 
+        //Clone Init
+        cloneToMap($("#toolbox select[name=expressway]"), '#maptoolbox #expnametype', true);
+        cloneToMap($("#toolbox select[name=exptype]"), '#maptoolbox #expnametype', false);
+        //cloneToMap($("#toolbox .mainsection"), '#maptoolbox #selectname', false);
+        //cloneToMap($("#lane_selection select[name=mainLane]"), '#maptoolbox #selectname', true, true);
+        //Initial
+        showTypeDropdown($('select[name=expressway]').val(), $("#exptype").val());
+        showExpType($('select[name=expressway]').val());
+        //$("#maptoolbox .mainLane").show();
+        $("#maptoolbox #damage").append('<select name="infotype" class="span3 infotype"><option value="texture">ค่าพื้นผิว - Texture</option><option selected value="roughness">ค่าความขรุขระ - IRI</option><option value="rutting">ค่าร่องล้อ - Rutting</option></select>');
+        $("#maptoolbox").hide();
+
+
         $("a.video_lightbox").fancybox({
             'transitionIn': 'none',
             'transitionOut': 'none',
@@ -314,6 +327,8 @@ $(function (){
         $('.intersect').not('#lane_selection .intersect').hide();
         $('#maptoolbox #mainLane').hide();
         $('#maptoolbox .mainsection').hide();
+      //  $('#maptoolbox .mainsection').remove();
+        $('#maptoolbox #selectname').html('');
         if (exptype == "2") {
 
             var elem = "enexname" + exp;
@@ -328,7 +343,7 @@ $(function (){
             $('#maptoolbox .accessname').remove();
             $('select[name=' + elem+']').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
             //$('.accessname').clone().removeClass('input-spanall').addClass('span3').appendTo('#maptoolbox #selectname').find('option').eq(index).prop('selected','selected');
-            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
+            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname',true);
             $('#maptoolbox #mainLane').prop('multiple','multiple');
             //Hide Limited_Half and Limited_Full of HDM4
             $('select#hdm4type option').not(':first').hide();
@@ -343,11 +358,11 @@ $(function (){
         } else {
             $('#maptoolbox #mainLane').show();
             var elem = "mainsection" + exp;
-             $('#maptoolbox .mainsection').remove();
+            $('#maptoolbox .mainsection').remove();
             $('select[name=' + elem+']').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
             //$('#maptoolbox select[name=mainsection]').show();
 
-            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname');
+            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname',true);
             $('#maptoolbox #mainLane').prop('multiple','multiple');
             $('#maptoolbox #mainLane').find('option:first').prop('selected','selected');
           //  mainLane(exp);
@@ -357,18 +372,7 @@ $(function (){
 
     }
 
-    //Clone Init
-    cloneToMap($("#toolbox select[name=expressway]"), '#maptoolbox #expnametype', true);
-    cloneToMap($("#toolbox select[name=exptype]"), '#maptoolbox #expnametype', true);
-    cloneToMap($("#toolbox .mainsection"), '#maptoolbox #selectname', true);
-    cloneToMap($("#lane_selection select[name=mainLane]"), '#maptoolbox #selectname', true, true);
-    //Initial
-    showTypeDropdown($('select[name=expressway]').val(), $("#exptype").val());
-    showExpType($('select[name=expressway]').val());
-    //$("#maptoolbox .mainLane").show();
-    $("#maptoolbox #damage").append('<select name="infotype" class="span3 infotype"><option value="texture">ค่าพื้นผิว - Texture</option><option selected value="roughness">ค่าความขรุขระ - IRI</option><option value="rutting">ค่าร่องล้อ - Rutting</option></select>');
-    $("#maptoolbox").hide();
-
+    
     //Sync mainsection
      $('#maptoolbox .mainsection, #lane_selection .mainsection').live('change', function () {
         HTMLselectTagBinding('select.mainsection', $(this), '#lane_selection select.mainsection');
@@ -395,12 +399,12 @@ $(function (){
 
     //autofill KM for #maptoolbox
     $('#maptoolbox select[name=expressway]').live('change', function () {
-        if($(this).val() == "1")
-        {
-            $("#fix_range").show();
+       // if($(this).val() == "")
+       // {
+       //     $("#fix_range").show();
             $('#toolbox input[name=kmstart]').val(0);
             $('#toolbox input[name=kmend]').val(2);
-        }   
+       // }   
         controller.damageSearch(); 
     });
 
@@ -543,6 +547,9 @@ $(function (){
     $("#exportPDF").bind('click', controller.exportPDF);
     $("#hdm4pdf").bind('click', controller.exportPDFhdm4);
 
+    $("#toolbox input[name=kmstart], #toolbox input[name=kmend]").live('bind', function () {
+        $(this).css('border', '').css('background-color', '');
+    });
 });
 
 

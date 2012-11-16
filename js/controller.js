@@ -47,6 +47,8 @@ function Controller(){
         g_all_result_all_lane = {};
         console.log(sectionCode);
         $('#lane_selection').html('');
+        $('#maptoolbox #mainLane').remove();
+        
         if ($('#lane_selection').is(':hidden')) $('#lane_selection').show();
         if (g_search_info['exptype'] == "2") {
             var sectionCode = $('.enexname:visible').val();
@@ -56,35 +58,40 @@ function Controller(){
             this.getAllLane(false);
         } else if (g_search_info['exptype'] == "3") {
             var sectionCode = $('.accessname:visible').val();
-            cloneToMap($("#toolbox .accessname:visible"), '#lane_selection');
-            cloneToMap($("#maptoolbox #mainLane"), '#lane_selection', false, false);
+            cloneToMap($("#toolbox .accessname:visible"), '#lane_selection', false);
+            _showLane($('#lane_selection'), _sectionException(sectionCode));
+            cloneToMap($("#lane_selection #mainLane"), '#maptoolbox #selectname', false, false);
+            //cloneToMap($("#maptoolbox #mainLane"), '#lane_selection', false, false);
             $('#lane_selection .accessname').addClass('span2').removeClass('span3');
             $('#lane_selection #mainLane option:first').prop('selected', 'selected');
             $('#lane_selection #mainLane').addClass('span1').removeClass('span3');
             $('#lane_selection .mainsection').addClass('span2').removeClass('span3');
             $('#maptoolbox #mainLane option:first').prop('selected', 'selected');
+            $('#maptoolbox #mainLane').prop('multiple', 'multiple');
             g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
             g_search_info_level2.currentcode = $('.accessname:visible option[value='+sectionCode+']').html();
             this.getAllLane(true);
         } else if (g_search_info['exptype'] == "4") {
             var sectionCode = $('.intersect:visible').val();
+            var lanecode = sectionCode.slice(-2);
             cloneToMap($("#toolbox .intersect:visible"), '#lane_selection');
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,lanecode);
             g_search_info_level2.currentcode = $('.intersect:visible option[value='+sectionCode+']').html();
-           // alert('what');
             this.getAllLane(false);
         } 
         else {
-        //  $('#lane_selection').append('<br>ตอนควบคุม : ');
             cloneToMap($("#toolbox select.mainsection:visible"), '#lane_selection', false, false);
-        //	$('#lane_selection').append('เลน : ');
-            cloneToMap($("#maptoolbox #mainLane"), '#lane_selection', false, false);
+            _showLane($('#lane_selection'), _sectionException(sectionCode));
+            cloneToMap($("#lane_selection #mainLane"), '#maptoolbox #selectname', false, false);
+         //   cloneToMap($("#maptoolbox #mainLane"), '#lane_selection', false, false);
             $('#lane_selection #mainLane option:first').prop('selected', 'selected');
             $('#lane_selection #mainLane').addClass('span1').removeClass('span3');
 
             $('#lane_selection .mainsection').addClass('span2').removeClass('span3');
             
             $('#maptoolbox #mainLane option:first').prop('selected', 'selected');
+
+            $('#maptoolbox #mainLane').prop('multiple', 'multiple');
 
             //Formulate Section
             g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
@@ -669,6 +676,44 @@ function Controller(){
     }
 
 	//Private Function
+    _showLane = function(selector,n){
+        //selector = $('select[name=mainLane]');
+        //selector.find('option').show();
+        var htmlcode = '<select id="mainLane" name="mainLane" class="mainLane">';
+        for(var i=0; i<n; i++)
+        {
+            if(i<n/2)
+                var prefix = 'F';
+            else
+                var prefix = 'R';
+            var suffix = (i%(n/2))+1;
+            var val = prefix+suffix;
+            htmlcode += '<option value="'+val+'">'+val+'</option>';
+        }
+        htmlcode += '</select>';
+        selector.append(htmlcode);
+    }
+
+    _sectionException = function(section){
+        switch(section){
+            //2 lane
+            case "0102":
+                return 2;
+            //4 lane
+            case "0402B01":
+            case "0500B01":
+            case "0500B03":
+            case "0500B04":
+            case "0302":
+                return 4;
+            //6 lane
+            case "0500B02":
+            case "0402B02":
+                return 6;
+            default:
+                return 8;
+        }
+    }
 
     _someFunc = function (ctx, x, y, radius, shadow) {
         _someFunc.calls++;

@@ -51,22 +51,22 @@ function View(){
     //Threshold:: Color: Green ,Yellow, Red
     switch (info) {
         case "roughness":
-            var threshold1 = 2.68;
+            var threshold1 = 2.5;
             var threshold2 = 3.5;
             var color1 = "#00bb00";
             var color2 = "#FFCC00";
             var color3 = "#DC0000";
             break;
         case "rutting":
-            var threshold1 = 100;
-            var threshold2 = 100;
+            var threshold1 = 6;
+            var threshold2 = 12;
             var color1 = "#00bb00";
             var color2 = "#FFCC00";
             var color3 = "#DC0000";
             break;
         case "texture":
-            var threshold1 = 0.3;
-            var threshold2 = "";
+            var threshold1 = 100;
+            var threshold2 = 100;
             var color1 = "#00bb00";
             var color2 = "#FFCC00";
             var color3 = "#DC0000";
@@ -85,7 +85,7 @@ function View(){
     //Cutting infotype string Ex From **** - Skid to only Skid
     var typecut = getAbbInfoType(g_search_info.infotype);//.substr(g_search_info.infotype.indexOf("-") + 2);
     //Plot Graph
-    if (info == "roughness") {
+    if (info == "roughness" || info == "rutting") {
         plot = $.plot($("#line-chart"), [{
             data: g_linedata,
             color: color2,
@@ -139,16 +139,16 @@ function View(){
             },
             threshold: {
                 below: {
-                    limit: 2.5,
+                    limit: threshold1,
                     color: color1
                 },
                 above: {
-                    limit: 3.5,
+                    limit: threshold2,
                     color: color3
                 }
             }
         }], g_options);
-    } else if (info == "texture") //one threshold
+    } else if (info == "xxxxx") //one threshold
     {
         plot = $.plot($("#line-chart"), [
         //{ data:g_linedata, color:color2, threshold: {above: {limit: threshold2, color:color3} }},

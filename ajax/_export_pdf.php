@@ -243,19 +243,21 @@ if($pdftype == "damage")
         */
         $cond = $infotype;
         if($cond == 'ค่าความขรุขระ - IRI') {
-		    if($data_inrange[$count][1] < 2.68)
+		    if($data_inrange[$count][1] < 2.5)
 		    	$html .= '<tr style="background-color: #c6efce;color:#006100">'; 
-		    else if($data_inrange[$count][1] >= 2.68 and $data_inrange[$count][1] < 3.5)
+		    else if($data_inrange[$count][1] >= 2.5 and $data_inrange[$count][1] < 3.5)
 		    	$html .= '<tr style="background-color: #ffeb9c;color:#8e5c00">';
 		    else if($data_inrange[$count][1] >= 3.5)
 		    	$html .= '<tr style="background-color: #ffc7ce;color:#a41118">';        
         } else if($cond == 'ค่าร่องล้อ - Rutting') {
-		    $html .= '<tr style="background-color: #c6efce">'; 
-        } else if($cond == 'ค่าความฝืด - Skid') {
-        	if($data_inrange[$count][1] > 0.3)
-        		$html .= '<tr style="background-color: #c6efce">'; 
-        	if($data_inrange[$count][1] <= 0.3)
-        		$html .= '<tr style="background-color: #ffc7ce">'; 
+		    if($data_inrange[$count][1] < 6)
+                $html .= '<tr style="background-color: #c6efce;color:#006100">'; 
+            else if($data_inrange[$count][1] >= 6 and $data_inrange[$count][1] < 12)
+                $html .= '<tr style="background-color: #ffeb9c;color:#8e5c00">';
+            else if($data_inrange[$count][1] >= 12)
+                $html .= '<tr style="background-color: #ffc7ce;color:#a41118">';   
+        } else if($cond == 'ค่าพื้นผิว - Texture') {
+        	$html .= '<tr style="background-color: #c6efce">'; 
         } else {
         	$html .= '<tr>';
         }  
