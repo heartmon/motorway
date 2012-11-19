@@ -22,7 +22,7 @@ $csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
 	
 	$q = "update {$tbl} set mark = 'start' where subdistance = 0";
 	retrieve($q);
-	$q = "update {$tbl} set type = '4' where type is null";
+	$q = "update {$tbl} set type = '1' where type is null";
 	retrieve($q);
 	$q = "update {$tbl} set the_geom = ST_GeometryFromText('SRID=4326;POINT(' || long || ' ' || lat || ')') where the_geom is null";
 	retrieve($q);

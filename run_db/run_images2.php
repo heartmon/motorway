@@ -13,9 +13,7 @@ $csv_img = "C:/WAPP/apache2/htdocs/ddd/run_db/";
 if($tbl == "images") {
 	//Get All Distinct Section
 	$sql = 'select distinct section from images_copy order by section';
-	//$sections = retrieve($sql);
-	$sections[0] = '090500532F1';
-	$sections[1] = '070101314F1';
+	$sections = retrieve($sql);
 	
 	for($i=0;$i<sizeof($sections)-1;$i++)
 	{

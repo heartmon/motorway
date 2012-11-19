@@ -8,7 +8,7 @@ function sliderSyncWithVideo(ui)
 	l += g_search_info_level2['kmfreq']/25;
    	if(l > g_video['length']+1)
    		l = g_video['length']+1;
-   	if(reverse)
+   	if(false) //reverse
    	{
    		$('#videoslider').slider( "values" , 0, $( "#videoslider" ).slider( "option", "max" ) - l + 1);
 		$('#videoslider').slider( "values" , 1, $( "#videoslider" ).slider( "option", "max" ) - ui.values[0]*g_all_result['offset'] - 1);
@@ -29,7 +29,7 @@ function updateVideoData() {
 		{
 			if(g_hdm4search_click)
 				var index = g_all_result['usedlength'] - $('#videoslider').slider( "values" , 0);
-			else if(reverse)
+			else if(false) //reverse
 				var index = g_all_result['usedlength'] - $('#videoslider').slider( "values" , 0) + 1;
 			else
 				var index = $('#videoslider').slider( "values" , 0)-1;
@@ -60,7 +60,7 @@ function updateVideoRange()
 	var start = $('#videoslider').slider( "values" , 0) -1 ;
 	var end = $('#videoslider').slider( "values" , 1)-1;
 
-	if(reverse)
+	if(false) //reverse
 	{
 		start =  g_all_result['usedlength']  - start;
 		end =  g_all_result['usedlength']  - end;
