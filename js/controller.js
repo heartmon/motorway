@@ -712,7 +712,11 @@ function Controller(){
                 return 4;
             //6 lane
           //  case "0500B02":
+<<<<<<< HEAD
          //   case "0402B02":
+=======
+         //    case "0402B02":
+>>>>>>> branch1
                 return 6;
             default:
                 return 8;

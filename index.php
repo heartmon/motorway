@@ -189,7 +189,11 @@
 								<option value="0500B01">ทางแยกต่างระดับคลองกุ่ม</option>	
 								<option value="0500B02">ทางแยกต่างระดับสุขาภิบาล 3</option>	
 								<option value="0500B03">ทางแยกต่างระดับทับช้าง</option>	
+<<<<<<< HEAD
 							<!--	<option value="0500B04">ทางแยกต่างระดับอ่อนนุช</option>-->
+=======
+								<option value="0500B04">ทางแยกต่างระดับอ่อนนุช</option>
+>>>>>>> branch1
 							</select>
 							<select name="enexname07" class="input-spanall enexname">
 								<option value="0101U01">สะพานลอยกลับรถ กม.เริ่มต้นที่ 1.5 - 1.7</option>
