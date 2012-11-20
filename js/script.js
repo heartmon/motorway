@@ -414,8 +414,9 @@ $(function (){
     });
 
     //Sync accessname
-    $('select[name=accessname]').live('change', function () {
-        HTMLselectTagBinding('select[name=' + $(this).prop('id') + ']', $(this), '#lane_selection .accessname');
+    $('select.accessname').live('change', function () {
+       // HTMLselectTagBinding('select[name=' + $(this).prop('id') + ']', $(this), '#lane_selection .accessname');
+       HTMLselectTagBinding('select.accessname', $(this), '#lane_selection select.accessname');
     });
 
     //Sync intersect
