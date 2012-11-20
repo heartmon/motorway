@@ -58,7 +58,9 @@ function Controller(){
             this.getAllLane(false);
         } else if (g_search_info['exptype'] == "3") {
             var sectionCode = $('.accessname:visible').val();
-            cloneToMap($("#toolbox .accessname:visible"), '#lane_selection', false);
+            // console.log($('#lane_selection select.accessname'));
+            //if($('#lane_selection select.accessname'))
+                cloneToMap($("#toolbox select.accessname:visible"), '#lane_selection', false, false);
             _showLane($('#lane_selection'), _sectionException(sectionCode));
             cloneToMap($("#lane_selection #mainLane"), '#maptoolbox #selectname', false, false);
             //cloneToMap($("#maptoolbox #mainLane"), '#lane_selection', false, false);
@@ -705,10 +707,12 @@ function Controller(){
             case "0500B03":
             case "0500B04":
             case "0302":
+            case "0402B02":
+            case "0500B02":
                 return 4;
             //6 lane
-            case "0500B02":
-            case "0402B02":
+          //  case "0500B02":
+         //    case "0402B02":
                 return 6;
             default:
                 return 8;
