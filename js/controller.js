@@ -11,6 +11,7 @@ function Controller(){
 		g_hdm4search_click = false;
 		var kmstart = $('#fix_range input[name=kmstart]').val();
 		var kmend   = $('#fix_range input[name=kmend]').val();
+        //g_search_info.infotype = $('#toolbox input[name=infotype]:checked').val();
 		if(_formValidation(kmstart,kmend))
 		{
 			$('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css('border', '').css('background-color', '');
@@ -98,7 +99,7 @@ function Controller(){
     }
 
     this.setupPavement = function(data){
-
+        qtip.removeAllFeatures();
         g_pavement = data;
         g_search_info_level2.currentsection = data[0]['section'];
         var headers = {'ตอนควบคุม: ': g_search_info_level2.currentcode+' ('+g_search_info_level2.currentsection+')', 'สายทาง: ':toExpressName(g_search_info.expressway)};

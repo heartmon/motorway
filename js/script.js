@@ -108,7 +108,7 @@ $(function (){
         showTypeDropdown($('select[name=expressway]').val(), $("#exptype").val());
         showExpType($('select[name=expressway]').val());
         //$("#maptoolbox .mainLane").show();
-        $("#maptoolbox #damage").append('<select name="infotype" class="span3 infotype"><option value="texture">ค่าพื้นผิว - Texture</option><option selected value="roughness">ค่าความขรุขระ - IRI</option><option value="rutting">ค่าร่องล้อ - Rutting</option><option value="pavement">Pavement</option</select>');
+        $("#maptoolbox #damage").append('<select name="infotype" class="span3 infotype"><option value="texture">ค่าพื้นผิว - Texture</option><option selected value="roughness">ค่าความขรุขระ - IRI</option><option value="rutting">ค่าร่องล้อ - Rutting</option></select>');
         $("#maptoolbox").hide();
 
 
@@ -293,6 +293,7 @@ $(function (){
         $('#toggle-map-display, #maximize-map-display, #video-map-display').css('bottom', '');
     });
 
+
     //================== Toolbox Maptoolbox Sync ========================
 
     //Sync Select input
@@ -442,8 +443,21 @@ $(function (){
         controller.damageSearch(); 
     });
 
+    $('select[name=infotype], input[name=infotype]').live('change', function () {
+        var info = $(this).prop('value');
+        console.log(info);
+        $('input[name=infotype][value=' + info + ']').prop('checked', 'checked');
+        $('select[name=infotype] option[value=' + info + ']').prop('selected', 'selected');
+    });
+
     $('#maptoolbox select[name=infotype]').live('change', function () {
-        if ($("#main_content").is(":hidden")) {
+        //g_search_info.infotype = $('#maptoolbox select[name=infotype]:checked').val();
+        if ($("#main_content").is(":hidden") || $("#damagesearch").is(":hidden")) {
+            if($('#toolbox input[name=kmstart]').val() == '' ||$('#toolbox input[name=kmend]').val() == '')
+            {
+                $('#toolbox input[name=kmstart]').val('0');
+                $('#toolbox input[name=kmend]').val('2');
+            }
             controller.damageSearch(); 
         } else {
             g_search_info['infotype'] = $(this).find('option:selected').val();
@@ -472,14 +486,6 @@ $(function (){
         g_search_info_level2['currentsection'] = g_search_info_level2['currentsection'].substr(0,9) + $(this).val();
         //g_search_info['exptype'] = $('select[name=exptype]').val();
         controller.searchPavement();
-    });
-
-
-    $('select[name=infotype], input[name=infotype]').live('change', function () {
-        var info = $(this).prop('value');
-        console.log(info);
-        $('input[name=infotype][value=' + info + ']').prop('checked', 'checked');
-        $('select[name=infotype] option[value=' + info + ']').prop('selected', 'selected');
     });
 
 
@@ -578,6 +584,18 @@ $(function (){
     $("#toolbox input[name=kmstart], #toolbox input[name=kmend]").live('bind', function () {
         $(this).css('border', '').css('background-color', '');
     });
+
+    //Pavement
+    $('#pavement_table tbody tr').live('click',function(){
+        var index = $(this).parent().children().index($(this));
+        //Highlight table when click
+        $('#pavement_table tbody tr.table_highlight').removeClass("table_highlight");
+        $('#pavement_table tbody tr').eq(index).addClass('table_highlight');
+        console.log(g_pavement[index]['lat']);
+        console.log(g_pavement[index]['long']);
+        //addPoints();
+    });
+
 
     //HDM4
     $('#hdm4table tbody tr td').live('click', function () {
