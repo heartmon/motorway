@@ -28,6 +28,7 @@ var g_search_info_level2 = {
     currentsection: "",
     currentcode: ""
 };
+var g_pavement = {};
 var g_hdm4_search = {
     expressway: "",
     year: "",
@@ -38,6 +39,7 @@ var g_hdm4_search = {
     dropdownOrder: ""
 };
 var g_hdm4_data_result = [];
+var g_pavement_array = [];
 var _kmfreq = [25, 50, 100, 500, 1000];
 var _rangefix = 25;
 var g_imageset;
@@ -106,7 +108,7 @@ $(function (){
         showTypeDropdown($('select[name=expressway]').val(), $("#exptype").val());
         showExpType($('select[name=expressway]').val());
         //$("#maptoolbox .mainLane").show();
-        $("#maptoolbox #damage").append('<select name="infotype" class="span3 infotype"><option value="texture">ค่าพื้นผิว - Texture</option><option selected value="roughness">ค่าความขรุขระ - IRI</option><option value="rutting">ค่าร่องล้อ - Rutting</option></select>');
+        $("#maptoolbox #damage").append('<select name="infotype" class="span3 infotype"><option value="texture">ค่าพื้นผิว - Texture</option><option selected value="roughness">ค่าความขรุขระ - IRI</option><option value="rutting">ค่าร่องล้อ - Rutting</option><option value="pavement">Pavement</option</select>');
         $("#maptoolbox").hide();
 
 
@@ -210,11 +212,15 @@ $(function (){
 
         //clone
         $("#maptoolbox").show();
+        $("#search-input").hide();
+        $(".errorreport").hide();
         $('#maptoolbox #mainLane option').prop('selected', '');
         $('#maptoolbox #mainLane option').eq($('#lane_selection #mainLane option:selected').index()).prop('selected', 'selected');
 
     }, function () {
         $("#maptoolbox").hide();
+        $("#search-input").show();
+        $(".errorreport").show();
         $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display').removeClass('maximize');
         $('#container_map, #map').css('width', '');
         $('#container_map, #map').css('height', '');
@@ -227,7 +233,6 @@ $(function (){
             qtip.removeAllFeatures();
             addPoints(g_all_result);
         }
-
     });
 
     $('#container_map, #toggle-map-display, #maximize-map-display, #video-map-display').hover(function () {
@@ -463,6 +468,13 @@ $(function (){
             controller.activatedResult(g_all_result_all_lane[$(this).val()]);
     });
 
+    $('#pavement_lane #mainLane').live('change', function(){
+        g_search_info_level2['currentsection'] = g_search_info_level2['currentsection'].substr(0,9) + $(this).val();
+        //g_search_info['exptype'] = $('select[name=exptype]').val();
+        controller.searchPavement();
+    });
+
+
     $('select[name=infotype], input[name=infotype]').live('change', function () {
         var info = $(this).prop('value');
         console.log(info);
@@ -524,6 +536,7 @@ $(function (){
         updateVertical(nearest);
         highlightTable(nearest);
         updateCurrentVar(nearest);
+        map.setCenter(new OpenLayers.LonLat(g_current_var['longi'], g_current_var['lat']).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()));
         //reelUpdate(nearest);
 
         //Update Scroll Bar of Data Table No.1
@@ -541,15 +554,124 @@ $(function (){
         var head = expressway + ";;" + $("#yearbudget .hdm4year").html() + ";;" + $("#yearbudget .hdm4type").html() + ";;" + $("#totalcost").html();
         $("#genexcel input[name=head]").val(head);
         $("#genexcel input[name=exceldata]").val(g_hdm4_data_result.join(";;"));
-        $("#genexcel").submit();
+        $("#genexcel:visible").submit();
+        return false;
+    });
+
+    $('#pavementexcel').bind('click', function(){
+        var columns = view.getPavementColumns();
+        var head = toExpressName(g_search_info.expressway)+";;"+g_search_info_level2.currentsection+";;"+g_search_info_level2.currentcode;
+       // var columns
+        columns = columns.join(";;");
+        var data = g_pavement_array.join(";;");
+        $("#genexcel input[name=head]").val(head);
+        $("#genexcel input[name=exceldata]").val(data);
+        $("#genexcel input[name=columns]").val(columns);
+        $("#genexcel:visible").submit();
         return false;
     });
 
     $("#exportPDF").bind('click', controller.exportPDF);
     $("#hdm4pdf").bind('click', controller.exportPDFhdm4);
+    $("#pavementpdf").bind('click', controller.exportPDFPavement);
 
     $("#toolbox input[name=kmstart], #toolbox input[name=kmend]").live('bind', function () {
         $(this).css('border', '').css('background-color', '');
+    });
+
+    //HDM4
+    $('#hdm4table tbody tr td').live('click', function () {
+        if ($(this).find('i').hasClass('icon-facetime-video')) {
+            $("a.video_lightbox").click();
+        }
+        if (!$(this).parent().hasClass('table_highlight')) {
+            var index = $(this).parent().parent().children().index($(this).parent());
+
+            //Highlight table when click
+            $('#hdm4table tbody tr.table_highlight').removeClass("table_highlight");
+            $('#hdm4table tbody tr').eq(index).addClass('table_highlight');
+
+            var tablerow = $(this).parent().find('td');
+            var allyear = 0;
+            if (g_hdm4_search['year'] == 'all') 
+                allyear = 1;
+
+            //Extract data from HDM4 table for video data
+            var hdm4kmstart = parseFloat(tablerow.eq(1 + allyear).html().replace('+', '.'));
+            var hdm4kmend = parseFloat(tablerow.eq(2 + allyear).html().replace('+', '.'));
+            var dir = tablerow.eq(3 + allyear).html();
+            var lane = tablerow.eq(4 + allyear).html();
+
+            var year = g_hdm4_search['year'];
+            var workdes = tablerow.eq(5 + allyear).html();
+            var cost = tablerow.eq(6 + allyear).html();
+
+            var hdm4current = {
+                year: year,
+                workdes: workdes,
+                cost: cost
+            };
+            g_current_var['hdm4'] = hdm4current;
+            $('#videoinfo #video_infotype').html(g_current_var['hdm4']['workdes']);
+            if (g_hdm4_search['exptype'] == 1) {
+                //Extract
+                switch (dir) {
+                    case "ขาเข้า":
+                        dir = "R";
+                        break;
+                    case "ขาออก":
+                        dir = "F";
+                        break;
+                }
+                switch (lane) {
+                    case "ซ้าย":
+                        lane = "03";
+                        break;
+                    case "กลาง":
+                        lane = "02";
+                        break;
+                    case "ขวา":
+                        lane = "01";
+                        break;
+                }
+                //Add case for enex and access (abb_exp = section)
+                var abb_exp = g_hdm4_search['expressway'];
+                if (abb_exp == "0102" || abb_exp == "0101") {
+                    //find specialcase for that section
+                    var spcase = 8;
+                    if (spcase < hdm4kmstart) 
+                        var section = '0102' + "%" + dir + lane; 
+                    else 
+                        var section = '0101' + "%" + dir + lane;
+                } 
+                else 
+                    var section = abb_exp + "%" + dir + lane;
+            } 
+            else {
+                var section;
+                if (g_hdm4_search['exptype'] == 3) {
+                    section = $('#toolbox select#accessname option').eq(g_hdm4_search['dropdownOrder']).val();
+                } else {
+                    section = $('#toolbox select.enexname:visible option').eq(g_hdm4_search['dropdownOrder']).val();
+                }
+            }
+            //console.log(hdm4kmstart+"=="+hdm4kmend+"=="+section);
+            hdm4Click(hdm4kmstart, hdm4kmend, section)
+            zoomCoor();
+        }
+    });
+
+   // $('#search_hdm4_button').bind('click', hdm4Search);
+
+    //HDM4 year dropdown
+    $('#hdm4yeardropdown a').bind('click', function () {
+        var y = $(this).html();
+        if (y != 'ทุกปี') y = parseInt(y) - 543;
+        else y = 'all';
+        g_hdm4_search['year'] = y;
+        //$('input:radio[name=hdm4year][value='+y+']').prop('checked',true);
+        ajaxhdm4();
+        return false;
     });
 });
 
@@ -782,6 +904,9 @@ function errorReport(errmsg) {
     $('.container').prepend(htmlcode);
     //$('div.errorreport').css('top',$('body').scrollTop()-100);
     $('div.errorreport:first').css('z-index', 3000 + noreport);
+    $(".alert-error").click(function(){
+        $(this).remove();
+    });
 }
 
 //======================= KmFreq Function ===================================

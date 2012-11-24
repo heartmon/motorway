@@ -1,12 +1,57 @@
 <?php
 if(isset($_POST['exceldata']))
 {
-	//echo '<link rel="stylesheet" type="text/css" href="css/style.css">';
 	$file="report.xls";
-	$exceldata= $_POST['exceldata'];
-	$head = explode(";;",$_POST['head']);
 	header("Content-type: application/vnd.ms-excel");
 	header("Content-Disposition: attachment; filename=$file");
+	$type = $_POST['type'];
+	//echo '<link rel="stylesheet" type="text/css" href="css/style.css">';
+	if($type == "pavement")
+	{	
+		$exceldata= $_POST['exceldata'];
+		$head = explode(";;",$_POST['head']);
+		$columns = explode(";;",$_POST['columns']);
+		echo '<h1>Pavement Result</h1>
+		<h3>สายทาง: <span class="expressway color-orange">'.$head[0].'</span></h3>
+		<h3>ตอนควบคุม: <span class="expressway color-orange">'.$head[2].' ('.$head[1].')</span></h3>';
+
+		$tableheader = "<table border=1 cellpadding='5'><tr><th width=60>ลำดับที่</th>";
+		for($i = 0 ; $i < sizeof($columns) ; $i++)
+		{
+			$tableheader .= '<th style="text-align:center">';
+			$tableheader .= $columns[$i];
+			$tableheader .= '</th>';
+		}
+		$tableheader .= "</tr>";
+		echo $tableheader;
+		$html = "";
+		for($i=0;$i<sizeof($exceldata);$i++)
+		{
+			$temp = explode(",", $exceldata[$i]);
+			$html .= '<tr>';
+			$html .= '<td align="center">'.($i+1).'</td>';
+	        $html .= '<td align="center">'.$temp[0].'</td>';
+	        $html .= '<td align="center">'.$temp[1].'</td>';
+	        $html .= '<td align="center">'.$temp[2].'</td>';
+	        $html .= '<td align="center">'.$temp[3].'</td>';
+	        $html .= '<td align="center">'.$temp[4].'</td>';
+	        $html .= '<td align="center">'.$temp[5].'</td>';
+	        $html .= '<td align="center">'.$temp[6].'</td>';
+	        //$html .= '<td align="center">'.$temp[5].'</td>';
+	        $html .= '</tr>';
+		}
+		//echo $exceldata;
+		echo $html;
+		echo '</table>';
+		//echo $head[4];
+	}
+	else {
+
+	
+	
+	$exceldata= $_POST['exceldata'];
+	$head = explode(";;",$_POST['head']);
+	
 	//echo '<h1>HDM4 Result</h1>'
 	echo '<h1>HDM4 Result</h1>
 	<h3>สายทาง: <span class="expressway color-blue">'.$head[0].'</span></h3>
@@ -42,5 +87,7 @@ if(isset($_POST['exceldata']))
 	echo $html;
 	echo '</table>';
 	echo $head[4];
+	}
 }
+
 ?>

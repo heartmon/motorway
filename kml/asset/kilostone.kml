@@ -1,0 +1,2147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>kilostone</name>
+<Schema name="kilostone" id="kilostone">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="no" type="int"></SimpleField>
+	<SimpleField name="framekey" type="string"></SimpleField>
+	<SimpleField name="link_id" type="string"></SimpleField>
+	<SimpleField name="distance" type="float"></SimpleField>
+	<SimpleField name="sta" type="float"></SimpleField>
+	<SimpleField name="lane" type="string"></SimpleField>
+	<SimpleField name="surveydate" type="string"></SimpleField>
+	<SimpleField name="latitude" type="float"></SimpleField>
+	<SimpleField name="longitude" type="float"></SimpleField>
+	<SimpleField name="message" type="string"></SimpleField>
+	<SimpleField name="gid" type="int"></SimpleField>
+</Schema>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1481764825786</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">1.489</SimpleData>
+		<SimpleData name="sta">0.861</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.739478</SimpleData>
+		<SimpleData name="longitude">100.651491</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3335</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.651491,13.739478</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1481764910396</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">2.484</SimpleData>
+		<SimpleData name="sta">1.856</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.737451</SimpleData>
+		<SimpleData name="longitude">100.660431</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3338</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.660431,13.737451</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1481764993019</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">3.486</SimpleData>
+		<SimpleData name="sta">2.858</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.736593</SimpleData>
+		<SimpleData name="longitude">100.669641</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3341</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.669641,13.736593</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1481765074846</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">4.489</SimpleData>
+		<SimpleData name="sta">3.861</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.735273</SimpleData>
+		<SimpleData name="longitude">100.678812</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3345</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.678812,13.735273</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">15</SimpleData>
+		<SimpleData name="framekey">1481765156463</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">5.485</SimpleData>
+		<SimpleData name="sta">4.857</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.734321</SimpleData>
+		<SimpleData name="longitude">100.687971</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3349</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.687971,13.734321</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">22</SimpleData>
+		<SimpleData name="framekey">1481765242525</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">6.488</SimpleData>
+		<SimpleData name="sta">5.86</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733266</SimpleData>
+		<SimpleData name="longitude">100.697171</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3356</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.697171,13.733266</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">24</SimpleData>
+		<SimpleData name="framekey">1481765324937</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">7.489</SimpleData>
+		<SimpleData name="sta">6.861</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.732259</SimpleData>
+		<SimpleData name="longitude">100.706371</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3358</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.706371,13.732259</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">27</SimpleData>
+		<SimpleData name="framekey">1481765405721</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">8.493</SimpleData>
+		<SimpleData name="sta">7.865</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.73125</SimpleData>
+		<SimpleData name="longitude">100.71559</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3361</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.71559,13.73125</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">30</SimpleData>
+		<SimpleData name="framekey">1481765483626</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">9.481</SimpleData>
+		<SimpleData name="sta">8.853</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730258</SimpleData>
+		<SimpleData name="longitude">100.724661</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3364</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.724661,13.730258</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">33</SimpleData>
+		<SimpleData name="framekey">1481765562946</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">10.493</SimpleData>
+		<SimpleData name="sta">9.865</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729294</SimpleData>
+		<SimpleData name="longitude">100.733963</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3367</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.733963,13.729294</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">39</SimpleData>
+		<SimpleData name="framekey">1481765640265</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">11.487</SimpleData>
+		<SimpleData name="sta">10.859</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729524</SimpleData>
+		<SimpleData name="longitude">100.743147</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3373</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.743147,13.729524</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">43</SimpleData>
+		<SimpleData name="framekey">1481765719095</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">12.488</SimpleData>
+		<SimpleData name="sta">11.86</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729746</SimpleData>
+		<SimpleData name="longitude">100.752392</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3377</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.752392,13.729746</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">46</SimpleData>
+		<SimpleData name="framekey">1481765801062</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">13.485</SimpleData>
+		<SimpleData name="sta">12.857</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730854</SimpleData>
+		<SimpleData name="longitude">100.761485</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3380</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.761485,13.730854</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">52</SimpleData>
+		<SimpleData name="framekey">1481765885833</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">14.49</SimpleData>
+		<SimpleData name="sta">13.863</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.732038</SimpleData>
+		<SimpleData name="longitude">100.770649</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3386</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.770649,13.732038</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">54</SimpleData>
+		<SimpleData name="framekey">1481765964665</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">15.494</SimpleData>
+		<SimpleData name="sta">14.866</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.732168</SimpleData>
+		<SimpleData name="longitude">100.779922</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3388</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.779922,13.732168</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">55</SimpleData>
+		<SimpleData name="framekey">1481766042536</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">16.493</SimpleData>
+		<SimpleData name="sta">15.865</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.73281</SimpleData>
+		<SimpleData name="longitude">100.789119</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3389</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.789119,13.73281</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">58</SimpleData>
+		<SimpleData name="framekey">1481766120999</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">17.492</SimpleData>
+		<SimpleData name="sta">16.864</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733814</SimpleData>
+		<SimpleData name="longitude">100.798296</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3392</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.798296,13.733814</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">61</SimpleData>
+		<SimpleData name="framekey">1481766198067</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">18.494</SimpleData>
+		<SimpleData name="sta">17.867</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.73299</SimpleData>
+		<SimpleData name="longitude">100.807304</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3395</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.807304,13.73299</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">63</SimpleData>
+		<SimpleData name="framekey">1481766277817</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">19.487</SimpleData>
+		<SimpleData name="sta">18.86</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.725769</SimpleData>
+		<SimpleData name="longitude">100.812458</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3397</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.812458,13.725769</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">66</SimpleData>
+		<SimpleData name="framekey">1481766356276</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">20.482</SimpleData>
+		<SimpleData name="sta">19.854</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.717668</SimpleData>
+		<SimpleData name="longitude">100.81644</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3400</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.81644,13.717668</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">68</SimpleData>
+		<SimpleData name="framekey">1481766439301</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">21.493</SimpleData>
+		<SimpleData name="sta">20.865</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.709432</SimpleData>
+		<SimpleData name="longitude">100.820483</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3402</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.820483,13.709432</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">73</SimpleData>
+		<SimpleData name="framekey">1481766603779</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">23.498</SimpleData>
+		<SimpleData name="sta">22.995</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.693127</SimpleData>
+		<SimpleData name="longitude">100.828507</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3871</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.828507,13.693127</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">76</SimpleData>
+		<SimpleData name="framekey">1481766688659</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">24.5</SimpleData>
+		<SimpleData name="sta">23.996</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.684971</SimpleData>
+		<SimpleData name="longitude">100.832517</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3874</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.832517,13.684971</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">80</SimpleData>
+		<SimpleData name="framekey">1481766767156</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">25.501</SimpleData>
+		<SimpleData name="sta">24.998</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.676825</SimpleData>
+		<SimpleData name="longitude">100.836525</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3878</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.836525,13.676825</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">83</SimpleData>
+		<SimpleData name="framekey">1481766913776</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">26.508</SimpleData>
+		<SimpleData name="sta">26.004</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.670533</SimpleData>
+		<SimpleData name="longitude">100.842992</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3881</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.842992,13.670533</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">86</SimpleData>
+		<SimpleData name="framekey">1481767000481</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">27.503</SimpleData>
+		<SimpleData name="sta">27</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.665628</SimpleData>
+		<SimpleData name="longitude">100.850666</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3884</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.850666,13.665628</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">89</SimpleData>
+		<SimpleData name="framekey">1481767079200</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">28.507</SimpleData>
+		<SimpleData name="sta">28.003</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.660651</SimpleData>
+		<SimpleData name="longitude">100.858412</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3887</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.858412,13.660651</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">94</SimpleData>
+		<SimpleData name="framekey">1481767167455</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">29.581</SimpleData>
+		<SimpleData name="sta">29.078</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.655326</SimpleData>
+		<SimpleData name="longitude">100.866708</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3892</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.866708,13.655326</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">95</SimpleData>
+		<SimpleData name="framekey">1481767240765</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">30.506</SimpleData>
+		<SimpleData name="sta">30.003</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.650743</SimpleData>
+		<SimpleData name="longitude">100.873846</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3893</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.873846,13.650743</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">98</SimpleData>
+		<SimpleData name="framekey">1481767320380</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">31.509</SimpleData>
+		<SimpleData name="sta">31.005</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.645774</SimpleData>
+		<SimpleData name="longitude">100.881579</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3896</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.881579,13.645774</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">100</SimpleData>
+		<SimpleData name="framekey">1481767409246</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">32.584</SimpleData>
+		<SimpleData name="sta">32.08</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.640449</SimpleData>
+		<SimpleData name="longitude">100.889875</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3898</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.889875,13.640449</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">104</SimpleData>
+		<SimpleData name="framekey">1481767484109</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">33.51</SimpleData>
+		<SimpleData name="sta">33.007</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.635859</SimpleData>
+		<SimpleData name="longitude">100.897031</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3902</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.897031,13.635859</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">105</SimpleData>
+		<SimpleData name="framekey">1481767564524</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">34.514</SimpleData>
+		<SimpleData name="sta">34.01</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.630893</SimpleData>
+		<SimpleData name="longitude">100.904774</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3903</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.904774,13.630893</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">110</SimpleData>
+		<SimpleData name="framekey">1481767646192</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">35.512</SimpleData>
+		<SimpleData name="sta">35.008</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.625954</SimpleData>
+		<SimpleData name="longitude">100.912478</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3908</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.912478,13.625954</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">111</SimpleData>
+		<SimpleData name="framekey">1481767728299</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">36.511</SimpleData>
+		<SimpleData name="sta">36.007</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.621005</SimpleData>
+		<SimpleData name="longitude">100.920187</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3909</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.920187,13.621005</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">115</SimpleData>
+		<SimpleData name="framekey">1481767806411</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">37.502</SimpleData>
+		<SimpleData name="sta">36.998</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.616098</SimpleData>
+		<SimpleData name="longitude">100.927835</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3913</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.927835,13.616098</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">117</SimpleData>
+		<SimpleData name="framekey">1481767884696</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">38.509</SimpleData>
+		<SimpleData name="sta">38.006</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.611103</SimpleData>
+		<SimpleData name="longitude">100.935612</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">3915</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.935612,13.611103</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1559084149685</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">1.446</SimpleData>
+		<SimpleData name="sta">39.013</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.606079</SimpleData>
+		<SimpleData name="longitude">100.943438</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4273</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.943438,13.606079</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1559084231654</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">2.445</SimpleData>
+		<SimpleData name="sta">40.012</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.60113</SimpleData>
+		<SimpleData name="longitude">100.951141</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4276</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.951141,13.60113</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1559084311586</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">3.445</SimpleData>
+		<SimpleData name="sta">41.012</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.596172</SimpleData>
+		<SimpleData name="longitude">100.958854</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4279</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.958854,13.596172</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">10</SimpleData>
+		<SimpleData name="framekey">1559084392772</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">4.448</SimpleData>
+		<SimpleData name="sta">42.015</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.590435</SimpleData>
+		<SimpleData name="longitude">100.965944</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4280</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.965944,13.590435</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1559084471331</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">5.42</SimpleData>
+		<SimpleData name="sta">42.987</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.583651</SimpleData>
+		<SimpleData name="longitude">100.97164</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4281</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.97164,13.583651</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">15</SimpleData>
+		<SimpleData name="framekey">1559084555568</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">6.451</SimpleData>
+		<SimpleData name="sta">44.018</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.576464</SimpleData>
+		<SimpleData name="longitude">100.977678</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4285</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.977678,13.576464</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">18</SimpleData>
+		<SimpleData name="framekey">1559084634753</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">7.443</SimpleData>
+		<SimpleData name="sta">45.009</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.569545</SimpleData>
+		<SimpleData name="longitude">100.983489</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4288</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.983489,13.569545</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">21</SimpleData>
+		<SimpleData name="framekey">1559084716576</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">8.448</SimpleData>
+		<SimpleData name="sta">46.015</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.56253</SimpleData>
+		<SimpleData name="longitude">100.989383</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4291</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.989383,13.56253</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">25</SimpleData>
+		<SimpleData name="framekey">1559084799168</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">9.459</SimpleData>
+		<SimpleData name="sta">47.025</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.555484</SimpleData>
+		<SimpleData name="longitude">100.995295</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4295</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.995295,13.555484</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">28</SimpleData>
+		<SimpleData name="framekey">1559084957264</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">11.452</SimpleData>
+		<SimpleData name="sta">49.019</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.541586</SimpleData>
+		<SimpleData name="longitude">101.006981</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4298</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.006981,13.541586</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">29</SimpleData>
+		<SimpleData name="framekey">1559085037712</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">12.469</SimpleData>
+		<SimpleData name="sta">50.036</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.534499</SimpleData>
+		<SimpleData name="longitude">101.012945</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4299</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.012945,13.534499</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">32</SimpleData>
+		<SimpleData name="framekey">1559085117003</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">13.457</SimpleData>
+		<SimpleData name="sta">51.024</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.527611</SimpleData>
+		<SimpleData name="longitude">101.018736</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4302</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.018736,13.527611</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1559076944682</SimpleData>
+		<SimpleData name="link_id">070302M00F1 </SimpleData>
+		<SimpleData name="distance">1.416</SimpleData>
+		<SimpleData name="sta">0.337</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.590713</SimpleData>
+		<SimpleData name="longitude">100.952767</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4503</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.952767,13.590713</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">33</SimpleData>
+		<SimpleData name="framekey">1559085276221</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">15.458</SimpleData>
+		<SimpleData name="sta">52.993</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.513673</SimpleData>
+		<SimpleData name="longitude">101.030472</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4536</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.030472,13.513673</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">38</SimpleData>
+		<SimpleData name="framekey">1559085355754</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">16.46</SimpleData>
+		<SimpleData name="sta">53.995</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.506686</SimpleData>
+		<SimpleData name="longitude">101.036347</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4541</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.036347,13.506686</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">39</SimpleData>
+		<SimpleData name="framekey">1559085435373</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">17.461</SimpleData>
+		<SimpleData name="sta">54.996</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.49971</SimpleData>
+		<SimpleData name="longitude">101.04222</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4542</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.04222,13.49971</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">40</SimpleData>
+		<SimpleData name="framekey">1559085515755</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">18.464</SimpleData>
+		<SimpleData name="sta">55.999</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.492039</SimpleData>
+		<SimpleData name="longitude">101.046804</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4543</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046804,13.492039</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">41</SimpleData>
+		<SimpleData name="framekey">1559085597593</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">19.466</SimpleData>
+		<SimpleData name="sta">57.001</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.482995</SimpleData>
+		<SimpleData name="longitude">101.046496</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4544</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046496,13.482995</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">44</SimpleData>
+		<SimpleData name="framekey">1559085682504</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">20.468</SimpleData>
+		<SimpleData name="sta">58.003</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.473968</SimpleData>
+		<SimpleData name="longitude">101.046082</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4547</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046082,13.473968</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">45</SimpleData>
+		<SimpleData name="framekey">1559085764909</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">21.47</SimpleData>
+		<SimpleData name="sta">59.005</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.464923</SimpleData>
+		<SimpleData name="longitude">101.046025</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4548</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046025,13.464923</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">50</SimpleData>
+		<SimpleData name="framekey">1559085846236</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">22.472</SimpleData>
+		<SimpleData name="sta">60.007</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.455881</SimpleData>
+		<SimpleData name="longitude">101.046091</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4553</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046091,13.455881</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">53</SimpleData>
+		<SimpleData name="framekey">1559085927604</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">23.475</SimpleData>
+		<SimpleData name="sta">61.01</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.446832</SimpleData>
+		<SimpleData name="longitude">101.046161</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4556</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046161,13.446832</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">54</SimpleData>
+		<SimpleData name="framekey">1559086007623</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">24.474</SimpleData>
+		<SimpleData name="sta">62.009</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.437817</SimpleData>
+		<SimpleData name="longitude">101.04634</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4557</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.04634,13.437817</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">56</SimpleData>
+		<SimpleData name="framekey">1559086088376</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">25.478</SimpleData>
+		<SimpleData name="sta">63.013</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.428758</SimpleData>
+		<SimpleData name="longitude">101.046614</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4559</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046614,13.428758</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">59</SimpleData>
+		<SimpleData name="framekey">1559086167179</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">26.476</SimpleData>
+		<SimpleData name="sta">64.011</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.419757</SimpleData>
+		<SimpleData name="longitude">101.046887</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4562</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046887,13.419757</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">61</SimpleData>
+		<SimpleData name="framekey">1559086246886</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">27.475</SimpleData>
+		<SimpleData name="sta">65.009</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.410747</SimpleData>
+		<SimpleData name="longitude">101.047154</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4564</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047154,13.410747</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">63</SimpleData>
+		<SimpleData name="framekey">1559086330194</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">28.486</SimpleData>
+		<SimpleData name="sta">66.021</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.401625</SimpleData>
+		<SimpleData name="longitude">101.047428</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4566</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047428,13.401625</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">65</SimpleData>
+		<SimpleData name="framekey">1559086424261</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">29.489</SimpleData>
+		<SimpleData name="sta">67.024</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.392572</SimpleData>
+		<SimpleData name="longitude">101.047001</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4568</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047001,13.392572</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">67</SimpleData>
+		<SimpleData name="framekey">1559086566838</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">30.49</SimpleData>
+		<SimpleData name="sta">68.025</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.38374</SimpleData>
+		<SimpleData name="longitude">101.045258</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4570</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.045258,13.38374</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">69</SimpleData>
+		<SimpleData name="framekey">1559086643333</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">31.487</SimpleData>
+		<SimpleData name="sta">69.021</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.375156</SimpleData>
+		<SimpleData name="longitude">101.042533</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4572</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.042533,13.375156</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">71</SimpleData>
+		<SimpleData name="framekey">1559086721253</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">32.503</SimpleData>
+		<SimpleData name="sta">70.038</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.366397</SimpleData>
+		<SimpleData name="longitude">101.039755</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4574</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.039755,13.366397</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">74</SimpleData>
+		<SimpleData name="framekey">1559086797668</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">33.496</SimpleData>
+		<SimpleData name="sta">71.031</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.358114</SimpleData>
+		<SimpleData name="longitude">101.036367</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4577</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.036367,13.358114</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">75</SimpleData>
+		<SimpleData name="framekey">1559086873616</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">34.493</SimpleData>
+		<SimpleData name="sta">72.028</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.350448</SimpleData>
+		<SimpleData name="longitude">101.031557</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4578</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.031557,13.350448</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">78</SimpleData>
+		<SimpleData name="framekey">1559086952578</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">35.493</SimpleData>
+		<SimpleData name="sta">73.028</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.342754</SimpleData>
+		<SimpleData name="longitude">101.026747</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4581</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.026747,13.342754</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">79</SimpleData>
+		<SimpleData name="framekey">1559087028769</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">36.5</SimpleData>
+		<SimpleData name="sta">74.035</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.335005</SimpleData>
+		<SimpleData name="longitude">101.021899</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4582</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.021899,13.335005</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">80</SimpleData>
+		<SimpleData name="framekey">1559087105971</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">37.497</SimpleData>
+		<SimpleData name="sta">75.032</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.327342</SimpleData>
+		<SimpleData name="longitude">101.017075</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4583</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.017075,13.327342</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">81</SimpleData>
+		<SimpleData name="framekey">1559087184927</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">38.498</SimpleData>
+		<SimpleData name="sta">76.033</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.320061</SimpleData>
+		<SimpleData name="longitude">101.011621</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4584</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.011621,13.320061</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">83</SimpleData>
+		<SimpleData name="framekey">1559087263698</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">39.503</SimpleData>
+		<SimpleData name="sta">77.038</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.312818</SimpleData>
+		<SimpleData name="longitude">101.006048</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">4586</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.006048,13.312818</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1430234810168</SimpleData>
+		<SimpleData name="link_id">090401M00F1 </SimpleData>
+		<SimpleData name="distance">2.765</SimpleData>
+		<SimpleData name="sta">2.014</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.173845</SimpleData>
+		<SimpleData name="longitude">100.645473</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5302</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.645473,14.173845</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1430234889765</SimpleData>
+		<SimpleData name="link_id">090401M00F1 </SimpleData>
+		<SimpleData name="distance">3.762</SimpleData>
+		<SimpleData name="sta">3.012</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.165959</SimpleData>
+		<SimpleData name="longitude">100.649917</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5303</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.649917,14.165959</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1430234967861</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">4.767</SimpleData>
+		<SimpleData name="sta">4.061</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.158019</SimpleData>
+		<SimpleData name="longitude">100.654393</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5350</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.654393,14.158019</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1430235045066</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">5.768</SimpleData>
+		<SimpleData name="sta">5.062</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.150097</SimpleData>
+		<SimpleData name="longitude">100.658857</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5351</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.658857,14.150097</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1430235122903</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">6.77</SimpleData>
+		<SimpleData name="sta">6.064</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.142178</SimpleData>
+		<SimpleData name="longitude">100.663323</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5353</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.663323,14.142178</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">10</SimpleData>
+		<SimpleData name="framekey">1430235197989</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">7.774</SimpleData>
+		<SimpleData name="sta">7.068</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.134237</SimpleData>
+		<SimpleData name="longitude">100.6678</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5355</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.6678,14.134237</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1430235275334</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">8.777</SimpleData>
+		<SimpleData name="sta">8.072</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.126302</SimpleData>
+		<SimpleData name="longitude">100.672272</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5356</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672272,14.126302</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">14</SimpleData>
+		<SimpleData name="framekey">1430235351755</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">9.779</SimpleData>
+		<SimpleData name="sta">9.073</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.118386</SimpleData>
+		<SimpleData name="longitude">100.67674</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5359</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.67674,14.118386</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">15</SimpleData>
+		<SimpleData name="framekey">1430235426149</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">10.779</SimpleData>
+		<SimpleData name="sta">10.074</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.110474</SimpleData>
+		<SimpleData name="longitude">100.681205</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5360</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.681205,14.110474</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">17</SimpleData>
+		<SimpleData name="framekey">1430235500163</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">11.78</SimpleData>
+		<SimpleData name="sta">11.074</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.102563</SimpleData>
+		<SimpleData name="longitude">100.685669</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5362</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.685669,14.102563</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">21</SimpleData>
+		<SimpleData name="framekey">1430235574462</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">12.779</SimpleData>
+		<SimpleData name="sta">12.073</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.094666</SimpleData>
+		<SimpleData name="longitude">100.690133</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5366</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.690133,14.094666</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">24</SimpleData>
+		<SimpleData name="framekey">1430235650436</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">13.778</SimpleData>
+		<SimpleData name="sta">13.072</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.086692</SimpleData>
+		<SimpleData name="longitude">100.694421</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5369</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.694421,14.086692</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">26</SimpleData>
+		<SimpleData name="framekey">1430235727683</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">14.784</SimpleData>
+		<SimpleData name="sta">14.079</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.077693</SimpleData>
+		<SimpleData name="longitude">100.695573</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5371</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.695573,14.077693</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">27</SimpleData>
+		<SimpleData name="framekey">1430235804719</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">15.784</SimpleData>
+		<SimpleData name="sta">15.079</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.068711</SimpleData>
+		<SimpleData name="longitude">100.696472</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5372</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.696472,14.068711</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">28</SimpleData>
+		<SimpleData name="framekey">1430235881839</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">16.787</SimpleData>
+		<SimpleData name="sta">16.081</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.059702</SimpleData>
+		<SimpleData name="longitude">100.697381</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5373</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.697381,14.059702</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">29</SimpleData>
+		<SimpleData name="framekey">1430235957202</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">17.782</SimpleData>
+		<SimpleData name="sta">17.077</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.05076</SimpleData>
+		<SimpleData name="longitude">100.698227</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5374</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698227,14.05076</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">31</SimpleData>
+		<SimpleData name="framekey">1430236112350</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">19.79</SimpleData>
+		<SimpleData name="sta">19.085</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.032631</SimpleData>
+		<SimpleData name="longitude">100.698233</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5376</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698233,14.032631</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">34</SimpleData>
+		<SimpleData name="framekey">1430236190448</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">20.786</SimpleData>
+		<SimpleData name="sta">20.08</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.023661</SimpleData>
+		<SimpleData name="longitude">100.698441</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5379</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698441,14.023661</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">36</SimpleData>
+		<SimpleData name="framekey">1430236269999</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">21.791</SimpleData>
+		<SimpleData name="sta">21.085</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.015221</SimpleData>
+		<SimpleData name="longitude">100.701794</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5381</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701794,14.015221</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">38</SimpleData>
+		<SimpleData name="framekey">1430236350075</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">22.794</SimpleData>
+		<SimpleData name="sta">22.088</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.006914</SimpleData>
+		<SimpleData name="longitude">100.705479</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5383</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.705479,14.006914</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">40</SimpleData>
+		<SimpleData name="framekey">1430236425729</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">23.797</SimpleData>
+		<SimpleData name="sta">23.092</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.998595</SimpleData>
+		<SimpleData name="longitude">100.709151</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5385</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.709151,13.998595</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">41</SimpleData>
+		<SimpleData name="framekey">1430236501262</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">24.795</SimpleData>
+		<SimpleData name="sta">24.09</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.99031</SimpleData>
+		<SimpleData name="longitude">100.712775</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5386</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.712775,13.99031</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">43</SimpleData>
+		<SimpleData name="framekey">1430236724427</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">25.786</SimpleData>
+		<SimpleData name="sta">25.08</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.981444</SimpleData>
+		<SimpleData name="longitude">100.713227</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5388</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.713227,13.981444</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">44</SimpleData>
+		<SimpleData name="framekey">1430236819870</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">26.799</SimpleData>
+		<SimpleData name="sta">26.093</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.972303</SimpleData>
+		<SimpleData name="longitude">100.713097</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5389</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.713097,13.972303</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">45</SimpleData>
+		<SimpleData name="framekey">1430236896811</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">27.8</SimpleData>
+		<SimpleData name="sta">27.095</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.963263</SimpleData>
+		<SimpleData name="longitude">100.712949</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5390</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.712949,13.963263</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">47</SimpleData>
+		<SimpleData name="framekey">1430236971659</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">28.8</SimpleData>
+		<SimpleData name="sta">28.095</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.95424</SimpleData>
+		<SimpleData name="longitude">100.712795</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5392</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.712795,13.95424</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">50</SimpleData>
+		<SimpleData name="framekey">1430237045768</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">29.807</SimpleData>
+		<SimpleData name="sta">29.102</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.945286</SimpleData>
+		<SimpleData name="longitude">100.711497</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5395</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.711497,13.945286</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">52</SimpleData>
+		<SimpleData name="framekey">1430237117224</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">30.797</SimpleData>
+		<SimpleData name="sta">30.092</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.936628</SimpleData>
+		<SimpleData name="longitude">100.709238</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5397</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.709238,13.936628</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">55</SimpleData>
+		<SimpleData name="framekey">1430237190409</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">31.808</SimpleData>
+		<SimpleData name="sta">31.102</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.927787</SimpleData>
+		<SimpleData name="longitude">100.70691</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5400</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70691,13.927787</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1546195226010</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">2.076</SimpleData>
+		<SimpleData name="sta">32.993</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.910986</SimpleData>
+		<SimpleData name="longitude">100.700319</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5764</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700319,13.910986</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1546195306297</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">3.078</SimpleData>
+		<SimpleData name="sta">33.996</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.902912</SimpleData>
+		<SimpleData name="longitude">100.696136</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5767</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.696136,13.902912</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1546195387413</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">4.1</SimpleData>
+		<SimpleData name="sta">35.018</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.894656</SimpleData>
+		<SimpleData name="longitude">100.691933</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5769</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.691933,13.894656</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">12</SimpleData>
+		<SimpleData name="framekey">1546195467173</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">5.083</SimpleData>
+		<SimpleData name="sta">36.001</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.886761</SimpleData>
+		<SimpleData name="longitude">100.687782</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5773</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.687782,13.886761</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">13</SimpleData>
+		<SimpleData name="framekey">1546195547127</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">6.086</SimpleData>
+		<SimpleData name="sta">37.004</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.878685</SimpleData>
+		<SimpleData name="longitude">100.683597</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5774</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.683597,13.878685</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">16</SimpleData>
+		<SimpleData name="framekey">1546195627447</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">7.098</SimpleData>
+		<SimpleData name="sta">38.016</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.870529</SimpleData>
+		<SimpleData name="longitude">100.679381</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5777</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.679381,13.870529</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">17</SimpleData>
+		<SimpleData name="framekey">1546195707589</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">8.1</SimpleData>
+		<SimpleData name="sta">39.018</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.861925</SimpleData>
+		<SimpleData name="longitude">100.676669</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5778</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.676669,13.861925</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">21</SimpleData>
+		<SimpleData name="framekey">1546195790646</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">9.114</SimpleData>
+		<SimpleData name="sta">40.032</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.853182</SimpleData>
+		<SimpleData name="longitude">100.674007</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5782</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674007,13.853182</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">26</SimpleData>
+		<SimpleData name="framekey">1546195869042</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">10.087</SimpleData>
+		<SimpleData name="sta">41.005</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.844604</SimpleData>
+		<SimpleData name="longitude">100.672474</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5787</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672474,13.844604</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">30</SimpleData>
+		<SimpleData name="framekey">1546195951587</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">11.09</SimpleData>
+		<SimpleData name="sta">42.008</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.835708</SimpleData>
+		<SimpleData name="longitude">100.673698</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5791</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.673698,13.835708</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">32</SimpleData>
+		<SimpleData name="framekey">1546196033837</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">12.088</SimpleData>
+		<SimpleData name="sta">43.005</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.826752</SimpleData>
+		<SimpleData name="longitude">100.674459</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5793</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674459,13.826752</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">34</SimpleData>
+		<SimpleData name="framekey">1546196114110</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">13.087</SimpleData>
+		<SimpleData name="sta">44.004</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.817929</SimpleData>
+		<SimpleData name="longitude">100.676194</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5795</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.676194,13.817929</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">35</SimpleData>
+		<SimpleData name="framekey">1546196194176</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">14.09</SimpleData>
+		<SimpleData name="sta">45.007</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.809151</SimpleData>
+		<SimpleData name="longitude">100.678462</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5796</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.678462,13.809151</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">40</SimpleData>
+		<SimpleData name="framekey">1546196274764</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">15.095</SimpleData>
+		<SimpleData name="sta">46.013</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.800363</SimpleData>
+		<SimpleData name="longitude">100.680777</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5801</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.680777,13.800363</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">43</SimpleData>
+		<SimpleData name="framekey">1546196359772</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">16.139</SimpleData>
+		<SimpleData name="sta">47.056</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.791258</SimpleData>
+		<SimpleData name="longitude">100.683237</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5804</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.683237,13.791258</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">44</SimpleData>
+		<SimpleData name="framekey">1546196439583</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">17.14</SimpleData>
+		<SimpleData name="sta">48.058</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.782502</SimpleData>
+		<SimpleData name="longitude">100.68556</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5805</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.68556,13.782502</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">46</SimpleData>
+		<SimpleData name="framekey">1546196512368</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">18.083</SimpleData>
+		<SimpleData name="sta">49.001</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.774689</SimpleData>
+		<SimpleData name="longitude">100.688964</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5807</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.688964,13.774689</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">52</SimpleData>
+		<SimpleData name="framekey">1546196595213</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">19.125</SimpleData>
+		<SimpleData name="sta">50.042</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.766384</SimpleData>
+		<SimpleData name="longitude">100.693477</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5813</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.693477,13.766384</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">55</SimpleData>
+		<SimpleData name="framekey">1546196674555</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">20.076</SimpleData>
+		<SimpleData name="sta">50.994</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.75877</SimpleData>
+		<SimpleData name="longitude">100.697573</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5816</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.697573,13.75877</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">59</SimpleData>
+		<SimpleData name="framekey">1546196893914</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">21.098</SimpleData>
+		<SimpleData name="sta">52.015</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.750617</SimpleData>
+		<SimpleData name="longitude">100.701966</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5820</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701966,13.750617</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">64</SimpleData>
+		<SimpleData name="framekey">1546197059355</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">23.104</SimpleData>
+		<SimpleData name="sta">54.021</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.732601</SimpleData>
+		<SimpleData name="longitude">100.702837</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5825</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702837,13.732601</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">65</SimpleData>
+		<SimpleData name="framekey">1546197138409</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">24.102</SimpleData>
+		<SimpleData name="sta">55.02</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.72378</SimpleData>
+		<SimpleData name="longitude">100.701083</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5826</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701083,13.72378</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">67</SimpleData>
+		<SimpleData name="framekey">1546197218117</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">25.107</SimpleData>
+		<SimpleData name="sta">56.025</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.714761</SimpleData>
+		<SimpleData name="longitude">100.700288</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">5828</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700288,13.714761</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">70</SimpleData>
+		<SimpleData name="framekey">1546197296372</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">26.106</SimpleData>
+		<SimpleData name="sta">56.989</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.705746</SimpleData>
+		<SimpleData name="longitude">100.699921</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">6328</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699921,13.705746</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">73</SimpleData>
+		<SimpleData name="framekey">1546197375526</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">27.109</SimpleData>
+		<SimpleData name="sta">57.991</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.696699</SimpleData>
+		<SimpleData name="longitude">100.699659</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">6331</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699659,13.696699</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">76</SimpleData>
+		<SimpleData name="framekey">1546197455257</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">28.11</SimpleData>
+		<SimpleData name="sta">58.993</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.687662</SimpleData>
+		<SimpleData name="longitude">100.699525</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">6334</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699525,13.687662</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">79</SimpleData>
+		<SimpleData name="framekey">1546197534726</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">29.109</SimpleData>
+		<SimpleData name="sta">59.992</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.678641</SimpleData>
+		<SimpleData name="longitude">100.699391</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">6337</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699391,13.678641</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">82</SimpleData>
+		<SimpleData name="framekey">1546197614119</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">30.11</SimpleData>
+		<SimpleData name="sta">60.993</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.669615</SimpleData>
+		<SimpleData name="longitude">100.699176</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">6340</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699176,13.669615</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#kilostone">
+		<SimpleData name="no">83</SimpleData>
+		<SimpleData name="framekey">1546197694214</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">31.118</SimpleData>
+		<SimpleData name="sta">62.001</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.661503</SimpleData>
+		<SimpleData name="longitude">100.695237</SimpleData>
+		<SimpleData name="message">kilometer sign</SimpleData>
+		<SimpleData name="gid">6341</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.695237,13.661503</coordinates></Point>
+  </Placemark>
+</Folder></Document></kml>

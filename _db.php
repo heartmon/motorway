@@ -10,7 +10,7 @@
 	$dbh = connect();
 	function connect() {
 		global $error;
-		$h = pg_connect('host=localhost port=5432 dbname=motorway user=heartmon password=');
+		$h = pg_connect('host=localhost port=5432 dbname=motorway user=postgres password=postgres');
 		if ($h === false) {
 			$error = 'มีปัญหาในการเชื่อมต่อกับฐานข้อมูล';
 			return null;

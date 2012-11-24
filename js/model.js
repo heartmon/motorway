@@ -3,6 +3,28 @@ function Model()
 
 	this.m = 1; 
 
+    this.getPavement = function(){
+        $.ajax({
+            url: 'ajax/_get_pavement.php',
+            type: 'GET',
+            data: {
+                section: g_search_info_level2['currentsection'],
+            },
+            dataType: 'jsonp',
+            dataCharset: 'jsonp',
+            success: function (data) {
+                if (!data['error']) {
+                    
+                    controller.setupPavement(data);
+                   // console.log(data);
+                } 
+                else {
+                    errorReport(data['error']);
+                }
+            }
+        });
+    }
+
 	this.getAllDamageInfo = function(infotype,kmfreq,section,exptype,hdm4type,activated){
 		sync = true;
 		$.ajax({

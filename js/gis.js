@@ -1,6 +1,10 @@
 $(function () {
+    $("#placeholder").hide()
     $("#search_hdm4_button").click(function () {
         qtip.removeAllFeatures();
+    });
+    $(".alert-error").click(function(){
+        $(this).remove();
     });
 });
 
@@ -22,9 +26,9 @@ var fixSize = function() {
 setTimeout(fixSize, 700);
 setTimeout(fixSize, 1500);
 
-var lon = 100.53143;
-var lat = 13.741;
-var zoom = 10;
+var lon = 100.5167;
+var lat = 13.7500;
+var zoom = 12;
 var pureCoverage = false;
 var format = 'image/png';
 var options = {
@@ -34,7 +38,8 @@ var options = {
     maxResolution: 156543.0339,
     maxExtent: new OpenLayers.Bounds(-20037508.34, - 20037508.34,
     20037508.34, 20037508.34),
-    numZoomLevels: 20,
+    numZoomLevels: 19,
+    wrapDateLine: false,
     controls: [
         new OpenLayers.Control.Navigation(),
         new OpenLayers.Control.KeyboardDefaults(),
@@ -52,6 +57,106 @@ var options = {
 };
 
 map = new OpenLayers.Map('map', options);
+
+// GEOLOCATION
+
+var geoStyle = {
+    fillColor: '#000',
+    fillOpacity: 0.1,
+    strokeWidth: 0
+};
+
+var pulsate = function(feature) {
+    var point = feature.geometry.getCentroid(),
+        bounds = feature.geometry.getBounds(),
+        radius = Math.abs((bounds.right - bounds.left)/2),
+        count = 0,
+        grow = 'up';
+
+    var resize = function(){
+        if (count>16) {
+            clearInterval(window.resizeInterval);
+        }
+        var interval = radius * 0.03;
+        var ratio = interval/radius;
+        switch(count) {
+            case 4:
+            case 12:
+                grow = 'down'; break;
+            case 8:
+                grow = 'up'; break;
+        }
+        if (grow!=='up') {
+            ratio = - Math.abs(ratio);
+        }
+        feature.geometry.resize(1+ratio, point);
+        gl_vector.drawFeature(feature);
+        count++;
+    };
+    window.resizeInterval = window.setInterval(resize, 50, point, radius);
+};
+
+var gl_vector = new OpenLayers.Layer.Vector('GeoLocation Mark');
+var geolocate = new OpenLayers.Control.Geolocate({
+    bind: false,
+    geolocationOptions: {
+        enableHighAccuracy: false,
+        maximumAge: 0,
+        timeout: 7000
+    }
+});
+map.addControl(geolocate);
+var firstGeolocation = true;
+geolocate.events.register("locationupdated",geolocate,function(e) {
+    gl_vector.removeAllFeatures();
+    var circle = new OpenLayers.Feature.Vector(
+        OpenLayers.Geometry.Polygon.createRegularPolygon(
+            new OpenLayers.Geometry.Point(e.point.x, e.point.y),
+            e.position.coords.accuracy/2,
+            40,
+            0
+        ),
+        {},
+        geoStyle
+    );
+    gl_vector.addFeatures([
+        new OpenLayers.Feature.Vector(
+            e.point,
+            {},
+            {
+                graphicName: 'cross',
+                strokeColor: '#f00',
+                strokeWidth: 2,
+                fillOpacity: 0,
+                pointRadius: 10
+            }
+        ),
+        circle
+    ]);
+    if (firstGeolocation) {
+        map.zoomToExtent(gl_vector.getDataExtent());
+        pulsate(circle);
+        firstGeolocation = false;
+        this.bind = true;
+    }
+});
+geolocate.events.register("locationfailed",this,function() {
+    OpenLayers.Console.log('Location detection failed');
+});
+
+document.getElementById('logo').onclick = function() {
+    gl_vector.removeAllFeatures();
+    geolocate.deactivate();
+   // document.getElementById('track').checked = false;
+    geolocate.watch = false;
+    firstGeolocation = true;
+    geolocate.activate();
+};
+
+// END GEOLOCATION
+
+
+        
 
 var centerline = new OpenLayers.Layer.Vector("Centerline MOTORWAY", {
     //Set your projection and strategies//
@@ -82,14 +187,14 @@ var centerline = new OpenLayers.Layer.Vector("Centerline MOTORWAY", {
 
 });
 
-var chainage = new OpenLayers.Layer.Vector("Chainage", {
+var begin = new OpenLayers.Layer.Vector("begin", {
     //Set your projection and strategies//
     projection: new OpenLayers.Projection("EPSG:4326"),
     strategies: [new OpenLayers.Strategy.Fixed()],
     //set the protocol with a url//
     protocol: new OpenLayers.Protocol.HTTP({
         //set the url to your variable//
-        url: "kml/chainage.kml",
+        url: "kml/asset/begin.kml",
         //format this layer as KML//
         format: new OpenLayers.Format.KML({
             //maxDepth is how deep it will follow network links//
@@ -111,15 +216,14 @@ var chainage = new OpenLayers.Layer.Vector("Chainage", {
 
 });
 
-
-var trafficsign = new OpenLayers.Layer.Vector("Traffic Sign", {
+var end = new OpenLayers.Layer.Vector("end", {
     //Set your projection and strategies//
     projection: new OpenLayers.Projection("EPSG:4326"),
     strategies: [new OpenLayers.Strategy.Fixed()],
     //set the protocol with a url//
     protocol: new OpenLayers.Protocol.HTTP({
         //set the url to your variable//
-        url: "kml/trafficsign.kml",
+        url: "kml/asset/end.kml",
         //format this layer as KML//
         format: new OpenLayers.Format.KML({
             //maxDepth is how deep it will follow network links//
@@ -141,14 +245,94 @@ var trafficsign = new OpenLayers.Layer.Vector("Traffic Sign", {
 
 });
 
-var esri = new OpenLayers.Layer.Vector("Traffic Sign", {
+var style2 = new OpenLayers.Style({
+                pointRadius: 5,
+                fillColor: "#252525",
+                fillOpacity: 0.8,
+                strokeColor: "#ffffff",
+                strokeWidth: 2,
+                strokeOpacity: 0.8
+            }, {
+                context: {
+                    radius: function(feature) {
+                        return Math.min(feature.attributes.count, 7) + 3;
+                    },
+                }
+            });
+
+var kilostone = new OpenLayers.Layer.Vector("kilostone", {
     //Set your projection and strategies//
     projection: new OpenLayers.Projection("EPSG:4326"),
     strategies: [new OpenLayers.Strategy.Fixed()],
     //set the protocol with a url//
     protocol: new OpenLayers.Protocol.HTTP({
         //set the url to your variable//
-        url: "kml/trafficsign.kml",
+        url: "kml/asset/kilostone.kml",
+        //format this layer as KML//
+        format: new OpenLayers.Format.KML({
+            //maxDepth is how deep it will follow network links//
+            maxDepth: 1,
+            //extract styles from the KML Layer//
+            extractStyles: true,
+            //extract attributes from the KML Layer//
+            extractAttributes: true
+        })
+    }),
+    styleMap: new OpenLayers.StyleMap({
+                        "default": style2,
+                        "select": {
+                            fillColor: "#8aeeef",
+                            strokeColor: "#32a8a9"
+                        }
+                })
+}, {
+
+    buffer: 1,
+    visibility: false,
+
+    displayOutsideMaxExtent: true,
+
+    isBaseLayer: false
+
+});
+
+var overhead = new OpenLayers.Layer.Vector("overhead", {
+    //Set your projection and strategies//
+    projection: new OpenLayers.Projection("EPSG:4326"),
+    strategies: [new OpenLayers.Strategy.Fixed()],
+    //set the protocol with a url//
+    protocol: new OpenLayers.Protocol.HTTP({
+        //set the url to your variable//
+        url: "kml/asset/overhead.kml",
+        //format this layer as KML//
+        format: new OpenLayers.Format.KML({
+            //maxDepth is how deep it will follow network links//
+            maxDepth: 1,
+            //extract styles from the KML Layer//
+            extractStyles: true,
+            //extract attributes from the KML Layer//
+            extractAttributes: true
+        })
+    })
+}, {
+
+    buffer: 1,
+    visibility: false,
+
+    displayOutsideMaxExtent: true,
+
+    isBaseLayer: false
+
+});
+
+var plaza = new OpenLayers.Layer.Vector("plaza", {
+    //Set your projection and strategies//
+    projection: new OpenLayers.Projection("EPSG:4326"),
+    strategies: [new OpenLayers.Strategy.Fixed()],
+    //set the protocol with a url//
+    protocol: new OpenLayers.Protocol.HTTP({
+        //set the url to your variable//
+        url: "kml/asset/plaza.kml",
         //format this layer as KML//
         format: new OpenLayers.Format.KML({
             //maxDepth is how deep it will follow network links//
@@ -200,7 +384,7 @@ var context = {
             }
         } else if (c_cond == "rutting") {
             var region = 0;
-        } else if (c_cond == "skid") {
+        } else if (c_cond == "texture") {
             //var region = 0;
 
             if (c_var > 0.3) {
@@ -279,9 +463,10 @@ var sm = new OpenLayers.StyleMap({
     }
 });
 
-qtip = new OpenLayers.Layer.Vector('IRI - Rutting - Skid', {
+qtip = new OpenLayers.Layer.Vector('IRI - Rutting - Texture', {
     //styleMap: new OpenLayers.StyleMap(style)
-    styleMap: sm
+    styleMap: sm,
+    numZoomLevels: null, minZoomLevel: 12, maxZoomLevel: 19 
 });
 
 
@@ -306,7 +491,7 @@ var hl = function (e) {
     //console.log("hl:" + e.feature.id);
 };
 
-map.addLayers([qtip]);
+map.addLayers([qtip,gl_vector]);
 map.addControl(selectController);
 selectController.activate();
 
@@ -343,13 +528,20 @@ var mapnik = new OpenLayers.Layer.OSM();
 
 map.addLayers([
 gsat, gmap, gphy, ghyb, longdo, centerline
+//,begin
+//,end
+//,overhead
+//,plaza
+//,kilostone
 //,chainage
 //,trafficsign
 ]);
 
+
+
 map.addControl(new OpenLayers.Control.LayerSwitcher());
 
-map.setCenter(new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()), zoom);
+map.setCenter(new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()), 9);
 
 map.zoomToMaxExtent();    
 
@@ -486,7 +678,7 @@ function showQtip(olEvent) {
     var c_cond = $("[name='infotype']:checked").val();
     var year = parseInt(data['year']) + 543;
     if (g_hdm4search_click) {
-        c_var = "แผนการซ่อม: " + data['workdes'] + "<br/>" + "งบประมาณ: " + data['cost'] + " ลบ. (ปี " + year + ")<br/>" + "IRI: " + data['iri'] + "<br/>" + "Rutting: " + data['rutting'] + "<br/>" + "Skid: " + data['skid'] + "<br/>";
+        c_var = "แผนการซ่อม: " + data['workdes'] + "<br/>" + "งบประมาณ: " + data['cost'] + " ลบ. (ปี " + year + ")<br/>" + "IRI: " + data['iri'] + "<br/>" + "Rutting: " + data['rutting'] + "<br/>" + "MPD: " + data['texture'] + "<br/>";
 
     } else if (c_cond == "roughness") {
         c_var = "IRI: " + data['var'];
@@ -499,8 +691,8 @@ function showQtip(olEvent) {
         }
     } else if (c_cond == "rutting") {
         c_var = "Rutting: " + data['var'];
-    } else if (c_cond == "skid") {
-        c_var = "Skid: " + data['var'];
+    } else if (c_cond == "texture") {
+        c_var = "MPD: " + data['var'];
         if (data['var'] < 0.3) {
             qcolor = "red";
         } else if (data['var'] >= 0.3) {
@@ -546,7 +738,7 @@ function showQtip(olEvent) {
     map.layers[0].redraw();
 }
 
-function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, workdes, year) {
+function poi(item, lat, long, km_at, iri, rutting, texture, code, section, cost, workdes, year) {
     var fpoint = new OpenLayers.Geometry.Point(long, lat).transform(
     new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
     var c_cond = $("[name='infotype']:checked").val();
@@ -557,32 +749,32 @@ function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, wo
         view_hdm4_cond = $(".table_highlight td").eq(5).html();
     }
 
-    if (g_hdm4search_click) {
-        var attributes = {
-            'name': item,
-            'km_at': km_at,
-            'longitude': long,
-            'latitude': lat,
-            'var': view_hdm4_cond,
-            'iri': iri,
-            'rutting': rutting,
-            'skid': skid,
-            //'code': toFullName(code),
-           // 'ename': toExpressName(section),
-            'section': section,
-            'cost': cost,
-            'workdes': workdes,
-            'year': year
-        };
-    } else if (c_cond == "roughness") {
+    var mname = $('.expressway option:selected').html();
+    var sname = ''
+    if($("[name='exptype']").val() == "1") {
+        $.each($('#option1 select'),function(){
+            if($(this).css("display") != 'none') {
+                sname += "ตอนควมคุมที่ " + $(this).find('option:selected').html();
+            }
+        })
+        
+    } else {
+        $.each($('#option2 select'),function(){
+            if($(this).css("display") != 'none') {
+                sname += $(this).find("option:selected").html();
+            }
+        })
+    }
+
+    if (c_cond == "roughness") {
         var attributes = {
             'name': item,
             'km_at': km_at,
             'longitude': long,
             'latitude': lat,
             'var': iri,
-            //'code': toFullName(code),
-           // 'ename': toExpressName(section),
+            'code': sname,
+            'ename': mname,
             'section': section,
             'cost': cost,
             'workdes': workdes,
@@ -595,61 +787,52 @@ function poi(item, lat, long, km_at, iri, rutting, skid, code, section, cost, wo
             'longitude': long,
             'latitude': lat,
             'var': rutting,
-           //'code': toFullName(code),
-           // 'ename': toExpressName(section),
+            'code': sname,
+            'ename': mname,
             'section': section,
             'cost': cost,
             'workdes': workdes,
             'year': year
         };
-    } else if (c_cond == "skid") {
-        //console.log("skid!: a " + skid);
+    } else if (c_cond == "texture") {
         var attributes = {
             'name': item,
             'km_at': km_at,
             'longitude': long,
             'latitude': lat,
-            'var': skid,
-           // 'code': toFullName(code),
-           // 'ename': toExpressName(section),
+            'var': texture,
+            'code': sname,
+            'ename': mname,
             'section': section,
             'cost': cost,
             'workdes': workdes,
             'year': year
         };
-    } else {
-        var attributes = {
-            'name': item,
-            'km_at': km_at,
-            'longitude': long,
-            'latitude': lat,
-            'iri': iri,
-            'rutting': rutting,
-            'skid': skid,
-            //'code': toFullName(code),
-            'var': '',
-           // 'ename': toExpressName(section),
-            'section': section,
-            'cost': cost,
-            'workdes': workdes,
-            'year': year
-        };
-    }
+    } 
     var feature = new OpenLayers.Feature.Vector(fpoint, attributes);
     feature.id = "POI_" + item;
     return feature;
 };
 
 function zoomCoor() {
-    var section;
-    var infotype = $('#exptype option:selected').val();
-    if (infotype == '2') {
-        section = $(".enexname option:selected").val();
-    } else if (infotype == 3) {
-        section = $(".accessname option:selected").val();
+    var section = $('.expressway option:selected').val();
+    if($("[name='exptype']").val() == "1") {
+        $.each($('#option1 select'),function(){
+            if($(this).css("display") != 'none') {
+                 section += $(this).find('option:selected').val();
+            }
+        })
     } else {
-        section = g_search_info_level2['currentsection'];
+        $.each($('#option2 select'),function(){
+            if($(this).css("display") != 'none') {
+                section += $(this).find("option:selected").val();
+            }
+        })
     }
+    section += "%";
+
+    
+    //console.log(section);
 
     $.ajax({
         url: 'ajax/_geo.php',

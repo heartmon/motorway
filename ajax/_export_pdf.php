@@ -2,6 +2,10 @@
 session_start();
 $_SESSION['open'] = true;
 //Get data of damage result
+$pdftype = $_POST['pdftype'];
+
+if($pdftype == "damage")
+{
 $expressway = $_POST['expressway'];
 $infotype = $_POST['infotype'];
 $section = $_POST['section'];
@@ -40,17 +44,31 @@ $lastlong = $_POST['lastlong'];*/
 
  //   echo $unencodedData;
 //}
+}
 
 //Get data of hdm4 result
-$year = $_POST['year'];
-$hdm4type = $_POST['hdm4type'];
-$hdm4data = $_POST['hdm4data'];
-$totalcost = $_POST['totalcost'];
+elseif($pdftype == "hdm4")
+{
+    $year = $_POST['year'];
+    $hdm4type = $_POST['hdm4type'];
+    $hdm4data = $_POST['hdm4data'];
+    $totalcost = $_POST['totalcost'];
+}
 
+else
+{
+    $expressway = $_POST['expressway'];
+    $section    = $_POST['section'];
+    $code       = $_POST['code'];
+    $data       = $_POST['data'];
+   // $encoded_data = json_decode($data, true);
+    $columns    = $_POST['columns'];
+    $cWidth     = $_POST['cWidth'];
+}
 //Check what type of pdf
-$pdftype = "damage";
-if($year)
-    $pdftype = "hdm4";
+//$pdftype = "damage";
+//if($year)
+//    $pdftype = "hdm4";
 
 //Require tcpdf class
 require_once('tcpdf/config/lang/eng.php');
@@ -61,8 +79,8 @@ class MYPDF extends TCPDF {
     //Page header
     public function Header() {
         // Logo
-        $image_file = K_PATH_IMAGES.'logo.png';
-       $this->Image($image_file, 10, 10, 18, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+        $image_file = K_PATH_IMAGES.'logo.jpg';
+       $this->Image($image_file, 10, 8, 18, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
         // Set font
         $this->SetFont('thsarabun', 'B', 24);
         // Title Thai
@@ -290,6 +308,105 @@ if($pdftype == "damage")
 }
 
 //--------------------------------------------------------------------
+// ===== of Pavement
+elseif($pdftype == "pavement")
+{
+     // add a page
+    $pdf->AddPage();
+
+    $pdf->Ln(4);
+
+    // set font
+    $pdf->SetFont('thsarabun', '', 24);
+    $pdf->writeHTML("<b>Pavement</b>", true, false, true, false, '');
+
+    // set font
+    $pdf->SetFont('thsarabun', '', 16);
+
+    $html = 
+    '<table border="0" cellpadding="1">
+        <tr style="line-height:4px;">
+            <td width="130"><b>สายทาง: </b></td>
+            <td width="10">:</td>
+            <td align="left" width="400">'.$expressway.'</td>
+        </tr>
+        <tr>
+            <td width="130"><b>ตอนควบคุม: </b></td>
+            <td width="10">:</td>
+            <td align="left" width="400">'.$code.' ('.$section.')</td>
+        </tr>
+        </table>';
+
+    $pdf->writeHTML($html, true, false, true, false, '');
+    //$pdf->writeHTML($totalcost, true, false, true, false, '');
+
+     // ----- Add Table Data -----
+    $datasize = sizeof($data);
+    $count = 0;
+    $tablenum = 0;
+    $perpage = 24;
+    $rownum = 0;
+    $x = $pdf->getX();
+    $y = $pdf->getY();
+
+    $tableheader = '<table cellpadding="1" border="1"><tr style="background-color: rgb(215, 215, 215);">';
+    //$tableheader .= '<th align="center" width="46">ลำดับ</th>';
+    for($i=0;$i<sizeof($columns);$i++)
+    {
+        $tableheader .= '<th align="center" width="'.$cWidth[$i].'">'.$columns[$i].'</th>';
+    }
+    $tableheader .= '</tr>';
+    // if($year == "ทุกปี")
+    //     $tableheader = '<table cellpadding="1" border="1"><tr style="background-color: rgb(215, 215, 215);"><th align="center" width="37">ลำดับ</th><th align="center" width="41">ปี</th><th align="center" width="65">กม.เริ่มต้น</th><th align="center" width="65">กม.สิ้นสุด</th><th align="center" width="55">ทิศทาง</th><th align="center" width="65">ช่องจราจร</th><th align="center" width="198">ลักษณะการซ่อม</th><th align="center" width="60">ราคา(ลบ.)</th><th width="60" align="center">NPV</th></tr>';
+    // else
+    //     $tableheader = '<table cellpadding="1" border="1"><tr style="background-color: rgb(215, 215, 215);"><th align="center" width="47">ลำดับที่</th><th align="center" width="70">กม.เริ่มต้น</th><th align="center" width="70">กม.สิ้นสุด</th><th align="center" width="55">ทิศทาง</th><th align="center" width="70">ช่องจราจร</th><th align="center" width="208">ลักษณะการซ่อม</th><th align="center" width="65">ราคา(ลบ.)</th><th width="60" align="center">NPV</th></tr>';
+
+
+    $html = $tableheader;
+
+    while($count <= $datasize)
+    {
+        if($count%2 == 0)
+            $html .= '<tr>';
+        else
+            $html .= '<tr style="background-color: rgb(245, 245, 245);">';
+
+       // $encoded_data->
+     //   $html .= '<td align="center">'.($count+1).'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][0],3, '.','').'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][1],3, '.','').'</td>';
+        $html .= '<td align="center">'.number_format($data[$count][2],3, '.','').'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][3],3, '.','').'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][4],3, '.','').'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][5],3, '.','').'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][6],3, '.','').'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][7],3, '.','').'</td>';
+        $html .= '</tr>';
+
+        $rownum++;
+        $count++;
+
+        if($rownum == $perpage || $count == $datasize)
+        {     
+            $html .= '</table>';
+            $x = $pdf->getX();
+           // if($tablenum%2 == 1)
+           //     $x += 15;
+            $pdf->writeHTMLCell(80, '', $x, $y, $html, 0, 0, false, true, 'J', true);
+            //$tablenum++;
+            $rownum = 0;
+            if($count < $datasize)
+            { 
+                $pdf->AddPage();
+                $perpage = 30;         
+                $y = $pdf->getY()+5;
+            }
+            $html = $tableheader;
+        }  
+
+    }
+}
+//--------------------------------------------------------------------------------
 // ===== of HDM4
 else 
 {

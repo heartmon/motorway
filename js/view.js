@@ -22,6 +22,95 @@ function View(){
         
     }
 
+    //Pavement Table
+    this.createPavement = function(data,headers,name){
+       // container.prepend('<div id="pavement"></div>');
+      // var columns = ['ระยะทาง','Lat','Long','รอยแตกหนังจระเข้','รอยแตกตามยาว','รอยร่องล้อ','ผิวหลุดร่อน','หลุม บ่อ','ผิวยุบตัวเป็นแอ่ง','ปะซ่อมผิว'];
+      $('#pavement > div').first().find('h3').remove();
+      for(h in headers)
+      {
+        var htmlcode = "<h3>";
+        htmlcode += h;
+        htmlcode += "<span class='color-orange'>" + headers[h] + "</span></h3>";
+        $('#pavement > div').first().prepend(htmlcode);
+      }
+
+      $('#pavement_table').html('');
+      var columns = this.getPavementColumns();
+       var htmlcode = "<thead><tr><th>ลำดับ</th>";
+
+       for(var i = 0; i < columns.length; i++)
+       {
+            htmlcode += "<th>";
+            htmlcode += columns[i];
+            htmlcode += "</th>";
+       }
+       htmlcode += "</tr></thead>";
+       htmlcode += "<tbody>";
+        g_pavement_array = [];
+       for(var i = 0; i < data.length; i++)
+       {
+            var distance    = parseFloat(data[i]['distance']).toFixed(3);
+            var crack_aca   = parseFloat(data[i]['crack_aca']).toFixed(3);
+            var crack_act   = parseFloat(data[i]['crack_act']).toFixed(3);
+            var bleeding    = parseFloat(data[i]['bleeding']).toFixed(3);
+            var raveling    = parseFloat(data[i]['raveling']).toFixed(3);
+            var phole       = parseFloat(data[i]['phole']).toFixed(3);
+            var deformation = parseFloat(data[i]['deformation']).toFixed(3);
+            var pacthing    = parseFloat(data[i]['pacthing']).toFixed(3);
+            htmlcode += "<tr>";
+            htmlcode += "<td>" + (i+1) + "</td>";
+            htmlcode += "<td>" + distance + "</td>";
+            htmlcode += "<td>" + crack_aca + "</td>";
+            htmlcode += "<td>" + crack_act + "</td>";
+            htmlcode += "<td>" + bleeding + "</td>";
+            htmlcode += "<td>" + raveling + "</td>";
+            htmlcode += "<td>" + phole + "</td>";
+            htmlcode += "<td>" + deformation + "</td>";
+            htmlcode += "<td>" + pacthing + "</td>";
+            htmlcode += "</tr>";
+
+            //For PDF Data
+            g_pavement_array.push([distance, crack_aca, crack_act, bleeding, raveling, phole, deformation, pacthing]);
+       }
+       htmlcode += "</tbody>";
+       $('#pavement_table').append(htmlcode);
+      // alert('cas');
+       //alert(htmlcode);
+
+        //Set Pager using tablesorter plugin
+        var myHeaders = {};
+        $("#pavement_table").find('th').each(function (i, e) {
+            myHeaders[$(this).index()] = {
+                sorter: false
+            };
+        });
+
+        $('.pager .first').unbind();
+        $('.pager .last').unbind();
+        $('.pager .prev').unbind();
+        $('.pager .next').unbind();
+
+        $("#pavement_table")
+            .tablesorter({
+            headers: myHeaders
+        })
+            .tablesorterPager({
+            container: $("#pavementpager"),
+            size: 20
+        });
+
+    }
+
+    this.getPavementColumns = function(){
+        var columns = ['ระยะทาง','รอยแตกหนังจระเข้','รอยแตกตามยาว','รอยร่องล้อ','ผิวหลุดร่อน','หลุม บ่อ','ผิวยุบตัวเป็นแอ่ง','ปะซ่อมผิว'];
+        return columns;
+    }
+    this.getPavementColumnsWidth = function(){
+        var width = [61,120,95,71,75,58,100,67];
+        return width;
+    }
+
 	//Create slider
     this.createSlider = function (container, range_container) {
         var container = $("#" + container);

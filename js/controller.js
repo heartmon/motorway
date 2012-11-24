@@ -22,7 +22,7 @@ function Controller(){
                 g_search_info.kmstart = kmstart;
                 g_search_info.kmend = kmend;
            // }
-            var sectionCode = $('select.mainsection:visible').val();
+
 
            /* if ($("#option2").is(":visible")) {
                 var exptype = $('select[name=exptype]').val();
@@ -37,10 +37,76 @@ function Controller(){
 
        		console.log(g_search_info);
        		_setupVar();
-
-            this.searchBySectionName(sectionCode);
+            switch(g_search_info['exptype'])
+           {
+            case "1":
+                var sectionCode = $('select.mainsection:visible').val();
+                g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+                g_search_info_level2.currentcode = $('.mainsection:visible option[value='+sectionCode+']').html();
+                break;
+            case "2":
+                var sectionCode = $('.enexname:visible').val();
+                g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+                g_search_info_level2.currentcode = $('.enexname:visible option[value='+sectionCode+']').html();
+                break;
+            case "3":
+                var sectionCode = $('.accessname:visible').val();
+                g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
+                g_search_info_level2.currentcode = $('.accessname:visible option[value='+sectionCode+']').html();
+                break;
+            case "4":
+                var sectionCode = $('.intersect:visible').val();
+                //var lanecode = sectionCode.slice(-2);
+                g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'');
+                g_search_info_level2.currentcode = $('.intersect:visible option[value='+sectionCode+']').html();
+                break;
+           }
+           // $('#pavement').remove();
+            if(g_search_info.infotype != "pavement")
+            {
+                console.log(sectionCode)
+                this.searchBySectionName(sectionCode);
+               
+            }
+            else
+            {
+                if(g_search_info['exptype'] == "1" || g_search_info['exptype'] == "3")
+                {
+                    $('#pavement_lane').html('');
+                    _showLane($('#pavement_lane'), _sectionException(sectionCode));
+                    $('#pavement_lane').prepend('<b>เลน:</b> ');
+                    $('#pavement_lane #mainLane').addClass('span1').removeClass('span3');
+                }
+                this.searchPavement(sectionCode);
+            }
 		}
 	}
+
+    this.showdata = function(selector){
+        if ($('#main_content').is(':hidden')) {
+            $('#main_content').show();
+        }
+        $('#main_content').children('div').hide();
+        if (selector.is(':hidden')) 
+            selector.show();    
+    }
+
+    this.searchPavement = function(sectionCode){
+        model.getPavement();
+        this.showdata($("#pavement"));
+       
+    }
+
+    this.setupPavement = function(data){
+
+        g_pavement = data;
+        g_search_info_level2.currentsection = data[0]['section'];
+        var headers = {'ตอนควบคุม: ': g_search_info_level2.currentcode+' ('+g_search_info_level2.currentsection+')', 'สายทาง: ':toExpressName(g_search_info.expressway)};
+        var columns = ['ระยะทาง','Lat','Long','รอยแตกหนังจระเข้','รอยแตกตามยาว','รอยร่องล้อ','ผิวหลุดร่อน','หลุม บ่อ','ผิวยุบตัวเป็นแอ่ง','ปะซ่อมผิว'];
+        view.createPavement(data,headers);
+        //$('#pavement').show();
+        this.showdata($('#pavement'));
+    }
 
 	this.searchBySectionName = function(sectionCode) {
         zoomCoor();
@@ -50,14 +116,10 @@ function Controller(){
         $('#maptoolbox #mainLane').remove();
         
         if ($('#lane_selection').is(':hidden')) $('#lane_selection').show();
-        if (g_search_info['exptype'] == "2") {
-            var sectionCode = $('.enexname:visible').val();
-            cloneToMap($("#toolbox .enexname:visible"), '#lane_selection');
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
-            g_search_info_level2.currentcode = $('.enexname:visible option[value='+sectionCode+']').html();
+        if (g_search_info['exptype'] == "2") {    
+            cloneToMap($("#toolbox .enexname:visible"), '#lane_selection');       
             this.getAllLane(false);
         } else if (g_search_info['exptype'] == "3") {
-            var sectionCode = $('.accessname:visible').val();
             // console.log($('#lane_selection select.accessname'));
             //if($('#lane_selection select.accessname'))
                 cloneToMap($("#toolbox select.accessname:visible"), '#lane_selection', false, false);
@@ -70,15 +132,13 @@ function Controller(){
             $('#lane_selection .mainsection').addClass('span2').removeClass('span3');
             $('#maptoolbox #mainLane option:first').prop('selected', 'selected');
             $('#maptoolbox #mainLane').prop('multiple', 'multiple');
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
-            g_search_info_level2.currentcode = $('.accessname:visible option[value='+sectionCode+']').html();
+            
             this.getAllLane(true);
         } else if (g_search_info['exptype'] == "4") {
-            var sectionCode = $('.intersect:visible').val();
-            var lanecode = sectionCode.slice(-2);
+            
+            
             cloneToMap($("#toolbox .intersect:visible"), '#lane_selection');
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,lanecode);
-            g_search_info_level2.currentcode = $('.intersect:visible option[value='+sectionCode+']').html();
+            
             this.getAllLane(false);
         } 
         else {
@@ -95,9 +155,6 @@ function Controller(){
 
             $('#maptoolbox #mainLane').prop('multiple', 'multiple');
 
-            //Formulate Section
-            g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
-            g_search_info_level2.currentcode = $('.mainsection:visible option[value='+sectionCode+']').html();
 
           //  g_search_info_level2['currentsection'] = $('#lane_selection select.mainLane :selected').val();
           //  g_search_info_level2['currentcode'] = $('#lane_selection select.mainLane :selected').prop('title');
@@ -166,11 +223,13 @@ function Controller(){
     //Show Data(table graph) of activated lane
     this.activatedResult = function (data, isHDM4) {
         if (!g_hdm4search_click) {
-            if ($('#main_content').is(':hidden')) {
-                $('#main_content').show();
-            }
-            if ($('#damagesearch').is(':hidden')) 
-                showDamage();
+             this.showdata($("#damagesearch"));
+            //this.showdata($("#damagesearch"));
+            // if ($('#main_content').is(':hidden')) {
+            //     $('#main_content').show();
+            // }
+            //if ($('#damagesearch').is(':hidden')) 
+            //    showDamage();
             _rangefix = data['rangefix'];
             if (!g_search_info_level2.kmfreq) 
                 g_search_info_level2.kmfreq = _rangefix;
@@ -353,6 +412,52 @@ function Controller(){
         $('#video-player #reel_container').hide().html('');
     }
 
+    this.exportPDFPavement = function(){
+        var data = {
+                pdftype:"pavement",
+                 columns: view.getPavementColumns(),
+                cWidth: view.getPavementColumnsWidth(),
+                expressway: toExpressName(g_search_info.expressway),
+                section: g_search_info_level2.currentsection,
+                code: g_search_info_level2.currentcode,
+                data: g_pavement_array
+            };
+        // var divide = 100;
+        // var l = Math.ceil(g_pavement_array.length/divide);
+        // var datacut = [];
+        // var temp = g_pavement_array;
+        // for(var i=0; i<l; i++)
+        //     {
+        //     datacut.push(temp.slice(i*divide,i*divide+divide-1));
+
+        //     console.log(datacut);
+        // }
+        // for(var i = 0; i<datacut.length; i++)
+        // {
+        //     data['data'+i] = datacut[i];
+        // }
+        // data['len'] = l;
+        // console.log(data);
+        showLoading();
+        $.ajax({
+            url: 'ajax/_export_pdf.php',
+            type: 'POST',
+            data: data,
+            success: function (data) {
+                if (!data['error']) {
+                    //alert('pdf saved');
+                  //  alert(data);
+                   $("#genpdf:visible").submit();
+                   // alert(data);
+                } else {
+                    alert('Search not found');
+                }
+                hideLoading();
+            }
+        });
+        return false;
+    }
+
     this.exportPDFhdm4 = function() {
         //Prepare data
         var year = $("#yearbudget .hdm4year").html();
@@ -371,7 +476,8 @@ function Controller(){
                 year: year,
                 hdm4type: hdm4type,
                 hdm4data: g_hdm4_data_result,
-                totalcost: totalcost
+                totalcost: totalcost,
+                pdftype: "hdm4"
             },
             success: function (data) {
                 if (!data['error']) {
@@ -475,7 +581,8 @@ function Controller(){
                 currentImage: currentImage,
                 currentlong: currentlong,
                 currentlat: currentlat,
-                currentkm: currentkm
+                currentkm: currentkm,
+                pdftype: "damage"
             },
             success: function (data) {
                 console.log(data);
@@ -710,10 +817,6 @@ function Controller(){
             case "0402B02":
             case "0500B02":
                 return 4;
-            //6 lane
-          //  case "0500B02":
-         //    case "0402B02":
-                return 6;
             default:
                 return 8;
         }
@@ -820,26 +923,29 @@ function Controller(){
 	            'border': "1px solid red",
 	            'background-color': "#FFD5D5"
 	        };
-	        if ((temp_kms === '' || temp_kme === '') && valid) {
-	            alert('โปรดกำหนด ช่วง กม.');
-	            valid = false;
-	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
-	        }
-	        if (isNaN(temp_kms) || isNaN(temp_kme) && valid) {
-	            alert('ช่วง กม. ต้องเป็นตัวเลขเท่านั้น');
-	            valid = false;
-	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
-	        }
-	        if (temp_kms >= temp_kme && valid && temp_kms !== '' && temp_kme !== '') {
-	            alert('ช่วง กม. เริ่มต้น ต้องน้อยกว่า ช่วง กม. สิ้นสุด');
-	            valid = false;
-	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
-	        }
-	        if (temp_kme - temp_kms > 2 && valid) {
-	            alert('ระยะทางต้องไม่เกิน 2 กม.');
-	            valid = false;
-	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
-	        }
+            if($('input[name=infotype]:checked').val() != 'pavement')
+            {
+    	        if ((temp_kms === '' || temp_kme === '') && valid) {
+    	            alert('โปรดกำหนด ช่วง กม.');
+    	            valid = false;
+    	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
+    	        }
+    	        if (isNaN(temp_kms) || isNaN(temp_kme) && valid) {
+    	            alert('ช่วง กม. ต้องเป็นตัวเลขเท่านั้น');
+    	            valid = false;
+    	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
+    	        }
+    	        if (temp_kms >= temp_kme && valid && temp_kms !== '' && temp_kme !== '') {
+    	            alert('ช่วง กม. เริ่มต้น ต้องน้อยกว่า ช่วง กม. สิ้นสุด');
+    	            valid = false;
+    	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
+    	        }
+    	        if (temp_kme - temp_kms > 2 && valid) {
+    	            alert('ระยะทางต้องไม่เกิน 2 กม.');
+    	            valid = false;
+    	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
+    	        }
+            }
   		}
         return valid;
 

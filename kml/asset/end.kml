@@ -1,0 +1,3635 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>bridge_end</name>
+<Schema name="bridge_end" id="bridge_end">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="no" type="int"></SimpleField>
+	<SimpleField name="framekey" type="string"></SimpleField>
+	<SimpleField name="link_id" type="string"></SimpleField>
+	<SimpleField name="distance" type="float"></SimpleField>
+	<SimpleField name="sta" type="float"></SimpleField>
+	<SimpleField name="lane" type="string"></SimpleField>
+	<SimpleField name="surveydate" type="string"></SimpleField>
+	<SimpleField name="latitude" type="float"></SimpleField>
+	<SimpleField name="longitude" type="float"></SimpleField>
+	<SimpleField name="message" type="string"></SimpleField>
+	<SimpleField name="gid" type="int"></SimpleField>
+</Schema>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1657858838960</SimpleData>
+		<SimpleData name="link_id">070101123F1 </SimpleData>
+		<SimpleData name="distance">0.771</SimpleData>
+		<SimpleData name="sta">0.447</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.740861</SimpleData>
+		<SimpleData name="longitude">100.645838</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3248</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.645838,13.740861</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1657857923752</SimpleData>
+		<SimpleData name="link_id">070101134F1 </SimpleData>
+		<SimpleData name="distance">2.58</SimpleData>
+		<SimpleData name="sta">0.567</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.740477</SimpleData>
+		<SimpleData name="longitude">100.645328</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3254</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.645328,13.740477</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1636384051709</SimpleData>
+		<SimpleData name="link_id">070101223F1 </SimpleData>
+		<SimpleData name="distance">2.091</SimpleData>
+		<SimpleData name="sta">0.845</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.730128</SimpleData>
+		<SimpleData name="longitude">100.754362</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3273</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.754362,13.730128</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1644987936225</SimpleData>
+		<SimpleData name="link_id">070101243F1 </SimpleData>
+		<SimpleData name="distance">1.221</SimpleData>
+		<SimpleData name="sta">0.91</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.729887</SimpleData>
+		<SimpleData name="longitude">100.748766</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3283</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.748766,13.729887</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1640694072420</SimpleData>
+		<SimpleData name="link_id">070101341F1 </SimpleData>
+		<SimpleData name="distance">4.025</SimpleData>
+		<SimpleData name="sta">2.081</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.729268</SimpleData>
+		<SimpleData name="longitude">100.743928</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3285</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.743928,13.729268</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1636385887520</SimpleData>
+		<SimpleData name="link_id">070101423F1 </SimpleData>
+		<SimpleData name="distance">2.066</SimpleData>
+		<SimpleData name="sta">1.637</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.697208</SimpleData>
+		<SimpleData name="longitude">100.826876</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3287</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.826876,13.697208</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1640681931965</SimpleData>
+		<SimpleData name="link_id">070101434F1 </SimpleData>
+		<SimpleData name="distance">1.611</SimpleData>
+		<SimpleData name="sta">0.704</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.697991</SimpleData>
+		<SimpleData name="longitude">100.825662</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3289</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.825662,13.697991</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1649276263943</SimpleData>
+		<SimpleData name="link_id">070302134F1 </SimpleData>
+		<SimpleData name="distance">1.278</SimpleData>
+		<SimpleData name="sta">0.392</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.597245</SimpleData>
+		<SimpleData name="longitude">100.956482</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3295</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.956482,13.597245</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1649274352903</SimpleData>
+		<SimpleData name="link_id">070302143F1 </SimpleData>
+		<SimpleData name="distance">2.423</SimpleData>
+		<SimpleData name="sta">0.882</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.601575</SimpleData>
+		<SimpleData name="longitude">100.953671</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3298</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.953671,13.601575</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1649274434389</SimpleData>
+		<SimpleData name="link_id">070302143F1 </SimpleData>
+		<SimpleData name="distance">3.097</SimpleData>
+		<SimpleData name="sta">1.556</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.597904</SimpleData>
+		<SimpleData name="longitude">100.956622</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3300</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.956622,13.597904</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1636387515392</SimpleData>
+		<SimpleData name="link_id">070302214F1 </SimpleData>
+		<SimpleData name="distance">1.579</SimpleData>
+		<SimpleData name="sta">0.383</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.603912</SimpleData>
+		<SimpleData name="longitude">100.947369</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3303</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.947369,13.603912</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1636387644352</SimpleData>
+		<SimpleData name="link_id">070302214F1 </SimpleData>
+		<SimpleData name="distance">2.829</SimpleData>
+		<SimpleData name="sta">1.633</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.597491</SimpleData>
+		<SimpleData name="longitude">100.953738</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3305</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.953738,13.597491</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1640679763075</SimpleData>
+		<SimpleData name="link_id">070302231F1 </SimpleData>
+		<SimpleData name="distance">1.15</SimpleData>
+		<SimpleData name="sta">0.299</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.562149</SimpleData>
+		<SimpleData name="longitude">100.951691</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3307</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.951691,13.562149</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1666462204415</SimpleData>
+		<SimpleData name="link_id">070401134F1 </SimpleData>
+		<SimpleData name="distance">2.38</SimpleData>
+		<SimpleData name="sta">0.607</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-30</SimpleData>
+		<SimpleData name="latitude">13.403536</SimpleData>
+		<SimpleData name="longitude">101.047028</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3315</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047028,13.403536</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1666462246384</SimpleData>
+		<SimpleData name="link_id">070401134F1 </SimpleData>
+		<SimpleData name="distance">2.857</SimpleData>
+		<SimpleData name="sta">1.084</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-30</SimpleData>
+		<SimpleData name="latitude">13.407849</SimpleData>
+		<SimpleData name="longitude">101.046899</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3317</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046899,13.407849</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1666460441750</SimpleData>
+		<SimpleData name="link_id">070401143F1 </SimpleData>
+		<SimpleData name="distance">1.254</SimpleData>
+		<SimpleData name="sta">0.705</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-30</SimpleData>
+		<SimpleData name="latitude">13.406326</SimpleData>
+		<SimpleData name="longitude">101.047559</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3326</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047559,13.406326</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1666460485516</SimpleData>
+		<SimpleData name="link_id">070401143F1 </SimpleData>
+		<SimpleData name="distance">1.684</SimpleData>
+		<SimpleData name="sta">1.135</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-30</SimpleData>
+		<SimpleData name="latitude">13.402447</SimpleData>
+		<SimpleData name="longitude">101.047674</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3328</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047674,13.402447</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1481764901087</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">2.378</SimpleData>
+		<SimpleData name="sta">1.75</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.737521</SimpleData>
+		<SimpleData name="longitude">100.659452</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3337</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.659452,13.737521</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1481764959387</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">3.068</SimpleData>
+		<SimpleData name="sta">2.44</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.737066</SimpleData>
+		<SimpleData name="longitude">100.665813</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3340</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.665813,13.737066</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1481765042395</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">4.093</SimpleData>
+		<SimpleData name="sta">3.465</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.735726</SimpleData>
+		<SimpleData name="longitude">100.675186</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3343</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675186,13.735726</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">16</SimpleData>
+		<SimpleData name="framekey">1481765165530</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">5.583</SimpleData>
+		<SimpleData name="sta">4.956</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.734224</SimpleData>
+		<SimpleData name="longitude">100.688873</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3350</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.688873,13.734224</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">20</SimpleData>
+		<SimpleData name="framekey">1481765232939</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">6.367</SimpleData>
+		<SimpleData name="sta">5.739</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733387</SimpleData>
+		<SimpleData name="longitude">100.696057</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3354</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.696057,13.733387</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">26</SimpleData>
+		<SimpleData name="framekey">1481765346122</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">7.747</SimpleData>
+		<SimpleData name="sta">7.119</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.732</SimpleData>
+		<SimpleData name="longitude">100.708734</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3360</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.708734,13.732</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">29</SimpleData>
+		<SimpleData name="framekey">1481765480333</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">9.44</SimpleData>
+		<SimpleData name="sta">8.812</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730298</SimpleData>
+		<SimpleData name="longitude">100.724283</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3363</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.724283,13.730298</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">36</SimpleData>
+		<SimpleData name="framekey">1481765608437</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">11.081</SimpleData>
+		<SimpleData name="sta">10.454</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729427</SimpleData>
+		<SimpleData name="longitude">100.739399</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3370</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.739399,13.729427</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">42</SimpleData>
+		<SimpleData name="framekey">1481765691734</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">12.122</SimpleData>
+		<SimpleData name="sta">11.494</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729672</SimpleData>
+		<SimpleData name="longitude">100.749007</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3376</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.749007,13.729672</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">45</SimpleData>
+		<SimpleData name="framekey">1481765738906</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">12.738</SimpleData>
+		<SimpleData name="sta">12.111</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729801</SimpleData>
+		<SimpleData name="longitude">100.754708</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3379</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.754708,13.729801</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">49</SimpleData>
+		<SimpleData name="framekey">1481765855638</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">14.119</SimpleData>
+		<SimpleData name="sta">13.491</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.731847</SimpleData>
+		<SimpleData name="longitude">100.767222</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3383</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.767222,13.731847</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">51</SimpleData>
+		<SimpleData name="framekey">1481765878136</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">14.394</SimpleData>
+		<SimpleData name="sta">13.767</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.731984</SimpleData>
+		<SimpleData name="longitude">100.769765</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3385</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.769765,13.731984</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">57</SimpleData>
+		<SimpleData name="framekey">1481766091417</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">17.114</SimpleData>
+		<SimpleData name="sta">16.487</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733432</SimpleData>
+		<SimpleData name="longitude">100.794829</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3391</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.794829,13.733432</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">64</SimpleData>
+		<SimpleData name="framekey">1481766289460</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">19.636</SimpleData>
+		<SimpleData name="sta">19.008</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.724557</SimpleData>
+		<SimpleData name="longitude">100.813056</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3398</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.813056,13.724557</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">69</SimpleData>
+		<SimpleData name="framekey">1481766445939</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">21.577</SimpleData>
+		<SimpleData name="sta">20.949</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.708763</SimpleData>
+		<SimpleData name="longitude">100.82082</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.82082,13.708763</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">52</SimpleData>
+		<SimpleData name="framekey">1481770506331</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">20.277</SimpleData>
+		<SimpleData name="sta">20.154</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.716242</SimpleData>
+		<SimpleData name="longitude">100.817065</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3610</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.817065,13.716242</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">56</SimpleData>
+		<SimpleData name="framekey">1481770621434</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">21.77</SimpleData>
+		<SimpleData name="sta">18.662</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.7284</SimpleData>
+		<SimpleData name="longitude">100.811088</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3614</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.811088,13.7284</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">60</SimpleData>
+		<SimpleData name="framekey">1481770795687</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">24.022</SimpleData>
+		<SimpleData name="sta">16.41</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733153</SimpleData>
+		<SimpleData name="longitude">100.792871</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3618</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.792871,13.733153</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">66</SimpleData>
+		<SimpleData name="framekey">1481771005895</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">26.677</SimpleData>
+		<SimpleData name="sta">13.755</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.731838</SimpleData>
+		<SimpleData name="longitude">100.768396</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3624</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.768396,13.731838</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">70</SimpleData>
+		<SimpleData name="framekey">1481771061394</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">27.348</SimpleData>
+		<SimpleData name="sta">13.083</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730993</SimpleData>
+		<SimpleData name="longitude">100.762291</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3628</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.762291,13.730993</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">75</SimpleData>
+		<SimpleData name="framekey">1481771138790</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">28.328</SimpleData>
+		<SimpleData name="sta">12.103</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729705</SimpleData>
+		<SimpleData name="longitude">100.753383</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3633</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.753383,13.729705</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">78</SimpleData>
+		<SimpleData name="framekey">1481771218342</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">29.346</SimpleData>
+		<SimpleData name="sta">11.086</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729467</SimpleData>
+		<SimpleData name="longitude">100.744024</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3636</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.744024,13.729467</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">81</SimpleData>
+		<SimpleData name="framekey">1481771269508</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">29.928</SimpleData>
+		<SimpleData name="sta">10.504</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729337</SimpleData>
+		<SimpleData name="longitude">100.738599</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3639</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.738599,13.729337</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">88</SimpleData>
+		<SimpleData name="framekey">1481771509685</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">31.571</SimpleData>
+		<SimpleData name="sta">8.861</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730324</SimpleData>
+		<SimpleData name="longitude">100.723475</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3646</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.723475,13.730324</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">94</SimpleData>
+		<SimpleData name="framekey">1481771686833</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">33.273</SimpleData>
+		<SimpleData name="sta">7.159</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.732039</SimpleData>
+		<SimpleData name="longitude">100.707842</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3652</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.707842,13.732039</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">98</SimpleData>
+		<SimpleData name="framekey">1481771813762</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">34.708</SimpleData>
+		<SimpleData name="sta">5.724</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.73348</SimpleData>
+		<SimpleData name="longitude">100.69465</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3656</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.69465,13.73348</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">101</SimpleData>
+		<SimpleData name="framekey">1481771882819</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">35.523</SimpleData>
+		<SimpleData name="sta">4.909</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.73431</SimpleData>
+		<SimpleData name="longitude">100.687166</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3659</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.687166,13.73431</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">104</SimpleData>
+		<SimpleData name="framekey">1481771996239</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">36.945</SimpleData>
+		<SimpleData name="sta">3.486</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.735829</SimpleData>
+		<SimpleData name="longitude">100.674117</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3662</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674117,13.735829</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">107</SimpleData>
+		<SimpleData name="framekey">1481772074480</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">37.975</SimpleData>
+		<SimpleData name="sta">2.456</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.737081</SimpleData>
+		<SimpleData name="longitude">100.664688</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3665</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.664688,13.737081</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">111</SimpleData>
+		<SimpleData name="framekey">1481772133279</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">38.687</SimpleData>
+		<SimpleData name="sta">1.745</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.737679</SimpleData>
+		<SimpleData name="longitude">100.658144</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3669</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.658144,13.737679</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">72</SimpleData>
+		<SimpleData name="framekey">1481766570995</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">23.087</SimpleData>
+		<SimpleData name="sta">22.583</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.696471</SimpleData>
+		<SimpleData name="longitude">100.826862</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3870</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.826862,13.696471</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">75</SimpleData>
+		<SimpleData name="framekey">1481766667156</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">24.243</SimpleData>
+		<SimpleData name="sta">23.74</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.687055</SimpleData>
+		<SimpleData name="longitude">100.831484</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3873</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.831484,13.687055</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">78</SimpleData>
+		<SimpleData name="framekey">1481766721653</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">24.917</SimpleData>
+		<SimpleData name="sta">24.413</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.681577</SimpleData>
+		<SimpleData name="longitude">100.834186</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3876</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.834186,13.681577</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">81</SimpleData>
+		<SimpleData name="framekey">1481766784165</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">25.713</SimpleData>
+		<SimpleData name="sta">25.209</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.675138</SimpleData>
+		<SimpleData name="longitude">100.837438</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3879</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.837438,13.675138</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">85</SimpleData>
+		<SimpleData name="framekey">1481766995872</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">27.44</SimpleData>
+		<SimpleData name="sta">26.936</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.665939</SimpleData>
+		<SimpleData name="longitude">100.85018</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3883</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.85018,13.665939</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">88</SimpleData>
+		<SimpleData name="framekey">1481767032416</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">27.912</SimpleData>
+		<SimpleData name="sta">27.409</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.663596</SimpleData>
+		<SimpleData name="longitude">100.853828</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3886</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.853828,13.663596</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">91</SimpleData>
+		<SimpleData name="framekey">1481767130734</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">29.141</SimpleData>
+		<SimpleData name="sta">28.637</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.657509</SimpleData>
+		<SimpleData name="longitude">100.863309</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3889</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.863309,13.657509</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">93</SimpleData>
+		<SimpleData name="framekey">1481767165151</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">29.553</SimpleData>
+		<SimpleData name="sta">29.049</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.655468</SimpleData>
+		<SimpleData name="longitude">100.866487</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3891</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.866487,13.655468</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">97</SimpleData>
+		<SimpleData name="framekey">1481767317278</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">31.47</SimpleData>
+		<SimpleData name="sta">30.966</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.645967</SimpleData>
+		<SimpleData name="longitude">100.881281</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3895</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.881281,13.645967</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">101</SimpleData>
+		<SimpleData name="framekey">1481767410446</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">32.598</SimpleData>
+		<SimpleData name="sta">32.095</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.640376</SimpleData>
+		<SimpleData name="longitude">100.889989</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3899</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.889989,13.640376</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">103</SimpleData>
+		<SimpleData name="framekey">1481767483373</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">33.501</SimpleData>
+		<SimpleData name="sta">32.998</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.635904</SimpleData>
+		<SimpleData name="longitude">100.89696</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3901</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.89696,13.635904</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">107</SimpleData>
+		<SimpleData name="framekey">1481767588478</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">34.804</SimpleData>
+		<SimpleData name="sta">34.301</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.629454</SimpleData>
+		<SimpleData name="longitude">100.907018</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3905</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.907018,13.629454</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">109</SimpleData>
+		<SimpleData name="framekey">1481767641118</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">35.448</SimpleData>
+		<SimpleData name="sta">34.945</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.626269</SimpleData>
+		<SimpleData name="longitude">100.91199</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3907</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.91199,13.626269</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">113</SimpleData>
+		<SimpleData name="framekey">1481767752348</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">36.806</SimpleData>
+		<SimpleData name="sta">36.302</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.619542</SimpleData>
+		<SimpleData name="longitude">100.922464</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3911</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.922464,13.619542</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">119</SimpleData>
+		<SimpleData name="framekey">1481767910458</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">38.83</SimpleData>
+		<SimpleData name="sta">38.327</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.609514</SimpleData>
+		<SimpleData name="longitude">100.938088</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">3917</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.938088,13.609514</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1481768991222</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">2.336</SimpleData>
+		<SimpleData name="sta">38.089</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.610603</SimpleData>
+		<SimpleData name="longitude">100.936266</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4072</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.936266,13.610603</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1481769149250</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">4.35</SimpleData>
+		<SimpleData name="sta">36.075</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.620586</SimpleData>
+		<SimpleData name="longitude">100.920713</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4076</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.920713,13.620586</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">10</SimpleData>
+		<SimpleData name="framekey">1481769244511</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">5.581</SimpleData>
+		<SimpleData name="sta">34.844</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.626686</SimpleData>
+		<SimpleData name="longitude">100.911207</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4080</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.911207,13.626686</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">12</SimpleData>
+		<SimpleData name="framekey">1481769298306</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">6.264</SimpleData>
+		<SimpleData name="sta">34.161</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.630069</SimpleData>
+		<SimpleData name="longitude">100.905932</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4082</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.905932,13.630069</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">16</SimpleData>
+		<SimpleData name="framekey">1481769408017</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">7.672</SimpleData>
+		<SimpleData name="sta">32.752</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.637044</SimpleData>
+		<SimpleData name="longitude">100.895056</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4086</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.895056,13.637044</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">19</SimpleData>
+		<SimpleData name="framekey">1481769480064</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">8.597</SimpleData>
+		<SimpleData name="sta">31.828</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.641624</SimpleData>
+		<SimpleData name="longitude">100.887917</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4089</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.887917,13.641624</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">22</SimpleData>
+		<SimpleData name="framekey">1481769556094</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">9.59</SimpleData>
+		<SimpleData name="sta">30.834</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.64655</SimpleData>
+		<SimpleData name="longitude">100.880246</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4092</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.880246,13.64655</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">26</SimpleData>
+		<SimpleData name="framekey">1481769716574</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">11.686</SimpleData>
+		<SimpleData name="sta">28.739</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.656935</SimpleData>
+		<SimpleData name="longitude">100.864066</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4096</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.864066,13.656935</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">28</SimpleData>
+		<SimpleData name="framekey">1481769733376</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">11.907</SimpleData>
+		<SimpleData name="sta">28.518</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.658029</SimpleData>
+		<SimpleData name="longitude">100.862363</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4098</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.862363,13.658029</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">31</SimpleData>
+		<SimpleData name="framekey">1481769829072</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">13.164</SimpleData>
+		<SimpleData name="sta">27.261</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.664265</SimpleData>
+		<SimpleData name="longitude">100.852654</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4101</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.852654,13.664265</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">34</SimpleData>
+		<SimpleData name="framekey">1481769870798</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">13.667</SimpleData>
+		<SimpleData name="sta">26.757</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.666768</SimpleData>
+		<SimpleData name="longitude">100.848765</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4104</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.848765,13.666768</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">40</SimpleData>
+		<SimpleData name="framekey">1481770130636</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">15.446</SimpleData>
+		<SimpleData name="sta">24.979</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.676904</SimpleData>
+		<SimpleData name="longitude">100.836407</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.836407,13.676904</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">42</SimpleData>
+		<SimpleData name="framekey">1481770193435</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">16.261</SimpleData>
+		<SimpleData name="sta">24.164</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.683538</SimpleData>
+		<SimpleData name="longitude">100.833143</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4112</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.833143,13.683538</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">45</SimpleData>
+		<SimpleData name="framekey">1481770248792</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">16.974</SimpleData>
+		<SimpleData name="sta">23.45</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.68935</SimpleData>
+		<SimpleData name="longitude">100.830286</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4115</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.830286,13.68935</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">49</SimpleData>
+		<SimpleData name="framekey">1481770336907</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">18.123</SimpleData>
+		<SimpleData name="sta">22.302</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.698702</SimpleData>
+		<SimpleData name="longitude">100.825693</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4119</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.825693,13.698702</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1559084194246</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">1.989</SimpleData>
+		<SimpleData name="sta">39.556</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.603389</SimpleData>
+		<SimpleData name="longitude">100.947628</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4275</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.947628,13.603389</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1559084293553</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">3.22</SimpleData>
+		<SimpleData name="sta">40.787</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.597288</SimpleData>
+		<SimpleData name="longitude">100.957122</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4278</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.957122,13.597288</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">13</SimpleData>
+		<SimpleData name="framekey">1559084480691</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">5.534</SimpleData>
+		<SimpleData name="sta">43.1</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.582859</SimpleData>
+		<SimpleData name="longitude">100.972306</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4283</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.972306,13.582859</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">17</SimpleData>
+		<SimpleData name="framekey">1559084600753</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">7.021</SimpleData>
+		<SimpleData name="sta">44.588</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.572486</SimpleData>
+		<SimpleData name="longitude">100.981021</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4287</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.981021,13.572486</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">23</SimpleData>
+		<SimpleData name="framekey">1559084795282</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">9.409</SimpleData>
+		<SimpleData name="sta">46.976</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.555824</SimpleData>
+		<SimpleData name="longitude">100.995</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4293</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.995,13.555824</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">27</SimpleData>
+		<SimpleData name="framekey">1559084906479</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">10.793</SimpleData>
+		<SimpleData name="sta">48.36</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.546179</SimpleData>
+		<SimpleData name="longitude">101.003114</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4297</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.003114,13.546179</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">31</SimpleData>
+		<SimpleData name="framekey">1559085109756</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">13.367</SimpleData>
+		<SimpleData name="sta">50.934</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.52824</SimpleData>
+		<SimpleData name="longitude">101.018204</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4301</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.018204,13.52824</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">63</SimpleData>
+		<SimpleData name="framekey">1559090434459</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">28.982</SimpleData>
+		<SimpleData name="sta">50.801</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.528921</SimpleData>
+		<SimpleData name="longitude">101.01754</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4401</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.01754,13.528921</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">71</SimpleData>
+		<SimpleData name="framekey">1559090686295</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">32.161</SimpleData>
+		<SimpleData name="sta">47.622</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.5511</SimpleData>
+		<SimpleData name="longitude">100.9989</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4409</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.9989,13.5511</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">74</SimpleData>
+		<SimpleData name="framekey">1559090786506</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">33.345</SimpleData>
+		<SimpleData name="sta">46.438</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.559366</SimpleData>
+		<SimpleData name="longitude">100.991958</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4412</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.991958,13.559366</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">78</SimpleData>
+		<SimpleData name="framekey">1559090949525</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">35.378</SimpleData>
+		<SimpleData name="sta">44.405</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.573552</SimpleData>
+		<SimpleData name="longitude">100.980032</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4416</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.980032,13.573552</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">81</SimpleData>
+		<SimpleData name="framekey">1559091060469</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">36.786</SimpleData>
+		<SimpleData name="sta">42.997</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.583384</SimpleData>
+		<SimpleData name="longitude">100.971776</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4419</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.971776,13.583384</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">90</SimpleData>
+		<SimpleData name="framekey">1559091247687</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">39.148</SimpleData>
+		<SimpleData name="sta">40.635</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.597893</SimpleData>
+		<SimpleData name="longitude">100.956058</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4428</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.956058,13.597893</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">93</SimpleData>
+		<SimpleData name="framekey">1559091344483</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">40.352</SimpleData>
+		<SimpleData name="sta">39.431</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.603862</SimpleData>
+		<SimpleData name="longitude">100.946761</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4431</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.946761,13.603862</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1559077118825</SimpleData>
+		<SimpleData name="link_id">070302M00F1 </SimpleData>
+		<SimpleData name="distance">3.039</SimpleData>
+		<SimpleData name="sta">1.96</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.576243</SimpleData>
+		<SimpleData name="longitude">100.950531</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4507</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.950531,13.576243</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1559075179943</SimpleData>
+		<SimpleData name="link_id">070302M00R1 </SimpleData>
+		<SimpleData name="distance">2.124</SimpleData>
+		<SimpleData name="sta">3.103</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.577717</SimpleData>
+		<SimpleData name="longitude">100.950581</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4523</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.950581,13.577717</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">35</SimpleData>
+		<SimpleData name="framekey">1559085306395</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">15.838</SimpleData>
+		<SimpleData name="sta">53.373</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.511022</SimpleData>
+		<SimpleData name="longitude">101.032702</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4538</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.032702,13.511022</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">37</SimpleData>
+		<SimpleData name="framekey">1559085345772</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">16.335</SimpleData>
+		<SimpleData name="sta">53.87</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.507562</SimpleData>
+		<SimpleData name="longitude">101.035616</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4540</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.035616,13.507562</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">43</SimpleData>
+		<SimpleData name="framekey">1559085639035</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">19.95</SimpleData>
+		<SimpleData name="sta">57.485</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.478638</SimpleData>
+		<SimpleData name="longitude">101.046297</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4546</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046297,13.478638</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">47</SimpleData>
+		<SimpleData name="framekey">1559085795703</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">21.846</SimpleData>
+		<SimpleData name="sta">59.381</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.461535</SimpleData>
+		<SimpleData name="longitude">101.046049</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4550</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046049,13.461535</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">49</SimpleData>
+		<SimpleData name="framekey">1559085827051</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">22.234</SimpleData>
+		<SimpleData name="sta">59.768</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.458037</SimpleData>
+		<SimpleData name="longitude">101.046074</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4552</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046074,13.458037</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">52</SimpleData>
+		<SimpleData name="framekey">1559085862696</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">22.675</SimpleData>
+		<SimpleData name="sta">60.21</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.454048</SimpleData>
+		<SimpleData name="longitude">101.046104</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4555</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046104,13.454048</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">64</SimpleData>
+		<SimpleData name="framekey">1559086345811</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">28.688</SimpleData>
+		<SimpleData name="sta">66.223</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.399802</SimpleData>
+		<SimpleData name="longitude">101.047447</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4567</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047447,13.399802</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">77</SimpleData>
+		<SimpleData name="framekey">1559086943923</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">35.378</SimpleData>
+		<SimpleData name="sta">72.913</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.343636</SimpleData>
+		<SimpleData name="longitude">101.0273</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4580</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.0273,13.343636</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1559088266009</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">1.963</SimpleData>
+		<SimpleData name="sta">77.933</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.306924</SimpleData>
+		<SimpleData name="longitude">101.001428</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4755</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.001428,13.306924</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">17</SimpleData>
+		<SimpleData name="framekey">1559088687944</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">7.494</SimpleData>
+		<SimpleData name="sta">72.401</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.348219</SimpleData>
+		<SimpleData name="longitude">101.030081</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4769</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.030081,13.348219</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">31</SimpleData>
+		<SimpleData name="framekey">1559089309475</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">14.685</SimpleData>
+		<SimpleData name="sta">65.21</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.409796</SimpleData>
+		<SimpleData name="longitude">101.047111</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4783</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047111,13.409796</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">38</SimpleData>
+		<SimpleData name="framekey">1559089701228</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">19.674</SimpleData>
+		<SimpleData name="sta">60.221</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.454861</SimpleData>
+		<SimpleData name="longitude">101.04603</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4790</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.04603,13.454861</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">41</SimpleData>
+		<SimpleData name="framekey">1559089736050</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">20.113</SimpleData>
+		<SimpleData name="sta">59.782</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.45883</SimpleData>
+		<SimpleData name="longitude">101.045999</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4793</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.045999,13.45883</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">43</SimpleData>
+		<SimpleData name="framekey">1559089769981</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">20.548</SimpleData>
+		<SimpleData name="sta">59.347</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.462765</SimpleData>
+		<SimpleData name="longitude">101.045972</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4795</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.045972,13.462765</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">47</SimpleData>
+		<SimpleData name="framekey">1559089941644</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">22.71</SimpleData>
+		<SimpleData name="sta">57.185</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.482292</SimpleData>
+		<SimpleData name="longitude">101.046391</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4799</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046391,13.482292</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">51</SimpleData>
+		<SimpleData name="framekey">1559090039085</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">23.969</SimpleData>
+		<SimpleData name="sta">55.926</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.49362</SimpleData>
+		<SimpleData name="longitude">101.046395</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4803</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046395,13.49362</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">53</SimpleData>
+		<SimpleData name="framekey">1559090060680</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">24.241</SimpleData>
+		<SimpleData name="sta">55.655</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.495825</SimpleData>
+		<SimpleData name="longitude">101.045329</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4805</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.045329,13.495825</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">57</SimpleData>
+		<SimpleData name="framekey">1559090210188</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">26.096</SimpleData>
+		<SimpleData name="sta">53.799</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.508797</SimpleData>
+		<SimpleData name="longitude">101.034478</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4809</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.034478,13.508797</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">59</SimpleData>
+		<SimpleData name="framekey">1559090245196</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">26.546</SimpleData>
+		<SimpleData name="sta">53.349</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.511932</SimpleData>
+		<SimpleData name="longitude">101.031839</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4811</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.031839,13.511932</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1679335148169</SimpleData>
+		<SimpleData name="link_id">090402B01F1 </SimpleData>
+		<SimpleData name="distance">2.704</SimpleData>
+		<SimpleData name="sta">1.747</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">14.004915</SimpleData>
+		<SimpleData name="longitude">100.706684</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4935</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.706684,14.004915</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1679335194681</SimpleData>
+		<SimpleData name="link_id">090402B01F1 </SimpleData>
+		<SimpleData name="distance">3.295</SimpleData>
+		<SimpleData name="sta">2.338</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">14.000016</SimpleData>
+		<SimpleData name="longitude">100.70885</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4937</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70885,14.000016</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1675058465939</SimpleData>
+		<SimpleData name="link_id">090402B01R1 </SimpleData>
+		<SimpleData name="distance">1.878</SimpleData>
+		<SimpleData name="sta">-0.051</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">14.002734</SimpleData>
+		<SimpleData name="longitude">100.706902</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4952</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.706902,14.002734</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1675058542619</SimpleData>
+		<SimpleData name="link_id">090402B01R1 </SimpleData>
+		<SimpleData name="distance">2.743</SimpleData>
+		<SimpleData name="sta">-0.917</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">14.009907</SimpleData>
+		<SimpleData name="longitude">100.703732</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4956</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703732,14.009907</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1679336245198</SimpleData>
+		<SimpleData name="link_id">090402B02F1 </SimpleData>
+		<SimpleData name="distance">2.324</SimpleData>
+		<SimpleData name="sta">1.5</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.929875</SimpleData>
+		<SimpleData name="longitude">100.707757</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4972</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.707757,13.929875</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1675057689639</SimpleData>
+		<SimpleData name="link_id">090402B02R1 </SimpleData>
+		<SimpleData name="distance">2.17</SimpleData>
+		<SimpleData name="sta">-0.364</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.9368</SimpleData>
+		<SimpleData name="longitude">100.708874</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4981</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.708874,13.9368</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1679337186536</SimpleData>
+		<SimpleData name="link_id">090500B01F1 </SimpleData>
+		<SimpleData name="distance">0.912</SimpleData>
+		<SimpleData name="sta">0.607</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.836145</SimpleData>
+		<SimpleData name="longitude">100.673869</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4989</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.673869,13.836145</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1679337299781</SimpleData>
+		<SimpleData name="link_id">090500B01F1 </SimpleData>
+		<SimpleData name="distance">2.23</SimpleData>
+		<SimpleData name="sta">1.925</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.824312</SimpleData>
+		<SimpleData name="longitude">100.674888</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">4995</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674888,13.824312</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1683629548205</SimpleData>
+		<SimpleData name="link_id">090500B01R1 </SimpleData>
+		<SimpleData name="distance">1.331</SimpleData>
+		<SimpleData name="sta">0.384</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.820425</SimpleData>
+		<SimpleData name="longitude">100.675084</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5009</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675084,13.820425</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1683629654823</SimpleData>
+		<SimpleData name="link_id">090500B01R1 </SimpleData>
+		<SimpleData name="distance">2.59</SimpleData>
+		<SimpleData name="sta">-0.876</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.831678</SimpleData>
+		<SimpleData name="longitude">100.673773</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5016</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.673773,13.831678</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">12</SimpleData>
+		<SimpleData name="framekey">1683629717016</SimpleData>
+		<SimpleData name="link_id">090500B01R1 </SimpleData>
+		<SimpleData name="distance">3.381</SimpleData>
+		<SimpleData name="sta">-1.667</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.838682</SimpleData>
+		<SimpleData name="longitude">100.6725</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5019</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.6725,13.838682</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1679337607317</SimpleData>
+		<SimpleData name="link_id">090500B02F1 </SimpleData>
+		<SimpleData name="distance">1.027</SimpleData>
+		<SimpleData name="sta">0.373</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.796294</SimpleData>
+		<SimpleData name="longitude">100.682101</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5032</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.682101,13.796294</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1679337746740</SimpleData>
+		<SimpleData name="link_id">090500B02F1 </SimpleData>
+		<SimpleData name="distance">2.703</SimpleData>
+		<SimpleData name="sta">2.05</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.781674</SimpleData>
+		<SimpleData name="longitude">100.686088</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5038</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686088,13.781674</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1675056235619</SimpleData>
+		<SimpleData name="link_id">090500B02R1 </SimpleData>
+		<SimpleData name="distance">3.793</SimpleData>
+		<SimpleData name="sta">-1.023</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.794453</SimpleData>
+		<SimpleData name="longitude">100.681974</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5055</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.681974,13.794453</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1679338498315</SimpleData>
+		<SimpleData name="link_id">090500B03F1 </SimpleData>
+		<SimpleData name="distance">2.045</SimpleData>
+		<SimpleData name="sta">1.418</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.729082</SimpleData>
+		<SimpleData name="longitude">100.702741</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5065</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702741,13.729082</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1679338610445</SimpleData>
+		<SimpleData name="link_id">090500B03F1 </SimpleData>
+		<SimpleData name="distance">3.174</SimpleData>
+		<SimpleData name="sta">2.546</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.719117</SimpleData>
+		<SimpleData name="longitude">100.700772</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5071</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700772,13.719117</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1675055022271</SimpleData>
+		<SimpleData name="link_id">090500B03R1 </SimpleData>
+		<SimpleData name="distance">2.697</SimpleData>
+		<SimpleData name="sta">-0.318</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.727036</SimpleData>
+		<SimpleData name="longitude">100.701619</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5087</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701619,13.727036</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1675055115503</SimpleData>
+		<SimpleData name="link_id">090500B03R1 </SimpleData>
+		<SimpleData name="distance">3.667</SimpleData>
+		<SimpleData name="sta">-1.288</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.735721</SimpleData>
+		<SimpleData name="longitude">100.702452</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5090</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702452,13.735721</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1597730112406</SimpleData>
+		<SimpleData name="link_id">090401123F1 </SimpleData>
+		<SimpleData name="distance">1.378</SimpleData>
+		<SimpleData name="sta">0.629</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.185074</SimpleData>
+		<SimpleData name="longitude">100.639362</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5102</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.639362,14.185074</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1593444783708</SimpleData>
+		<SimpleData name="link_id">090401132F1 </SimpleData>
+		<SimpleData name="distance">1.952</SimpleData>
+		<SimpleData name="sta">1.118</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.189612</SimpleData>
+		<SimpleData name="longitude">100.634016</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5109</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.634016,14.189612</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1597732990096</SimpleData>
+		<SimpleData name="link_id">090401134F1 </SimpleData>
+		<SimpleData name="distance">1.613</SimpleData>
+		<SimpleData name="sta">0.601</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.187749</SimpleData>
+		<SimpleData name="longitude">100.637326</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5115</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.637326,14.187749</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1593445235994</SimpleData>
+		<SimpleData name="link_id">090401141F1 </SimpleData>
+		<SimpleData name="distance">1.487</SimpleData>
+		<SimpleData name="sta">1.068</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.184768</SimpleData>
+		<SimpleData name="longitude">100.639296</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5119</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.639296,14.184768</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1593451936763</SimpleData>
+		<SimpleData name="link_id">090402112F1 </SimpleData>
+		<SimpleData name="distance">3.43</SimpleData>
+		<SimpleData name="sta">2.383</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.067158</SimpleData>
+		<SimpleData name="longitude">100.699095</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5123</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699095,14.067158</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1597751567131</SimpleData>
+		<SimpleData name="link_id">090402234F1 </SimpleData>
+		<SimpleData name="distance">1.611</SimpleData>
+		<SimpleData name="sta">1.013</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.002944</SimpleData>
+		<SimpleData name="longitude">100.70666</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5129</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70666,14.002944</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1602039263165</SimpleData>
+		<SimpleData name="link_id">090402343F1 </SimpleData>
+		<SimpleData name="distance">0.968</SimpleData>
+		<SimpleData name="sta">0.759</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.930426</SimpleData>
+		<SimpleData name="longitude">100.707939</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5135</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.707939,13.930426</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1602037201928</SimpleData>
+		<SimpleData name="link_id">090500112F1 </SimpleData>
+		<SimpleData name="distance">1.227</SimpleData>
+		<SimpleData name="sta">0.523</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.836506</SimpleData>
+		<SimpleData name="longitude">100.673815</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5138</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.673815,13.836506</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1602037329930</SimpleData>
+		<SimpleData name="link_id">090500112F1 </SimpleData>
+		<SimpleData name="distance">2.406</SimpleData>
+		<SimpleData name="sta">1.702</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.826272</SimpleData>
+		<SimpleData name="longitude">100.675869</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5141</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675869,13.826272</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1602040853726</SimpleData>
+		<SimpleData name="link_id">090500121F1 </SimpleData>
+		<SimpleData name="distance">1.601</SimpleData>
+		<SimpleData name="sta">0.974</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.831208</SimpleData>
+		<SimpleData name="longitude">100.673683</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5144</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.673683,13.831208</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1602040936931</SimpleData>
+		<SimpleData name="link_id">090500121F1 </SimpleData>
+		<SimpleData name="distance">2.381</SimpleData>
+		<SimpleData name="sta">1.754</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.838146</SimpleData>
+		<SimpleData name="longitude">100.672636</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5146</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672636,13.838146</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1610615760495</SimpleData>
+		<SimpleData name="link_id">090500134F1 </SimpleData>
+		<SimpleData name="distance">0.917</SimpleData>
+		<SimpleData name="sta">0.489</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.82007</SimpleData>
+		<SimpleData name="longitude">100.675176</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5157</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675176,13.82007</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1610621317494</SimpleData>
+		<SimpleData name="link_id">090500141F1 </SimpleData>
+		<SimpleData name="distance">2.252</SimpleData>
+		<SimpleData name="sta">1.284</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.838245</SimpleData>
+		<SimpleData name="longitude">100.672575</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5164</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672575,13.838245</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1610616861079</SimpleData>
+		<SimpleData name="link_id">090500143F1 </SimpleData>
+		<SimpleData name="distance">1.765</SimpleData>
+		<SimpleData name="sta">1.039</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.823557</SimpleData>
+		<SimpleData name="longitude">100.675551</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5168</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675551,13.823557</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1610619509638</SimpleData>
+		<SimpleData name="link_id">090500214F1 </SimpleData>
+		<SimpleData name="distance">0.665</SimpleData>
+		<SimpleData name="sta">0.236</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.796843</SimpleData>
+		<SimpleData name="longitude">100.681929</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5180</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.681929,13.796843</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1610619603135</SimpleData>
+		<SimpleData name="link_id">090500214F1 </SimpleData>
+		<SimpleData name="distance">1.369</SimpleData>
+		<SimpleData name="sta">0.941</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.790761</SimpleData>
+		<SimpleData name="longitude">100.68382</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5184</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.68382,13.790761</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1614924427113</SimpleData>
+		<SimpleData name="link_id">090500221F1 </SimpleData>
+		<SimpleData name="distance">1.111</SimpleData>
+		<SimpleData name="sta">0.681</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.794128</SimpleData>
+		<SimpleData name="longitude">100.681994</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5192</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.681994,13.794128</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1614918261479</SimpleData>
+		<SimpleData name="link_id">090500223F1 </SimpleData>
+		<SimpleData name="distance">1.559</SimpleData>
+		<SimpleData name="sta">1.172</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.781998</SimpleData>
+		<SimpleData name="longitude">100.686061</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5196</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686061,13.781998</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1610625970940</SimpleData>
+		<SimpleData name="link_id">090500243F1 </SimpleData>
+		<SimpleData name="distance">1.846</SimpleData>
+		<SimpleData name="sta">1.128</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.782079</SimpleData>
+		<SimpleData name="longitude">100.686035</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5202</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686035,13.782079</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1619203355704</SimpleData>
+		<SimpleData name="link_id">090500321F1 </SimpleData>
+		<SimpleData name="distance">0.97</SimpleData>
+		<SimpleData name="sta">0.111</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.782187</SimpleData>
+		<SimpleData name="longitude">100.68345</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5207</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.68345,13.782187</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1619203406616</SimpleData>
+		<SimpleData name="link_id">090500321F1 </SimpleData>
+		<SimpleData name="distance">1.295</SimpleData>
+		<SimpleData name="sta">0.435</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.780473</SimpleData>
+		<SimpleData name="longitude">100.684805</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5209</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.684805,13.780473</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1619203653784</SimpleData>
+		<SimpleData name="link_id">090500321F1 </SimpleData>
+		<SimpleData name="distance">2.877</SimpleData>
+		<SimpleData name="sta">2.017</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.794141</SimpleData>
+		<SimpleData name="longitude">100.682022</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5213</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.682022,13.794141</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1614919967801</SimpleData>
+		<SimpleData name="link_id">090500334F1 </SimpleData>
+		<SimpleData name="distance">2.064</SimpleData>
+		<SimpleData name="sta">0.433</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.780101</SimpleData>
+		<SimpleData name="longitude">100.684551</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5216</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.684551,13.780101</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1614923390798</SimpleData>
+		<SimpleData name="link_id">090500341F1 </SimpleData>
+		<SimpleData name="distance">0.478</SimpleData>
+		<SimpleData name="sta">0.16</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.782622</SimpleData>
+		<SimpleData name="longitude">100.683352</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5219</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.683352,13.782622</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1614923456973</SimpleData>
+		<SimpleData name="link_id">090500341F1 </SimpleData>
+		<SimpleData name="distance">0.953</SimpleData>
+		<SimpleData name="sta">0.636</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.786362</SimpleData>
+		<SimpleData name="longitude">100.683813</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5221</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.683813,13.786362</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1614923488063</SimpleData>
+		<SimpleData name="link_id">090500341F1 </SimpleData>
+		<SimpleData name="distance">1.174</SimpleData>
+		<SimpleData name="sta">0.856</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.788288</SimpleData>
+		<SimpleData name="longitude">100.683286</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5223</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.683286,13.788288</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1623516131428</SimpleData>
+		<SimpleData name="link_id">090500412F1 </SimpleData>
+		<SimpleData name="distance">1.849</SimpleData>
+		<SimpleData name="sta">1.361</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.732259</SimpleData>
+		<SimpleData name="longitude">100.708401</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5235</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.708401,13.732259</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1623512044114</SimpleData>
+		<SimpleData name="link_id">090500414F1 </SimpleData>
+		<SimpleData name="distance">2.539</SimpleData>
+		<SimpleData name="sta">1.344</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.732193</SimpleData>
+		<SimpleData name="longitude">100.703283</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5241</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703283,13.732193</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1623518502311</SimpleData>
+		<SimpleData name="link_id">090500421F1 </SimpleData>
+		<SimpleData name="distance">0.711</SimpleData>
+		<SimpleData name="sta">0.123</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.73172</SimpleData>
+		<SimpleData name="longitude">100.708212</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5243</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.708212,13.73172</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1623518692978</SimpleData>
+		<SimpleData name="link_id">090500421F1 </SimpleData>
+		<SimpleData name="distance">2.243</SimpleData>
+		<SimpleData name="sta">1.655</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.735425</SimpleData>
+		<SimpleData name="longitude">100.702417</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5246</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702417,13.735425</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1627804360070</SimpleData>
+		<SimpleData name="link_id">090500423F1 </SimpleData>
+		<SimpleData name="distance">1.264</SimpleData>
+		<SimpleData name="sta">0.112</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.731717</SimpleData>
+		<SimpleData name="longitude">100.708151</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5252</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.708151,13.731717</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1627804505063</SimpleData>
+		<SimpleData name="link_id">090500423F1 </SimpleData>
+		<SimpleData name="distance">2.047</SimpleData>
+		<SimpleData name="sta">0.896</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.729447</SimpleData>
+		<SimpleData name="longitude">100.702842</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5256</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702842,13.729447</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1627806726263</SimpleData>
+		<SimpleData name="link_id">090500432F1 </SimpleData>
+		<SimpleData name="distance">1.615</SimpleData>
+		<SimpleData name="sta">1.451</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.732221</SimpleData>
+		<SimpleData name="longitude">100.708427</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5261</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.708427,13.732221</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1627796154155</SimpleData>
+		<SimpleData name="link_id">090500443F1 </SimpleData>
+		<SimpleData name="distance">2.091</SimpleData>
+		<SimpleData name="sta">1.361</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.729469</SimpleData>
+		<SimpleData name="longitude">100.702838</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5270</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702838,13.729469</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1619218111047</SimpleData>
+		<SimpleData name="link_id">090500523F1 </SimpleData>
+		<SimpleData name="distance">0.544</SimpleData>
+		<SimpleData name="sta">0.22</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.718363</SimpleData>
+		<SimpleData name="longitude">100.701052</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5274</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701052,13.718363</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1619217646317</SimpleData>
+		<SimpleData name="link_id">090500523F1 </SimpleData>
+		<SimpleData name="distance">2.584</SimpleData>
+		<SimpleData name="sta">0.997</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.723762</SimpleData>
+		<SimpleData name="longitude">100.699605</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5279</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699605,13.723762</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1627798567070</SimpleData>
+		<SimpleData name="link_id">090500541F1 </SimpleData>
+		<SimpleData name="distance">0.997</SimpleData>
+		<SimpleData name="sta">0.619</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.726207</SimpleData>
+		<SimpleData name="longitude">100.701324</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5285</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701324,13.726207</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1589148523790</SimpleData>
+		<SimpleData name="link_id">090600112F1 </SimpleData>
+		<SimpleData name="distance">1.585</SimpleData>
+		<SimpleData name="sta">0.7</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-20</SimpleData>
+		<SimpleData name="latitude">13.647628</SimpleData>
+		<SimpleData name="longitude">100.687852</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5289</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.687852,13.647628</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1602034729449</SimpleData>
+		<SimpleData name="link_id">090402U02F1 </SimpleData>
+		<SimpleData name="distance">1.378</SimpleData>
+		<SimpleData name="sta">1.018</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">14.002978</SimpleData>
+		<SimpleData name="longitude">100.706673</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5294</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.706673,14.002978</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1430234957366</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">4.625</SimpleData>
+		<SimpleData name="sta">3.919</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.15914</SimpleData>
+		<SimpleData name="longitude">100.653761</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5349</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.653761,14.15914</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1430235133763</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">6.915</SimpleData>
+		<SimpleData name="sta">6.209</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.141029</SimpleData>
+		<SimpleData name="longitude">100.663971</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5354</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.663971,14.141029</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">13</SimpleData>
+		<SimpleData name="framekey">1430235336278</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">9.567</SimpleData>
+		<SimpleData name="sta">8.862</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.120056</SimpleData>
+		<SimpleData name="longitude">100.675798</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5358</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675798,14.120056</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">19</SimpleData>
+		<SimpleData name="framekey">1430235539475</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">12.301</SimpleData>
+		<SimpleData name="sta">11.595</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.098445</SimpleData>
+		<SimpleData name="longitude">100.687997</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5364</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.687997,14.098445</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">39</SimpleData>
+		<SimpleData name="framekey">1430236422540</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">23.753</SimpleData>
+		<SimpleData name="sta">23.047</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.998962</SimpleData>
+		<SimpleData name="longitude">100.70899</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5384</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70899,13.998962</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">54</SimpleData>
+		<SimpleData name="framekey">1430237172744</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">31.559</SimpleData>
+		<SimpleData name="sta">30.854</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.929964</SimpleData>
+		<SimpleData name="longitude">100.70748</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5399</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70748,13.929964</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1430231562442</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">3.721</SimpleData>
+		<SimpleData name="sta">30.012</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.936397</SimpleData>
+		<SimpleData name="longitude">100.709069</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5568</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.709069,13.936397</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">20</SimpleData>
+		<SimpleData name="framekey">1430232353363</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">12.238</SimpleData>
+		<SimpleData name="sta">21.495</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.011009</SimpleData>
+		<SimpleData name="longitude">100.703551</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5584</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703551,14.011009</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">36</SimpleData>
+		<SimpleData name="framekey">1430233135250</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">22.649</SimpleData>
+		<SimpleData name="sta">11.084</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.101797</SimpleData>
+		<SimpleData name="longitude">100.686017</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5600</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686017,14.101797</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">41</SimpleData>
+		<SimpleData name="framekey">1430233331283</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">25.301</SimpleData>
+		<SimpleData name="sta">8.431</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.122788</SimpleData>
+		<SimpleData name="longitude">100.674176</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5605</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674176,14.122788</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">46</SimpleData>
+		<SimpleData name="framekey">1430233529486</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">27.985</SimpleData>
+		<SimpleData name="sta">5.748</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.144031</SimpleData>
+		<SimpleData name="longitude">100.662201</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5610</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.662201,14.144031</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">50</SimpleData>
+		<SimpleData name="framekey">1430233696428</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">30.245</SimpleData>
+		<SimpleData name="sta">3.488</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.161915</SimpleData>
+		<SimpleData name="longitude">100.652115</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5614</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.652115,14.161915</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1546195267826</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">2.596</SimpleData>
+		<SimpleData name="sta">33.514</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.90679</SimpleData>
+		<SimpleData name="longitude">100.698144</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5766</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698144,13.90679</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1546195404839</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">4.314</SimpleData>
+		<SimpleData name="sta">35.232</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.892925</SimpleData>
+		<SimpleData name="longitude">100.691037</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5770</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.691037,13.892925</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1546195463061</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">5.032</SimpleData>
+		<SimpleData name="sta">35.95</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.887168</SimpleData>
+		<SimpleData name="longitude">100.687991</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5772</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.687991,13.887168</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">15</SimpleData>
+		<SimpleData name="framekey">1546195573112</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">6.419</SimpleData>
+		<SimpleData name="sta">37.336</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.875999</SimpleData>
+		<SimpleData name="longitude">100.682209</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5776</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.682209,13.875999</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">19</SimpleData>
+		<SimpleData name="framekey">1546195766213</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">8.822</SimpleData>
+		<SimpleData name="sta">39.74</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.855624</SimpleData>
+		<SimpleData name="longitude">100.675005</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5780</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675005,13.855624</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">22</SimpleData>
+		<SimpleData name="framekey">1546195820415</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">9.472</SimpleData>
+		<SimpleData name="sta">40.39</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.850137</SimpleData>
+		<SimpleData name="longitude">100.672912</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5783</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672912,13.850137</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">25</SimpleData>
+		<SimpleData name="framekey">1546195860705</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">9.984</SimpleData>
+		<SimpleData name="sta">40.902</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.845533</SimpleData>
+		<SimpleData name="longitude">100.672537</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5786</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672537,13.845533</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">29</SimpleData>
+		<SimpleData name="framekey">1546195944819</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">11.008</SimpleData>
+		<SimpleData name="sta">41.926</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.836431</SimpleData>
+		<SimpleData name="longitude">100.67352</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5790</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.67352,13.836431</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">33</SimpleData>
+		<SimpleData name="framekey">1546196062159</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">12.437</SimpleData>
+		<SimpleData name="sta">43.355</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.823606</SimpleData>
+		<SimpleData name="longitude">100.67471</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5794</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.67471,13.823606</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">38</SimpleData>
+		<SimpleData name="framekey">1546196260640</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">14.919</SimpleData>
+		<SimpleData name="sta">45.837</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.801903</SimpleData>
+		<SimpleData name="longitude">100.680383</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5799</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.680383,13.801903</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">45</SimpleData>
+		<SimpleData name="framekey">1546196457822</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">17.378</SimpleData>
+		<SimpleData name="sta">48.296</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.78045</SimpleData>
+		<SimpleData name="longitude">100.686209</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5806</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686209,13.78045</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">48</SimpleData>
+		<SimpleData name="framekey">1546196561695</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">18.705</SimpleData>
+		<SimpleData name="sta">49.623</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.76973</SimpleData>
+		<SimpleData name="longitude">100.691657</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5809</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.691657,13.76973</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">51</SimpleData>
+		<SimpleData name="framekey">1546196593691</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">19.105</SimpleData>
+		<SimpleData name="sta">50.023</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.766537</SimpleData>
+		<SimpleData name="longitude">100.693393</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5812</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.693393,13.766537</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">54</SimpleData>
+		<SimpleData name="framekey">1546196660716</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">19.946</SimpleData>
+		<SimpleData name="sta">50.864</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.759828</SimpleData>
+		<SimpleData name="longitude">100.697035</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5815</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.697035,13.759828</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">60</SimpleData>
+		<SimpleData name="framekey">1546196939292</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">21.582</SimpleData>
+		<SimpleData name="sta">52.5</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.746329</SimpleData>
+		<SimpleData name="longitude">100.702659</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5821</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702659,13.746329</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">66</SimpleData>
+		<SimpleData name="framekey">1546197174086</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">24.552</SimpleData>
+		<SimpleData name="sta">55.469</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.719768</SimpleData>
+		<SimpleData name="longitude">100.700493</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5827</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700493,13.719768</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">69</SimpleData>
+		<SimpleData name="framekey">1546197238966</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">25.368</SimpleData>
+		<SimpleData name="sta">56.286</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.712403</SimpleData>
+		<SimpleData name="longitude">100.700194</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">5830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700194,13.712403</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">21</SimpleData>
+		<SimpleData name="framekey">1546199504727</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">9.019</SimpleData>
+		<SimpleData name="sta">56.09</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.71388</SimpleData>
+		<SimpleData name="longitude">100.700181</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6041</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700181,13.71388</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">27</SimpleData>
+		<SimpleData name="framekey">1546199697526</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">11.498</SimpleData>
+		<SimpleData name="sta">53.611</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.736041</SimpleData>
+		<SimpleData name="longitude">100.702772</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6047</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702772,13.736041</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">30</SimpleData>
+		<SimpleData name="framekey">1546199836358</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">13.247</SimpleData>
+		<SimpleData name="sta">51.862</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.751654</SimpleData>
+		<SimpleData name="longitude">100.701394</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6050</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701394,13.751654</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">34</SimpleData>
+		<SimpleData name="framekey">1546199965045</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">14.375</SimpleData>
+		<SimpleData name="sta">50.734</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.760642</SimpleData>
+		<SimpleData name="longitude">100.696513</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6054</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.696513,13.760642</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">38</SimpleData>
+		<SimpleData name="framekey">1546200038773</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">15.243</SimpleData>
+		<SimpleData name="sta">49.867</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.767564</SimpleData>
+		<SimpleData name="longitude">100.692752</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6058</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.692752,13.767564</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">41</SimpleData>
+		<SimpleData name="framekey">1546200081105</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">15.693</SimpleData>
+		<SimpleData name="sta">49.416</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.771168</SimpleData>
+		<SimpleData name="longitude">100.690794</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6061</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.690794,13.771168</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">48</SimpleData>
+		<SimpleData name="framekey">1546200489888</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">18.522</SimpleData>
+		<SimpleData name="sta">46.587</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.795106</SimpleData>
+		<SimpleData name="longitude">100.682061</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6068</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.682061,13.795106</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">51</SimpleData>
+		<SimpleData name="framekey">1546200563391</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">19.49</SimpleData>
+		<SimpleData name="sta">45.62</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.803585</SimpleData>
+		<SimpleData name="longitude">100.679864</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6071</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.679864,13.803585</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">58</SimpleData>
+		<SimpleData name="framekey">1546200811403</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">22.76</SimpleData>
+		<SimpleData name="sta">42.349</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.832462</SimpleData>
+		<SimpleData name="longitude">100.674004</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6078</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674004,13.832462</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">61</SimpleData>
+		<SimpleData name="framekey">1546200863101</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">23.416</SimpleData>
+		<SimpleData name="sta">41.693</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.838285</SimpleData>
+		<SimpleData name="longitude">100.672966</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6081</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672966,13.838285</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">65</SimpleData>
+		<SimpleData name="framekey">1546200933278</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">24.332</SimpleData>
+		<SimpleData name="sta">40.777</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.84649</SimpleData>
+		<SimpleData name="longitude">100.672529</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6085</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672529,13.84649</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">68</SimpleData>
+		<SimpleData name="framekey">1546200999994</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">25.21</SimpleData>
+		<SimpleData name="sta">39.899</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.854143</SimpleData>
+		<SimpleData name="longitude">100.674322</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6088</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674322,13.854143</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">70</SimpleData>
+		<SimpleData name="framekey">1546201028721</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">25.596</SimpleData>
+		<SimpleData name="sta">39.513</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.857418</SimpleData>
+		<SimpleData name="longitude">100.675551</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6090</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675551,13.857418</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">74</SimpleData>
+		<SimpleData name="framekey">1546201204491</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">27.969</SimpleData>
+		<SimpleData name="sta">37.14</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.87747</SimpleData>
+		<SimpleData name="longitude">100.68289</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6094</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.68289,13.87747</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">79</SimpleData>
+		<SimpleData name="framekey">1546201305629</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">29.319</SimpleData>
+		<SimpleData name="sta">35.791</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.888357</SimpleData>
+		<SimpleData name="longitude">100.688523</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6099</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.688523,13.888357</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">83</SimpleData>
+		<SimpleData name="framekey">1546201382698</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">30.339</SimpleData>
+		<SimpleData name="sta">34.77</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.896613</SimpleData>
+		<SimpleData name="longitude">100.692729</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6103</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.692729,13.896613</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">86</SimpleData>
+		<SimpleData name="framekey">1546201490939</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">31.754</SimpleData>
+		<SimpleData name="sta">33.355</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.907996</SimpleData>
+		<SimpleData name="longitude">100.698692</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6106</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698692,13.907996</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">72</SimpleData>
+		<SimpleData name="framekey">1546197330055</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">26.534</SimpleData>
+		<SimpleData name="sta">57.416</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.70189</SimpleData>
+		<SimpleData name="longitude">100.699762</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6330</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699762,13.70189</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">75</SimpleData>
+		<SimpleData name="framekey">1546197391172</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">27.306</SimpleData>
+		<SimpleData name="sta">58.189</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.694918</SimpleData>
+		<SimpleData name="longitude">100.699634</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6333</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699634,13.694918</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">78</SimpleData>
+		<SimpleData name="framekey">1546197526327</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">29.005</SimpleData>
+		<SimpleData name="sta">59.887</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.679589</SimpleData>
+		<SimpleData name="longitude">100.699405</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6336</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699405,13.679589</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">81</SimpleData>
+		<SimpleData name="framekey">1546197592067</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">29.83</SimpleData>
+		<SimpleData name="sta">60.712</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.672142</SimpleData>
+		<SimpleData name="longitude">100.699292</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6339</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699292,13.672142</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">85</SimpleData>
+		<SimpleData name="framekey">1546197725526</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">31.5</SimpleData>
+		<SimpleData name="sta">62.383</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.658685</SimpleData>
+		<SimpleData name="longitude">100.693192</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6343</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.693192,13.658685</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">87</SimpleData>
+		<SimpleData name="framekey">1546197744389</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">31.711</SimpleData>
+		<SimpleData name="sta">62.594</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.657126</SimpleData>
+		<SimpleData name="longitude">100.692061</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6345</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.692061,13.657126</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1546199002396</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">2.622</SimpleData>
+		<SimpleData name="sta">64.001</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.657907</SimpleData>
+		<SimpleData name="longitude">100.692537</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6408</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.692537,13.657907</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1546199031003</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">2.971</SimpleData>
+		<SimpleData name="sta">63.652</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.660473</SimpleData>
+		<SimpleData name="longitude">100.694403</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6410</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.694403,13.660473</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1546199217498</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">5.386</SimpleData>
+		<SimpleData name="sta">61.237</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.681054</SimpleData>
+		<SimpleData name="longitude">100.699357</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6415</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699357,13.681054</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">13</SimpleData>
+		<SimpleData name="framekey">1546199346983</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">7.054</SimpleData>
+		<SimpleData name="sta">59.569</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.696133</SimpleData>
+		<SimpleData name="longitude">100.699589</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6419</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699589,13.696133</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#bridge_end">
+		<SimpleData name="no">17</SimpleData>
+		<SimpleData name="framekey">1546199410409</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">7.831</SimpleData>
+		<SimpleData name="sta">58.792</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.703156</SimpleData>
+		<SimpleData name="longitude">100.699748</SimpleData>
+		<SimpleData name="message">bridge end</SimpleData>
+		<SimpleData name="gid">6423</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699748,13.703156</coordinates></Point>
+  </Placemark>
+</Folder></Document></kml>

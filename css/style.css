@@ -346,9 +346,10 @@ right: 10px;
   line-height: 15px;
   display:none;
 }
-#hdm4result
+#hdm4result, #pavement
 {
 	min-height: 650px;
+	position: relative;
 }
 #hdm4result h2
 {
@@ -356,9 +357,9 @@ right: 10px;
 	display: inline-block;
 }
 
-#hdm4result h3, .resultoptionchange
+#hdm4result h3, .resultoptionchange, #pavement h3
 {
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 #hdm4table th, #hdm4table td, #section_table th
@@ -366,19 +367,15 @@ right: 10px;
 	text-align: center;
 }
 
-#hdm4table th
-{
-	vertical-align: middle;
-}
 
-#hdm4result > div:first-child
+#hdm4result > div, #pavement > div
 {
 	margin-top:10px;
 	margin-bottom:15px;
-	position:relative;
+	/*position:relative;*/
 }
 
-#hdm4buttongroup
+.mybuttongroup
 {
 	position:absolute;
 	right:0px;
@@ -629,10 +626,18 @@ h1 > div {
 		height: 15px;	
 	}
 	
-	#breadcrumb, #search-input {
+	#breadcrumb {
 		font-size: 1.0em;
+		
 	}
-
+	 #search-input {
+	 	font-size: 1.0em;
+position: absolute;
+z-index: 1001;
+margin-top: -70px;
+margin-left: -225px;
+	 }
+	
 	#hdm4graph {
 		display:none
 	}
@@ -692,4 +697,14 @@ h1 > div {
     overflow: hidden;    
 }
 
+.table thead th
+{
+	text-align:center;
+	vertical-align: middle;
+}
 
+#pavement tbody td
+{
+	text-align: center;
+}
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>plaza</name>
+<Schema name="plaza" id="plaza">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="no" type="int"></SimpleField>
+	<SimpleField name="framekey" type="string"></SimpleField>
+	<SimpleField name="link_id" type="string"></SimpleField>
+	<SimpleField name="distance" type="float"></SimpleField>
+	<SimpleField name="sta" type="float"></SimpleField>
+	<SimpleField name="lane" type="string"></SimpleField>
+	<SimpleField name="surveydate" type="string"></SimpleField>
+	<SimpleField name="latitude" type="float"></SimpleField>
+	<SimpleField name="longitude" type="float"></SimpleField>
+	<SimpleField name="message" type="string"></SimpleField>
+	<SimpleField name="gid" type="int"></SimpleField>
+</Schema>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">82</SimpleData>
+		<SimpleData name="framekey">1481766875265</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">26.403</SimpleData>
+		<SimpleData name="sta">25.899</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.671055</SimpleData>
+		<SimpleData name="longitude">100.842176</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">3880</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.842176,13.671055</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">35</SimpleData>
+		<SimpleData name="framekey">1481769960622</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">13.934</SimpleData>
+		<SimpleData name="sta">26.491</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.668176</SimpleData>
+		<SimpleData name="longitude">100.846769</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">4105</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.846769,13.668176</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">66</SimpleData>
+		<SimpleData name="framekey">1559086441862</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">29.511</SimpleData>
+		<SimpleData name="sta">67.046</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.39239</SimpleData>
+		<SimpleData name="longitude">101.046978</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">4569</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046978,13.39239</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">25</SimpleData>
+		<SimpleData name="framekey">1559089066388</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">12.166</SimpleData>
+		<SimpleData name="sta">67.729</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.387101</SimpleData>
+		<SimpleData name="longitude">101.046</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">4777</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046,13.387101</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">42</SimpleData>
+		<SimpleData name="framekey">1430236651724</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">25.473</SimpleData>
+		<SimpleData name="sta">24.768</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.984254</SimpleData>
+		<SimpleData name="longitude">100.713286</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">5387</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.713286,13.984254</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1430231969674</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">8.392</SimpleData>
+		<SimpleData name="sta">25.341</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.978189</SimpleData>
+		<SimpleData name="longitude">100.713158</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">5573</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.713158,13.978189</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">56</SimpleData>
+		<SimpleData name="framekey">1546196792699</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">20.544</SimpleData>
+		<SimpleData name="sta">51.462</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.755068</SimpleData>
+		<SimpleData name="longitude">100.699637</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">5817</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699637,13.755068</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#plaza">
+		<SimpleData name="no">44</SimpleData>
+		<SimpleData name="framekey">1546200272163</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">16.157</SimpleData>
+		<SimpleData name="sta">48.952</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.774859</SimpleData>
+		<SimpleData name="longitude">100.68878</SimpleData>
+		<SimpleData name="message">plaza</SimpleData>
+		<SimpleData name="gid">6064</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.68878,13.774859</coordinates></Point>
+  </Placemark>
+</Folder></Document></kml>

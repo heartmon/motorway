@@ -1,0 +1,3107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>overhead</name>
+<Schema name="overhead" id="overhead">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="no" type="int"></SimpleField>
+	<SimpleField name="framekey" type="string"></SimpleField>
+	<SimpleField name="link_id" type="string"></SimpleField>
+	<SimpleField name="distance" type="float"></SimpleField>
+	<SimpleField name="sta" type="float"></SimpleField>
+	<SimpleField name="lane" type="string"></SimpleField>
+	<SimpleField name="surveydate" type="string"></SimpleField>
+	<SimpleField name="latitude" type="float"></SimpleField>
+	<SimpleField name="longitude" type="float"></SimpleField>
+	<SimpleField name="message" type="string"></SimpleField>
+	<SimpleField name="gid" type="int"></SimpleField>
+</Schema>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1675043584490</SimpleData>
+		<SimpleData name="link_id">070101B01F1 </SimpleData>
+		<SimpleData name="distance">1.059</SimpleData>
+		<SimpleData name="sta">0.251</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.729725</SimpleData>
+		<SimpleData name="longitude">100.743719</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3243</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.743719,13.729725</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1657857894419</SimpleData>
+		<SimpleData name="link_id">070101134F1 </SimpleData>
+		<SimpleData name="distance">2.342</SimpleData>
+		<SimpleData name="sta">0.329</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.740038</SimpleData>
+		<SimpleData name="longitude">100.647483</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3251</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.647483,13.740038</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1627807450765</SimpleData>
+		<SimpleData name="link_id">070101212F1 </SimpleData>
+		<SimpleData name="distance">1.283</SimpleData>
+		<SimpleData name="sta">0.057</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.729817</SimpleData>
+		<SimpleData name="longitude">100.741004</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3260</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.741004,13.729817</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1623516794000</SimpleData>
+		<SimpleData name="link_id">070101214F1 </SimpleData>
+		<SimpleData name="distance">3.255</SimpleData>
+		<SimpleData name="sta">1.113</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.725328</SimpleData>
+		<SimpleData name="longitude">100.746741</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3264</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.746741,13.725328</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1623516854912</SimpleData>
+		<SimpleData name="link_id">070101214F1 </SimpleData>
+		<SimpleData name="distance">3.748</SimpleData>
+		<SimpleData name="sta">1.605</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.72088</SimpleData>
+		<SimpleData name="longitude">100.746727</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3265</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.746727,13.72088</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1636384097116</SimpleData>
+		<SimpleData name="link_id">070101223F1 </SimpleData>
+		<SimpleData name="distance">2.32</SimpleData>
+		<SimpleData name="sta">1.073</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-28</SimpleData>
+		<SimpleData name="latitude">13.730151</SimpleData>
+		<SimpleData name="longitude">100.756473</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3274</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.756473,13.730151</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1644986115102</SimpleData>
+		<SimpleData name="link_id">070101234F1 </SimpleData>
+		<SimpleData name="distance">0.955</SimpleData>
+		<SimpleData name="sta">0.197</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-29</SimpleData>
+		<SimpleData name="latitude">13.728547</SimpleData>
+		<SimpleData name="longitude">100.749869</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3278</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.749869,13.728547</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1666462250749</SimpleData>
+		<SimpleData name="link_id">070401134F1 </SimpleData>
+		<SimpleData name="distance">2.897</SimpleData>
+		<SimpleData name="sta">1.124</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-30</SimpleData>
+		<SimpleData name="latitude">13.408212</SimpleData>
+		<SimpleData name="longitude">101.046889</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3318</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046889,13.408212</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">10</SimpleData>
+		<SimpleData name="framekey">1481765069070</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">4.418</SimpleData>
+		<SimpleData name="sta">3.79</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.735346</SimpleData>
+		<SimpleData name="longitude">100.678161</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3344</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.678161,13.735346</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">13</SimpleData>
+		<SimpleData name="framekey">1481765145836</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">5.371</SimpleData>
+		<SimpleData name="sta">4.744</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.734435</SimpleData>
+		<SimpleData name="longitude">100.686923</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3347</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686923,13.734435</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">18</SimpleData>
+		<SimpleData name="framekey">1481765191212</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">5.867</SimpleData>
+		<SimpleData name="sta">5.239</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733901</SimpleData>
+		<SimpleData name="longitude">100.691474</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3352</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.691474,13.733901</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">21</SimpleData>
+		<SimpleData name="framekey">1481765236535</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">6.412</SimpleData>
+		<SimpleData name="sta">5.784</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733343</SimpleData>
+		<SimpleData name="longitude">100.696473</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3355</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.696473,13.733343</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">23</SimpleData>
+		<SimpleData name="framekey">1481765259497</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">6.701</SimpleData>
+		<SimpleData name="sta">6.074</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.733052</SimpleData>
+		<SimpleData name="longitude">100.699132</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3357</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699132,13.733052</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">31</SimpleData>
+		<SimpleData name="framekey">1481765484553</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">9.493</SimpleData>
+		<SimpleData name="sta">8.865</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730246</SimpleData>
+		<SimpleData name="longitude">100.724769</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3365</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.724769,13.730246</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">32</SimpleData>
+		<SimpleData name="framekey">1481765562028</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">10.481</SimpleData>
+		<SimpleData name="sta">9.854</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729295</SimpleData>
+		<SimpleData name="longitude">100.733853</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3366</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.733853,13.729295</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">34</SimpleData>
+		<SimpleData name="framekey">1481765593173</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">10.886</SimpleData>
+		<SimpleData name="sta">10.258</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729374</SimpleData>
+		<SimpleData name="longitude">100.737587</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3368</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.737587,13.729374</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">37</SimpleData>
+		<SimpleData name="framekey">1481765609286</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">11.092</SimpleData>
+		<SimpleData name="sta">10.464</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.72943</SimpleData>
+		<SimpleData name="longitude">100.739499</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3371</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.739499,13.72943</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">38</SimpleData>
+		<SimpleData name="framekey">1481765624555</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">11.287</SimpleData>
+		<SimpleData name="sta">10.66</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729472</SimpleData>
+		<SimpleData name="longitude">100.741302</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3372</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.741302,13.729472</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">40</SimpleData>
+		<SimpleData name="framekey">1481765646123</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">11.562</SimpleData>
+		<SimpleData name="sta">10.934</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729543</SimpleData>
+		<SimpleData name="longitude">100.743823</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3374</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.743823,13.729543</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">47</SimpleData>
+		<SimpleData name="framekey">1481765804995</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">13.531</SimpleData>
+		<SimpleData name="sta">12.903</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.73096</SimpleData>
+		<SimpleData name="longitude">100.761897</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3381</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.761897,13.73096</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">53</SimpleData>
+		<SimpleData name="framekey">1481765897555</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">14.638</SimpleData>
+		<SimpleData name="sta">14.01</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.732097</SimpleData>
+		<SimpleData name="longitude">100.772009</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3387</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.772009,13.732097</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">65</SimpleData>
+		<SimpleData name="framekey">1481766326785</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">20.107</SimpleData>
+		<SimpleData name="sta">19.48</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.720719</SimpleData>
+		<SimpleData name="longitude">100.814939</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3399</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.814939,13.720719</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">70</SimpleData>
+		<SimpleData name="framekey">1481766450995</SimpleData>
+		<SimpleData name="link_id">070101M00F1 </SimpleData>
+		<SimpleData name="distance">21.64</SimpleData>
+		<SimpleData name="sta">21.012</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.708248</SimpleData>
+		<SimpleData name="longitude">100.821072</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3404</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.821072,13.708248</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">63</SimpleData>
+		<SimpleData name="framekey">1481770977125</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">26.322</SimpleData>
+		<SimpleData name="sta">14.11</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.732029</SimpleData>
+		<SimpleData name="longitude">100.771676</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3621</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.771676,13.732029</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">67</SimpleData>
+		<SimpleData name="framekey">1481771010374</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">26.732</SimpleData>
+		<SimpleData name="sta">13.7</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.731809</SimpleData>
+		<SimpleData name="longitude">100.767889</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3625</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.767889,13.731809</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">69</SimpleData>
+		<SimpleData name="framekey">1481771054024</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">27.255</SimpleData>
+		<SimpleData name="sta">13.177</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.731203</SimpleData>
+		<SimpleData name="longitude">100.763127</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3627</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.763127,13.731203</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">72</SimpleData>
+		<SimpleData name="framekey">1481771067751</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">27.43</SimpleData>
+		<SimpleData name="sta">13.002</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730809</SimpleData>
+		<SimpleData name="longitude">100.761563</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3630</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.761563,13.730809</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">73</SimpleData>
+		<SimpleData name="framekey">1481771124550</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">28.151</SimpleData>
+		<SimpleData name="sta">12.28</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729744</SimpleData>
+		<SimpleData name="longitude">100.755018</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3631</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.755018,13.729744</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">82</SimpleData>
+		<SimpleData name="framekey">1481771317686</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">30.124</SimpleData>
+		<SimpleData name="sta">10.308</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729293</SimpleData>
+		<SimpleData name="longitude">100.736788</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3640</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.736788,13.729293</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">84</SimpleData>
+		<SimpleData name="framekey">1481771396323</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">30.616</SimpleData>
+		<SimpleData name="sta">9.815</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.729351</SimpleData>
+		<SimpleData name="longitude">100.732243</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3642</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.732243,13.729351</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">85</SimpleData>
+		<SimpleData name="framekey">1481771490400</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">31.414</SimpleData>
+		<SimpleData name="sta">9.017</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730169</SimpleData>
+		<SimpleData name="longitude">100.72491</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3643</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.72491,13.730169</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">89</SimpleData>
+		<SimpleData name="framekey">1481771559874</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">32.035</SimpleData>
+		<SimpleData name="sta">8.397</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.730793</SimpleData>
+		<SimpleData name="longitude">100.719212</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3647</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.719212,13.730793</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">91</SimpleData>
+		<SimpleData name="framekey">1481771604479</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">32.497</SimpleData>
+		<SimpleData name="sta">7.935</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.731257</SimpleData>
+		<SimpleData name="longitude">100.714962</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3649</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.714962,13.731257</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">92</SimpleData>
+		<SimpleData name="framekey">1481771659553</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">32.995</SimpleData>
+		<SimpleData name="sta">7.437</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.731758</SimpleData>
+		<SimpleData name="longitude">100.710391</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3650</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.710391,13.731758</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">109</SimpleData>
+		<SimpleData name="framekey">1481772111663</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">38.438</SimpleData>
+		<SimpleData name="sta">1.994</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.737385</SimpleData>
+		<SimpleData name="longitude">100.660426</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3667</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.660426,13.737385</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">112</SimpleData>
+		<SimpleData name="framekey">1481772176798</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">39.172</SimpleData>
+		<SimpleData name="sta">1.26</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.738911</SimpleData>
+		<SimpleData name="longitude">100.653835</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3670</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.653835,13.738911</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">114</SimpleData>
+		<SimpleData name="framekey">1481772200384</SimpleData>
+		<SimpleData name="link_id">070101M00R1 </SimpleData>
+		<SimpleData name="distance">39.432</SimpleData>
+		<SimpleData name="sta">0.999</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.739401</SimpleData>
+		<SimpleData name="longitude">100.651483</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3672</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.651483,13.739401</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">114</SimpleData>
+		<SimpleData name="framekey">1481767795385</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">37.359</SimpleData>
+		<SimpleData name="sta">36.855</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.616804</SimpleData>
+		<SimpleData name="longitude">100.926735</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3912</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.926735,13.616804</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">116</SimpleData>
+		<SimpleData name="framekey">1481767878411</SimpleData>
+		<SimpleData name="link_id">070200M00F1 </SimpleData>
+		<SimpleData name="distance">38.43</SimpleData>
+		<SimpleData name="sta">37.926</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.611499</SimpleData>
+		<SimpleData name="longitude">100.934996</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">3914</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.934996,13.611499</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">37</SimpleData>
+		<SimpleData name="framekey">1481770099211</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">15.038</SimpleData>
+		<SimpleData name="sta">25.387</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.673793</SimpleData>
+		<SimpleData name="longitude">100.838401</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4107</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.838401,13.673793</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">46</SimpleData>
+		<SimpleData name="framekey">1481770267530</SimpleData>
+		<SimpleData name="link_id">070200M00R1 </SimpleData>
+		<SimpleData name="distance">17.218</SimpleData>
+		<SimpleData name="sta">23.207</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-07-31</SimpleData>
+		<SimpleData name="latitude">13.69133</SimpleData>
+		<SimpleData name="longitude">100.829312</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4116</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.829312,13.69133</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1559084119540</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">1.073</SimpleData>
+		<SimpleData name="sta">38.64</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.607927</SimpleData>
+		<SimpleData name="longitude">100.940559</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4271</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.940559,13.607927</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1559084140086</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">1.329</SimpleData>
+		<SimpleData name="sta">38.895</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.606663</SimpleData>
+		<SimpleData name="longitude">100.942531</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4272</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.942531,13.606663</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">14</SimpleData>
+		<SimpleData name="framekey">1559084545566</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">6.327</SimpleData>
+		<SimpleData name="sta">43.893</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.577328</SimpleData>
+		<SimpleData name="longitude">100.976948</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4284</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.976948,13.577328</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">19</SimpleData>
+		<SimpleData name="framekey">1559084636529</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">7.464</SimpleData>
+		<SimpleData name="sta">45.031</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.569394</SimpleData>
+		<SimpleData name="longitude">100.983615</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4289</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.983615,13.569394</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">20</SimpleData>
+		<SimpleData name="framekey">1559084673168</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">7.911</SimpleData>
+		<SimpleData name="sta">45.478</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.566274</SimpleData>
+		<SimpleData name="longitude">100.986232</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4290</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.986232,13.566274</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">24</SimpleData>
+		<SimpleData name="framekey">1559084797439</SimpleData>
+		<SimpleData name="link_id">070301M00F1 </SimpleData>
+		<SimpleData name="distance">9.437</SimpleData>
+		<SimpleData name="sta">47.003</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.555636</SimpleData>
+		<SimpleData name="longitude">100.995164</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4294</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.995164,13.555636</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">64</SimpleData>
+		<SimpleData name="framekey">1559090491386</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">29.716</SimpleData>
+		<SimpleData name="sta">50.068</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.534041</SimpleData>
+		<SimpleData name="longitude">101.013239</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4402</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.013239,13.534041</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">66</SimpleData>
+		<SimpleData name="framekey">1559090563771</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">30.628</SimpleData>
+		<SimpleData name="sta">49.155</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.540407</SimpleData>
+		<SimpleData name="longitude">101.007885</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4404</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.007885,13.540407</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">68</SimpleData>
+		<SimpleData name="framekey">1559090615468</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">31.285</SimpleData>
+		<SimpleData name="sta">48.498</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.544991</SimpleData>
+		<SimpleData name="longitude">101.004038</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4406</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.004038,13.544991</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">70</SimpleData>
+		<SimpleData name="framekey">1559090683527</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">32.126</SimpleData>
+		<SimpleData name="sta">47.657</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.55086</SimpleData>
+		<SimpleData name="longitude">100.999108</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4408</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.999108,13.55086</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">83</SimpleData>
+		<SimpleData name="framekey">1559091062725</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">36.815</SimpleData>
+		<SimpleData name="sta">42.969</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.583581</SimpleData>
+		<SimpleData name="longitude">100.971611</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4421</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.971611,13.583581</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">85</SimpleData>
+		<SimpleData name="framekey">1559091139754</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">37.79</SimpleData>
+		<SimpleData name="sta">41.993</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.590392</SimpleData>
+		<SimpleData name="longitude">100.96589</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4423</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.96589,13.590392</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">86</SimpleData>
+		<SimpleData name="framekey">1559091178228</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">38.28</SimpleData>
+		<SimpleData name="sta">41.503</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.593534</SimpleData>
+		<SimpleData name="longitude">100.96272</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4424</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.96272,13.593534</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">87</SimpleData>
+		<SimpleData name="framekey">1559091196292</SimpleData>
+		<SimpleData name="link_id">070301M00R1 </SimpleData>
+		<SimpleData name="distance">38.507</SimpleData>
+		<SimpleData name="sta">41.276</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.594716</SimpleData>
+		<SimpleData name="longitude">100.961004</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4425</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.961004,13.594716</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1559077154934</SimpleData>
+		<SimpleData name="link_id">070302M00F1 </SimpleData>
+		<SimpleData name="distance">3.399</SimpleData>
+		<SimpleData name="sta">2.32</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.573033</SimpleData>
+		<SimpleData name="longitude">100.950028</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4508</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.950028,13.573033</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1559077169864</SimpleData>
+		<SimpleData name="link_id">070302M00F1 </SimpleData>
+		<SimpleData name="distance">3.534</SimpleData>
+		<SimpleData name="sta">2.455</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.571824</SimpleData>
+		<SimpleData name="longitude">100.949849</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4509</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.949849,13.571824</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1559077178660</SimpleData>
+		<SimpleData name="link_id">070302M00F1 </SimpleData>
+		<SimpleData name="distance">3.61</SimpleData>
+		<SimpleData name="sta">2.531</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.571144</SimpleData>
+		<SimpleData name="longitude">100.94975</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4510</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.94975,13.571144</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1559075119862</SimpleData>
+		<SimpleData name="link_id">070302M00R1 </SimpleData>
+		<SimpleData name="distance">1.533</SimpleData>
+		<SimpleData name="sta">3.694</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.572435</SimpleData>
+		<SimpleData name="longitude">100.949764</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4520</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.949764,13.572435</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1559075153014</SimpleData>
+		<SimpleData name="link_id">070302M00R1 </SimpleData>
+		<SimpleData name="distance">1.87</SimpleData>
+		<SimpleData name="sta">3.357</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.575443</SimpleData>
+		<SimpleData name="longitude">100.950228</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4521</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.950228,13.575443</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1559075367457</SimpleData>
+		<SimpleData name="link_id">070302M00R1 </SimpleData>
+		<SimpleData name="distance">3.571</SimpleData>
+		<SimpleData name="sta">1.656</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.590615</SimpleData>
+		<SimpleData name="longitude">100.952571</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4526</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.952571,13.590615</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">55</SimpleData>
+		<SimpleData name="framekey">1559086024888</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">24.69</SimpleData>
+		<SimpleData name="sta">62.225</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.435865</SimpleData>
+		<SimpleData name="longitude">101.046403</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4558</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046403,13.435865</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">57</SimpleData>
+		<SimpleData name="framekey">1559086104056</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">25.676</SimpleData>
+		<SimpleData name="sta">63.211</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.426968</SimpleData>
+		<SimpleData name="longitude">101.046668</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4560</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046668,13.426968</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">58</SimpleData>
+		<SimpleData name="framekey">1559086143429</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">26.177</SimpleData>
+		<SimpleData name="sta">63.712</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.422451</SimpleData>
+		<SimpleData name="longitude">101.046803</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4561</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046803,13.422451</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">60</SimpleData>
+		<SimpleData name="framekey">1559086212135</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">27.039</SimpleData>
+		<SimpleData name="sta">64.574</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.414678</SimpleData>
+		<SimpleData name="longitude">101.047035</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4563</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047035,13.414678</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">68</SimpleData>
+		<SimpleData name="framekey">1559086638387</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">31.422</SimpleData>
+		<SimpleData name="sta">68.957</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.375714</SimpleData>
+		<SimpleData name="longitude">101.042713</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4571</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.042713,13.375714</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">70</SimpleData>
+		<SimpleData name="framekey">1559086715041</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">32.421</SimpleData>
+		<SimpleData name="sta">69.956</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.367107</SimpleData>
+		<SimpleData name="longitude">101.039973</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4573</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.039973,13.367107</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">72</SimpleData>
+		<SimpleData name="framekey">1559086753269</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">32.917</SimpleData>
+		<SimpleData name="sta">70.452</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.362831</SimpleData>
+		<SimpleData name="longitude">101.038638</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4575</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.038638,13.362831</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">73</SimpleData>
+		<SimpleData name="framekey">1559086791700</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">33.417</SimpleData>
+		<SimpleData name="sta">70.952</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.358724</SimpleData>
+		<SimpleData name="longitude">101.036747</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4576</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.036747,13.358724</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">82</SimpleData>
+		<SimpleData name="framekey">1559087261824</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">39.479</SimpleData>
+		<SimpleData name="sta">77.014</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.312985</SimpleData>
+		<SimpleData name="longitude">101.006175</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4585</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.006175,13.312985</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">84</SimpleData>
+		<SimpleData name="framekey">1559087299744</SimpleData>
+		<SimpleData name="link_id">070401M00F1 </SimpleData>
+		<SimpleData name="distance">39.944</SimpleData>
+		<SimpleData name="sta">77.479</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.309638</SimpleData>
+		<SimpleData name="longitude">101.003601</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4587</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.003601,13.309638</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1559088291129</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">2.274</SimpleData>
+		<SimpleData name="sta">77.621</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.309167</SimpleData>
+		<SimpleData name="longitude">101.00315</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4756</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.00315,13.309167</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1559088327767</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">2.765</SimpleData>
+		<SimpleData name="sta">77.13</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.31271</SimpleData>
+		<SimpleData name="longitude">101.005876</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4757</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.005876,13.31271</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1559088392823</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">3.623</SimpleData>
+		<SimpleData name="sta">76.272</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.318902</SimpleData>
+		<SimpleData name="longitude">101.010639</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4759</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.010639,13.318902</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1559088470329</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">4.65</SimpleData>
+		<SimpleData name="sta">75.246</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.326337</SimpleData>
+		<SimpleData name="longitude">101.016296</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4761</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.016296,13.326337</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1559088505081</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">5.123</SimpleData>
+		<SimpleData name="sta">74.772</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.329942</SimpleData>
+		<SimpleData name="longitude">101.018653</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4763</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.018653,13.329942</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">12</SimpleData>
+		<SimpleData name="framekey">1559088528008</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">5.434</SimpleData>
+		<SimpleData name="sta">74.461</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.332339</SimpleData>
+		<SimpleData name="longitude">101.020149</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4764</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.020149,13.332339</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">13</SimpleData>
+		<SimpleData name="framekey">1559088541175</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">5.605</SimpleData>
+		<SimpleData name="sta">74.29</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.33366</SimpleData>
+		<SimpleData name="longitude">101.020979</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4765</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.020979,13.33366</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">21</SimpleData>
+		<SimpleData name="framekey">1559088927237</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">10.639</SimpleData>
+		<SimpleData name="sta">69.256</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.373885</SimpleData>
+		<SimpleData name="longitude">101.042061</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4773</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.042061,13.373885</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">23</SimpleData>
+		<SimpleData name="framekey">1559088996073</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">11.559</SimpleData>
+		<SimpleData name="sta">68.336</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.38183</SimpleData>
+		<SimpleData name="longitude">101.044575</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4775</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.044575,13.38183</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">26</SimpleData>
+		<SimpleData name="framekey">1559089148867</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">12.642</SimpleData>
+		<SimpleData name="sta">67.253</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.391372</SimpleData>
+		<SimpleData name="longitude">101.046682</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4778</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.046682,13.391372</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">28</SimpleData>
+		<SimpleData name="framekey">1559089190067</SimpleData>
+		<SimpleData name="link_id">070401M00R1 </SimpleData>
+		<SimpleData name="distance">13.149</SimpleData>
+		<SimpleData name="sta">66.746</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-14</SimpleData>
+		<SimpleData name="latitude">13.39592</SimpleData>
+		<SimpleData name="longitude">101.047234</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4780</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>101.047234,13.39592</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1679335034536</SimpleData>
+		<SimpleData name="link_id">090402B01F1 </SimpleData>
+		<SimpleData name="distance">1.315</SimpleData>
+		<SimpleData name="sta">0.358</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">14.016434</SimpleData>
+		<SimpleData name="longitude">100.701595</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4931</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701595,14.016434</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1675058408496</SimpleData>
+		<SimpleData name="link_id">090402B01R1 </SimpleData>
+		<SimpleData name="distance">1.251</SimpleData>
+		<SimpleData name="sta">0.575</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.997541</SimpleData>
+		<SimpleData name="longitude">100.709193</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4948</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.709193,13.997541</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1675058450059</SimpleData>
+		<SimpleData name="link_id">090402B01R1 </SimpleData>
+		<SimpleData name="distance">1.702</SimpleData>
+		<SimpleData name="sta">0.124</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">14.001281</SimpleData>
+		<SimpleData name="longitude">100.707545</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4951</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.707545,14.001281</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1675058510877</SimpleData>
+		<SimpleData name="link_id">090402B01R1 </SimpleData>
+		<SimpleData name="distance">2.39</SimpleData>
+		<SimpleData name="sta">-0.563</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">14.006978</SimpleData>
+		<SimpleData name="longitude">100.70503</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4955</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70503,14.006978</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1679336149971</SimpleData>
+		<SimpleData name="link_id">090402B02F1 </SimpleData>
+		<SimpleData name="distance">1.326</SimpleData>
+		<SimpleData name="sta">0.502</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.938595</SimpleData>
+		<SimpleData name="longitude">100.71006</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4969</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.71006,13.938595</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1675057610858</SimpleData>
+		<SimpleData name="link_id">090402B02R1 </SimpleData>
+		<SimpleData name="distance">1.226</SimpleData>
+		<SimpleData name="sta">0.58</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.928551</SimpleData>
+		<SimpleData name="longitude">100.706701</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4979</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.706701,13.928551</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1679337159035</SimpleData>
+		<SimpleData name="link_id">090500B01F1 </SimpleData>
+		<SimpleData name="distance">0.619</SimpleData>
+		<SimpleData name="sta">0.314</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.838711</SimpleData>
+		<SimpleData name="longitude">100.673205</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4987</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.673205,13.838711</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1679337234519</SimpleData>
+		<SimpleData name="link_id">090500B01F1 </SimpleData>
+		<SimpleData name="distance">1.449</SimpleData>
+		<SimpleData name="sta">1.144</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.83135</SimpleData>
+		<SimpleData name="longitude">100.674475</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4992</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674475,13.83135</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1679337279124</SimpleData>
+		<SimpleData name="link_id">090500B01F1 </SimpleData>
+		<SimpleData name="distance">1.976</SimpleData>
+		<SimpleData name="sta">1.671</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.82661</SimpleData>
+		<SimpleData name="longitude">100.674737</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">4994</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674737,13.82661</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1683629549770</SimpleData>
+		<SimpleData name="link_id">090500B01R1 </SimpleData>
+		<SimpleData name="distance">1.348</SimpleData>
+		<SimpleData name="sta">0.367</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.820575</SimpleData>
+		<SimpleData name="longitude">100.675045</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5010</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675045,13.820575</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1683629589894</SimpleData>
+		<SimpleData name="link_id">090500B01R1 </SimpleData>
+		<SimpleData name="distance">1.811</SimpleData>
+		<SimpleData name="sta">-0.096</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.824659</SimpleData>
+		<SimpleData name="longitude">100.674169</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5012</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674169,13.824659</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1679337619846</SimpleData>
+		<SimpleData name="link_id">090500B02F1 </SimpleData>
+		<SimpleData name="distance">1.159</SimpleData>
+		<SimpleData name="sta">0.506</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.795154</SimpleData>
+		<SimpleData name="longitude">100.682477</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5033</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.682477,13.795154</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1679337742245</SimpleData>
+		<SimpleData name="link_id">090500B02F1 </SimpleData>
+		<SimpleData name="distance">2.651</SimpleData>
+		<SimpleData name="sta">1.997</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.782131</SimpleData>
+		<SimpleData name="longitude">100.685953</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5037</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.685953,13.782131</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1675056147221</SimpleData>
+		<SimpleData name="link_id">090500B02R1 </SimpleData>
+		<SimpleData name="distance">2.834</SimpleData>
+		<SimpleData name="sta">-0.064</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.786074</SimpleData>
+		<SimpleData name="longitude">100.684198</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5053</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.684198,13.786074</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1679338385936</SimpleData>
+		<SimpleData name="link_id">090500B03F1 </SimpleData>
+		<SimpleData name="distance">0.854</SimpleData>
+		<SimpleData name="sta">0.226</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.739815</SimpleData>
+		<SimpleData name="longitude">100.703046</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5061</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703046,13.739815</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1679338502845</SimpleData>
+		<SimpleData name="link_id">090500B03F1 </SimpleData>
+		<SimpleData name="distance">2.085</SimpleData>
+		<SimpleData name="sta">1.457</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.728728</SimpleData>
+		<SimpleData name="longitude">100.70268</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5066</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70268,13.728728</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">8</SimpleData>
+		<SimpleData name="framekey">1679338563341</SimpleData>
+		<SimpleData name="link_id">090500B03F1 </SimpleData>
+		<SimpleData name="distance">2.658</SimpleData>
+		<SimpleData name="sta">2.031</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.723727</SimpleData>
+		<SimpleData name="longitude">100.70136</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5068</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70136,13.723727</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1675054953699</SimpleData>
+		<SimpleData name="link_id">090500B03R1 </SimpleData>
+		<SimpleData name="distance">1.973</SimpleData>
+		<SimpleData name="sta">0.405</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.720672</SimpleData>
+		<SimpleData name="longitude">100.700164</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5084</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700164,13.720672</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1675055019139</SimpleData>
+		<SimpleData name="link_id">090500B03R1 </SimpleData>
+		<SimpleData name="distance">2.664</SimpleData>
+		<SimpleData name="sta">-0.286</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-09-03</SimpleData>
+		<SimpleData name="latitude">13.726751</SimpleData>
+		<SimpleData name="longitude">100.701545</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5086</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701545,13.726751</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1597730070634</SimpleData>
+		<SimpleData name="link_id">090401123F1 </SimpleData>
+		<SimpleData name="distance">0.979</SimpleData>
+		<SimpleData name="sta">0.23</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.188242</SimpleData>
+		<SimpleData name="longitude">100.637631</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5100</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.637631,14.188242</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1597730130422</SimpleData>
+		<SimpleData name="link_id">090401123F1 </SimpleData>
+		<SimpleData name="distance">1.577</SimpleData>
+		<SimpleData name="sta">0.829</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.183485</SimpleData>
+		<SimpleData name="longitude">100.64024</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5103</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.64024,14.183485</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1597751504778</SimpleData>
+		<SimpleData name="link_id">090402234F1 </SimpleData>
+		<SimpleData name="distance">0.967</SimpleData>
+		<SimpleData name="sta">0.369</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">13.997643</SimpleData>
+		<SimpleData name="longitude">100.70911</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5126</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70911,13.997643</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1597751546794</SimpleData>
+		<SimpleData name="link_id">090402234F1 </SimpleData>
+		<SimpleData name="distance">1.41</SimpleData>
+		<SimpleData name="sta">0.811</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-21</SimpleData>
+		<SimpleData name="latitude">14.001307</SimpleData>
+		<SimpleData name="longitude">100.70747</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5128</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70747,14.001307</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1602033306180</SimpleData>
+		<SimpleData name="link_id">090402334F1 </SimpleData>
+		<SimpleData name="distance">1.332</SimpleData>
+		<SimpleData name="sta">0.313</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.928551</SimpleData>
+		<SimpleData name="longitude">100.706642</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5130</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.706642,13.928551</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1602037176188</SimpleData>
+		<SimpleData name="link_id">090500112F1 </SimpleData>
+		<SimpleData name="distance">0.972</SimpleData>
+		<SimpleData name="sta">0.268</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.838737</SimpleData>
+		<SimpleData name="longitude">100.67324</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5136</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.67324,13.838737</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1602037256749</SimpleData>
+		<SimpleData name="link_id">090500112F1 </SimpleData>
+		<SimpleData name="distance">1.8</SimpleData>
+		<SimpleData name="sta">1.096</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.831392</SimpleData>
+		<SimpleData name="longitude">100.674515</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5140</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.674515,13.831392</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1602040809502</SimpleData>
+		<SimpleData name="link_id">090500121F1 </SimpleData>
+		<SimpleData name="distance">1.234</SimpleData>
+		<SimpleData name="sta">0.607</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.828038</SimpleData>
+		<SimpleData name="longitude">100.673155</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5143</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.673155,13.828038</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1610615767475</SimpleData>
+		<SimpleData name="link_id">090500134F1 </SimpleData>
+		<SimpleData name="distance">0.973</SimpleData>
+		<SimpleData name="sta">0.545</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.820555</SimpleData>
+		<SimpleData name="longitude">100.675046</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5158</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.675046,13.820555</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1610621164438</SimpleData>
+		<SimpleData name="link_id">090500141F1 </SimpleData>
+		<SimpleData name="distance">1.076</SimpleData>
+		<SimpleData name="sta">0.108</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.829978</SimpleData>
+		<SimpleData name="longitude">100.671826</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5160</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.671826,13.829978</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1610616734648</SimpleData>
+		<SimpleData name="link_id">090500143F1 </SimpleData>
+		<SimpleData name="distance">0.841</SimpleData>
+		<SimpleData name="sta">0.115</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.82991</SimpleData>
+		<SimpleData name="longitude">100.671799</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5165</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.671799,13.82991</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1610617199060</SimpleData>
+		<SimpleData name="link_id">090500212F1 </SimpleData>
+		<SimpleData name="distance">0.753</SimpleData>
+		<SimpleData name="sta">0.035</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.798545</SimpleData>
+		<SimpleData name="longitude">100.68153</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5175</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.68153,13.798545</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1610619479505</SimpleData>
+		<SimpleData name="link_id">090500214F1 </SimpleData>
+		<SimpleData name="distance">0.473</SimpleData>
+		<SimpleData name="sta">0.045</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.798511</SimpleData>
+		<SimpleData name="longitude">100.681468</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5178</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.681468,13.798511</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1610619538419</SimpleData>
+		<SimpleData name="link_id">090500214F1 </SimpleData>
+		<SimpleData name="distance">0.857</SimpleData>
+		<SimpleData name="sta">0.428</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.795201</SimpleData>
+		<SimpleData name="longitude">100.682504</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5181</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.682504,13.795201</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">4</SimpleData>
+		<SimpleData name="framekey">1614918259555</SimpleData>
+		<SimpleData name="link_id">090500223F1 </SimpleData>
+		<SimpleData name="distance">1.541</SimpleData>
+		<SimpleData name="sta">1.154</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.782155</SimpleData>
+		<SimpleData name="longitude">100.686015</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5195</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686015,13.782155</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1614927393552</SimpleData>
+		<SimpleData name="link_id">090500234F1 </SimpleData>
+		<SimpleData name="distance">1.451</SimpleData>
+		<SimpleData name="sta">0.083</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.788985</SimpleData>
+		<SimpleData name="longitude">100.683147</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5199</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.683147,13.788985</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1610625969550</SimpleData>
+		<SimpleData name="link_id">090500243F1 </SimpleData>
+		<SimpleData name="distance">1.835</SimpleData>
+		<SimpleData name="sta">1.118</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.782174</SimpleData>
+		<SimpleData name="longitude">100.686009</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5201</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.686009,13.782174</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1619206061335</SimpleData>
+		<SimpleData name="link_id">090500314F1 </SimpleData>
+		<SimpleData name="distance">1.563</SimpleData>
+		<SimpleData name="sta">0.527</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.7823</SimpleData>
+		<SimpleData name="longitude">100.688256</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5204</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.688256,13.7823</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1619203512040</SimpleData>
+		<SimpleData name="link_id">090500321F1 </SimpleData>
+		<SimpleData name="distance">1.946</SimpleData>
+		<SimpleData name="sta">1.087</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.785995</SimpleData>
+		<SimpleData name="longitude">100.684154</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5211</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.684154,13.785995</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1614919987768</SimpleData>
+		<SimpleData name="link_id">090500334F1 </SimpleData>
+		<SimpleData name="distance">2.191</SimpleData>
+		<SimpleData name="sta">0.559</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.780724</SimpleData>
+		<SimpleData name="longitude">100.683599</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5217</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.683599,13.780724</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1623515956967</SimpleData>
+		<SimpleData name="link_id">090500412F1 </SimpleData>
+		<SimpleData name="distance">0.711</SimpleData>
+		<SimpleData name="sta">0.223</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.739812</SimpleData>
+		<SimpleData name="longitude">100.703108</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5230</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703108,13.739812</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1623516028279</SimpleData>
+		<SimpleData name="link_id">090500412F1 </SimpleData>
+		<SimpleData name="distance">1.181</SimpleData>
+		<SimpleData name="sta">0.693</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.735628</SimpleData>
+		<SimpleData name="longitude">100.703614</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5233</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703614,13.735628</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1623511896244</SimpleData>
+		<SimpleData name="link_id">090500414F1 </SimpleData>
+		<SimpleData name="distance">1.413</SimpleData>
+		<SimpleData name="sta">0.217</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.739842</SimpleData>
+		<SimpleData name="longitude">100.703109</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5236</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703109,13.739842</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1623511961681</SimpleData>
+		<SimpleData name="link_id">090500414F1 </SimpleData>
+		<SimpleData name="distance">1.884</SimpleData>
+		<SimpleData name="sta">0.689</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.735636</SimpleData>
+		<SimpleData name="longitude">100.703607</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5239</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703607,13.735636</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">5</SimpleData>
+		<SimpleData name="framekey">1627804370891</SimpleData>
+		<SimpleData name="link_id">090500423F1 </SimpleData>
+		<SimpleData name="distance">1.331</SimpleData>
+		<SimpleData name="sta">0.179</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.73171</SimpleData>
+		<SimpleData name="longitude">100.70753</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5253</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70753,13.73171</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">9</SimpleData>
+		<SimpleData name="framekey">1627804516771</SimpleData>
+		<SimpleData name="link_id">090500423F1 </SimpleData>
+		<SimpleData name="distance">2.128</SimpleData>
+		<SimpleData name="sta">0.976</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.728733</SimpleData>
+		<SimpleData name="longitude">100.70272</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5257</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70272,13.728733</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1627805721984</SimpleData>
+		<SimpleData name="link_id">090500432F1 </SimpleData>
+		<SimpleData name="distance">0.42</SimpleData>
+		<SimpleData name="sta">0.257</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.730051</SimpleData>
+		<SimpleData name="longitude">100.701668</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5259</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701668,13.730051</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1627798926121</SimpleData>
+		<SimpleData name="link_id">090500434F1 </SimpleData>
+		<SimpleData name="distance">0.208</SimpleData>
+		<SimpleData name="sta">0.11</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.730017</SimpleData>
+		<SimpleData name="longitude">100.701649</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5262</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701649,13.730017</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1627795974926</SimpleData>
+		<SimpleData name="link_id">090500443F1 </SimpleData>
+		<SimpleData name="distance">0.788</SimpleData>
+		<SimpleData name="sta">0.058</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.733198</SimpleData>
+		<SimpleData name="longitude">100.699932</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5267</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699932,13.733198</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">6</SimpleData>
+		<SimpleData name="framekey">1627796162382</SimpleData>
+		<SimpleData name="link_id">090500443F1 </SimpleData>
+		<SimpleData name="distance">2.173</SimpleData>
+		<SimpleData name="sta">1.443</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.728741</SimpleData>
+		<SimpleData name="longitude">100.702721</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5271</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702721,13.728741</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1619218097317</SimpleData>
+		<SimpleData name="link_id">090500523F1 </SimpleData>
+		<SimpleData name="distance">0.459</SimpleData>
+		<SimpleData name="sta">0.135</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.718782</SimpleData>
+		<SimpleData name="longitude">100.701668</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5272</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701668,13.718782</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">7</SimpleData>
+		<SimpleData name="framekey">1619217588684</SimpleData>
+		<SimpleData name="link_id">090500523F1 </SimpleData>
+		<SimpleData name="distance">2.181</SimpleData>
+		<SimpleData name="sta">0.595</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.72066</SimpleData>
+		<SimpleData name="longitude">100.700161</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5277</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700161,13.72066</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1627798577785</SimpleData>
+		<SimpleData name="link_id">090500541F1 </SimpleData>
+		<SimpleData name="distance">1.053</SimpleData>
+		<SimpleData name="sta">0.675</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-27</SimpleData>
+		<SimpleData name="latitude">13.726704</SimpleData>
+		<SimpleData name="longitude">100.701449</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5286</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701449,13.726704</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1589148473709</SimpleData>
+		<SimpleData name="link_id">090600112F1 </SimpleData>
+		<SimpleData name="distance">1.22</SimpleData>
+		<SimpleData name="sta">0.335</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-20</SimpleData>
+		<SimpleData name="latitude">13.650744</SimpleData>
+		<SimpleData name="longitude">100.688026</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5287</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.688026,13.650744</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1584843632175</SimpleData>
+		<SimpleData name="link_id">090600114F1 </SimpleData>
+		<SimpleData name="distance">0.909</SimpleData>
+		<SimpleData name="sta">0.135</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-20</SimpleData>
+		<SimpleData name="latitude">13.650768</SimpleData>
+		<SimpleData name="longitude">100.688006</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5290</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.688006,13.650768</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1602034658284</SimpleData>
+		<SimpleData name="link_id">090402U02F1 </SimpleData>
+		<SimpleData name="distance">0.713</SimpleData>
+		<SimpleData name="sta">0.354</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">13.997514</SimpleData>
+		<SimpleData name="longitude">100.709209</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5291</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.709209,13.997514</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">3</SimpleData>
+		<SimpleData name="framekey">1602034705580</SimpleData>
+		<SimpleData name="link_id">090402U02F1 </SimpleData>
+		<SimpleData name="distance">1.17</SimpleData>
+		<SimpleData name="sta">0.811</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-22</SimpleData>
+		<SimpleData name="latitude">14.0013</SimpleData>
+		<SimpleData name="longitude">100.707536</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5293</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.707536,14.0013</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1619212441108</SimpleData>
+		<SimpleData name="link_id">090500U04F1 </SimpleData>
+		<SimpleData name="distance">1.149</SimpleData>
+		<SimpleData name="sta">0.208</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-23</SimpleData>
+		<SimpleData name="latitude">13.739829</SimpleData>
+		<SimpleData name="longitude">100.70309</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5298</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.70309,13.739829</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">52</SimpleData>
+		<SimpleData name="framekey">1430233736716</SimpleData>
+		<SimpleData name="link_id">090401M00R1 </SimpleData>
+		<SimpleData name="distance">30.783</SimpleData>
+		<SimpleData name="sta">2.988</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.166176</SimpleData>
+		<SimpleData name="longitude">100.649714</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5315</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.649714,14.166176</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">53</SimpleData>
+		<SimpleData name="framekey">1430233804956</SimpleData>
+		<SimpleData name="link_id">090401M00R1 </SimpleData>
+		<SimpleData name="distance">31.679</SimpleData>
+		<SimpleData name="sta">2.092</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.173269</SimpleData>
+		<SimpleData name="longitude">100.645715</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5316</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.645715,14.173269</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">55</SimpleData>
+		<SimpleData name="framekey">1430233846764</SimpleData>
+		<SimpleData name="link_id">090401M00R1 </SimpleData>
+		<SimpleData name="distance">32.227</SimpleData>
+		<SimpleData name="sta">1.543</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.177615</SimpleData>
+		<SimpleData name="longitude">100.643266</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5318</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.643266,14.177615</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">56</SimpleData>
+		<SimpleData name="framekey">1430233875401</SimpleData>
+		<SimpleData name="link_id">090401M00R1 </SimpleData>
+		<SimpleData name="distance">32.608</SimpleData>
+		<SimpleData name="sta">1.163</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.18063</SimpleData>
+		<SimpleData name="longitude">100.641568</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5319</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.641568,14.18063</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">16</SimpleData>
+		<SimpleData name="framekey">1430235484165</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">11.563</SimpleData>
+		<SimpleData name="sta">10.858</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.104189</SimpleData>
+		<SimpleData name="longitude">100.684753</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5361</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.684753,14.104189</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">20</SimpleData>
+		<SimpleData name="framekey">1430235550258</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">12.451</SimpleData>
+		<SimpleData name="sta">11.745</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.097262</SimpleData>
+		<SimpleData name="longitude">100.688664</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5365</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.688664,14.097262</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">22</SimpleData>
+		<SimpleData name="framekey">1430235580820</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">12.863</SimpleData>
+		<SimpleData name="sta">12.158</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.093998</SimpleData>
+		<SimpleData name="longitude">100.690509</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5367</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.690509,14.093998</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">23</SimpleData>
+		<SimpleData name="framekey">1430235618674</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">13.361</SimpleData>
+		<SimpleData name="sta">12.656</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.090064</SimpleData>
+		<SimpleData name="longitude">100.692734</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5368</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.692734,14.090064</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">25</SimpleData>
+		<SimpleData name="framekey">1430235666540</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">13.986</SimpleData>
+		<SimpleData name="sta">13.281</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.084859</SimpleData>
+		<SimpleData name="longitude">100.694849</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5370</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.694849,14.084859</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">30</SimpleData>
+		<SimpleData name="framekey">1430236034576</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">18.805</SimpleData>
+		<SimpleData name="sta">18.099</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.041531</SimpleData>
+		<SimpleData name="longitude">100.698237</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5375</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698237,14.041531</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">32</SimpleData>
+		<SimpleData name="framekey">1430236136141</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">20.091</SimpleData>
+		<SimpleData name="sta">19.386</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.029915</SimpleData>
+		<SimpleData name="longitude">100.698229</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5377</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698229,14.029915</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">33</SimpleData>
+		<SimpleData name="framekey">1430236186893</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">20.74</SimpleData>
+		<SimpleData name="sta">20.035</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.024064</SimpleData>
+		<SimpleData name="longitude">100.698373</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5378</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698373,14.024064</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">35</SimpleData>
+		<SimpleData name="framekey">1430236222047</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">21.189</SimpleData>
+		<SimpleData name="sta">20.483</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.020209</SimpleData>
+		<SimpleData name="longitude">100.699589</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5380</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699589,14.020209</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">46</SimpleData>
+		<SimpleData name="framekey">1430236919658</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">28.104</SimpleData>
+		<SimpleData name="sta">27.398</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.960525</SimpleData>
+		<SimpleData name="longitude">100.712904</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5391</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.712904,13.960525</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">48</SimpleData>
+		<SimpleData name="framekey">1430236988906</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">29.034</SimpleData>
+		<SimpleData name="sta">28.328</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.952136</SimpleData>
+		<SimpleData name="longitude">100.712763</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5393</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.712763,13.952136</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">49</SimpleData>
+		<SimpleData name="framekey">1430237034741</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">29.657</SimpleData>
+		<SimpleData name="sta">28.951</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.946599</SimpleData>
+		<SimpleData name="longitude">100.711846</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5394</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.711846,13.946599</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">51</SimpleData>
+		<SimpleData name="framekey">1430237063992</SimpleData>
+		<SimpleData name="link_id">090402M00F1 </SimpleData>
+		<SimpleData name="distance">30.056</SimpleData>
+		<SimpleData name="sta">29.35</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.943115</SimpleData>
+		<SimpleData name="longitude">100.710934</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5396</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.710934,13.943115</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1430231424826</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">2.023</SimpleData>
+		<SimpleData name="sta">31.709</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.921537</SimpleData>
+		<SimpleData name="longitude">100.705163</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5565</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.705163,13.921537</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1430231454313</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">2.383</SimpleData>
+		<SimpleData name="sta">31.35</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.924686</SimpleData>
+		<SimpleData name="longitude">100.705992</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5566</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.705992,13.924686</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1430232116841</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">9.342</SimpleData>
+		<SimpleData name="sta">24.39</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.986752</SimpleData>
+		<SimpleData name="longitude">100.713272</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5575</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.713272,13.986752</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">13</SimpleData>
+		<SimpleData name="framekey">1430232152119</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">9.752</SimpleData>
+		<SimpleData name="sta">23.981</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.990384</SimpleData>
+		<SimpleData name="longitude">100.712664</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5577</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.712664,13.990384</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">14</SimpleData>
+		<SimpleData name="framekey">1430232184518</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">10.16</SimpleData>
+		<SimpleData name="sta">23.573</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">13.993773</SimpleData>
+		<SimpleData name="longitude">100.711184</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5578</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.711184,13.993773</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">24</SimpleData>
+		<SimpleData name="framekey">1430232617524</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">15.723</SimpleData>
+		<SimpleData name="sta">18.01</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.041489</SimpleData>
+		<SimpleData name="longitude">100.698168</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5588</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698168,14.041489</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">27</SimpleData>
+		<SimpleData name="framekey">1430232706211</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">16.92</SimpleData>
+		<SimpleData name="sta">16.812</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.052306</SimpleData>
+		<SimpleData name="longitude">100.698056</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5591</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.698056,14.052306</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">28</SimpleData>
+		<SimpleData name="framekey">1430232742723</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">17.411</SimpleData>
+		<SimpleData name="sta">16.321</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.056723</SimpleData>
+		<SimpleData name="longitude">100.69761</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5592</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.69761,14.056723</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">30</SimpleData>
+		<SimpleData name="framekey">1430232779748</SimpleData>
+		<SimpleData name="link_id">090402M00R1 </SimpleData>
+		<SimpleData name="distance">17.909</SimpleData>
+		<SimpleData name="sta">15.824</SimpleData>
+		<SimpleData name="lane">Lane R2</SimpleData>
+		<SimpleData name="surveydate">2012-07-27</SimpleData>
+		<SimpleData name="latitude">14.061198</SimpleData>
+		<SimpleData name="longitude">100.697161</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5594</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.697161,14.061198</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">1</SimpleData>
+		<SimpleData name="framekey">1546195180074</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">1.494</SimpleData>
+		<SimpleData name="sta">32.412</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.915668</SimpleData>
+		<SimpleData name="longitude">100.702746</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5762</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702746,13.915668</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">2</SimpleData>
+		<SimpleData name="framekey">1546195211816</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">1.896</SimpleData>
+		<SimpleData name="sta">32.814</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.912431</SimpleData>
+		<SimpleData name="longitude">100.701066</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5763</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701066,13.912431</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">23</SimpleData>
+		<SimpleData name="framekey">1546195852642</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">9.884</SimpleData>
+		<SimpleData name="sta">40.801</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.846439</SimpleData>
+		<SimpleData name="longitude">100.672599</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5784</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672599,13.846439</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">27</SimpleData>
+		<SimpleData name="framekey">1546195892740</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">10.378</SimpleData>
+		<SimpleData name="sta">41.296</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.841984</SimpleData>
+		<SimpleData name="longitude">100.672345</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5788</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.672345,13.841984</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">36</SimpleData>
+		<SimpleData name="framekey">1546196230417</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">14.544</SimpleData>
+		<SimpleData name="sta">45.462</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.805177</SimpleData>
+		<SimpleData name="longitude">100.679514</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5797</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.679514,13.805177</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">39</SimpleData>
+		<SimpleData name="framekey">1546196270065</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">15.036</SimpleData>
+		<SimpleData name="sta">45.954</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.800877</SimpleData>
+		<SimpleData name="longitude">100.680648</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5800</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.680648,13.800877</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">41</SimpleData>
+		<SimpleData name="framekey">1546196314240</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">15.581</SimpleData>
+		<SimpleData name="sta">46.498</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.796116</SimpleData>
+		<SimpleData name="longitude">100.681886</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5802</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.681886,13.796116</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">49</SimpleData>
+		<SimpleData name="framekey">1546196579277</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">18.924</SimpleData>
+		<SimpleData name="sta">49.842</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.767984</SimpleData>
+		<SimpleData name="longitude">100.692609</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5810</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.692609,13.767984</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">57</SimpleData>
+		<SimpleData name="framekey">1546196866235</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">20.875</SimpleData>
+		<SimpleData name="sta">51.792</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.752433</SimpleData>
+		<SimpleData name="longitude">100.701097</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5818</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701097,13.752433</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">61</SimpleData>
+		<SimpleData name="framekey">1546196942760</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">21.624</SimpleData>
+		<SimpleData name="sta">52.542</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.745954</SimpleData>
+		<SimpleData name="longitude">100.702668</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5822</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702668,13.745954</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">62</SimpleData>
+		<SimpleData name="framekey">1546196959757</SimpleData>
+		<SimpleData name="link_id">090500M00F1 </SimpleData>
+		<SimpleData name="distance">21.839</SimpleData>
+		<SimpleData name="sta">52.756</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.744017</SimpleData>
+		<SimpleData name="longitude">100.702693</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">5823</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.702693,13.744017</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">23</SimpleData>
+		<SimpleData name="framekey">1546199511400</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">9.105</SimpleData>
+		<SimpleData name="sta">56.004</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.714651</SimpleData>
+		<SimpleData name="longitude">100.700211</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6043</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700211,13.714651</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">31</SimpleData>
+		<SimpleData name="framekey">1546199838230</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">13.265</SimpleData>
+		<SimpleData name="sta">51.844</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.751796</SimpleData>
+		<SimpleData name="longitude">100.701317</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6051</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.701317,13.751796</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">35</SimpleData>
+		<SimpleData name="framekey">1546199968359</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">14.41</SimpleData>
+		<SimpleData name="sta">50.699</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.760924</SimpleData>
+		<SimpleData name="longitude">100.69636</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6055</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.69636,13.760924</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">39</SimpleData>
+		<SimpleData name="framekey">1546200044225</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">15.306</SimpleData>
+		<SimpleData name="sta">49.803</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.768073</SimpleData>
+		<SimpleData name="longitude">100.692474</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6059</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.692474,13.768073</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">42</SimpleData>
+		<SimpleData name="framekey">1546200092581</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">15.808</SimpleData>
+		<SimpleData name="sta">49.301</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.77208</SimpleData>
+		<SimpleData name="longitude">100.690295</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6062</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.690295,13.77208</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">45</SimpleData>
+		<SimpleData name="framekey">1546200359373</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">16.818</SimpleData>
+		<SimpleData name="sta">48.291</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.780247</SimpleData>
+		<SimpleData name="longitude">100.68616</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6065</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.68616,13.780247</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">53</SimpleData>
+		<SimpleData name="framekey">1546200617934</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">20.207</SimpleData>
+		<SimpleData name="sta">44.902</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.80986</SimpleData>
+		<SimpleData name="longitude">100.678199</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6073</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.678199,13.80986</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">54</SimpleData>
+		<SimpleData name="framekey">1546200654959</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">20.703</SimpleData>
+		<SimpleData name="sta">44.406</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.814196</SimpleData>
+		<SimpleData name="longitude">100.67705</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6074</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.67705,13.814196</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">76</SimpleData>
+		<SimpleData name="framekey">1546201288492</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">29.094</SimpleData>
+		<SimpleData name="sta">36.015</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.886543</SimpleData>
+		<SimpleData name="longitude">100.687585</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6096</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.687585,13.886543</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">80</SimpleData>
+		<SimpleData name="framekey">1546201318892</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">29.494</SimpleData>
+		<SimpleData name="sta">35.615</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.88977</SimpleData>
+		<SimpleData name="longitude">100.689254</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6100</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.689254,13.88977</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">87</SimpleData>
+		<SimpleData name="framekey">1546201503848</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">31.919</SimpleData>
+		<SimpleData name="sta">33.19</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.909327</SimpleData>
+		<SimpleData name="longitude">100.699382</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6107</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699382,13.909327</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">89</SimpleData>
+		<SimpleData name="framekey">1546201580874</SimpleData>
+		<SimpleData name="link_id">090500M00R1 </SimpleData>
+		<SimpleData name="distance">32.914</SimpleData>
+		<SimpleData name="sta">32.195</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.917355</SimpleData>
+		<SimpleData name="longitude">100.703541</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6109</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.703541,13.917355</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">88</SimpleData>
+		<SimpleData name="framekey">1546197747138</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">31.74</SimpleData>
+		<SimpleData name="sta">62.623</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.656914</SimpleData>
+		<SimpleData name="longitude">100.691909</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6346</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.691909,13.656914</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">90</SimpleData>
+		<SimpleData name="framekey">1546197798437</SimpleData>
+		<SimpleData name="link_id">090600M00F1 </SimpleData>
+		<SimpleData name="distance">32.163</SimpleData>
+		<SimpleData name="sta">63.046</SimpleData>
+		<SimpleData name="lane">Lane F1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.653619</SimpleData>
+		<SimpleData name="longitude">100.689915</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6348</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.689915,13.653619</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">11</SimpleData>
+		<SimpleData name="framekey">1546199310251</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">6.599</SimpleData>
+		<SimpleData name="sta">60.023</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.692024</SimpleData>
+		<SimpleData name="longitude">100.699523</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6417</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699523,13.692024</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">15</SimpleData>
+		<SimpleData name="framekey">1546199391959</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">7.607</SimpleData>
+		<SimpleData name="sta">59.016</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.701133</SimpleData>
+		<SimpleData name="longitude">100.699664</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6421</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.699664,13.701133</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#overhead">
+		<SimpleData name="no">19</SimpleData>
+		<SimpleData name="framekey">1546199469625</SimpleData>
+		<SimpleData name="link_id">090600M00R1 </SimpleData>
+		<SimpleData name="distance">8.58</SimpleData>
+		<SimpleData name="sta">58.043</SimpleData>
+		<SimpleData name="lane">Lane R1</SimpleData>
+		<SimpleData name="surveydate">2012-08-10</SimpleData>
+		<SimpleData name="latitude">13.709911</SimpleData>
+		<SimpleData name="longitude">100.700021</SimpleData>
+		<SimpleData name="message">overhead sign</SimpleData>
+		<SimpleData name="gid">6425</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.700021,13.709911</coordinates></Point>
+  </Placemark>
+</Folder></Document></kml>

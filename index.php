@@ -131,10 +131,10 @@
 							<option value="09">ทางหลวงพิเศษหมายเลข 9</option>
 					</select>
 					<select name="exptype" class="exptype input-spanall">
-							<option value="1">ทางหลัก M</option>
-							<option value="2">ทางกลับรถ U </option>
-							<option value="3">ทางรถบรรทุก B</option>
-							<option value="4">ทางแยก #</option>
+							<option value="1">ทางหลัก</option>
+							<option value="2">ทางกลับรถ</option>
+							<option value="3">ทางรถบรรทุก</option>
+							<option value="4">ทางแยก</option>
 					</select>
 					<li class="divider"></li>
 					<div id="option1">
@@ -159,7 +159,7 @@
 							เริ่ม <input placeholder="" type="text" name="kmstart" class="span1 inline" >
 							สิ้นสุด <input placeholder="" type="text" name="kmend" class="span1 inline">
 							</div>
-							<span style="font-size:0.778em;" class="color-grey">(ช่วง กม. ที่กำหนด จะต้องมีระยะทางไม่เกิน 2 กม. เท่านั้น))</span>
+							<span style="font-size:0.778em;" class="color-grey">(ช่วง กม. ที่กำหนด จะต้องมีระยะทางไม่เกิน 2 กม. เท่านั้น)</span>
 						</div>
 					</div>
 						
@@ -189,7 +189,6 @@
 								<option value="0500B01">ทางแยกต่างระดับคลองกุ่ม</option>	
 								<option value="0500B02">ทางแยกต่างระดับสุขาภิบาล 3</option>	
 								<option value="0500B03">ทางแยกต่างระดับทับช้าง</option>	
-								<option value="0500B04">ทางแยกต่างระดับอ่อนนุช</option>
 							</select>
 							<select name="enexname07" class="input-spanall enexname">
 								<option value="0101U01">สะพานลอยกลับรถ กม.เริ่มต้นที่ 1.5 - 1.7</option>
@@ -356,6 +355,9 @@
 						<label class="radio">
 							<input name="infotype" value="rutting" type="radio"><span>ค่าร่องล้อ - Rutting</span>
 						</label>
+						<label class="radio">
+							<input name="infotype" value="pavement" type="radio"><span>Pavement</span>
+						</label>
 
 						<div align="right"><button id="search" type="submit" class="btn btn-small btn-primary">เรียกดู</button></div>
 						</form>
@@ -401,7 +403,44 @@
 
 			<!-- Main Content -->
 			<div id="main_content" class="span9">
-				
+				<!-- Pavement  -->
+				<div id="pavement">
+					<h1>Pavement<div></div></h1>
+					<div>
+						<div id="pavement_lane">
+
+						</div>
+						<div class="mybuttongroup">
+							<a href="#" id="hdm4graph" class="fancyimage btn btn-small"><img src="images/icon_chart.png" title="ดูกราฟ" width=18> กราฟ</a>
+							<form id="genpdf" method="POST" style="display:inline-block;" action="topdf.php">
+								<a href="#" target="blank" id="pavementpdf" class="btn btn-small"><img src="images/icon_pdf.png" title="export pdf file" width=18> PDF</a>
+								<input type="hidden" name="pdffilename" value="">
+							</form>
+							<form id="genexcel" target="_blank" method="POST" style="display:inline-block;" action="excel.php">
+								<a href="#" id="pavementexcel" class="btn btn-small"><img src="images/icon_excel.png" title="export excel file" width=18> Excel</a>
+								<input type="hidden" name="head" value="">
+								<input type="hidden" name="exceldata" value="">
+								<input type="hidden" name="columns" value="">
+								<input type="hidden" name="type" value="pavement">
+							</form>
+						</div>
+					</div>
+					<table id="pavement_table" class="table table-condensed table-bordered">
+					</table>
+
+					<div id="pavementpager" class="pager">
+						<form>
+							<img src="css/tablesorter/first.png" class="first"/>
+							<img src="css/tablesorter/prev.png" class="prev"/>
+							<input type="text" class="pagedisplay span1"/>
+							<img src="css/tablesorter/next.png" class="next"/>
+							<img src="css/tablesorter/last.png" class="last"/>
+							<select class="pagesize span1" style="display:none;">
+								<option selected="selected"  value="20">20</option>
+							</select>
+						</form>
+					</div>
+				</div>
 				<!-- HDM4 -->
 				<div id="hdm4result">
 					<h1>แผนการซ่อมบำรุง<div></div></h1>
@@ -422,6 +461,7 @@
 							    <li><a href="">ทุกปี</a></li>
 							  </ul>
 						</div>
+						
 					<br>
 					<h3>Budget Scenario: <span class="hdm4result-type hdm4type color-orange"></span></h3>	
 					
@@ -429,7 +469,7 @@
 						
 					</div>
 
-						<div id="hdm4buttongroup">
+						<div class="mybuttongroup">
 							<a href="#" id="hdm4graph" class="fancyimage btn btn-small"><img src="images/icon_chart.png" title="ดูกราฟ" width=18> กราฟ</a>
 							<form id="genpdf" method="POST" style="display:inline-block;" action="topdf.php">
 								<a href="#" target="blank" id="hdm4pdf" class="btn btn-small"><img src="images/icon_pdf.png" title="export pdf file" width=18> PDF</a>
@@ -579,6 +619,5 @@
 		</div>
 	</div>
 </div>
-<div id="footer">พัฒนาโดย สำนักวิจัยและให้คำปรึกษา มหาวิทยาลัยธรรมศาสตร์ :: พบข้อผิดพลาดของโปรแกรม โปรดติดต่อ iamnotkorr@gmail.com</div>
 </body>
 </html>
