@@ -33,12 +33,15 @@ function updateVideoData() {
 				var index = g_all_result['usedlength'] - $('#videoslider').slider( "values" , 0) + 1;
 			else
 				var index = $('#videoslider').slider( "values" , 0)-1;
+			if(g_search_info_level2.kmstart == 0)
+				index -= 1;
 			var damage = parseFloat(g_all_result[index][getInfoType(g_search_info['infotype'])]).toFixed(4);
 			var lat = g_all_result[index]['lat'];
 			var longi = g_all_result[index]['long']; 
 			var km = g_all_result[index]['subdistance'];
 
-			var filename = ((g_video['first_image'] + index)*5) + '.jpg';
+		//	var filename = ((g_video['first_image'] + index)*5) + '.jpg';
+			var filename = (parseInt(g_video['first_image'])+(index * (g_search_info_level2.kmfreq / 25 )* 5)) + '.jpg';
 		//	var numPic = index;
 
 			$('#videoinfo #video_km').html(toKm(km));

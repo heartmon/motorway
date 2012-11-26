@@ -588,6 +588,7 @@ $(function (){
     //Pavement
     $('#pavement_table tbody tr').live('click',function(){
         var index = $(this).parent().children().index($(this));
+        console.log(index);
         //Highlight table when click
         $('#pavement_table tbody tr.table_highlight').removeClass("table_highlight");
         $('#pavement_table tbody tr').eq(index).addClass('table_highlight');
