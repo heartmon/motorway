@@ -20,7 +20,10 @@ if($tbl == "images") {
 		$section = $sections[$i]['section'];
 		
 		//Select the first distance [roughness is a reference]
-		$sql = "select *  from roughness where section LIKE '{$section}' order by subdistance limit 1";
+		if(strrpos($section,'R') !== false)
+			$sql = "select *  from roughness where section LIKE '{$section}' order by subdistance DESC limit 1";	
+		else
+			$sql = "select *  from roughness where section LIKE '{$section}' order by subdistance limit 1";
 		$row = retrieve($sql);
 		$latstart = $row[0]['lat'];
 		$longstart = $row[0]['long'];

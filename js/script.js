@@ -45,6 +45,7 @@ var _rangefix = 25;
 var g_imageset;
 var finish_getimage = false;
 var HDM4videoclick = false;
+var zoom = false;
 
 var g_current_var = {
     index: 0,
@@ -98,6 +99,7 @@ $(function (){
        // $('#fix_range').hide();
         $('#option2').hide();
         $('select[name=mainsection09]').hide();
+        $('#pavement_select').hide();
 
         //Clone Init
         cloneToMap($("#toolbox select[name=expressway]"), '#maptoolbox #expnametype', true);
@@ -368,7 +370,7 @@ $(function (){
             $('select[name=' + elem+']').not('#lane_selection .accessname').show().find('option:first').prop('selected', 'selected');
             //$('#maptoolbox select[name=mainsection]').show();
 
-            cloneToMap($('select[name=' + elem+']'), '#maptoolbox #selectname',true);
+            cloneToMap($('#notpavement select[name=' + elem+']'), '#maptoolbox #selectname',true);
             $('#maptoolbox #mainLane').prop('multiple','multiple');
             $('#maptoolbox #mainLane').find('option:first').prop('selected','selected');
           //  mainLane(exp);
@@ -448,6 +450,24 @@ $(function (){
         console.log(info);
         $('input[name=infotype][value=' + info + ']').prop('checked', 'checked');
         $('select[name=infotype] option[value=' + info + ']').prop('selected', 'selected');
+
+        //var paveoption7 = '<option value="0102">0102</option><option value="0101">0101</option><option value="0200">0200</option><option value="0301">0301</option><option value="0302">0302</option><option value="0401">0401</option>';
+        //var paveoption9 = '<option value="0401">0401</option><option value="0402">0402</option><option value="0500">0500</option><option value="0600">0600</option>';
+
+       //  var ex = $('#toolbox select.mainsection:visible option').prop('id');
+       // $('#option1 div').hide();
+        if(info=='pavement')
+        {
+            $('#option1 #notpavement').hide();
+            $('#option1 #pavement_select').show();
+            $('#option1 #fix_range').hide();
+        }
+        else
+        {
+           $('#option1 #notpavement').show();
+           $('#option1 #pavement_select').hide();
+           $('#option1 #fix_range').show();
+        }
     });
 
     $('#maptoolbox select[name=infotype]').live('change', function () {
@@ -483,7 +503,10 @@ $(function (){
     });
 
     $('#pavement_lane #mainLane').live('change', function(){
-        g_search_info_level2['currentsection'] = g_search_info_level2['currentsection'].substr(0,9) + $(this).val();
+        if(g_search_info_level2['currentsection'].indexOf('%') == -1)
+            g_search_info_level2['currentsection'] = g_search_info_level2['currentsection'].substr(0,9) + $(this).val();
+        else
+            g_search_info_level2['currentsection'] = g_search_info_level2['currentsection'].substr(0,g_search_info_level2['currentsection'].indexOf('%')+1) + $(this).val();
         //g_search_info['exptype'] = $('select[name=exptype]').val();
         controller.searchPavement();
     });
@@ -594,7 +617,7 @@ $(function (){
         $('#pavement_table tbody tr').eq(index).addClass('table_highlight');
         console.log(g_pavement[index]['lat']);
         console.log(g_pavement[index]['long']);
-        //addPoints();
+        //addPoints(g_pavement[index]);
     });
 
 
@@ -800,10 +823,12 @@ function updateVideo(index) {
         $('#video-player #thumbnail').html('<img src="" />');
         $('#video-player #thumbnail img').attr("src", "images/imgloading.gif").attr("width", "370").attr("height", "240");
 
+        var directory = getImageDirectory(g_search_info_level2.currentsection);
+
         var wait = setInterval(function () {
             if (finish_getimage) {
                 clearInterval(wait);
-                var imgpath = "asset_images/" + g_search_info_level2.currentsection + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
+                var imgpath = "asset_images/" + directory + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
                 console.log(imgpath);
                 $('#video-player #thumbnail img').attr("src", imgpath);
             }
@@ -811,7 +836,7 @@ function updateVideo(index) {
 
         $("#video-player #thumbnail img").error(function () {
             $(this).attr("src", "images/imgerror.gif");
-            var imgpath = "asset_images/" + g_search_info_level2.currentsection + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
+            var imgpath = "asset_images/" + directory + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
             //alert('Image not found:\n'+'Location: '+imgpath);
             errorReport('Image not found:\n' + 'Location: ' + imgpath);
         });
@@ -928,6 +953,28 @@ function errorReport(errmsg) {
     });
 }
 
+//Get Directory of Image (0101 is in the same direc with 0200 ..~~)
+function getImageDirectory(section){
+    var exp = section.substr(0,2);
+    var suffix = section.substr(6);
+    var sstr = section.substr(2,4);
+    switch(sstr){
+        case "0200":
+            return exp+"0101"+suffix;
+            break;             
+        case "0401":
+            return exp+"0301"+suffix;
+            break;
+        case "0402":
+            return exp+"0401"+suffix;
+            break;            
+        case "0600":
+            return exp+"0500"+suffix;
+            break;
+        default:
+            return section;
+    }
+}
 //======================= KmFreq Function ===================================
     function disableFreq() {
         $('#kmfreq').html(g_search_info_level2.kmfreq);

@@ -3,7 +3,7 @@ function Model()
 
 	this.m = 1; 
 
-    this.getPavement = function(){
+    this.getPavement = function(kmstart,kmend){
         $.ajax({
             url: 'ajax/_get_pavement.php',
             type: 'GET',
@@ -14,12 +14,14 @@ function Model()
             dataCharset: 'jsonp',
             success: function (data) {
                 if (!data['error']) {
-                    
+                    g_pavement = data;
+                    g_search_info_level2.currentsection = data[0]['section'];
                     controller.setupPavement(data);
                    // console.log(data);
                 } 
                 else {
                     errorReport(data['error']);
+                    controller.setupPavement(data);
                 }
             }
         });
@@ -53,6 +55,7 @@ function Model()
                 } 
                 else {
                     errorReport(data['error']);
+                    hideLoading();
                 }
             },
             complete: function(data){
@@ -75,7 +78,7 @@ function Model()
             success: function (data) {
                 if (!data['error']) {
                     //Set first image to variable
-                    g_video['first_image'] = parseInt(data[0]['frameno']) +  (g_all_result['mindis']*1000/5) ;
+                    g_video['first_image'] = parseInt(data[0]['frameno']) +  (g_all_result['dist_image']*1000/5) ;
                     console.log(data);
                     finish_getimage = true;
 

@@ -33,8 +33,8 @@
 	<script type="text/javascript" src="js/jquery/jquery.tablesorter.js"></script>
 	<script type="text/javascript" src="js/jquery/jquery.tablesorter.pager.js"></script>
 	<script type="text/javascript" src="js/jquery/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-	<!--<script type="text/javascript" src="js/openlayer/googlemap.js"></script>-->
-	<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+	<script type="text/javascript" src="js/openlayer/googlemap.js"></script>
+	<!--<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>-->
 	<script type="text/javascript" src="js/openlayer/OpenLayers.js"></script>
 	<script defer="defer" type="text/javascript" src="js/gis.js"></script>
 
@@ -139,20 +139,33 @@
 					<li class="divider"></li>
 					<div id="option1">
 						เลือกตอนควบคุม: 
-						<select name="mainsection07" class="input-spanall mainsection">
-							<option value="0102">0102</option>
-							<option value="0101">0101</option>
-							<option value="0200">0200</option>
-							<option value="0301">0301</option>
-							<option value="0302">0302</option>
-							<option value="0401">0401</option>
-						</select>
-						<select name="mainsection09" class="input-spanall mainsection">
-							<option value="0401">0401</option>
-							<option value="0402">0402</option>
-							<option value="0500">0500</option>
-							<option value="0600">0600</option>
-						</select>
+						<div id="notpavement">
+							<select name="mainsection07" class="input-spanall mainsection">
+								<option value="0000">เส้นทางหลัก</option>
+								<option value="0102">0102</option>
+								<option value="0302">0302</option>
+							</select>
+
+							<select name="mainsection09" class="input-spanall mainsection">
+								<option value="0000">เส้นทางหลัก</option>
+							</select>
+						</div>
+						<div id="pavement_select">
+							<select name="mainsection07" class="input-spanall mainsection">
+								<option value="0102">0102</option>
+								<option value="0101">0101</option>
+								<option value="0200">0200</option>
+								<option value="0301">0301</option>
+								<option value="0302">0302</option>
+								<option value="0401">0401</option>
+							</select>
+							<select name="mainsection09" class="input-spanall mainsection">
+								<option value="0401">0401</option>
+								<option value="0402">0402</option>
+								<option value="0500">0500</option>
+								<option value="0600">0600</option>
+							</select>
+						</div>
 						<div id="fix_range">
 							กำหนดช่วงกม.
 							<div class="font16">

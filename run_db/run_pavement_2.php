@@ -9,7 +9,7 @@ $tbl = "pavement"; // **
 //$iri_cols = "(section,distance,subdistance,iri_right,iri_left,iri_avg,speed,events,lat,long)";
 $pavement_cop_cols = "(no,framekey,link_id,distance,sta,lane,surveydate,lat,long,ratedate,rators,cracks_aca,cracks_acw,cracks_act,bleeding,raveling,phole,deformation,patching,joint)";
 //$csv_img = "C:/Program Files (x86)/PostgreSQL/EnterpriseDB-ApachePHP/apache/www/run_db/";
-$csv_img = "/Applications/MAMP/htdocs/motorway2/run_db/";
+$csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
 	//$c = 0;
  //    $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator('csv_pavement')); 
  // 	 foreach($files as $file) { 
@@ -27,10 +27,11 @@ $csv_img = "/Applications/MAMP/htdocs/motorway2/run_db/";
 	// }
 
 
-	$qc = "INSERT INTO pavement (distance,lat,long,crack_aca,crack_act,bleeding,raveling,phole,deformation,pacthing,section,the_geom,id) 
-	(SELECT distance,lat,long,cracks_aca,cracks_act,bleeding,raveling,phole,deformation,patching,section from pavement_copy
+	$qc = "INSERT INTO pavement (distance,lat,long,crack_aca,crack_act,bleeding,raveling,phole,deformation,pacthing,section) 
+	(SELECT distance,lat,long,cracks_aca,cracks_act,bleeding,raveling,phole,deformation,patching,link_id from pavement_copy
 	 where cracks_aca <> 0 or cracks_act <> 0 or bleeding <> 0 or raveling <> 0 or phole <> 0 or deformation <> 0 
 	 or patching <> 0 order by id)";
+	echo $qc;
     retrieve($qc);
 	//echo $c;	
 

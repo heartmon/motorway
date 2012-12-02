@@ -36,6 +36,8 @@ function View(){
       }
 
       $('#pavement_table').html('');
+      if(!data['error'])
+      {
       var columns = this.getPavementColumns();
        var htmlcode = "<thead><tr><th>ลำดับ</th>";
 
@@ -79,6 +81,7 @@ function View(){
        //alert(htmlcode);
 
         //Set Pager using tablesorter plugin
+        $("#pavementpager").show();
         var myHeaders = {};
         $("#pavement_table").find('th').each(function (i, e) {
             myHeaders[$(this).index()] = {
@@ -99,6 +102,12 @@ function View(){
             container: $("#pavementpager"),
             size: 20
         });
+        }
+        else
+        {
+            $('#pavement_table').html('ไม่มีค่า pavement ในสายทางนี้');
+            $("#pavementpager").hide();
+        }
 
     }
 

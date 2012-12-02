@@ -9,14 +9,14 @@ $tbl = "pavement_copy"; // **
 //$iri_cols = "(section,distance,subdistance,iri_right,iri_left,iri_avg,speed,events,lat,long)";
 $pavement_cop_cols = "(no,framekey,link_id,distance,sta,lane,surveydate,lat,long,ratedate,rators,cracks_aca,cracks_acw,cracks_act,bleeding,raveling,phole,deformation,patching,joint)";
 //$csv_img = "C:/Program Files (x86)/PostgreSQL/EnterpriseDB-ApachePHP/apache/www/run_db/";
-$csv_img = "/Applications/MAMP/htdocs/motorway2/run_db/";
-	//$c = 0;
+$csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
+	$c = 0;
     $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator('csv_pavement')); 
  	 foreach($files as $file) { 
      	//echo $file . "<br/>";
      	$section = substr($file,15,11);
      	//echo $section . "<br/>";
-     	//$c++;
+     	$c++;
      	//echo $v . "<br/>";
 		$q = "COPY " . $tbl . " " 
 		. $pavement_cop_cols . // ***
@@ -25,7 +25,9 @@ $csv_img = "/Applications/MAMP/htdocs/motorway2/run_db/";
 		retrieve($q);
 		echo "<br/	>";	
 
-		$q = "update {$tbl} set section = '{$section}' where section is null";
+		//$q = "update {$tbl} set section = '{$section}' where section is null";
+		//retrieve($q);
+		$q = "update {$tbl} set link_id = '{$section}' where link_id LIKE 'Start'";
 		retrieve($q);
 	}
 
@@ -35,7 +37,7 @@ $csv_img = "/Applications/MAMP/htdocs/motorway2/run_db/";
 	//  where cracks_aca <> 0 and cracks_act <> 0 and bleeding <> 0 and raveling <> 0 and phole <> 0 and deformation <> 0 
 	//  and patching <> 0 order by id)";
  //    retrieve($qc);
-	//echo $c;	
+	echo $c;	
 
 
 	// $fp = "csv_iri/";

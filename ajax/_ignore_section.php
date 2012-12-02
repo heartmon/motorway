@@ -10,6 +10,9 @@ $kmfreq = $_GET['kmfreq'];
 $section = $_GET['section'];
 $exptype = $_GET['exptype'];
 
+$userkmstart = $kmstart;
+$userkmend = $kmend;
+
 //Get HDM4 value
 $year = $_GET['year'];
 $type = $_GET['hdm4type'];
@@ -55,6 +58,7 @@ echo $dir;
 echo $lane;*/
 
 
+
 //Select Column Name for each infotype
 if($infotype == 'roughness')
 	$column_info_name = 'iri_avg';
@@ -64,10 +68,28 @@ elseif($infotype == 'texture')
 	$column_info_name = 'mpd';
 
 
+//Select first section
+if($exptype == 1 && strrpos($section, "0000") !== false)
+{
+	$e = substr($section,0,2).'%';
+	$lane = substr($section,-2);
+	//$sql = "SELECT section from {$infotype} where section LIKE '{$e}' AND subdistance >= {$kmstart} AND type = '{$exptype}' order by section limit 1";
+	$sql = "SELECT section from {$infotype} where section LIKE '{$e}' AND type = '{$exptype}' order by (subdistance-{$kmstart})^2, section limit 1";
+	//$s = retrieve($sql);
+	$result = pg_query($sql);
+	$s = pg_fetch_assoc($result);
+	//echo $sql;
+	//print_r($s);
+	//echo $s[0]['section'];
+	$prefix = substr($s['section'],0,9);
+	$section = $prefix.$lane;
+}
+
 // if(!$kmend)// || (!$kmstart))
 // {
 // 	$findkm = true;
  	$cond = " WHERE section LIKE '{$section}'";
+
 // 	if($kmstart)
 // 		$cond .= " AND subdistance >= {$kmstart}";
 // 	if($kmend)
@@ -77,6 +99,7 @@ elseif($infotype == 'texture')
 // 	}
 	//MAX-MIN calculation
 	$sql = "SELECT MIN(subdistance), MAX(subdistance) FROM {$infotype}".$cond;
+
 	$result = pg_query($sql);
 	$row = pg_fetch_assoc($result);
 	$max = $row['max'];
@@ -88,7 +111,7 @@ elseif($infotype == 'texture')
 		$kmend = $max;
 
 // // }
-
+$dist = $kmstart - $min;
 $rangefix = 25;
 
 //if($max != null || $min != null || !$findkm)
@@ -107,6 +130,7 @@ $rangefix = 25;
 		// else
 			$sect_cond = " rn.section LIKE '{$section}'";
 
+		//$sect_cond .= " AND rn.section NOT LIKE '%0102M00%' AND rn.section NOT LIKE '%0302M00%'";
 		$sql .= $sect_cond;
 
 		$sql .= " AND rn.type = '{$exptype}'";
@@ -176,12 +200,16 @@ $rangefix = 25;
 			$rows['num_rows'] = $num_rows;
 			$rows['rangefix'] = $rangefix;
 			$rows['lastkm'] = $max_distance;
+			$rows['dist_image'] = $dist;
 			//$rows['specialcase'] = $maxFromFirstSection;
 		}
 		else
 		{
 			$type = exptypeToFull($exptype);
-			$rows['error'] = "ระบบไม่ค้นพบข้อมูล: \nประเภทสายทาง: ".$type." \nตอนควบคุม: ".$section." \nความเสียหาย: ".$infotype."\nช่วงกม.: ".$kmstart." - ".$kmend;
+			
+			$rows['error'] = "ระบบไม่ค้นพบข้อมูล: \nประเภทสายทาง: ".$type." \nตอนควบคุม: ".$section." \nความเสียหาย: ".$infotype."\nช่วงกม.: ".$userkmstart." - ".$userkmend;
+			if($kmend < $kmstart)
+				$rows['error'] .= " (ช่วงกม. ต้องไม่เกิน ".$kmend.")";
 		}
 	}
 

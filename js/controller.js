@@ -42,6 +42,7 @@ function Controller(){
            {
             case "1":
                 var sectionCode = $('select.mainsection:visible').val();
+                g_search_info_level2.currentsection = sectionCode;
                 g_search_info_level2.currentsection = _formSection(g_search_info.expressway,sectionCode,g_search_info.exptype,'F1');
                 g_search_info_level2.currentcode = $('.mainsection:visible option[value='+sectionCode+']').html();
                 break;
@@ -95,13 +96,11 @@ function Controller(){
     this.searchPavement = function(sectionCode){
         model.getPavement();
         this.showdata($("#pavement"));
-       
     }
 
     this.setupPavement = function(data){
         qtip.removeAllFeatures();
-        g_pavement = data;
-        g_search_info_level2.currentsection = data[0]['section'];
+        
         var headers = {'ตอนควบคุม: ': g_search_info_level2.currentcode+' ('+g_search_info_level2.currentsection+')', 'สายทาง: ':toExpressName(g_search_info.expressway)};
         var columns = ['ระยะทาง','Lat','Long','รอยแตกหนังจระเข้','รอยแตกตามยาว','รอยร่องล้อ','ผิวหลุดร่อน','หลุม บ่อ','ผิวยุบตัวเป็นแอ่ง','ปะซ่อมผิว'];
         view.createPavement(data,headers);
@@ -110,7 +109,12 @@ function Controller(){
     }
 
 	this.searchBySectionName = function(sectionCode) {
-        zoomCoor();
+        zoom = false;
+        if(g_search_info_level2['currentsection'].indexOf('0000') == -1)
+        {
+            zoomCoor();
+            zoom = true;
+        }
         g_all_result_all_lane = {};
         console.log(sectionCode);
         $('#lane_selection').html('');
@@ -187,11 +191,13 @@ function Controller(){
             suffix.push(section.slice(-2));
         }
       //  console.log(suffix);
-
+        //if(g_search_info.exptype == "1" && g_search_info_level2.currentsection == '0000')
+           // var prefix = ''// var prefix = g_search_info.expressway+'%';
         if (section.indexOf('R') != -1) 
             var prefix = section.substr(0, section.indexOf('R'));
         else 
             var prefix = section.substr(0, section.indexOf('F'));
+        console.log(prefix);
 
         var fingetalllane = false;
         if(!g_all_result_all_lane[suffix[0]])
@@ -241,6 +247,11 @@ function Controller(){
         g_all_result = data;
 
         g_search_info_level2.currentsection = g_all_result[0]['section'];
+        if(!zoom)
+        {
+            zoomCoor();
+            zoom = true;
+        }
         if (g_search_info_level2['currentsection'].indexOf('R') != -1) {
             reverse = true;
         } 

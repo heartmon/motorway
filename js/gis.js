@@ -663,7 +663,7 @@ function addPoints(all_result) {
         //last = value['hdm4result'];
         var feature = poi(index, value['lat'], value['long'], value['subdistance'], value['iri_avg'], value['rut_lane'], value['mpd'], value['code'], value['section'], cost, workdes, year);
         qtip.addFeatures(feature);
-        if (index == Math.ceil((all_result['maxdis'] * 1000 - all_result['mindis'] * 1000) / 25)) return false;
+        if (index == Math.ceil((g_all_result['maxdis'] * 1000 - all_result['mindis'] * 1000) / 25)) return false;
 
     });
 }
@@ -844,7 +844,7 @@ function zoomCoor() {
             infotype: g_search_info['infotype'],
             exptype: g_search_info['exptype'],
             searchtype: g_search_info['searchtype'],
-            section: section
+            section: g_search_info_level2['currentsection']
         },
         dataType: 'jsonp',
         dataCharset: 'jsonp',

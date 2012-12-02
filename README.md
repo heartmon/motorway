@@ -17,3 +17,12 @@ v0.4
 
 v0.5
 - Edit save photo button (in video.js)
+
+branch(2)
+v.0.6
+
+- Create getImageDirectory() function in script.js (for example, image of 070200M00 is in the same directory with 070101M00 and for the same with 070401M00 is in 070301M00, 090402M00->090401M00, 090600M00->090500M00)
+- Edit ignore_section.php, controller.js, index.php, script.js for new algorithm (search for the whole main way)
+- Edit ignore_section.php to inform the user the maximum km. range if users' input exceed the maximum km of that section
+- Add new data for pavement (csv file)
+
