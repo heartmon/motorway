@@ -25,4 +25,5 @@ v.0.6
 - Edit ignore_section.php, controller.js, index.php, script.js for new algorithm (search for the whole main way)
 - Edit ignore_section.php to inform the user the maximum km. range if users' input exceed the maximum km of that section
 - Add new data for pavement (csv file)
-
+- Edit gis.js at addPoints function (change all result mindis to g_all_result[mindis])
+- Some bug fixed in controller.js script.js
