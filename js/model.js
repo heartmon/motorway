@@ -102,5 +102,41 @@ function Model()
         });
     }
 
+    this.getHDM4Result = function(exp,hdm4type,year,exptype,section){
+        showLoading();
+        $.ajax({
+            url: 'ajax/_hdm4search.php',
+            type: 'GET',
+            data: {
+                expressway: exp, //only value number of expressway are sent.
+                type: hdm4type,
+                year: year,
+                exptype: exptype,
+                section: section,
+            },
+            dataType: 'jsonp',
+            dataCharset: 'jsonp',
+            success: function (data) {
+                if (!data['error']) {
+                    if ($('#main_content').is(':hidden')) $('#main_content').show();
+                    showdata($('#hdm4result'));
+                    var totalcost = data['totalcost'];
+                   // delete data['totalcost'];
+                   // updateHDM4metadata();
+                    g_hdm4_result = data;
+                  //  createHDM4table(data, totalcost);
+                    $('input:radio[name=hdm4year][value=' + g_hdm4_search['year'] + ']').prop('checked', true);
+                    //g_hdm4_search['section'] = ..;
+                    controller.setHDM4();
+                } else {
+                    g_hdm4_search['year'] = g_hdm4_search['prevyear'];
+                    alert(data['error']);
+                    // errorReport(data['error']);
+                }
+                hideLoading();
+            }
+        });
+    }
+
 
 }

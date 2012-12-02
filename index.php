@@ -152,8 +152,9 @@
 						</div>
 						<div id="pavement_select">
 							<select name="mainsection07" class="input-spanall mainsection">
-								<option value="0102">0102</option>
+								
 								<option value="0101">0101</option>
+								<option value="0102">0102</option>
 								<option value="0200">0200</option>
 								<option value="0301">0301</option>
 								<option value="0302">0302</option>
@@ -458,14 +459,31 @@
 				<div id="hdm4result">
 					<h1>แผนการซ่อมบำรุง<div></div></h1>
 					<div>
-						<h3>สายทาง: <span class="hdm4result-expressway color-orange expressway"></span></h3><br>
-						<h3>ปี: </h3>
+						<h3>สายทาง: <span class="expressway color-orange expressway"></span></h3>
+					<!-- 	<h3>ตอนควบคุม: <span class="section color-orange"></span></h3> -->
+						<h3 class="inline">ตอนควบคุม: </h3>
 						<div class="resultoptionchange" class="btn-group">
 							  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-							  <span class="hdm4result-year hdm4year"></span>
+							  <span class="section"></span>
 							    <span style="vertical-align:middle;" class="caret"></span>
 							  </a>
-							  <ul class="dropdown-menu">
+							  <ul id="hdm4sectiondropdown" class="dropdown-menu">
+							    <li><a href=""></a></li>
+							    <li><a href=""></a></li>
+							    <li><a href=""></a></li>
+							    <li><a href=""></a></li>
+							    <li><a href=""></a></li>
+							    <li><a href=""></a></li>
+							  </ul>
+						</div>
+						<br>
+						<h3 class="inline">ปี: </h3>
+						<div class="resultoptionchange" class="btn-group">
+							  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							  <span class="hdm4year"></span>
+							    <span style="vertical-align:middle;" class="caret"></span>
+							  </a>
+							  <ul id="hdm4yeardropdown" class="dropdown-menu">
 							    <li><a href="">2556</a></li>
 							    <li><a href="">2557</a></li>
 							    <li><a href="">2558</a></li>

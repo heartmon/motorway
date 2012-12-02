@@ -6,10 +6,11 @@ $expressway = $_GET['expressway'];
 $type =  $_GET['type'];
 $year =  $_GET['year'];
 $exptype = $_GET['exptype'];
+$section = $_GET['section'];
 
 
-if($expressway == "0102")
-	$expressway = "0101";
+// if($expressway == "0102")
+// 	$expressway = "0101";
 
 if($type == "unlimited")
 	$typetable = "hdm4_unlimited";
@@ -18,7 +19,8 @@ elseif($type == "limited_half")
 else
 	$typetable = "hdm4_limited_full";
 
-$sql = "SELECT * FROM {$typetable} WHERE abb_exp LIKE '{$expressway}' AND type = {$exptype}";
+//$sql = "SELECT * FROM {$typetable} WHERE abb_exp LIKE '{$expressway}' AND type = {$exptype}";
+$sql = "SELECT * FROM {$typetable} WHERE expressway LIKE '{$expressway}' AND type = {$exptype}";
 if($year != 'all')
 	$sql .= " AND year = {$year}";
 $sql .= " ORDER BY id";
@@ -29,11 +31,14 @@ $rows = array();
 $totalcost = 0;
 if(pg_num_rows($result) > 0)
 {
+	$c = 0;
 	while($row = pg_fetch_assoc($result)) {
 		//echo utf8_decode($row[])
 		$rows[] = $row;
 		$totalcost += $row['cost'];
+		$c++;
 	}
+	$rows['length']	= $c;
 	$rows['totalcost'] = $totalcost;
 }
 else

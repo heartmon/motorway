@@ -63,6 +63,8 @@ function Controller(){
                 g_search_info_level2.currentcode = $('.intersect:visible option[value='+sectionCode+']').html();
                 break;
            }
+           g_search_info_level2['kmstart'] = g_search_info['kmstart'];
+            g_search_info_level2['kmend'] = g_search_info['kmend'];
            // $('#pavement').remove();
             if(g_search_info.infotype != "pavement")
             {
@@ -84,18 +86,11 @@ function Controller(){
 		}
 	}
 
-    this.showdata = function(selector){
-        if ($('#main_content').is(':hidden')) {
-            $('#main_content').show();
-        }
-        $('#main_content').children('div').hide();
-        if (selector.is(':hidden')) 
-            selector.show();    
-    }
+    
 
     this.searchPavement = function(sectionCode){
         model.getPavement();
-        this.showdata($("#pavement"));
+        showdata($("#pavement"));
     }
 
     this.setupPavement = function(data){
@@ -105,10 +100,11 @@ function Controller(){
         var columns = ['ระยะทาง','Lat','Long','รอยแตกหนังจระเข้','รอยแตกตามยาว','รอยร่องล้อ','ผิวหลุดร่อน','หลุม บ่อ','ผิวยุบตัวเป็นแอ่ง','ปะซ่อมผิว'];
         view.createPavement(data,headers);
         //$('#pavement').show();
-        this.showdata($('#pavement'));
+        showdata($('#pavement'));
     }
 
 	this.searchBySectionName = function(sectionCode) {
+        
         zoom = false;
         if(g_search_info_level2['currentsection'].indexOf('0000') == -1)
         {
@@ -172,8 +168,7 @@ function Controller(){
      this.getAllLane = function (all, isHDM4) {
         showLoading();
         // if (!isHDM4) {
-             g_search_info_level2['kmstart'] = g_search_info['kmstart'];
-             g_search_info_level2['kmend'] = g_search_info['kmend'];
+             
         //     var section = g_search_info_level2.currentsection;
         // } else 
         if(g_hdm4search_click)
@@ -230,7 +225,7 @@ function Controller(){
     //Show Data(table graph) of activated lane
     this.activatedResult = function (data, isHDM4) {
         if (!g_hdm4search_click) {
-             this.showdata($("#damagesearch"));
+             showdata($("#damagesearch"));
             //this.showdata($("#damagesearch"));
             // if ($('#main_content').is(':hidden')) {
             //     $('#main_content').show();
@@ -247,6 +242,8 @@ function Controller(){
         g_all_result = data;
 
         g_search_info_level2.currentsection = g_all_result[0]['section'];
+        if(g_hdm4search_click)
+            zoom = false;
         if(!zoom)
         {
             zoomCoor();
@@ -263,7 +260,8 @@ function Controller(){
         if (!g_search_info_level2['kmstart']) 
             g_search_info_level2['kmstart'] = parseFloat(g_all_result[0]['subdistance']);
 
-        this.calculatePlotData(isHDM4);
+        if(!g_hdm4search_click)
+            this.calculatePlotData(isHDM4);
     }
 
      //Calculate Data based on KM Frequency
@@ -612,29 +610,31 @@ function Controller(){
 
     //======================== HDM4 Function =============================//
 
-    function hdm4Click(kmstart, kmend, section) {
-        setupLevel2();
+    this.hdm4Click = function(kmstart, kmend, section) {
+        _setupVar();
         //showLoading();
         g_search_info_level2['kmstart'] = kmstart;
         g_search_info_level2['kmend'] = kmend;
-        g_search_info['infotype'] = "ค่าความขรุขระ - IRI";
-        //g_search_info_level2['currentsection']    =   section;
-        g_hdm4_search['section'] = section;
+        g_search_info['infotype'] = "roughness";
+
+        g_search_info_level2['currentsection']    =   section;
+        //g_hdm4_search['section'] = section;
         g_search_info['exptype'] = g_hdm4_search['exptype'];
-        g_search_info_level2.kmfreq = 5;
+        g_search_info_level2.kmfreq = 25;
 
         g_data['kmstart'] = kmstart;
         g_data['kmend'] = kmend;
 
         // console.log(g_search_info_level2);
         zoomCoor();
-        ajaxSearch1(true);
+        //ajaxSearch1(true);
+        this.getAllLane(false);
     }
 
     this.hdm4Search = function() {
         g_hdm4search_click = true;
-        setupLevel2();
-        g_video = {};
+        //setupLevel2();
+        //g_video = {};
         //finish_getimage = false;
         var valid = true;
         //Form Validation
@@ -652,6 +652,11 @@ function Controller(){
             //Order for dropdown
             g_hdm4_search['dropdownOrder'] = $('#toolbox .enexname:visible option:selected').index();
         }
+        else {
+            g_hdm4_search['section'] = "0101";
+            g_hdm4_search['code'] = "0101";
+
+        }
 
 
         if (temp_ex == "nothing") {
@@ -661,140 +666,26 @@ function Controller(){
         if (valid) {
             //SetUp Value
             g_hdm4_search['expressway'] = temp_ex;
-            g_search_info['expressway'] = $('select[name=expressway]').val();
+            //g_search_info['expressway'] = $('select[name=expressway]').val();
             g_hdm4_search['type'] = $('#hdm4type').val();
             var temp = $('input:radio[name=hdm4year]:checked').val();
             g_hdm4_search['year'] = temp;
             g_hdm4_search['prevyear'] = temp;
             g_hdm4_search['exptype'] = exptype;
 
-            ajaxhdm4();
+            //GET HDM4 Data Result
+            model.getHDM4Result(g_hdm4_search['expressway'],g_hdm4_search['type'],g_hdm4_search['year'],g_hdm4_search['exptype'],g_hdm4_search['section']);
         }
         return false;
     }
 
-    function ajaxhdm4() {
-        showLoading();
-        $.ajax({
-            url: 'ajax/_hdm4search.php',
-            type: 'GET',
-            data: {
-                expressway: g_hdm4_search['expressway'], //only value number of expressway are sent.
-                type: g_hdm4_search['type'],
-                year: g_hdm4_search['year'],
-                exptype: g_hdm4_search['exptype']
-            },
-            dataType: 'jsonp',
-            dataCharset: 'jsonp',
-            success: function (data) {
-                if (!data['error']) {
-                    if ($('#main_content').is(':hidden')) $('#main_content').show();
-                    showHDM4();
-                    var totalcost = data['totalcost'];
-                    delete data['totalcost'];
-                    updateHDM4metadata();
-                    g_hdm4_result = data;
-                    createHDM4table(data, totalcost);
-                    $('input:radio[name=hdm4year][value=' + g_hdm4_search['year'] + ']').prop('checked', true);
-                } else {
-                    g_hdm4_search['year'] = g_hdm4_search['prevyear'];
-                    alert(data['error']);
-                    // errorReport(data['error']);
-                }
-                hideLoading();
-            }
-        });
+    
+
+    this.setHDM4 = function(){
+        view.updateHDM4metadata();
+        view.createHDM4table(g_hdm4_result, totalcost);
     }
 
-    function updateHDM4metadata() {
-        if (g_hdm4_search['expressway'] == "0101" || g_hdm4_search['expressway'] == "0102") {
-            $("#hdm4result .expressway").html('เฉลิมมหานคร ช่วงที่ 1 - 2 (ดินแดง - บางนา)');
-        } else {
-            //$("#hdm4result .expressway").html(expcodeToExpressway(g_hdm4_search['expressway']));
-            if (g_hdm4_search['exptype'] == 1) $("#hdm4result .expressway").html($('select[name=expressway] option:selected').html());
-            else if (g_hdm4_search['exptype'] == 3) $("#hdm4result .expressway").html($('select[name=accessname] option:selected').html());
-            else $("#hdm4result .expressway").html($('select.enexname option:selected').html());
-        }
-
-        if (g_hdm4_search['year'] == 'all') $("#hdm4result .hdm4year").html('ทุกปี');
-        else $("#hdm4result .hdm4year").html(parseInt((g_hdm4_search['year'])) + 543);
-
-
-        //Type Conversion
-        var type = "";
-        if (g_hdm4_search['type'] == "unlimited") type = "ไม่จำกัดงบ";
-        else if (g_hdm4_search['type'] == "limited_half") type = "ครึ่งงบ";
-        else type = "เต็มงบ";
-
-        $("#hdm4result .hdm4type").html(type);
-        //Update Src of Graph
-        $('#hdm4graph').prop('href', 'asset_images/hdm4/hdm4graph_' + g_hdm4_search['expressway'] + '.jpg');
-    }
-
-    function createHDM4table(row, totalcost) {
-        $('#hdm4table').html('');
-        var htmlcode = "<thead><tr>";
-        htmlcode += "<th width=40>ลำดับ</th>";
-        if (g_hdm4_search['year'] == 'all') htmlcode += "<th>ปี</th>";
-        htmlcode += "<th style='text-align:right;' width=68>กม.เริ่มต้น</th><th style='text-align:right;' width=68>กม.สิ้นสุด</th><th width=55>ทิศทาง</th><th width=76>ช่องจราจร</th><th width=242>ลักษณะการซ่อม</th><th width=75>ราคา(ลบ.)</th><th width=71>NPV/CAP</th><th></th></tr></thead>";
-
-        $('#hdm4table').html(htmlcode);
-        $('#hdm4table').append('<tbody></tbody>');
-        g_hdm4_data_result = [];
-        var count = 0;
-        for (i in row) {
-            count++;
-            var year = row[i]['year'];
-            var exp = row[i]['expressway'];
-            var dir = row[i]['dir'];
-            if (g_hdm4_search['exptype'] != 1) var lane = row[i]['lane']
-            else var lane = row[i]['lane'].substr(row[i]['lane'].indexOf('าจร') + 3);
-            var kmstart = toKm(parseFloat(row[i]['kmstart']).toFixed(3));
-            var kmend = toKm(parseFloat(row[i]['kmend']).toFixed(3));
-            //var rangekm = row[i]['kmstart']+'-'+row[i]['kmend'];
-            var workdes = row[i]['workdes'];
-            var cost = parseFloat(row[i]['cost']).toFixed(3);
-            var npv = parseFloat(row[i]['npv']).toFixed(2);
-            var htmlcode = "<tr>";
-
-            htmlcode += "<td>" + count + "</td>";
-            if (g_hdm4_search['year'] == 'all') htmlcode += "<td>" + (parseInt(year) + 543) + "</td>";
-            htmlcode += "<td style='text-align:right;'>" + kmstart + "</td><td style='text-align:right;'>" + kmend + "</td><td>" + dir + "</td><td>" + lane + "</td><td>" + workdes + "</td><td>" + cost + "</td><td>" + npv + "</td><td><i class='icon-facetime-video'></i></td></tr>";
-
-            $('#hdm4table').append(htmlcode);
-
-            //For PDF Data
-            g_hdm4_data_result.push([year, kmstart, kmend, dir, lane, workdes, cost, npv]);
-        }
-        var text = 'จำนวนเงินทั้งหมดที่ใช้ ';
-        if (g_hdm4_search['year'] != 'all') text += "ในปี " + (parseInt(g_hdm4_search['year']) + 543);
-        text += ' : <span class="color-blue">' + totalcost + '</span> ล้านบาท';
-
-        //Total Cost Display
-        $("#totalcost").html(text);
-
-        //Set Pager using tablesorter plugin
-        var myHeaders = {};
-        $("#hdm4table").find('th').each(function (i, e) {
-            myHeaders[$(this).index()] = {
-                sorter: false
-            };
-        });
-
-        $('.pager .first').unbind();
-        $('.pager .last').unbind();
-        $('.pager .prev').unbind();
-        $('.pager .next').unbind();
-
-        $("#hdm4table")
-            .tablesorter({
-            headers: myHeaders
-        })
-            .tablesorterPager({
-            container: $("#hdm4pager"),
-            size: 20
-        });
-    }
 
 	//Private Function
     _showLane = function(selector,n){

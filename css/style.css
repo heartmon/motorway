@@ -357,9 +357,10 @@ right: 10px;
 	display: inline-block;
 }
 
-#hdm4result h3, .resultoptionchange, #pavement h3
+/*#hdm4result h3, .resultoptionchange, #pavement h3*/
+h3.inline, .resultoptionchange
 {
-	/*display: inline-block;*/
+	display: inline-block;
 }
 
 #hdm4table th, #hdm4table td, #section_table th

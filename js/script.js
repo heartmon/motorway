@@ -36,6 +36,7 @@ var g_hdm4_search = {
     prevyear: "",
     section: "",
     exptype: "",
+    code: "",
     dropdownOrder: ""
 };
 var g_hdm4_data_result = [];
@@ -667,58 +668,93 @@ $(function (){
                 }
                 switch (lane) {
                     case "ซ้าย":
-                        lane = "03";
+                        lane = "4";
                         break;
-                    case "กลาง":
-                        lane = "02";
+                    case "กลาง(2)":
+                        lane = "3";
+                        break;
+                    case "กลาง(1)":
+                        lane = "2";
                         break;
                     case "ขวา":
-                        lane = "01";
+                        lane = "1";
                         break;
                 }
-                //Add case for enex and access (abb_exp = section)
-                var abb_exp = g_hdm4_search['expressway'];
-                if (abb_exp == "0102" || abb_exp == "0101") {
-                    //find specialcase for that section
-                    var spcase = 8;
-                    if (spcase < hdm4kmstart) 
-                        var section = '0102' + "%" + dir + lane; 
-                    else 
-                        var section = '0101' + "%" + dir + lane;
-                } 
-                else 
-                    var section = abb_exp + "%" + dir + lane;
-            } 
-            else {
-                var section;
-                if (g_hdm4_search['exptype'] == 3) {
-                    section = $('#toolbox select#accessname option').eq(g_hdm4_search['dropdownOrder']).val();
-                } else {
-                    section = $('#toolbox select.enexname:visible option').eq(g_hdm4_search['dropdownOrder']).val();
-                }
-            }
+            var exp = g_hdm4_search['expressway'];
+            var prefix = g_hdm4_search['section'].substr(0,9);
+            var section = prefix+dir+lane;
+            //     //Add case for enex and access (abb_exp = section)
+            //     var abb_exp = g_hdm4_search['expressway'];
+            //     if (abb_exp == "0102" || abb_exp == "0101") {
+            //         //find specialcase for that section
+            //         var spcase = 8;
+            //         if (spcase < hdm4kmstart) 
+            //             var section = '0102' + "%" + dir + lane; 
+            //         else 
+            //             var section = '0101' + "%" + dir + lane;
+            //     } 
+            //     else 
+            //         var section = abb_exp + "%" + dir + lane;
+             } 
+            // else {
+            //     var section;
+            //     if (g_hdm4_search['exptype'] == 3) {
+            //         section = $('#toolbox select#accessname option').eq(g_hdm4_search['dropdownOrder']).val();
+            //     } else {
+            //         section = $('#toolbox select.enexname:visible option').eq(g_hdm4_search['dropdownOrder']).val();
+            //     }
+            // }
             //console.log(hdm4kmstart+"=="+hdm4kmend+"=="+section);
-            hdm4Click(hdm4kmstart, hdm4kmend, section)
-            zoomCoor();
+            console.log(section);
+            controller.hdm4Click(hdm4kmstart, hdm4kmend, section)
+            //zoomCoor();
         }
     });
 
-   // $('#search_hdm4_button').bind('click', hdm4Search);
+    $('#search_hdm4_button').bind('click', controller.hdm4Search);
 
     //HDM4 year dropdown
     $('#hdm4yeardropdown a').bind('click', function () {
         var y = $(this).html();
-        if (y != 'ทุกปี') y = parseInt(y) - 543;
-        else y = 'all';
+        if (y != 'ทุกปี') 
+            y = parseInt(y) - 543;
+        else 
+            y = 'all';
         g_hdm4_search['year'] = y;
         //$('input:radio[name=hdm4year][value='+y+']').prop('checked',true);
-        ajaxhdm4();
+        model.getHDM4Result(g_hdm4_search['expressway'],g_hdm4_search['type'],g_hdm4_search['year'],g_hdm4_search['exptype'],g_hdm4_search['section']);
         return false;
     });
+
+    //HDM4 section dropdown
+    $('#hdm4yeardropdown a').bind('click', function () {
+        var y = $(this).html();
+        if (y != 'ทุกปี') 
+            y = parseInt(y) - 543;
+        else 
+            y = 'all';
+        g_hdm4_search['year'] = y;
+        //$('input:radio[name=hdm4year][value='+y+']').prop('checked',true);
+        model.getHDM4Result(g_hdm4_search['expressway'],g_hdm4_search['type'],g_hdm4_search['year'],g_hdm4_search['exptype'],g_hdm4_search['section']);
+        return false;
+    });
+
+
+
 });
 
 
 //Global Function
+
+//Show data
+function showdata(selector){
+        if ($('#main_content').is(':hidden')) {
+            $('#main_content').show();
+        }
+        $('#main_content').children('div').hide();
+        if (selector.is(':hidden')) 
+            selector.show();    
+    }
 
 //Update datatable
 function updateDataTable() {
@@ -1075,4 +1111,18 @@ function toDir(lane){
         return 'ขาออก';
     else
         return 'ขาเข้า';
+}
+
+function selectToList(source,target){
+    var htmlcode = "";
+    target.html('');
+    source.find('option').each(function(){
+        var value = $(this).prop('value');
+        var html  = $(this).html();
+        htmlcode += "<li>";
+        htmlcode += "<a id='"+value+"'>"+html+"</a>";
+        htmlcode += "</li>";
+    });
+    target.append(htmlcode);
+    return htmlcode;
 }

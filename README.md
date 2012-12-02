@@ -27,3 +27,6 @@ v.0.6
 - Add new data for pavement (csv file)
 - Edit gis.js at addPoints function (change all result mindis to g_all_result[mindis])
 - Some bug fixed in controller.js script.js
+
+- Add hdm4 data to DB and prepare HDM4 function.
+- HDM4 data table display (not functional).
