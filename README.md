@@ -35,7 +35,7 @@ v.0.6
 v0.7
 
 - Update/Add HDM4 data to database (include all type) [Main09 has problemed and wait for u-turn]
-- HDM4 function complete (except export to excel and graph)
+- HDM4 function complete
 - Some bug fixed
 - Add name instead of 0101,0102 ~~ (based on HDM4 xls file)
 - Edit controller.js, view.js, model.js, script.js, gis.js, ignore_section.php, _hdm4_search.php, style.css, index.php

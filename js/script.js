@@ -143,7 +143,7 @@ $(function (){
             $.fancybox({
                 //'autoDimensions': false, 
                 'autoscale': true,
-                'content': '<img src="' + this.href + '" width="460" height="380" />',
+                'content': '<img src="' + this.href + '" width="730" height="353" />',
                 'scrolling': 'no'
             });
             return false;
@@ -577,27 +577,29 @@ $(function (){
 
     //Export PDF and Excel
     $("#hdm4excel").bind('click', function () {
-        var expressway;
-        if (g_hdm4_search['exptype'] != 2) expressway = $('#yearbudget .expressway').html();
-        else expressway = $('select[name=expressway] option[value=' + g_search_info['expressway'] + ']').html() + ' / ' + $('#yearbudget .expressway').html();
+      //  var expressway;
+       // if (g_hdm4_search['exptype'] != 2) expressway = $('#yearbudget .expressway').html();
+      //  else expressway = $('select[name=expressway] option[value=' + g_search_info['expressway'] + ']').html() + ' / ' + $('#yearbudget .expressway').html();
 
-        var head = expressway + ";;" + $("#yearbudget .hdm4year").html() + ";;" + $("#yearbudget .hdm4type").html() + ";;" + $("#totalcost").html();
-        $("#genexcel input[name=head]").val(head);
-        $("#genexcel input[name=exceldata]").val(g_hdm4_data_result.join(";;"));
-        $("#genexcel:visible").submit();
+     //  var head = expressway + ";;" + $("#yearbudget .hdm4year").html() + ";;" + $("#yearbudget .hdm4type").html() + ";;" + $("#totalcost").html();
+        var columns = view.getHDM4Columns();
+        var head = toExpressName(g_search_info.expressway)+";;"+$('#hdm4result .section').html()+";;"+g_hdm4_search.year+";;"+$('#hdm4result .hdm4type').html()+";;"+$("#totalcost").html();
+        columns = columns.join(";;");
+        $("#hdm4result #genexcel input[name=head]").val(head);
+        $("#hdm4result #genexcel input[name=exceldata]").val(g_hdm4_data_result.join(";;"));
+        $("#hdm4result #genexcel").submit();
         return false;
     });
 
     $('#pavementexcel').bind('click', function(){
         var columns = view.getPavementColumns();
         var head = toExpressName(g_search_info.expressway)+";;"+g_search_info_level2.currentsection+";;"+g_search_info_level2.currentcode;
-       // var columns
         columns = columns.join(";;");
         var data = g_pavement_array.join(";;");
-        $("#genexcel input[name=head]").val(head);
-        $("#genexcel input[name=exceldata]").val(data);
-        $("#genexcel input[name=columns]").val(columns);
-        $("#genexcel:visible").submit();
+        $("#pavement #genexcel input[name=head]").val(head);
+        $("#pavement #genexcel input[name=exceldata]").val(data);
+        $("#pavement #genexcel input[name=columns]").val(columns);
+        $("#pavement #genexcel").submit();
         return false;
     });
 

@@ -176,7 +176,7 @@ function View(){
         }        
         
         //Update Src of Graph
-        //$('#hdm4graph').prop('href', 'asset_images/hdm4/hdm4graph_' + g_hdm4_search['expressway'] + '.jpg');
+        $('#hdm4graph').prop('href', 'images/hdm4graph/' + g_hdm4_search['expressway'] + '-' + g_hdm4_search['exptype'] + '.jpg');
     }
 
     this.createHDM4table = function(row){

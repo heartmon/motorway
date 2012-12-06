@@ -425,7 +425,7 @@
 
 						</div>
 						<div class="mybuttongroup">
-							<a href="#" id="hdm4graph" class="fancyimage btn btn-small"><img src="images/icon_chart.png" title="ดูกราฟ" width=18> กราฟ</a>
+							
 							<form id="genpdf" method="POST" style="display:inline-block;" action="topdf.php">
 								<a href="#" target="blank" id="pavementpdf" class="btn btn-small"><img src="images/icon_pdf.png" title="export pdf file" width=18> PDF</a>
 								<input type="hidden" name="pdffilename" value="">
@@ -494,7 +494,7 @@
 						</div>
 						
 					<br>
-					<h3>Budget Scenario: <span class="hdm4result-type hdm4type color-orange"></span></h3>	
+					<h3>Budget Scenario: <span class="hdm4type color-orange"></span></h3>	
 					
 					<div class="right" id="totalcost">
 						

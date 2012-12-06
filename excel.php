@@ -2,15 +2,18 @@
 if(isset($_POST['exceldata']))
 {
 	$file="report.xls";
-	header("Content-type: application/vnd.ms-excel");
-	header("Content-Disposition: attachment; filename=$file");
+	//header("Content-type: application/vnd.ms-excel");
+	//header("Content-Disposition: attachment; filename=$file");
 	$type = $_POST['type'];
 	//echo '<link rel="stylesheet" type="text/css" href="css/style.css">';
 	if($type == "pavement")
 	{	
-		$exceldata= $_POST['exceldata'];
+	//	echo $_POST['exceldata'];
+		$exceldata= explode(";;",$_POST['exceldata']);
+		//echo $exceldata;
 		$head = explode(";;",$_POST['head']);
 		$columns = explode(";;",$_POST['columns']);
+
 		echo '<h1>Pavement Result</h1>
 		<h3>สายทาง: <span class="expressway color-orange">'.$head[0].'</span></h3>
 		<h3>ตอนควบคุม: <span class="expressway color-orange">'.$head[2].' ('.$head[1].')</span></h3>';
@@ -25,6 +28,7 @@ if(isset($_POST['exceldata']))
 		$tableheader .= "</tr>";
 		echo $tableheader;
 		$html = "";
+
 		for($i=0;$i<sizeof($exceldata);$i++)
 		{
 			$temp = explode(",", $exceldata[$i]);
@@ -37,6 +41,7 @@ if(isset($_POST['exceldata']))
 	        $html .= '<td align="center">'.$temp[4].'</td>';
 	        $html .= '<td align="center">'.$temp[5].'</td>';
 	        $html .= '<td align="center">'.$temp[6].'</td>';
+	        $html .= '<td align="center">'.$temp[7].'</td>';
 	        //$html .= '<td align="center">'.$temp[5].'</td>';
 	        $html .= '</tr>';
 		}
@@ -54,9 +59,11 @@ if(isset($_POST['exceldata']))
 	
 	//echo '<h1>HDM4 Result</h1>'
 	echo '<h1>HDM4 Result</h1>
+
 	<h3>สายทาง: <span class="expressway color-blue">'.$head[0].'</span></h3>
-	<h3>Year: <span class="color-blue">'.$head[1].'</span></h3>
-	<h3>Budget Scenario: <span class="hdm4type color-blue">'.$head[2].'</span></h3>';
+	<h3>ตอนควบคุม: <span class="expressway color-orange">'.$head[1].'</span></h3>
+	<h3>Year: <span class="color-blue">'.$head[2].'</span></h3>
+	<h3>Budget Scenario: <span class="hdm4type color-blue">'.$head[3].'</span></h3>';
 
 	$exceldata = explode(";;", $exceldata);
 	$tableheader = "<table border=1 cellpadding='5'><th width=60>ลำดับที่</th>";
