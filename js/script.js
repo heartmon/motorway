@@ -656,46 +656,53 @@ $(function (){
             };
             g_current_var['hdm4'] = hdm4current;
             $('#videoinfo #video_infotype').html(g_current_var['hdm4']['workdes']);
-            if (g_hdm4_search['exptype'] == 1) {
-                //Extract
-                switch (dir) {
-                    case "ขาเข้า":
-                        dir = "R";
-                        break;
-                    case "ขาออก":
-                        dir = "F";
-                        break;
-                }
-                switch (lane) {
-                    case "ซ้าย":
-                        lane = "4";
-                        break;
-                    case "กลาง(2)":
-                        lane = "3";
-                        break;
-                    case "กลาง(1)":
-                        lane = "2";
-                        break;
-                    case "ขวา":
-                        lane = "1";
-                        break;
-                }
-            var exp = g_hdm4_search['expressway'];
-            var prefix = g_hdm4_search['section'].substr(0,9);
-            var section = prefix+dir+lane;
-            //     //Add case for enex and access (abb_exp = section)
-            //     var abb_exp = g_hdm4_search['expressway'];
-            //     if (abb_exp == "0102" || abb_exp == "0101") {
-            //         //find specialcase for that section
-            //         var spcase = 8;
-            //         if (spcase < hdm4kmstart) 
-            //             var section = '0102' + "%" + dir + lane; 
-            //         else 
-            //             var section = '0101' + "%" + dir + lane;
-            //     } 
-            //     else 
-            //         var section = abb_exp + "%" + dir + lane;
-             } 
+            // if (g_hdm4_search['exptype'] != 4) {
+            //     //Extract
+            //     switch (dir) {
+            //         case "ขาเข้า":
+            //             dir = "R";
+            //             break;
+            //         case "ขาออก":
+            //             dir = "F";
+            //             break;
+            //     }
+            //     switch (lane) {
+            //         case "ซ้าย":
+            //             lane = "4";
+            //             break;
+            //         case "กลาง(2)":
+            //         case "กลาง(สอง)":
+            //             lane = "3";
+            //             break;
+            //         case "กลาง(1)":
+            //         case "กลาง(หนึ่ง)":
+            //             lane = "2";
+            //             break;
+            //         case "ขวา":
+            //             lane = "1";
+            //             break;
+            //     }
+            // var exp = g_hdm4_search['expressway'];
+            // var prefix = g_hdm4_search['section'].substr(0,9);
+            // //alert('arai wa');
+            // var section = prefix+dir+lane;
+            // //     //Add case for enex and access (abb_exp = section)
+            // //     var abb_exp = g_hdm4_search['expressway'];
+            // //     if (abb_exp == "0102" || abb_exp == "0101") {
+            // //         //find specialcase for that section
+            // //         var spcase = 8;
+            // //         if (spcase < hdm4kmstart) 
+            // //             var section = '0102' + "%" + dir + lane; 
+            // //         else 
+            // //             var section = '0101' + "%" + dir + lane;
+            // //     } 
+            // //     else 
+            // //         var section = abb_exp + "%" + dir + lane;
+            //  } 
+            //  else
+            //  {
+                var section = g_hdm4_result[index]['section'] ;
+             //}
             // else {
             //     var section;
             //     if (g_hdm4_search['exptype'] == 3) {
@@ -714,10 +721,10 @@ $(function (){
     $('#search_hdm4_button').bind('click', controller.hdm4Search);
 
     //HDM4 year dropdown
-    $('#hdm4yeardropdown a').bind('click', function () {
+    $('#hdm4yeardropdown a').live('click', function () {
         var y = $(this).html();
         if (y != 'ทุกปี') 
-            y = parseInt(y) - 543;
+            y = parseInt(y);
         else 
             y = 'all';
         g_hdm4_search['year'] = y;
@@ -727,13 +734,10 @@ $(function (){
     });
 
     //HDM4 section dropdown
-    $('#hdm4yeardropdown a').bind('click', function () {
-        var y = $(this).html();
-        if (y != 'ทุกปี') 
-            y = parseInt(y) - 543;
-        else 
-            y = 'all';
-        g_hdm4_search['year'] = y;
+    $('#hdm4sectiondropdown a').live('click', function () {
+        var sect = $(this).prop('id');
+        g_hdm4_search['section'] = g_hdm4_search.expressway + sect;
+        g_hdm4_search['code'] = $(this).html();
         //$('input:radio[name=hdm4year][value='+y+']').prop('checked',true);
         model.getHDM4Result(g_hdm4_search['expressway'],g_hdm4_search['type'],g_hdm4_search['year'],g_hdm4_search['exptype'],g_hdm4_search['section']);
         return false;
@@ -999,7 +1003,10 @@ function getImageDirectory(section){
             return exp+"0101"+suffix;
             break;             
         case "0401":
-            return exp+"0301"+suffix;
+            if(exp == "07")
+                return exp+"0301"+suffix;
+            else
+                return section;
             break;
         case "0402":
             return exp+"0401"+suffix;
@@ -1120,7 +1127,7 @@ function selectToList(source,target){
         var value = $(this).prop('value');
         var html  = $(this).html();
         htmlcode += "<li>";
-        htmlcode += "<a id='"+value+"'>"+html+"</a>";
+        htmlcode += "<a href='' id='"+value+"'>"+html+"</a>";
         htmlcode += "</li>";
     });
     target.append(htmlcode);

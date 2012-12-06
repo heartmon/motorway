@@ -49,6 +49,7 @@ $lastlong = $_POST['lastlong'];*/
 //Get data of hdm4 result
 elseif($pdftype == "hdm4")
 {
+    $expressway = $_POST['expressway'];
     $year = $_POST['year'];
     $hdm4type = $_POST['hdm4type'];
     $hdm4data = $_POST['hdm4data'];

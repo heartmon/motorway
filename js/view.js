@@ -145,7 +145,7 @@ function View(){
         if (year == 'all') 
             $("#hdm4result .hdm4year").html('ทุกปี');
         else 
-            $("#hdm4result .hdm4year").html(parseInt((g_hdm4_search['year'])) + 543);
+            $("#hdm4result .hdm4year").html(parseInt((g_hdm4_search['year'])));
 
         // if (g_hdm4_search['expressway'] == "0101" || g_hdm4_search['expressway'] == "0102") {
         //     $("#hdm4result .expressway").html('เฉลิมมหานคร ช่วงที่ 1 - 2 (ดินแดง - บางนา)');
@@ -160,13 +160,21 @@ function View(){
         //Type Conversion
         var type = "";
         if (g_hdm4_search['type'] == "unlimited") type = "ไม่จำกัดงบ";
-        else if (g_hdm4_search['type'] == "limited_half") type = "ครึ่งงบ";
-        else type = "เต็มงบ";
+        else if (g_hdm4_search['type'] == "limited_half") type = "แบบที่ 1  อ้างอิงงบปี 55";
+        else type = "แบบที่ 2 เพิ่มอีก 10%";
 
         $("#hdm4result .hdm4type").html(type);
 
         //Set HDM4 base on expressway and exptype
-        selectToList($('#toolbox #pavement_select select[name=mainsection'+g_hdm4_search.expressway+']'),$('#hdm4sectiondropdown'));
+        switch(g_hdm4_search['exptype'])
+        {
+            case "1":
+                selectToList($('#toolbox #pavement_select select[name=mainsection'+g_hdm4_search.expressway+']'),$('#hdm4sectiondropdown'));
+                break;
+            default:
+                selectToList($('#toolbox select.seclist:visible'),$('#hdm4sectiondropdown'));
+        }        
+        
         //Update Src of Graph
         //$('#hdm4graph').prop('href', 'asset_images/hdm4/hdm4graph_' + g_hdm4_search['expressway'] + '.jpg');
     }
@@ -202,16 +210,16 @@ function View(){
             var year = row[i]['year'];
             var exp = row[i]['expressway'];
            
-            if (g_hdm4_search['exptype'] != "1") 
-             {
-                var dir = row[i]['dir'];
-                var lane = row[i]['lane'];
-             } 
-            else 
-            {
+            // if (g_hdm4_search['exptype'] != "1" || g_hdm4_search['exptype'] != "3") 
+            //  {
+            //     var dir = row[i]['dir'];
+            //     var lane = row[i]['lane'];
+            //  } 
+            // else 
+            // {
                 var dir = row[i]['dir'].substr(row[i]['dir'].indexOf('ฝั่ง')+ 4);
                var lane = row[i]['lane'].substr(row[i]['lane'].indexOf('าจร') + 3);
-            }
+            //}
 
             var kmstart = toKm(parseFloat(row[i]['kmstart']).toFixed(3));
             var kmend = toKm(parseFloat(row[i]['kmend']).toFixed(3));
@@ -222,7 +230,7 @@ function View(){
             htmlcode = "<tr>";
 
             htmlcode += "<td>" + (i+1) + "</td>";
-            if (g_hdm4_search['year'] == 'all') htmlcode += "<td>" + (parseInt(year) + 543) + "</td>";
+            if (g_hdm4_search['year'] == 'all') htmlcode += "<td>" + (parseInt(year)) + "</td>";
             htmlcode += "<td style='text-align:right;'>" + kmstart + "</td><td style='text-align:right;'>" + kmend + "</td><td>" + dir + "</td><td>" + lane + "</td><td>" + workdes + "</td><td>" + cost + "</td><td>" + npv + "</td><td><i class='icon-facetime-video'></i></td></tr>";
 
             
@@ -236,7 +244,7 @@ function View(){
 
         var text = 'จำนวนเงินทั้งหมดที่ใช้ ';
         if (g_hdm4_search['year'] != 'all') 
-            text += "ในปี " + (parseInt(g_hdm4_search['year']) + 543);
+            text += "ในปี " + (parseInt(g_hdm4_search['year']));
         text += ' : <span class="color-blue">' + row['totalcost'] + '</span> ล้านบาท';
 
         //Total Cost Display

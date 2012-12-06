@@ -27,7 +27,7 @@ function Model()
         });
     }
 
-	this.getAllDamageInfo = function(infotype,kmfreq,section,exptype,hdm4type,activated){
+	this.getAllDamageInfo = function(infotype,kmfreq,section,exptype,hdm4type,hdm4year,activated){
 		sync = true;
 		$.ajax({
             url: 'ajax/_ignore_section.php',
@@ -40,7 +40,8 @@ function Model()
                 kmfreq: kmfreq,
                 section: section,
                 exptype: exptype,
-                hdm4type: hdm4type
+                hdm4type: hdm4type,
+                year: hdm4year
             },
             dataType: 'jsonp',
             dataCharset: 'jsonp',
@@ -79,23 +80,13 @@ function Model()
                 if (!data['error']) {
                     //Set first image to variable
                     g_video['first_image'] = parseInt(data[0]['frameno']) +  (g_all_result['dist_image']*1000/5) ;
-                    console.log(data);
+                  //  console.log(data);
                     finish_getimage = true;
 
-                    //Initialize and Setup video
-                   if ($('#videoplayer').find('div').hasClass('jsMovieFrame')) $('#videoplayer').jsMovie("destroy");
-                   $('#videoplayer').data("loadStatus", 'loaded');
-
-                  //  Preload video
-                   openVideo();
-                   videoPreloader();
-
-                   if (!g_hdm4search_click) {
-                        $('#table1 tr').eq(0).click();
-                        scrollTable();
-                    }
+                    controller.videoInit();
+                    
                    
-                } else {
+                } else {    
                     errorReport(data['error']);
                 }
             }

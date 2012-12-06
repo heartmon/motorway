@@ -13,50 +13,6 @@ $exptype = $_GET['exptype'];
 $userkmstart = $kmstart;
 $userkmend = $kmend;
 
-//Get HDM4 value
-$year = $_GET['year'];
-$type = $_GET['hdm4type'];
-if($type == "unlimited")
-	$typetable = "hdm4_unlimited";
-elseif($type == "limited_half")
-	$typetable = "hdm4_limited_half";
-else
-	$typetable = "hdm4_limited_full";
-
-//Extract value for hdm4 (dir lane )
-
-if($exptype == "1")
-{
-	$hdm4abbexp = $expressway;
-	if($expressway == "0102")
-		$hdm4abbexp = "0101";
-	$dir = substr($section,-3,1);
-	$laneno = substr($section,-2);
-	//Extract dir and lane
-	if($dir == 'R')
-		$dir = 'ขาเข้า';
-	else
-		$dir = 'ขาออก';
-	$lane = "ช่องจราจร";
-	switch($laneno){
-		case '01': $lane .= 'ขวา'; break;
-		case '02': $lane .= 'กลาง'; break;		
-		case '03': $lane .= 'ซ้าย'; break;
-	}
-}
-else
-{
-	$hdm4abbexp = substr($section,0,-3);
-	$dir = '-';
-	$lane = '-';
-}
-
-$GLOBALS["lasthdm4kmend"] = 0;
-/*echo $typetable;
-echo $hdm4abbexp;
-echo $dir;
-echo $lane;*/
-
 
 
 //Select Column Name for each infotype
@@ -84,6 +40,52 @@ if($exptype == 1 && strrpos($section, "0000") !== false)
 	$prefix = substr($s['section'],0,9);
 	$section = $prefix.$lane;
 }
+
+
+//Get HDM4 value
+$year = $_GET['year'];
+$type = $_GET['hdm4type'];
+if($type == "unlimited")
+	$typetable = "hdm4_unlimited";
+elseif($type == "limited_half")
+	$typetable = "hdm4_limited_half";
+else
+	$typetable = "hdm4_limited_full";
+
+
+//Extract value for hdm4 (dir lane )
+if($exptype == "1")
+{
+	$hdm4section = $section;
+	$dir = substr($section,-2,1);
+	$laneno = substr($section,-1);
+	//Extract dir and lane
+	if($dir == 'R')
+		$dir = 'ฝั่งขาเข้า';
+	else
+		$dir = 'ฝั่งขาออก';
+	$lane = "ช่องจราจร";
+	switch($laneno){
+		case '1': $lane .= 'ขวา'; break;
+		case '2': $lane .= 'กลาง(1)'; break;		
+		case '3': $lane .= 'กลาง(2)'; break;
+		case '4': $lane .= 'ซ้าย'; break;
+	}
+}
+else
+{
+	//$hdm4section = substr($section,0,-3);
+	$hdm4section = $section;
+	$dir = '-';
+	$lane = '-';
+}
+
+$GLOBALS["lasthdm4kmend"] = 0;
+/*echo $typetable;
+echo $hdm4abbexp;
+echo $dir;
+echo $lane;*/
+
 
 // if(!$kmend)// || (!$kmstart))
 // {
@@ -158,7 +160,7 @@ $rangefix = 25;
 	$sql .= " AND rn.subdistance >= {$kmstart} AND rn.subdistance <= {$kmendpadding}";
 	$sql .= " ORDER BY subdistance ,section";
 	//echo $sql;
-
+	
 	$result = pg_query($sql);
 	$rows = array();
 	$max_distance = 0;
@@ -177,7 +179,7 @@ $rangefix = 25;
 					//Add HDM4 Result
 					//echo $GLOBALS["lasthdm4kmend"];
 					if($GLOBALS["lasthdm4kmend"] <= $row['subdistance'])
-						$hdm4result = hdm4join($typetable, $hdm4abbexp, $dir, $lane,$row['subdistance']);
+						$hdm4result = hdm4join($typetable, $hdm4section, $dir, $lane,$row['subdistance']);
 					////if($GLOBALS["lasthdm4kmend"] <= $row['subdistance']-19.5 && (strrpos($section, '0103100') !== false))
 						//$hdm4result = hdm4join($typetable, $hdm4abbexp, $dir, $lane,$row['subdistance']);
 					$row['hdm4result'] = $hdm4result;				
@@ -238,18 +240,19 @@ function exptypeToFull($exptype)
 	return $type;
 }
 
-function hdm4join($typetable, $hdm4abbexp, $dir, $lane, $kms){
+function hdm4join($typetable, $hdm4section, $dir, $lane, $kms){
 	//year = {$year} AND
-	if($hdm4abbexp == "0103")
-	{
-		$kms = $kms-19.5;
-	}
+	// if($hdm4abbexp == "0103")
+	// {
+	// 	$kms = $kms-19.5;
+	// }
 	$hdm4sql = "SELECT year,workdes,cost,kmend from {$typetable} 
-			WHERE 	abb_exp LIKE '{$hdm4abbexp}' AND 
+			WHERE 	section LIKE '{$hdm4section}' AND 
 					dir = '{$dir}' AND 
 					lane = '{$lane}' AND
 					{$kms} >= kmstart AND {$kms} < kmend
 			ORDER BY id";
+	//echo $hdm4sql;
 	//echo $hdm4sql;
 	$sqlresult = pg_query($hdm4sql);
 	$hdm4result = array();

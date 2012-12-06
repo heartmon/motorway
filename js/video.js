@@ -27,9 +27,9 @@ function sliderSyncWithVideo(ui)
 function updateVideoData() {
 		if(g_video['first_image'])
 		{
-			if(g_hdm4search_click)
-				var index = g_all_result['usedlength'] - $('#videoslider').slider( "values" , 0);
-			else if(false) //reverse
+			//if(g_hdm4search_click)
+			//	var index = g_all_result['usedlength'] - $('#videoslider').slider( "values" , 0);
+			if(false) //reverse
 				var index = g_all_result['usedlength'] - $('#videoslider').slider( "values" , 0) + 1;
 			else
 				var index = $('#videoslider').slider( "values" , 0)-1;

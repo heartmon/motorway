@@ -643,6 +643,7 @@ function zoomMap(s) {
 
 function addPoints(all_result) {
     $.each(all_result, function (index, value) {
+        //console.log(index);
         var cost;
         var workdes;
         var year;
@@ -663,7 +664,8 @@ function addPoints(all_result) {
         //last = value['hdm4result'];
         var feature = poi(index, value['lat'], value['long'], value['subdistance'], value['iri_avg'], value['rut_lane'], value['mpd'], value['code'], value['section'], cost, workdes, year);
         qtip.addFeatures(feature);
-        if (index == Math.ceil((g_all_result['maxdis'] * 1000 - all_result['mindis'] * 1000) / 25)) return false;
+        //if (index == Math.ceil((g_all_result['maxdis'] * 1000 - g_all_result['mindis'] * 1000) / 25) - 1) return false;
+        if (index == all_result['usedlength']) return false;
 
     });
 }
@@ -676,7 +678,7 @@ function showQtip(olEvent) {
     var qcolor = "green";
     var km_at = "KM: " + data['km_at'];
     var c_cond = $("[name='infotype']:checked").val();
-    var year = parseInt(data['year']) + 543;
+    var year = parseInt(data['year']);
     if (g_hdm4search_click) {
         c_var = "แผนการซ่อม: " + data['workdes'] + "<br/>" + "งบประมาณ: " + data['cost'] + " ลบ. (ปี " + year + ")<br/>" + "IRI: " + data['iri'] + "<br/>" + "Rutting: " + data['rutting'] + "<br/>" + "MPD: " + data['texture'] + "<br/>";
 

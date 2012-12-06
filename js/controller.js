@@ -171,9 +171,9 @@ function Controller(){
              
         //     var section = g_search_info_level2.currentsection;
         // } else 
-        if(g_hdm4search_click)
-            var section = g_hdm4_search['section'];
-        else
+        //if(g_hdm4search_click)
+         //   var section = g_hdm4_search['section'];
+        //else
             var section = g_search_info_level2.currentsection;
 
         var suffix = [];
@@ -192,18 +192,18 @@ function Controller(){
             var prefix = section.substr(0, section.indexOf('R'));
         else 
             var prefix = section.substr(0, section.indexOf('F'));
-        console.log(prefix);
+        //console.log(prefix);
 
         var fingetalllane = false;
         if(!g_all_result_all_lane[suffix[0]])
         {
-            model.getAllDamageInfo(g_search_info.infotype,25,prefix+suffix[0],g_search_info.exptype,$('select#hdm4type').val(),true);
+            model.getAllDamageInfo(g_search_info.infotype,25,prefix+suffix[0],g_search_info.exptype,$('select#hdm4type').val(),$('input[name=hdm4year]:checked').val(),true);
         }
         for (var i = 1; i < suffix.length; i++) {
             var isection = prefix + suffix[i];
             var c = 0;
             if (!g_all_result_all_lane[suffix[i]]) {
-                 model.getAllDamageInfo(g_search_info.infotype,25,isection,g_search_info.exptype,$('select#hdm4type').val());
+                 model.getAllDamageInfo(g_search_info.infotype,25,isection,g_search_info.exptype,$('select#hdm4type').val(),$('input[name=hdm4year]:checked').val());
             }
         }
     }
@@ -220,6 +220,9 @@ function Controller(){
         g_all_result_all_lane[s]['mindis'] = parseFloat(g_all_result_all_lane[s][0]['subdistance']);
         g_all_result_all_lane[s]['usedlength'] = Math.ceil((g_all_result_all_lane[s]['maxdis'] * 1000 - g_all_result_all_lane[s]['mindis'] * 1000) / 25);
         g_all_result_all_lane[s]['onmap'] = false;
+        //if(g_hdm4search_click)
+        //    this.
+
     }
 
     //Show Data(table graph) of activated lane
@@ -260,13 +263,14 @@ function Controller(){
         if (!g_search_info_level2['kmstart']) 
             g_search_info_level2['kmstart'] = parseFloat(g_all_result[0]['subdistance']);
 
-        if(!g_hdm4search_click)
+        //if(!g_hdm4search_click)
             this.calculatePlotData(isHDM4);
     }
 
      //Calculate Data based on KM Frequency
     this.calculatePlotData = function (isHDM4) {
         //Reset
+        //alert('set');
         g_linedata = [];
 
         var count = 0;
@@ -336,12 +340,15 @@ function Controller(){
         g_all_result['maxdis'] = parseFloat(maxdis);
         g_all_result['offset'] = index_freq;
         g_all_result['last_consider_row'] = last_consider_row;
-        g_all_result['usedlength'] = Math.ceil((g_all_result['maxdis'] * 1000 - g_all_result['mindis'] * 1000) / 25);
+        g_all_result['usedlength'] = Math.ceil(Math.round((g_all_result['maxdis'] * 1000 - g_all_result['mindis'] * 1000)) / 25);
+        //console.log(g_all_result['usedlength']);
+       // g_all_result['indexsearch'] = g_all_result['usedlength']
 
 //        g_data['kmstart'] = g_all_result['mindis'];
   //      g_data['kmend']   = g_all_result['maxdis'];
 
         qtip.removeAllFeatures();
+
         addPoints(g_all_result);
 
         //Reset Some Value          
@@ -408,8 +415,26 @@ function Controller(){
              //     $('#table1 tr').eq(0).click();
        //      }
        //  }
+       if(g_hdm4search_click)
+            updateCurrentVar(0);
         hideLoading();
     }    
+    this.videoInit = function(){
+        //Initialize and Setup video
+        if ($('#videoplayer').find('div').hasClass('jsMovieFrame')) 
+            $('#videoplayer').jsMovie("destroy");
+        $('#videoplayer').data("loadStatus", 'loaded');
+
+      //  Preload video
+       openVideo();
+       videoPreloader();
+
+       if (!g_hdm4search_click) {
+            $('#table1 tr').eq(0).click();
+            scrollTable();
+        }
+        //else
+    }
     this.settingImage =  function() {
         $('#video-detail .control-section').html(g_all_result[0]['section']);
         $('#video-detail .code-section').html(g_search_info_level2.currentcode);
@@ -470,11 +495,9 @@ function Controller(){
 
     this.exportPDFhdm4 = function() {
         //Prepare data
-        var year = $("#yearbudget .hdm4year").html();
-        var expressway;
-        if (g_hdm4_search['exptype'] != 2) expressway = $('#yearbudget .expressway').html();
-        else expressway = $('select[name=expressway] option[value=' + g_search_info['expressway'] + ']').html() + ' / ' + $('#yearbudget .expressway').html();
-        var hdm4type = $("#yearbudget .hdm4type").html();
+        var year = $("#hdm4result .hdm4year").html();
+        var expressway = $('#hdm4result .expressway').html() + ' / ' + $('#hdm4result .section').html();
+        var hdm4type = $("#hdm4result .hdm4type").html();
         var totalcost = $("#totalcost").html();
         //Retrieve data from table
         showLoading();
@@ -484,10 +507,10 @@ function Controller(){
             data: {
                 expressway: expressway,
                 year: year,
+                pdftype: "hdm4",
                 hdm4type: hdm4type,
-                hdm4data: g_hdm4_data_result,
                 totalcost: totalcost,
-                pdftype: "hdm4"
+                hdm4data: g_hdm4_data_result
             },
             success: function (data) {
                 if (!data['error']) {
@@ -613,11 +636,14 @@ function Controller(){
     this.hdm4Click = function(kmstart, kmend, section) {
         _setupVar();
         //showLoading();
+        console.log('kmstart: '+kmstart);
+        console.log('kmend: ' + kmend);
         g_search_info_level2['kmstart'] = kmstart;
         g_search_info_level2['kmend'] = kmend;
         g_search_info['infotype'] = "roughness";
 
         g_search_info_level2['currentsection']    =   section;
+        //console.log(section);
         //g_hdm4_search['section'] = section;
         g_search_info['exptype'] = g_hdm4_search['exptype'];
         g_search_info_level2.kmfreq = 25;
@@ -628,6 +654,7 @@ function Controller(){
         // console.log(g_search_info_level2);
         zoomCoor();
         //ajaxSearch1(true);
+        g_all_result_all_lane = {};
         this.getAllLane(false);
     }
 
@@ -640,23 +667,31 @@ function Controller(){
         //Form Validation
         var temp_ex = $('select[name=expressway]').val();
         var exptype = $('select[name=exptype]').val();
-        //For ENEX and ACCESS Type
-        if (exptype == "3") //Access
-        {
-            temp_ex = $('#toolbox select.accessname').val().substr(0, $('select.enexname').val().length - 3);
-            //Order for dropdown
-            g_hdm4_search['dropdownOrder'] = $('#toolbox #accessname option:selected').index();
-        } else if (exptype == "2") //Enex
-        {
-            temp_ex = $('select.enexname').val().substr(0, $('select.enexname').val().length - 3);
-            //Order for dropdown
-            g_hdm4_search['dropdownOrder'] = $('#toolbox .enexname:visible option:selected').index();
-        }
-        else {
-            g_hdm4_search['section'] = "0101";
-            g_hdm4_search['code'] = "0101";
 
+        if (exptype == "1")
+        {
+            g_hdm4_search['section'] = temp_ex+$('#pavement_select select[name=mainsection'+temp_ex+']').find('option').first().val()+'M00';
+            g_hdm4_search['code'] = $('#pavement_select select[name=mainsection'+temp_ex+']').find('option').first().html();
         }
+        else
+        {
+            g_hdm4_search['section'] = temp_ex+$('#toolbox select.seclist:visible').find('option').first().val().substr(0,7);
+            g_hdm4_search['code'] = $('#toolbox select.seclist:visible').find('option').first().html(); 
+        }
+        
+        //For ENEX and ACCESS Type
+        // if (exptype == "3") //Access
+        // {
+
+        //     temp_ex = $('#toolbox select.accessname').val().substr(0, $('select.enexname').val().length - 3);
+        //     //Order for dropdown
+        //     g_hdm4_search['dropdownOrder'] = $('#toolbox #accessname option:selected').index();
+        // } else if (exptype == "2") //Enex
+        // {
+        //     temp_ex = $('select.enexname').val().substr(0, $('select.enexname').val().length - 3);
+        //     //Order for dropdown
+        //     g_hdm4_search['dropdownOrder'] = $('#toolbox .enexname:visible option:selected').index();
+        // }
 
 
         if (temp_ex == "nothing") {
@@ -684,6 +719,7 @@ function Controller(){
     this.setHDM4 = function(){
         view.updateHDM4metadata();
         view.createHDM4table(g_hdm4_result, totalcost);
+        g_hdm4_search['section'] = g_hdm4_result[0]['section'].substr(0,9);
     }
 
 
@@ -780,7 +816,7 @@ function Controller(){
         var type = "";
         switch(exptype){
             case "1":
-                type = "M%";
+                type = "M00";
                 break;
             case "2":
                 //

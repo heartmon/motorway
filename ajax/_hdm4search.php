@@ -20,7 +20,10 @@ else
 	$typetable = "hdm4_limited_full";
 
 //$sql = "SELECT * FROM {$typetable} WHERE abb_exp LIKE '{$expressway}' AND type = {$exptype}";
-$sql = "SELECT * FROM {$typetable} WHERE expressway LIKE '{$expressway}' AND type = {$exptype}";
+$sec_code = $section.'%';
+
+$sql = "SELECT * FROM {$typetable} WHERE section LIKE '{$sec_code}' AND type = {$exptype}";
+
 if($year != 'all')
 	$sql .= " AND year = {$year}";
 $sql .= " ORDER BY id";
@@ -44,7 +47,7 @@ if(pg_num_rows($result) > 0)
 else
 {
 	if($year != 'all')
-		$rows['error'] = "ไม่มี HDM4 Plan สำหรับปี ".($year+543)." ในสายทางนี้";
+		$rows['error'] = "ไม่มี HDM4 Plan สำหรับปี ".($year)." ในสายทางนี้";
 	else
 		$rows['error'] = "ไม่มี HDM4 Plan แบบที่เลือกในสายทางนี้";
 }

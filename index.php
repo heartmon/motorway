@@ -140,31 +140,31 @@
 					<div id="option1">
 						เลือกตอนควบคุม: 
 						<div id="notpavement">
-							<select name="mainsection07" class="input-spanall mainsection">
+							<select name="mainsection07" class="input-spanall mainsection seclist">
 								<option value="0000">เส้นทางหลัก</option>
-								<option value="0102">0102</option>
-								<option value="0302">0302</option>
+								<option value="0102">ทางเข้าออกสถานีขนส่งสินค้าร่มเกล้า</option>
+								<option value="0302">แยกทางตอนควบคุมหมายเลข 070304 - บรรจบทางหลวงหมายเลข 34 (บางวัว)</option>
 							</select>
 
-							<select name="mainsection09" class="input-spanall mainsection">
+							<select name="mainsection09" class="input-spanall mainsection seclist">
 								<option value="0000">เส้นทางหลัก</option>
 							</select>
 						</div>
 						<div id="pavement_select">
-							<select name="mainsection07" class="input-spanall mainsection">
+							<select name="mainsection07" class="input-spanall mainsection seclist">
 								
-								<option value="0101">0101</option>
-								<option value="0102">0102</option>
-								<option value="0200">0200</option>
-								<option value="0301">0301</option>
-								<option value="0302">0302</option>
-								<option value="0401">0401</option>
+								<option value="0101">ถนนศรีนครินทร์ - กม.22+000 (ต่อเขตแขวงฯ สมุทรปราการ)</option>
+								<option value="0102">ทางเข้าออกสถานีขนส่งสินค้าร่มเกล้า</option>
+								<option value="0200">กม.22+000 (ต่อเขตแขวงฯ กรุงเทพ) - กม.38+600 (ต่อเขตแขวงฯ ฉะเชิงเทรา)</option>
+								<option value="0301">กม.38+600 (ต่อเขตแขวงฯ สมุทรปราการ) - กม.52+000 (ต่อเขตแขวงฯ ชลบุรี)</option>
+								<option value="0302">แยกทางตอนควบคุมหมายเลข 070304 - บรรจบทางหลวงหมายเลข 34 (บางวัว)</option>
+								<option value="0401">กม.52+000 (ต่อเขตแขวงฯ ฉะเชิงเทรา) - ทางแยกต่างระดับคีรี</option>
 							</select>
-							<select name="mainsection09" class="input-spanall mainsection">
-								<option value="0401">0401</option>
-								<option value="0402">0402</option>
-								<option value="0500">0500</option>
-								<option value="0600">0600</option>
+							<select name="mainsection09" class="input-spanall mainsection seclist">
+								<option value="0401">แยกทางหลวงหมายเลข 1 (บางปะอิน) - คลองระพีพัฒน์ (ต่อเขตแขวงฯ ปทุมธานี)</option>
+								<option value="0402">คลองระพีพัฒน์ (ต่อเขตแขวงฯ อยุธยา) - ลำลูกการ (ต่อเขตแขวงฯ กรุงเทพ)</option>
+								<option value="0500">ลำลูกกา (ต่อเขตแขวงฯ ปทุมธานี) - ประเวศ (ต่อเขตแขวงฯ สมุทรปราการ)</option>
+								<option value="0600">ประเวศ (ต่อเขตแขวงฯ กรุงเทพ) - พระประแดง</option>
 							</select>
 						</div>
 						<div id="fix_range">
@@ -179,7 +179,7 @@
 						
 						<div id="option2">
 						
-							<select name="accessname07" class="input-spanall accessname">
+							<select name="accessname07" class="input-spanall accessname seclist">
 							<!--	<option value="">ทางแยกต่างระดับศรีนครินทร์</option>
 								<option value="">ทางแยกต่างระดับวัดสลุด</option> -->
 								<option value="0101B01">ทางแยกต่างระดับร่มเกล้า</option>
@@ -193,7 +193,7 @@
 								<option value="">ทางแยกต่างระดับชลบุรี</option>
 								<option value="">ทางแยกต่างระดับบางพระ</option>	-->									
 							</select>
-							<select name="accessname09" class="input-spanall accessname">
+							<select name="accessname09" class="input-spanall accessname seclist">
 							<!--	<option value="">ทางแยกต่างระดับบางปะอิน</option>
 								<option value="">สะพานลอยทางเข้า-ออก สถานีขนส่งสินค้าคลองหลวง</option>
 								<option value="">สะพาน OVERPASS และทางแยก อ.คลองหลวง</option> -->
@@ -204,7 +204,7 @@
 								<option value="0500B02">ทางแยกต่างระดับสุขาภิบาล 3</option>	
 								<option value="0500B03">ทางแยกต่างระดับทับช้าง</option>	
 							</select>
-							<select name="enexname07" class="input-spanall enexname">
+							<select name="enexname07" class="input-spanall enexname seclist">
 								<option value="0101U01">สะพานลอยกลับรถ กม.เริ่มต้นที่ 1.5 - 1.7</option>
 								<option value="0101U02">สะพานลอยกลับรถ กม.เริ่มต้นที่ 14.4 - 14.7</option>
 								<option value="0101U03">สะพานลอยกลับรถ กม.เริ่มต้นที่ 9.6 - 9.2</option>
@@ -212,7 +212,7 @@
 								<option value="0302U02">ที่กลับรถแยกต่างระดับบางควาย</option>
 							</select>
 							
-							<select name="enexname09" class="input-spanall enexname">
+							<select name="enexname09" class="input-spanall enexname seclist">
 								<option value="0401U01">ที่กลับรถแยกต่างระดับบางปะอิน</option>
 								<option value="0402U01">ที่กลับรถแยกต่างระดับธัญบุรี (ไป อ.บางปะอิน)</option>
 								<option value="0402U02">ที่กลับรถแยกต่างระดับธัญบุรี (ไป อ.บางพลี)</option>
@@ -221,7 +221,7 @@
 								<option value="0500U05">ที่กลับรถแยกต่างระดับทับช้าง (ไป อ.บางพลี)</option>
 							</select>
 
-							<select name="intersect07" class="input-spanall intersect">
+							<select name="intersect07" class="input-spanall intersect seclist">
 								<option value="0101113F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก กรุงเทพ-ชลบุรี</option>
 								<option value="0101121F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาเข้า รามคำแหง-กรุงเทพ</option>
 								<option value="0101123F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก รามคำแหง-ชลบุรี</option>
@@ -279,7 +279,7 @@
 								
 							</select>
 
-							<select name="intersect09" class="input-spanall intersect">
+							<select name="intersect09" class="input-spanall intersect seclist">
 								<option value="0401141F1">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาเข้า กรุงเทพฯ-บางพลี </option>
 								<option value="0401132F1">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาออก บางพลี-สระบุรี </option>
 								<option value="0401123F1">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาเข้า สระบุรี-บางพลี </option>
@@ -384,23 +384,23 @@
 						<form class="">
 						<select id="hdm4type" name="hdm4type" class="input-spanall">
 							<option value="unlimited" >แบบไม่จำกัดงบ</option>
-							<option value="limited_half">แบบครึ่งงบ</option>
-							<option value="limited_full">แบบเต็มงบ</option>
+							<option value="limited_half">แบบที่ 1 อ้างอิงงบปี 55</option>
+							<option value="limited_full">แบบที่ 2 เพิ่มอีก 10%</option>
 						</select>
 						<label class="radio">
-							<input checked name="hdm4year" value="2013" type="radio">2556: HDM4 Plan
+							<input checked name="hdm4year" value="2556" type="radio">2556: HDM4 Plan
 						</label>
 						<label class="radio">
-							<input name="hdm4year" value="2014" type="radio">2557: HDM4 Plan
+							<input name="hdm4year" value="2557" type="radio">2557: HDM4 Plan
 						</label>
 						<label class="radio">
-							<input name="hdm4year" value="2015" type="radio">2558: HDM4 Plan
+							<input name="hdm4year" value="2558" type="radio">2558: HDM4 Plan
 						</label>
 						<label class="radio">
-							<input name="hdm4year" value="2016" type="radio">2559: HDM4 Plan
+							<input name="hdm4year" value="2559" type="radio">2559: HDM4 Plan
 						</label>
 						<label class="radio">
-							<input name="hdm4year" value="2017" type="radio">2560: HDM4 Plan
+							<input name="hdm4year" value="2560" type="radio">2560: HDM4 Plan
 						</label>
 						<label class="radio">
 							<input name="hdm4year" value="all" type="radio">ทุกปี: HDM4 Plan

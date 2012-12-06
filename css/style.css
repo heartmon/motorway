@@ -362,6 +362,10 @@ h3.inline, .resultoptionchange
 {
 	display: inline-block;
 }
+.resultoptionchange
+{
+	width:600px;
+}
 
 #hdm4table th, #hdm4table td, #section_table th
 {
@@ -564,6 +568,8 @@ a.dropdown-toggle
 	top: 5px;
 							position: absolute;
 							right:0;
+	min-width: 240px;
+	text-align: center;
 }
 
 h1 > div {
@@ -708,4 +714,9 @@ margin-left: -225px;
 {
 	text-align: center;
 }
+
+#hdm4sectiondropdown
+{
+	overflow:scroll;
+	max-height: 250px;
 }
