@@ -2,8 +2,8 @@
 if(isset($_POST['exceldata']))
 {
 	$file="report.xls";
-	//header("Content-type: application/vnd.ms-excel");
-	//header("Content-Disposition: attachment; filename=$file");
+	header("Content-type: application/vnd.ms-excel");
+	header("Content-Disposition: attachment; filename=$file");
 	$type = $_POST['type'];
 	//echo '<link rel="stylesheet" type="text/css" href="css/style.css">';
 	if($type == "pavement")
