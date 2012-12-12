@@ -717,9 +717,10 @@ function Controller(){
     
 
     this.setHDM4 = function(){
+        g_hdm4_search['section'] = g_hdm4_result[0]['section'].substr(0,9);
         view.updateHDM4metadata();
         view.createHDM4table(g_hdm4_result, totalcost);
-        g_hdm4_search['section'] = g_hdm4_result[0]['section'].substr(0,9);
+        
     }
 
 

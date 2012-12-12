@@ -739,6 +739,7 @@ $(function (){
     $('#hdm4sectiondropdown a').live('click', function () {
         var sect = $(this).prop('id');
         g_hdm4_search['section'] = g_hdm4_search.expressway + sect;
+        //console.log(g_hdm4_search.section);
         g_hdm4_search['code'] = $(this).html();
         //$('input:radio[name=hdm4year][value='+y+']').prop('checked',true);
         model.getHDM4Result(g_hdm4_search['expressway'],g_hdm4_search['type'],g_hdm4_search['year'],g_hdm4_search['exptype'],g_hdm4_search['section']);

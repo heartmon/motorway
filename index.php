@@ -388,7 +388,7 @@
 							<option value="limited_full">แบบที่ 2 เพิ่มอีก 10%</option>
 						</select>
 						<label class="radio">
-							<input checked name="hdm4year" value="2556" type="radio">2556: HDM4 Plan
+							<input name="hdm4year" value="2556" type="radio">2556: HDM4 Plan
 						</label>
 						<label class="radio">
 							<input name="hdm4year" value="2557" type="radio">2557: HDM4 Plan
@@ -403,7 +403,7 @@
 							<input name="hdm4year" value="2560" type="radio">2560: HDM4 Plan
 						</label>
 						<label class="radio">
-							<input name="hdm4year" value="all" type="radio">ทุกปี: HDM4 Plan
+							<input checked name="hdm4year" value="all" type="radio">ทุกปี: HDM4 Plan
 						</label>
 
 						<div align="right"><button id="search_hdm4_button" type="submit" class="btn btn-small btn-primary">เรียกดู</button></div>

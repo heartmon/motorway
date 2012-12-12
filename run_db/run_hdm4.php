@@ -24,7 +24,7 @@ $csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
 	
 	$q = "update {$tbl} set expressway = substring(section from 0 for 3) where expressway is null";
 	retrieve($q);
-	$q = "update {$tbl} set type = '1' where type is null";
+	$q = "update {$tbl} set type = '2' where type is null";
 	retrieve($q);
 	$q = "update {$tbl} set section = substring(section from 0 for 12)";
 	retrieve($q);

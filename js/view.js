@@ -210,16 +210,13 @@ function View(){
             var year = row[i]['year'];
             var exp = row[i]['expressway'];
            
-            // if (g_hdm4_search['exptype'] != "1" || g_hdm4_search['exptype'] != "3") 
-            //  {
-            //     var dir = row[i]['dir'];
-            //     var lane = row[i]['lane'];
-            //  } 
-            // else 
-            // {
-                var dir = row[i]['dir'].substr(row[i]['dir'].indexOf('ฝั่ง')+ 4);
-               var lane = row[i]['lane'].substr(row[i]['lane'].indexOf('าจร') + 3);
-            //}
+            var dir = row[i]['dir'].substr(row[i]['dir'].indexOf('ฝั่ง')+ 4);
+            var lane = row[i]['lane'].substr(row[i]['lane'].indexOf('าจร') + 3);
+
+            if(g_hdm4_search['exptype'] == "2")
+            {
+                dir = '-';
+            }
 
             var kmstart = toKm(parseFloat(row[i]['kmstart']).toFixed(3));
             var kmend = toKm(parseFloat(row[i]['kmend']).toFixed(3));
