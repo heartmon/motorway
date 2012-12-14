@@ -108,6 +108,8 @@
 				<div id="selectname">
 					
 				</div>
+				<div id="geo">
+				</div>
 				<div id="damage">
 				</div>
 			</div>
@@ -116,6 +118,7 @@
 				<a class="btn btn-inverse normal" title="เก็บแผนที่" id="toggle-map-display" ><i class="icon-chevron-up icon-white"></i></a>
 				<a class="btn btn-inverse normal" title="ขยายแผนที่" id="maximize-map-display" ><i class="icon-resize-full icon-white"></i></a>
 				<a href="#videodialog" class="btn btn-inverse normal video_lightbox" title="ดูวิดีโอ" id="video-map-display" ><i class="icon-facetime-video icon-white"></i></a>
+				<a class="btn btn-inverse normal" title="ดูตำแหน่งปัจจุบัน" id="geolocation" ><i class="icon-map-marker icon-white"></i></a>
 			</div>
 		</div>
 
@@ -369,16 +372,25 @@
 						<label class="radio">
 							<input name="infotype" value="rutting" type="radio"><span>ค่าร่องล้อ - Rutting</span>
 						</label>
-						<label class="radio">
-							<input name="infotype" value="pavement" type="radio"><span>Pavement</span>
-						</label>
+						
 
-						<div align="right"><button id="search" type="submit" class="btn btn-small btn-primary">เรียกดู</button></div>
-						</form>
+						<div align="right"><button id="search" type="submit" class="damagesearch_but btn btn-small btn-primary">เรียกดู</button></div>
+						
 					</li>
 					<li class="divider"></li>
 					<li class="active toolbox-topic">
-						<a><i class="icon-wrench icon-white"></i> 2.2) แผนการซ่อมบำรุง</a>
+						<a><i class="icon-search icon-white"></i> 2.2) ค่า Pavement</a>
+						<li class="toolbox-content">
+						<label class="radio">
+							<input name="infotype" value="pavement" type="radio"><span>ค่า Pavement</span>
+						</label>
+						</form>
+						<div align="right"><button id="search" type="submit" class="damagesearch_but btn btn-small btn-primary">เรียกดู</button></div>
+						</li>
+					</li>
+					<li class="divider"></li>
+					<li class="active toolbox-topic">
+						<a><i class="icon-wrench icon-white"></i> 2.3) แผนการซ่อมบำรุง</a>
 					</li>
 					<li class="toolbox-content">
 						<form class="">
@@ -409,6 +421,7 @@
 						<div align="right"><button id="search_hdm4_button" type="submit" class="btn btn-small btn-primary">เรียกดู</button></div>
 						</form>
 					</li>	
+
 				</ul>
 				
 			</div>

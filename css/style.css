@@ -108,7 +108,7 @@ textarea {
 	height:330px;
 	/*background: pink;*/
 }
-#toggle-map-display, #maximize-map-display, #video-map-display
+#toggle-map-display, #maximize-map-display, #video-map-display, #geolocation
 {
 	width:20px;
 	height:25px;
@@ -118,13 +118,19 @@ textarea {
 	text-align:center;
 	z-index:1001;
 }
-	#toggle-map-display i, #maximize-map-display i,  #video-map-display i
+	#toggle-map-display i, #maximize-map-display i,  #video-map-display i, #geolocation i
 	{
 		margin-top:5px;
 	}
-#video-map-display.normal 
+#geolocation.normal
 {
 	right:100px;
+	bottom:30px;
+	position:absolute;
+}
+#video-map-display.normal 
+{
+	right:145px;
 	bottom:30px;
 	position: absolute;
 }
@@ -134,10 +140,16 @@ textarea {
 	bottom:30px;
 	position: absolute;
 }
+#geolocation.maximize
+{
+	position:fixed;
+	right:115px;
+	bottom:25px;
+}
 #video-map-display.maximize
 {
 	position:fixed;
-	right:120px;
+	right:160px;
 	bottom:25px;
 }
 #toggle-map-display.maximize
@@ -719,4 +731,9 @@ margin-left: -225px;
 {
 	overflow-y:scroll;
 	max-height: 250px;
+}
+
+.geolocation_type .nav
+{
+	margin-bottom: 0px;
 }

@@ -129,5 +129,70 @@ function Model()
         });
     }
 
+    this.getNearest = function(lat,longitude,lane,activate)
+    {
+        showLoading();
+        $.ajax({
+            url: 'ajax/_get_geolocation.php',
+            type: 'GET',
+            data: {
+                lat:lat,
+                longitude:longitude,
+                lane:lane
+            },
+            dataType: 'jsonp',
+            dataCharset: 'jsonp',
+            success: function (data) {
+                if (!data['error']) {
+                    g_geolocation[lane] = data[1];
+                  //  console.log(data[0][0].geo);
+                    
+                    if(activate)
+                    {
+                        zoomMap(data[0][0].geo);
+                        controller.setNearestOnMap(g_geolocation[lane]);
+
+                    }
+                    //controller.getGeoLeft(lat,longitude);
+                } else { 
+                   // alert(data['error']);
+                }
+                hideLoading();
+            }
+        })
+    }
+
+    this.getNearestPavement = function(lat,longitude,lane,activate)
+    {
+        showLoading();
+        $.ajax({
+            url: 'ajax/_get_geolocation_pavement.php',
+            type: 'GET',
+            data: {
+                lat:lat,
+                longitude:longitude,
+                lane:lane
+            },
+            dataType: 'jsonp',
+            dataCharset: 'jsonp',
+            success: function (data) {
+                if (!data['error']) {
+                    g_geolocation[lane] = data[1];
+                  //  console.log(data[0][0].geo);
+                    
+                    if(activate)
+                    {
+                        zoomMap(data[0][0].geo);
+                        controller.setNearestOnMap(g_geolocation[lane]);
+                    }
+                    //controller.getGeoLeft(lat,longitude);
+                } else { 
+                   // alert(data['error']);
+                }
+                hideLoading();
+            }
+        })
+    }
+
 
 }

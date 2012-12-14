@@ -4208,7 +4208,7 @@ button.close {
 .hidden-desktop {
   display: none !important;
 }
-/*@media (max-width: 767px) {
+@media (max-width: 767px) {
   .visible-phone {
     display: inherit !important;
   }
@@ -4555,7 +4555,7 @@ button.close {
   input.span1, textarea.span1, .uneditable-input.span1 {
     width: 32px;
   }
-}*/
+}
 
 /*BIG SCREEN */
 /*

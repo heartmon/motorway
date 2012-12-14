@@ -66,6 +66,7 @@ var g_video = {
     first_image: "",
     length: ""
 };
+var g_geolocation = {};
 var g_hdm4search_click = false;
 var reverse = false;
 
@@ -150,7 +151,7 @@ $(function (){
         });
     }
 
-    $('#search').bind('click', function () {
+    $('.damagesearch_but').bind('click', function () {
         controller.damageSearch();
         $("#maptoolbox #mainLane").find('option').eq(0).prop('selected', 'selected');
         return false;
@@ -188,6 +189,52 @@ $(function (){
         }
     });
 
+    $('#geolocation').bind('hover', function(){
+        $('#geolocation').qtip({
+        overwrite: true,
+        content: {
+            title: {
+                text: "เลือกความเสียหาย"
+            },
+            text: '<ul class="nav nav-pills nav-stacked"><li><a href="#">ค่าพื้นผิว - Texture</li><li><a href="#">ค่าความขรุขระ - IRI</li><li><a href="#">ค่าร่องล้อ - Rutting</li><li><a href="#">ค่า Pavement</li></ul>',
+            button: 'Close'
+        },
+        style: {
+            classes: 'ui-tooltip-' + 'bootstrap' + ' ui-tooltip-shadow myqtip geolocation_type'
+        },
+        position: {
+            adjust: {
+                x: 0,
+                y: -30
+            },
+            my: 'bottom center', // Position my top left...
+            at: 'bottom center' // at the bottom right of...
+        },
+        show: {
+            ready: true,
+        },
+        hide: {
+            event: 'unfocus',
+            target: $(this)
+        },
+        events: {
+            show: function () {
+                // $(document).one("click", function () {
+                //     $(".qtip").qtip('hide');
+                // });
+
+            }
+        }
+        });
+    });
+
+    $('.geolocation_type li').live('click',function(index) {
+        var index = $(this).index();
+        $("#toolbox input[name=infotype]").eq(index).click();
+    });
+
+     
+
     //=================== Map Resizing ==========================
     //MapResize
     $(window).resize(function () {
@@ -207,7 +254,7 @@ $(function (){
     //Maximize map
     $('#maximize-map-display').toggle(function () {
         if ($('#container_map').hasClass('mapclose')) $('#toggle-map-display').addClass('fromClose').click();
-        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display').addClass('maximize');
+        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display, #geolocation').addClass('maximize');
         $('#container_map').parent().css('height', '368px');
         $(this).children().removeClass('icon-resize-full').addClass('icon-resize-small')
         $(this).attr('title', 'ย่อแผนที่');
@@ -224,7 +271,7 @@ $(function (){
         $("#maptoolbox").hide();
         $("#search-input").show();
         $(".errorreport").show();
-        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display').removeClass('maximize');
+        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display, #geolocation').removeClass('maximize');
         $('#container_map, #map').css('width', '');
         $('#container_map, #map').css('height', '');
         $(this).children().removeClass('icon-resize-small').addClass('icon-resize-full')
@@ -238,7 +285,7 @@ $(function (){
         }
     });
 
-    $('#container_map, #toggle-map-display, #maximize-map-display, #video-map-display').hover(function () {
+    $('#container_map, #toggle-map-display, #maximize-map-display, #video-map-display, #geolocation').hover(function () {
         if ($('#toggle-map-display i').hasClass('icon-chevron-up')) $('#toggle-map-display').stop().animate({
             opacity: 0.8
         });
@@ -246,6 +293,9 @@ $(function (){
             opacity: 0.8
         });
         $('#video-map-display').stop().animate({
+            opacity: 0.8
+        });
+        $('#geolocation').stop().animate({
             opacity: 0.8
         });
     }, function () {
@@ -258,7 +308,46 @@ $(function (){
         $('#video-map-display').stop().animate({
             opacity: 0
         });
+        $('#geolocation').stop().animate({
+            opacity: 0
+        });
     });
+
+    $("div.geolocation_type").live({
+        mouseenter:
+           function()
+           {
+             if ($('#toggle-map-display i').hasClass('icon-chevron-up')) $('#toggle-map-display').stop().animate({
+            opacity: 0.8
+        });
+        $('#maximize-map-display').stop().animate({
+            opacity: 0.8
+        });
+        $('#video-map-display').stop().animate({
+            opacity: 0.8
+        });
+        $('#geolocation').stop().animate({
+            opacity: 0.8
+        });
+           },
+        mouseleave:
+           function()
+           {
+if ($('#toggle-map-display i').hasClass('icon-chevron-up')) $('#toggle-map-display').stop().animate({
+            opacity: 0
+        });
+        $('#maximize-map-display').stop().animate({
+            opacity: 0
+        });
+        $('#video-map-display').stop().animate({
+            opacity: 0
+        });
+        $('#geolocation').stop().animate({
+            opacity: 0
+        });
+           }
+       }
+    );
 
     //Minimize map
     $('#toggle-map-display').toggle(function () {
@@ -272,7 +361,7 @@ $(function (){
         $('#map').stop().animate({
             top: -325
         }, 'fast');
-        $('#toggle-map-display, #maximize-map-display, #video-map-display').css('bottom', '15px');
+        $('#toggle-map-display, #maximize-map-display, #video-map-display, #geolocation').css('bottom', '15px');
         $(this).attr('title', 'เปิดแผนที่');
         $(this).children().removeClass('icon-chevron-up').addClass('icon-chevron-down')
     }, function () {
@@ -293,7 +382,7 @@ $(function (){
         }
         $(this).children().removeClass('icon-chevron-down').addClass('icon-chevron-up');
         $(this).attr('title', 'เก็บแผนที่');
-        $('#toggle-map-display, #maximize-map-display, #video-map-display').css('bottom', '');
+        $('#toggle-map-display, #maximize-map-display, #video-map-display, #geolocation').css('bottom', '');
     });
 
 
@@ -559,6 +648,17 @@ $(function (){
         });
     });
 
+    //Addpoint of lanes
+    $('#maptoolbox #geo select').live('change', function () {
+       // alert('what');
+        qtip.removeAllFeatures();
+        var suffix = [];
+        $(this).find('option:selected').each(function () {
+            var s = $(this).val();
+            addPoints(g_geolocation[s]);
+        });
+    });
+
     //Plot Click
     $("#line-chart").bind("plotclick", function (event, pos, item) {
         plot.unhighlight();
@@ -755,6 +855,7 @@ $(function (){
 
 //Show data
 function showdata(selector){
+        $('#maptoolbox #geo').hide();
         if ($('#main_content').is(':hidden')) {
             $('#main_content').show();
         }
@@ -1135,4 +1236,8 @@ function selectToList(source,target){
     });
     target.append(htmlcode);
     return htmlcode;
+}
+
+function returnName(section){
+
 }

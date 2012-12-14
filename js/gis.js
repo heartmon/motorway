@@ -119,6 +119,7 @@ geolocate.events.register("locationupdated",geolocate,function(e) {
         {},
         geoStyle
     );
+    
     gl_vector.addFeatures([
         new OpenLayers.Feature.Vector(
             e.point,
@@ -139,19 +140,24 @@ geolocate.events.register("locationupdated",geolocate,function(e) {
         firstGeolocation = false;
         this.bind = true;
     }
+    var convertedPts = e.point;
+    convertedPts.transform(new OpenLayers.Projection("EPSG:900913"), new OpenLayers.Projection("EPSG:4326"));
+    
+    //call controller function
+    controller.getGeolocation(convertedPts.x,convertedPts.y);
 });
 geolocate.events.register("locationfailed",this,function() {
     OpenLayers.Console.log('Location detection failed');
 });
 
-document.getElementById('logo').onclick = function() {
+$('.geolocation_type li').live('click',function() {
     gl_vector.removeAllFeatures();
     geolocate.deactivate();
    // document.getElementById('track').checked = false;
     geolocate.watch = false;
     firstGeolocation = true;
     geolocate.activate();
-};
+});
 
 // END GEOLOCATION
 
@@ -359,7 +365,10 @@ var colors = ["#00bb00", "#ffcc00", "#dc0000", "#0000ff", "#252525"];
 var context = {
     getColor: function (feature) {
         var c_var = feature.attributes['var'];
-        var hdm4_cond = c_var.substr(0, 4);
+        if(c_var == null)
+            var hdm4_cond = '';
+        else
+            var hdm4_cond = c_var.substr(0, 4);
         var c_cond = $("[name='infotype']:checked").val();
         var sec = feature.attributes['section'];
         //console.log(sec + " " + hdm4_cond);
@@ -526,8 +535,9 @@ var gsat = new OpenLayers.Layer.Google("Google Satellite", {
 );
 var mapnik = new OpenLayers.Layer.OSM();
 
-map.addLayers([
-gsat, gmap, gphy, ghyb, longdo, centerline
+ map.addLayers([
+ gsat, gmap, gphy, ghyb, longdo, centerline
+//map.addLayers([longdo, centerline
 //,begin
 //,end
 //,overhead
@@ -643,6 +653,7 @@ function zoomMap(s) {
 
 function addPoints(all_result) {
     $.each(all_result, function (index, value) {
+
         //console.log(index);
         var cost;
         var workdes;
@@ -655,11 +666,14 @@ function addPoints(all_result) {
             value['hdm4result'] = last
         } 
         */
-        $.each(value['hdm4result'], function (k, v) {
-            cost = v.cost;
-            workdes = v.workdes;
-            year = v.year;
-        });
+        // $.each(value['hdm4result'], function (k, v) {
+        //     cost = v.cost;
+        //     workdes = v.workdes;
+        //     year = v.year;
+        // });
+    cost = '';
+    workdes = '';
+    year = '';
 
         //last = value['hdm4result'];
         var feature = poi(index, value['lat'], value['long'], value['subdistance'], value['iri_avg'], value['rut_lane'], value['mpd'], value['code'], value['section'], cost, workdes, year);

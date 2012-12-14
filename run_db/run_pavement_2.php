@@ -27,8 +27,8 @@ $csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
 	// }
 
 
-	$qc = "INSERT INTO pavement (distance,lat,long,crack_aca,crack_act,bleeding,raveling,phole,deformation,pacthing,section) 
-	(SELECT distance,lat,long,cracks_aca,cracks_act,bleeding,raveling,phole,deformation,patching,link_id from pavement_copy
+	$qc = "INSERT INTO pavement (sta,lat,long,crack_aca,crack_act,bleeding,raveling,phole,deformation,pacthing,section) 
+	(SELECT sta,lat,long,cracks_aca,cracks_act,bleeding,raveling,phole,deformation,patching,link_id from pavement_copy
 	 where cracks_aca <> 0 or cracks_act <> 0 or bleeding <> 0 or raveling <> 0 or phole <> 0 or deformation <> 0 
 	 or patching <> 0 order by id)";
 	echo $qc;
@@ -38,6 +38,26 @@ $csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
     
 	$q = "update {$tbl} set the_geom = ST_GeometryFromText('SRID=4326;POINT(' || long || ' ' || lat || ')') where the_geom is null";
 	retrieve($q);
+	$q = "update pavement 
+set deformation = 0
+where deformation is NULL";
+retrieve($q);
+$q = "update pavement 
+set pacthing = 0
+where pacthing is NULL";
+retrieve($q);
+$q = "update pavement 
+set phole = 0
+where phole is NULL";
+retrieve($q);
+$q = "update pavement 
+set bleeding = 0
+where bleeding is NULL";
+retrieve($q);
+$q = "update pavement 
+set crack_aca = 0
+where crack_aca is NULL";
+retrieve($q);
 	// $fp = "csv_iri/";
 	// $fs = d2a($fp,true);
 	// foreach($fs as $k => $v) {

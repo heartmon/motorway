@@ -52,7 +52,7 @@ function View(){
         g_pavement_array = [];
        for(var i = 0; i < data.length; i++)
        {
-            var distance    = parseFloat(data[i]['distance']).toFixed(3);
+            var distance    = parseFloat(data[i]['sta']).toFixed(3);
             var crack_aca   = parseFloat(data[i]['crack_aca']).toFixed(3);
             var crack_act   = parseFloat(data[i]['crack_act']).toFixed(3);
             var bleeding    = parseFloat(data[i]['bleeding']).toFixed(3);

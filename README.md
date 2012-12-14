@@ -39,3 +39,9 @@ v0.7
 - Some bug fixed
 - Add name instead of 0101,0102 ~~ (based on HDM4 xls file)
 - Edit controller.js, view.js, model.js, script.js, gis.js, ignore_section.php, _hdm4_search.php, style.css, index.php
+
+v0.8
+
+- Geolocation tagging 
+- 12-12-14motorway.backup --> update minus subdistance and update pavement
+- Some bug fixed (pavement search)

@@ -5,7 +5,8 @@ include_once('../_db.php');
 //$expressway = $_GET['expressway'];
 $section = $_GET['section'];
 
-$sql = "SELECT * FROM pavement where section LIKE '{$section}'";
+$sql = "SELECT * FROM pavement where section LIKE '{$section}%'";
+//echo $sql;
 $rows = retrieve($sql);
 
 if($rows != null)

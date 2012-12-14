@@ -74,6 +74,7 @@ function Controller(){
             }
             else
             {
+                $('#pavement_lane').html('');
                 if(g_search_info['exptype'] == "1" || g_search_info['exptype'] == "3")
                 {
                     $('#pavement_lane').html('');
@@ -675,7 +676,7 @@ function Controller(){
         }
         else
         {
-            g_hdm4_search['section'] = temp_ex+$('#toolbox select.seclist:visible').find('option').first().val().substr(0,7);
+            g_hdm4_search['section'] = temp_ex+$('#toolbox select.seclist:visible').find('option:selected').first().val().substr(0,7);
             g_hdm4_search['code'] = $('#toolbox select.seclist:visible').find('option').first().html(); 
         }
         
@@ -723,6 +724,60 @@ function Controller(){
         
     }
 
+    //====== GEOLOCATION ACTION
+    this.getGeolocation = function(lat,longitude){
+        //alert(lat);
+        //alert(longitude);
+
+        lat = 13.7374042;
+        longitude =100.6610667;
+        g_geolocation['lat'] = lat;
+        g_geolocation['longitude'] = longitude;
+        //lat = 13.7304618;
+        //longitude = 100.7608799;
+
+        if($('#toolbox input[name=infotype]:checked').val() == "pavement")
+        {
+            model.getNearestPavement(lat,longitude,"F1",true);
+            model.getNearestPavement(lat,longitude,"F2");
+            model.getNearestPavement(lat,longitude,"F3");
+            model.getNearestPavement(lat,longitude,"F4");
+            model.getNearestPavement(lat,longitude,"R1");
+            model.getNearestPavement(lat,longitude,"R2");
+            model.getNearestPavement(lat,longitude,"R3");
+            model.getNearestPavement(lat,longitude,"R4");
+        }
+        else
+        {
+            model.getNearest(lat,longitude,"F1",true);
+            model.getNearest(lat,longitude,"F2");
+            model.getNearest(lat,longitude,"F3");
+            model.getNearest(lat,longitude,"F4");
+            model.getNearest(lat,longitude,"R1");
+            model.getNearest(lat,longitude,"R2");
+            model.getNearest(lat,longitude,"R3");
+            model.getNearest(lat,longitude,"R4");
+        }
+        
+
+
+        $('#maptoolbox #geo').html('');
+        $('#maptoolbox #geo').show();
+        $('#maptoolbox #mainLane').hide();
+        _showLane($('#maptoolbox #geo'), _sectionException());
+        $('#maptoolbox #geo select').prop('id','geomainLane');
+        $('#maptoolbox #geo select').prop('class','geomainLane');
+        $('#maptoolbox #geo select').prop('multiple', 'multiple');
+        $('#maptoolbox #geo select option:first').prop('selected', 'selected');
+         
+    }
+
+    this.setNearestOnMap = function(current){
+        qtip.removeAllFeatures();
+        if(current){
+            addPoints(current);
+        }
+    }
 
 	//Private Function
     _showLane = function(selector,n){
