@@ -94,6 +94,7 @@
 	<div class="container">
 		<div id="loading" class="misc alert">Loading <img src="css/img/ajax-loader.gif"></div>
 		
+		
 		<!-- ======= MAP ========== -->
 		<div class="row" style="position: relative;">
 			<div class="span12">	
@@ -121,7 +122,11 @@
 				<a class="btn btn-inverse normal" title="ดูตำแหน่งปัจจุบัน" id="geolocation" ><i class="icon-map-marker icon-white"></i></a>
 			</div>
 		</div>
-
+	<div>
+		<div id="search-input" class="alert alert-warning font16">
+			<span class="expressway"></span> • <span class="fullname"></span> • <span class="infotype"></span> • <span class="rangekm"></span>
+		</div>
+	</div>
 		<div class="row">
 			<div class="span3">
 				<ul id="toolbox" class="nav nav-list toolbox">
@@ -230,7 +235,8 @@
 								<option value="0101123F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก รามคำแหง-ชลบุรี</option>
 								<option value="0101132F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาเข้า ชลบุรี-รามคำแหง</option>
 								<option value="0101134F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก ชลบุรี-บางนา</option>
-								<option value="0101143F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาเข้า บางนา-ชลบุรี</option>							
+								<option value="0101143F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาเข้า บางนา-ชลบุรี</option>	
+								<!--<option value="0101141F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก บางนา-กรุงเทพฯ</option>-->									
 																						
 								<option value="0101212F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาออก กรุงเทพ-มีนบุรี </option>
 								<option value="0101214F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาเข้า กรุงเทพ-ลาดกระบัง</option>
@@ -243,11 +249,9 @@
 								<option value="0101314F1">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาออก กรุงเทพ-สนามบินสุวรรณภูมิ </option>
 								<option value="0101334F1">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาออก ชลบุรี- สถานีขนส่งสินค้าร่มเกล้า</option>
 								<option value="0101341F1">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ สนามบินสุวรรณภูมื-กรุงเทพ</option>
-								<option value="0101343F1">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาออก สนามบินสุวรรณภูมิ-ชลบุร</option>
 
 								<option value="0101412F1">ทางแยกต่างระดับลาดกระบัง</option> 
 								<option value="0101421F1">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก มีนบุรี-กรุงเทพ</option>
-								<option value="0101423F1">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก มีนบุรี-ชลบุรี</option>
 								<option value="0101434F1">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก ชลบุรี-อ่อนนุช</option>
 
 								<option value="0302114F2">ทางแยกต่างระดับบางควาย ถนนฝั่งขาออก กรุงเทพ-บางนา ตราด</option>
@@ -268,18 +272,20 @@
 								<option value="0301121F1">ทางแยกต่างระดับบางประกง ถนนฝั่งขาเข้า บางประกง-กรุงเทพ</option>-->
 
 								<option value="0401123F1">ทางแยกต่างระดับพานทอง</option>
-								<option value="0401143F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-ชลบุร</option>
-								<option value="0401141F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-กรุงเทพ</option>
-								<option value="0401134F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
+								<option value="0302143F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-ชลบุรี</option>
+								<option value="0302141F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-กรุงเทพ</option>
+								<option value="0302134F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
+					
 					
 								<option value="0401212F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาออก กรุงเทพ-บ้านบึง</option>
 								<option value="0401223F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาออก บ้านบึง-ชลบุรี</option>
+								
 								<option value="0401234F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาออก ชลบุรี-ชลบุรี</option>
 								<option value="0401241F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
-								<option value="0401243F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า บ้านบึง-กรุงเทพ</option>
-								<option value="0401221F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า ชลบุรี-บ้านบึง</option>
 								
-								
+								<option value="0401241F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า ชลบุรี-กรุงเทพ</option>
+								<option value="0401221F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า บ้านบึง-กรุงเทพ</option>
+		
 							</select>
 
 							<select name="intersect09" class="input-spanall intersect seclist">
@@ -360,7 +366,7 @@
 						<a><i class="icon-search icon-white"></i> 2.1) ข้อมูลที่ต้องการเรียกดู </a>
 					</li>
 
-					<li class="toolbox-content">
+					<li class="toolbox-content cond">
 						<form class="">
 						
 						<label class="radio">
@@ -379,13 +385,13 @@
 					</li>
 					<li class="divider"></li>
 					<li class="active toolbox-topic">
-						<a><i class="icon-search icon-white"></i> 2.2) ค่า Pavement</a>
-						<li class="toolbox-content">
+						<a><i class="icon-search icon-white"></i> 2.2) ประเภทความเสียหาย</a>
+						<li class="toolbox-content cond">
 						<label class="radio">
-							<input name="infotype" value="pavement" type="radio"><span>ค่า Pavement</span>
+							<input name="infotype" value="pavement" type="radio"><span>ประเภทความเสียหายที่ผิวทาง (Distress)</span>
 						</label>
 						</form>
-						<div align="right"><button id="search" type="submit" class="damagesearch_but btn btn-small btn-primary">เรียกดู</button></div>
+						<div align="right"><button id="search" type="submit" class="damagesearch_but pav btn btn-small btn-primary">เรียกดู</button></div>
 						</li>
 					</li>
 					<li class="divider"></li>
@@ -432,8 +438,8 @@
 			<div id="main_content" class="span9">
 				<!-- Pavement  -->
 				<div id="pavement">
-					<h1>Pavement<div></div></h1>
-					<div>
+					<h1>ประเภทความเสียหายที่ผิวทาง (Distress) <div></div></h1>
+					<div id="phead">
 						<div id="pavement_lane">
 
 						</div>
@@ -548,9 +554,7 @@
 
 				<!-- Damage Search -->
 				<div id="damagesearch">
-				<div id="search-input" class="alert alert-warning font16">
-					<span class="expressway"></span> • <span class="fullname"></span> • <span class="infotype"></span> • กม.<span class="rangekm"></span>
-				</div>
+				
 
 				<div class="row" style="margin-bottom:25px;">
 					<div id="center_container" class="span9">

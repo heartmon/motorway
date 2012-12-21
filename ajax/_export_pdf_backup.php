@@ -365,18 +365,6 @@ elseif($pdftype == "pavement")
 
     $html = $tableheader;
 
-	/*
-	
-	Red (web color) (Hex: #FF0000) (RGB: 255, 0, 0)
-Orange (color wheel Orange) (Hex: #FF7F00) (RGB: 255, 127, 0)
-Yellow (web color) (Hex: #FFFF00) (RGB: 255, 255, 0)
-Green (X11) (Electric Green) (HTML/CSS “Lime”) (Color wheel green) (Hex: #00FF00) (RGB: 0, 255, 0)
-Blue (web color) (Hex: #0000FF) (RGB: 0, 0, 255)
-Indigo (Electric Indigo) (Hex: #6600FF) (RGB: 111, 0, 255)
-Violet (Electric Violet) (Hex: #8B00FF) (RGB: 143, 0, 255)
-	
-	*/
-	
     while($count <= $datasize)
     {
         if($count%2 == 0)
@@ -385,60 +373,15 @@ Violet (Electric Violet) (Hex: #8B00FF) (RGB: 143, 0, 255)
             $html .= '<tr style="background-color: rgb(245, 245, 245);">';
 
        // $encoded_data->
-        //$html .= '<td align="center">'.($count+1).'</td>';
-        $color = array("#FFFFFF","#FF0000","#FF7F00","#FFFF00","#00FF00","#0000FF","#6600FF","#8B00FF");
-		$html .= '<td align="center"> '.number_format($data[$count][0],3, '.','').'</td>';
-
-		if($data[$count][1] != 0) {
-			$html .= '<td align="center" style="color:#fff;background-color:' . $color[1] . '"> '.number_format($data[$count][1],3, '.','').'</td>';
-		} else {
-			$html .= '<td align="center"> '.number_format($data[$count][1],3, '.','').'</td>';
-		}
-
-		if($data[$count][2] != 0) {
-			$html .= '<td align="center" style="color:#fff;background-color:' . $color[2] . '"> '.number_format($data[$count][2],3, '.','').'</td>';
-		} else {
-			$html .= '<td align="center"> '.number_format($data[$count][2],3, '.','').'</td>';
-		}
-
-		if($data[$count][3] != 0) {
-			$html .= '<td align="center" style="color:#fff;background-color:' . $color[3] . '"> '.number_format($data[$count][3],3, '.','').'</td>';
-		} else {
-			$html .= '<td align="center"> '.number_format($data[$count][3],3, '.','').'</td>';
-		}
-
-		if($data[$count][4] != 0) {
-			$html .= '<td align="center" style="color:#fff;background-color:' . $color[4] . '"> '.number_format($data[$count][4],3, '.','').'</td>';
-		} else {
-			$html .= '<td align="center"> '.number_format($data[$count][4],3, '.','').'</td>';
-		}
-
-		if($data[$count][5] != 0) {
-			$html .= '<td align="center" style="color:#fff;background-color:' . $color[5] . '"> '.number_format($data[$count][5],3, '.','').'</td>';
-		} else {
-			$html .= '<td align="center"> '.number_format($data[$count][5],3, '.','').'</td>';
-		}
-
-		if($data[$count][6] != 0) {
-			$html .= '<td align="center" style="color:#fff;background-color:' . $color[6] . '"> '.number_format($data[$count][6],3, '.','').'</td>';
-		} else {
-			$html .= '<td align="center"> '.number_format($data[$count][6],3, '.','').'</td>';
-		}
-        
-		if($data[$count][7] != 0) {
-			$html .= '<td align="center" style="color:#fff;background-color:' . $color[7] . '"> '.number_format($data[$count][7],3, '.','').'</td>';
-		} else {
-			$html .= '<td align="center"> '.number_format($data[$count][7],3, '.','').'</td>';
-		}
-		
-		/*
+     //   $html .= '<td align="center">'.($count+1).'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][0],3, '.','').'</td>';
+        $html .= '<td align="center"> '.number_format($data[$count][1],3, '.','').'</td>';
         $html .= '<td align="center">'.number_format($data[$count][2],3, '.','').'</td>';
         $html .= '<td align="center"> '.number_format($data[$count][3],3, '.','').'</td>';
         $html .= '<td align="center"> '.number_format($data[$count][4],3, '.','').'</td>';
         $html .= '<td align="center"> '.number_format($data[$count][5],3, '.','').'</td>';
         $html .= '<td align="center"> '.number_format($data[$count][6],3, '.','').'</td>';
         $html .= '<td align="center"> '.number_format($data[$count][7],3, '.','').'</td>';
-		*/
         $html .= '</tr>';
 
         $rownum++;

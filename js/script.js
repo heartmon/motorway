@@ -152,8 +152,21 @@ $(function (){
     }
 
     $('.damagesearch_but').bind('click', function () {
-        controller.damageSearch();
-        $("#maptoolbox #mainLane").find('option').eq(0).prop('selected', 'selected');
+        var index = 0;
+        if($(this).hasClass('pav'))
+            index = 1;
+        
+        var infotype = $('#toolbox input[name=infotype]:checked').val();
+        var valid = true;
+        //alert(index);
+        if((index == 0 && infotype != 'pavement') || (index == 1 && infotype == 'pavement')){
+            controller.damageSearch();
+            $("#maptoolbox #mainLane").find('option').eq(0).prop('selected', 'selected');
+        }
+        else{
+            alert('ยังไม่ได้เลือกประเภทความเสียหาย');
+        }
+        
         return false;
     });
 
@@ -882,6 +895,12 @@ function updateRange(ui, rangeInfo) {
     }
 
 }
+function updateBreadCrumb(exp,fn,infotype,rangekm){
+    $('#search-input .expressway').html(exp);
+    $('#search-input .fullname').html(fn);
+    $('#search-input .infotype').html(infotype);
+    $('#search-input .rangekm').html('กม. '+rangekm);
+}
 
 function updateChartAxis(serie_id) {
         g_options.xaxis.min = g_data['kmstart'];
@@ -967,7 +986,9 @@ function updateVideo(index) {
         $('#video-player #thumbnail').html('<img src="" />');
         $('#video-player #thumbnail img').attr("src", "images/imgloading.gif").attr("width", "370").attr("height", "240");
 
-        var directory = getImageDirectory(g_search_info_level2.currentsection);
+        var directory = g_search_info_level2.currentsection;
+        if(g_search_info.exptype == "1")
+            directory = getImageDirectory(g_search_info_level2.currentsection);
 
         var wait = setInterval(function () {
             if (finish_getimage) {
@@ -1102,25 +1123,40 @@ function getImageDirectory(section){
     var exp = section.substr(0,2);
     var suffix = section.substr(6);
     var sstr = section.substr(2,4);
-    switch(sstr){
-        case "0200":
-            return exp+"0101"+suffix;
-            break;             
-        case "0401":
-            if(exp == "07")
-                return exp+"0301"+suffix;
-            else
-                return section;
-            break;
-        case "0402":
-            return exp+"0401"+suffix;
-            break;            
-        case "0600":
-            return exp+"0500"+suffix;
-            break;
-        default:
+    if(sstr == "0200"){
+        return exp+"0101"+suffix;
+	} 
+	/*
+	if(sstr == "0401") {
+        if(exp == "07")
+            return exp+"0402"+suffix;
+        else
             return section;
-    }
+	}
+	*/
+	
+	if(sstr == "0402") {
+        if(exp == "07")
+            return exp+"0401"+suffix;
+        else
+            return section;
+	}
+	
+	if(sstr == "0402") {
+        if(exp == "09")
+            return exp+"0401"+suffix;
+        else
+            return section;
+	}
+
+    if(sstr == "0301") {
+        if(exp == "07")
+            return exp+"0302"+suffix;
+        else
+            return section;
+    } else {
+	    return section;
+	}
 }
 //======================= KmFreq Function ===================================
     function disableFreq() {

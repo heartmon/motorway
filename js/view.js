@@ -16,7 +16,7 @@ function View(){
         //console.log($('.tablescroll_head'));
         if ($('.tablescroll').length === 0) $('#table1').tableScroll({
             height: 285,
-            width: 290
+            width: 273
         });
 
         
@@ -52,6 +52,9 @@ function View(){
         g_pavement_array = [];
        for(var i = 0; i < data.length; i++)
        {
+            var longi    = parseFloat(data[i]['long']);
+            var lat    = parseFloat(data[i]['lat']);
+
             var distance    = parseFloat(data[i]['sta']).toFixed(3);
             var crack_aca   = parseFloat(data[i]['crack_aca']).toFixed(3);
             var crack_act   = parseFloat(data[i]['crack_act']).toFixed(3);
@@ -105,7 +108,7 @@ function View(){
         }
         else
         {
-            $('#pavement_table').html('ไม่มีค่า pavement ในสายทางนี้');
+            $('#pavement_table').html('ไม่มีค่าความเสียหายที่ผิวทาง (Distress) ในสายทางนี้');
             $("#pavementpager").hide();
         }
 

@@ -272,6 +272,12 @@ table thead
 {
 	height:210px;
 	width:95%;
+	margin-left: 10px;
+}
+
+.color-blue
+{
+	color:#f58d14;
 }
 
 .color-orange
@@ -348,14 +354,15 @@ right: 10px;
 	cursor: pointer;
 }
 #current_linedata {
-  position:absolute;
-  right:20px;
-  top:90px;
-  font-size:15px;
-  z-index:998;
-  width: 125px;
-  text-align:left;
-  line-height: 15px;
+	position: absolute;
+	right: 40px;
+	top: 90px;
+	font-size: 15px;
+	z-index: 998;
+	width: 125px;
+	text-align: left;
+	line-height: 15px;
+	margin: 7px;
   display:none;
 }
 #hdm4result, #pavement
@@ -396,7 +403,7 @@ h3.inline, .resultoptionchange
 {
 	position:absolute;
 	right:0px;
-	top:53px;
+	top:0px;
 }
 
 table tr.totalcostrow td
@@ -577,11 +584,11 @@ a.dropdown-toggle
 	border: 1px solid gainsboro;
 	padding: 10px 20px;
 	background: #EEE;
-	top: 5px;
 							position: absolute;
-							right:0;
 	min-width: 290px;
 	text-align: center;
+	right: 0;
+top: 120px;
 }
 
 h1 > div {
@@ -651,10 +658,10 @@ h1 > div {
 	}
 	 #search-input {
 	 	font-size: 1.0em;
-position: absolute;
-z-index: 1001;
-margin-top: -70px;
-margin-left: -225px;
+//position: absolute;
+z-index: 1003;
+//margin-top: -70px;
+//margin-left: -225px;
 	 }
 	
 	#hdm4graph {
@@ -736,4 +743,25 @@ margin-left: -225px;
 .geolocation_type .nav
 {
 	margin-bottom: 0px;
+}
+
+#phead {
+	/*width:500px;*/
+}
+
+.tablescroll {
+display: block;
+padding: 4px;
+line-height: 1;
+border: 1px solid #DDD;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tablescroll_head,.tablescroll_wrapper,#table1 {
+	width:290px;
 }

@@ -14,27 +14,19 @@
 		$q = "SELECT ST_AsText(ST_Envelope(ST_Collect(the_geom))) as geo ".
 			"FROM {$infotype} WHERE ST_IsEmpty(the_geom) is false ";
 		$q .= "AND section LIKE '{$section}' ";
-		if(isset($_GET['exptype'])) {
+		if(isset($_GET['exptype']) and $infotype != "pavement") {
 			$q .= "AND type = '{$exptype}' ";
 		}
-		if(isset($kmstart) and $kmstart !='') {
+		if(isset($kmstart) and $kmstart !='' and $infotype != "pavement") {
 			$q .= "AND subdistance >= {$kmstart} ";
-		} else {
-			//$q .= "AND subdistance >= 0 ";
-		}
-		if(isset($kmend) and $kmend !='') {
+		} 
+		if(isset($kmend) and $kmend !='' and $infotype != "pavement") {
 			$q .= "AND subdistance <= {$kmend} ";
-		} else {
-			//$q .= "AND subdistance <= 10 ";
 		}
 		$q .= "GROUP BY section";
 		//echo $q;
 		$result = retrieve($q);
-		//print_r($result);
-		//$result = pg_query($q);
-		//$row = pg_fetch_assoc($result);
 		echo $_GET['callback'].'('.json_encode($result).')';
-		
-				
+						
 	}			
 ?>

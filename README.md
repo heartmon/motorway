@@ -45,3 +45,18 @@ v0.8
 - Geolocation tagging 
 - 12-12-14motorway.backup --> update minus subdistance and update pavement
 - Some bug fixed (pavement search)
+
+v0.9 (use 12-12-14 database)
+
+- add feature points of pavement on map
+- change some div and breadcrumb position
+- lots of css edited
+- some bugs fixed (mainly on data issues)
+- fix _geo.php for pavement
+- add colors to pdf on table of pavement 
+- HDM4 plot on hold and will be continued after annouced bugs fixed
+
+v1.0
+
+- bug fixed
+

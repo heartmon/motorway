@@ -9,8 +9,10 @@ $(function () {
 });
 
 var qtip;
+var qtippavement;
 var map;
 var selectController;
+var selectControllerPavement;
 
 var init = function () {
 // Get rid of address bar on iphone/ipod
@@ -26,9 +28,9 @@ var fixSize = function() {
 setTimeout(fixSize, 700);
 setTimeout(fixSize, 1500);
 
-var lon = 100.5167;
+var lon = 100.7500;
 var lat = 13.7500;
-var zoom = 12;
+var zoom = 10;
 var pureCoverage = false;
 var format = 'image/png';
 var options = {
@@ -438,6 +440,36 @@ var context_hdm4 = {
     }
 };
 
+var colorsPavement = ["#FFFFFF","#FF0000","#FF7F00","#FFFF00","#00FF00","#0000FF","#6600FF","#8B00FF"];
+
+var contextPavement = {
+    getColor: function (feature) {
+        var c_var = feature.attributes['var'];
+        var sec = feature.attributes['section'];
+
+        if(feature.attributes['crack_aca'] != 0) {
+            region = 1;
+        } else if(feature.attributes['crack_act'] != 0) {
+            region = 2;
+        } else if(feature.attributes['bleeding'] != 0) {
+            region = 3;
+        } else if(feature.attributes['raveling'] != 0) {
+            region = 4;
+        } else if(feature.attributes['phole'] != 0) {
+            region = 5;
+        } else if(feature.attributes['deformation'] != 0) {
+            region = 6;
+        } else if(feature.attributes['patching'] != 0) {
+            region = 7;
+        }
+
+        return colorsPavement[region];
+    },
+    getSize: function (feature) {
+        return 3;
+    }
+}
+
 var template = {
     pointRadius: "${getSize}", // using context.getSize(feature)
     fillColor: "${getColor}", // using context.getColor(feature)
@@ -446,12 +478,22 @@ var template = {
     strokeColor: "${getColor}",
     strokeWidth: 1,
 };
-var style_hdm4 = new OpenLayers.Style(template, {
-    context: context_hdm4
-});
+
+var templatePavement = {
+    pointRadius: "${getSize}", // using context.getSize(feature)
+    fillColor: "${getColor}", // using context.getColor(feature)
+    fillOpacity: 0.5,
+    stroke: true,
+    strokeColor: "${getColor}",
+    strokeWidth: 1,
+};
 
 var style = new OpenLayers.Style(template, {
     context: context
+});
+
+var stylePavement = new OpenLayers.Style(templatePavement, {
+    context: contextPavement
 });
 
 var defStyle = {
@@ -461,8 +503,20 @@ var defStyle = {
     cursor: "pointer"
 };
 var sty = OpenLayers.Util.applyDefaults(defStyle, OpenLayers.Feature.Vector.style["default"]);
+
 var sm = new OpenLayers.StyleMap({
     'default': style,
+    'select': {
+        strokeColor: "blue",
+        strokeWidth: 2,
+        cursor: "pointer",
+        fillColor: "blue",
+        fillOpacity: 0.3
+    }
+});
+
+var smPavement = new OpenLayers.StyleMap({
+    'default': stylePavement,
     'select': {
         strokeColor: "blue",
         strokeWidth: 2,
@@ -475,6 +529,12 @@ var sm = new OpenLayers.StyleMap({
 qtip = new OpenLayers.Layer.Vector('IRI - Rutting - Texture', {
     //styleMap: new OpenLayers.StyleMap(style)
     styleMap: sm,
+    numZoomLevels: null, minZoomLevel: 12, maxZoomLevel: 19 
+});
+
+qtipPavement = new OpenLayers.Layer.Vector('Distress', {
+    //styleMap: new OpenLayers.StyleMap(style)
+    styleMap: smPavement,
     numZoomLevels: null, minZoomLevel: 12, maxZoomLevel: 19 
 });
 
@@ -496,13 +556,34 @@ selectController = new OpenLayers.Control.SelectFeature([qtip], {
     }
 });
 
+selectControllerPavement = new OpenLayers.Control.SelectFeature([qtipPavement], {
+    clickout: true,
+    toggle: false,
+    multiple: false,
+    hover: false,
+    highlightOnly: true,
+    toggleKey: "ctrlKey", // ctrl key removes from selection
+    multipleKey: "shiftKey", // shift key adds to selection
+    eventListeners: {
+        beforefeaturehighlighted: showQtipPavement,
+        featurehighlighted: showQtipPavement,
+        featureunhighlighted: hl,
+        //featureselected: hl,
+        //featureunselected: showStatus
+    }
+});
+
+
+
 var hl = function (e) {
     //console.log("hl:" + e.feature.id);
 };
 
-map.addLayers([qtip,gl_vector]);
+map.addLayers([qtip,qtipPavement,gl_vector]);
 map.addControl(selectController);
+map.addControl(selectControllerPavement);
 selectController.activate();
+
 
 var longdo = new OpenLayers.Layer.TMS("Longdo Map", "http://ms.longdo.com/mmmap/tile.php", {
     layername: 'gray',
@@ -536,8 +617,8 @@ var gsat = new OpenLayers.Layer.Google("Google Satellite", {
 var mapnik = new OpenLayers.Layer.OSM();
 
  map.addLayers([
- gsat, gmap, gphy, ghyb, longdo, centerline
-//map.addLayers([longdo, centerline
+ gsat, gmap, gphy, ghyb, 
+ longdo, centerline
 //,begin
 //,end
 //,overhead
@@ -553,7 +634,7 @@ map.addControl(new OpenLayers.Control.LayerSwitcher());
 
 map.setCenter(new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()), 9);
 
-map.zoomToMaxExtent();    
+//map.zoomToMaxExtent();    
 
 }
 
@@ -652,76 +733,70 @@ function zoomMap(s) {
 }
 
 function addPoints(all_result) {
+    selectController.activate();
+    selectControllerPavement.deactivate();
     $.each(all_result, function (index, value) {
 
-        //console.log(index);
         var cost;
         var workdes;
         var year;
 
-        /*
-        console.log(value['hdm4result']);
-        
-        if(typeof value['hdm4result'] === "undefined") {
-            value['hdm4result'] = last
-        } 
-        */
-        // $.each(value['hdm4result'], function (k, v) {
-        //     cost = v.cost;
-        //     workdes = v.workdes;
-        //     year = v.year;
-        // });
     cost = '';
     workdes = '';
     year = '';
 
-        //last = value['hdm4result'];
         var feature = poi(index, value['lat'], value['long'], value['subdistance'], value['iri_avg'], value['rut_lane'], value['mpd'], value['code'], value['section'], cost, workdes, year);
         qtip.addFeatures(feature);
-        //if (index == Math.ceil((g_all_result['maxdis'] * 1000 - g_all_result['mindis'] * 1000) / 25) - 1) return false;
         if (index == all_result['usedlength']) return false;
-
     });
 }
 
-function showQtip(olEvent) {
+function addPointsPavement(all_result) {
+    selectController.deactivate();
+    selectControllerPavement.activate();
+     $.each(all_result, function (index, value) {
+        //console.log(value);
+        var feature = poiPavement(index, value['lat'], value['long'], value['sta'], value['crack_aca'], value['crack_act'], 
+            value['bleeding'], value['raveling'], value['phole'], value['deformation'], value['pacthing']);
+        qtipPavement.addFeatures(feature);
+     });
+}
+
+function showQtipPavement(olEvent) {
     var elem = document.getElementById(olEvent.feature.geometry.id);
     var data = olEvent.feature.data;
     var ol = olEvent;
-    var c_var = "";
-    var qcolor = "green";
-    var km_at = "KM: " + data['km_at'];
-    var c_cond = $("[name='infotype']:checked").val();
-    var year = parseInt(data['year']);
-    if (g_hdm4search_click) {
-        c_var = "แผนการซ่อม: " + data['workdes'] + "<br/>" + "งบประมาณ: " + data['cost'] + " ลบ. (ปี " + year + ")<br/>" + "IRI: " + data['iri'] + "<br/>" + "Rutting: " + data['rutting'] + "<br/>" + "MPD: " + data['texture'] + "<br/>";
 
-    } else if (c_cond == "roughness") {
-        c_var = "IRI: " + data['var'];
-        if (data['var'] < 2.68) {
-            qcolor = "green";
-        } else if (data['var'] >= 2.68 && data['var'] < 3.5) {
-            qcolor = "plain";
-        } else if (data['var'] >= 3.5) {
-            qcolor = "red";
+    var qcolor = "plain";    
+    var c_var = "";
+    var columns = ['','รอยแตกหนังจระเข้','รอยแตกตามยาว','รอยร่องล้อ','ผิวหลุดร่อน','หลุม บ่อ','ผิวยุบตัวเป็นแอ่ง','ปะซ่อมผิว'];
+     
+    
+    if(data['crack_aca'] != 0) {
+            c_var += columns[1] + ": " + data['crack_aca'] + " ตร.ม.";
+        } else if(data['crack_act'] != 0) {
+            c_var += columns[2] + ": " + data['crack_act'] + " ตร.ม.";
+        } else if(data['bleeding'] != 0) {
+            c_var += columns[3] + ": " + data['bleeding'] + " ตร.ม.";
+        } else if(data['raveling'] != 0) {
+            c_var += columns[4] + ": " + data['raveling'] + " ตร.ม.";
+        } else if(data['phole'] != 0) {
+            c_var += columns[5] + ": " + data['phole'] + " ตร.ม.";
+        } else if(data['deformation'] != 0) {
+            c_var += columns[6] + ": " + data['deformation'] + " ตร.ม.";
+        } else if(data['patching'] != 0) {
+            c_var += columns[7] + ": " + data['pacthing'] + " ตร.ม.";
         }
-    } else if (c_cond == "rutting") {
-        c_var = "Rutting: " + data['var'];
-    } else if (c_cond == "texture") {
-        c_var = "MPD: " + data['var'];
-        if (data['var'] < 0.3) {
-            qcolor = "red";
-        } else if (data['var'] >= 0.3) {
-            qcolor = "green";
-        }
-    }
+
+        console.log(data);
+
     $(elem).qtip({
         overwrite: true,
         content: {
             title: {
                 text: "<span class='etitle'>" + data['ename'] + "</span>" + "<br/>" + "<span class='edesc'>[" + data['code'] + "]</span>"
             },
-            text: c_var + "<br />" + km_at + "<br />" + "Lat: " + data['latitude'] + "<br />" + "Long: " + data['longitude'],
+            text: c_var + "<br/>KM: " + data['km_at'] + "<br />" + "Lat: " + data['latitude'] + "<br />" + "Long: " + data['longitude'],
             button: 'Close'
         },
         style: {
@@ -754,23 +829,108 @@ function showQtip(olEvent) {
     map.layers[0].redraw();
 }
 
-function poi(item, lat, long, km_at, iri, rutting, texture, code, section, cost, workdes, year) {
+function showQtip(olEvent) {
+    var elem = document.getElementById(olEvent.feature.geometry.id);
+    var data = olEvent.feature.data;
+    var ol = olEvent;
+    var c_var = "";
+    var qcolor = "green";
+    var c_cond = $("[name='infotype']:checked").val();
+    var year = parseInt(data['year']);
+    if (g_hdm4search_click) {
+        c_var = "แผนการซ่อม: " + data['workdes'] + "<br/>" + "งบประมาณ: " + data['cost'] + " ลบ. (ปี " + year + ")<br/>" + "IRI: " + data['iri'] + "<br/>" + "Rutting: " + data['rutting'] + "<br/>" + "MPD: " + data['texture'] + "<br/>";
+
+    } else if (c_cond == "roughness") {
+        c_var = "IRI: " + data['var'];
+        if (data['var'] < 2.68) {
+            qcolor = "green";
+        } else if (data['var'] >= 2.68 && data['var'] < 3.5) {
+            qcolor = "plain";
+        } else if (data['var'] >= 3.5) {
+            qcolor = "red";
+        }
+    } else if (c_cond == "rutting") {
+        c_var = "Rutting: " + data['var'];
+    } else if (c_cond == "texture") {
+        c_var = "MPD: " + data['var'];
+        if (data['var'] < 0.3) {
+            qcolor = "red";
+        } else if (data['var'] >= 0.3) {
+            qcolor = "green";
+        }
+    }
+    $(elem).qtip({
+        overwrite: true,
+        content: {
+            title: {
+                text: "<span class='etitle'>" + data['ename'] + "</span>" + "<br/>" + "<span class='edesc'>[" + data['code'] + "]</span>"
+            },
+            text: c_var + "<br />" + "KM: " + data['km_at'] + "<br />" + "Lat: " + data['latitude'] + "<br />" + "Long: " + data['longitude'],
+            button: 'Close'
+        },
+        style: {
+            classes: 'ui-tooltip-' + qcolor + ' ui-tooltip-shadow myqtip'
+        },
+        position: {
+            adjust: {
+                x: 0,
+                y: -15
+            },
+            my: 'bottom center', // Position my top left...
+            at: 'bottom center' // at the bottom right of...
+        },
+        show: {
+            ready: true,
+        },
+        hide: {
+            event: 'unfocus',
+            target: $(this)
+        },
+        events: {
+            show: function () {
+                $(document).one("click", function () {
+                    $(".qtip").qtip('hide');
+                });
+            }
+        }
+    });
+    //.qtip('show');
+    map.layers[0].redraw();
+}
+
+function poiPavement(item, lat, long, sta, crack_aca, crack_act, bleeding, raveling, phole, deformation, pacthing) {
     var fpoint = new OpenLayers.Geometry.Point(long, lat).transform(
     new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
-    var c_cond = $("[name='infotype']:checked").val();
-    var view_hdm4_cond;
-    if (g_hdm4_search['year'] == 'all') {
-        view_hdm4_cond = $(".table_highlight td").eq(6).html();
-    } else {
-        view_hdm4_cond = $(".table_highlight td").eq(5).html();
-    }
+    var names = getNames();
+    var mname = names[0];
+    var sname = names[1];
+    var attributes = {
+            'name': item,
+            'km_at': sta,
+            'longitude': long,
+            'latitude': lat,
+            'code': sname,
+            'ename': mname,
+            'crack_aca': crack_aca,
+            'crack_act': crack_act,
+            'bleeding': bleeding,
+            'raveling': raveling,
+            'phole': phole,
+            'deformation': deformation,
+            'pacthing': pacthing,
+        };
+    var feature = new OpenLayers.Feature.Vector(fpoint, attributes);
+    feature.id = "POI_" + item;
+    return feature;
+}
 
+function getNames(){
     var mname = $('.expressway option:selected').html();
     var sname = ''
     if($("[name='exptype']").val() == "1") {
         $.each($('#option1 select'),function(){
             if($(this).css("display") != 'none') {
-                sname += "ตอนควมคุมที่ " + $(this).find('option:selected').html();
+                sname += "" + $(this).find('option:selected').html();
             }
         })
         
@@ -781,6 +941,21 @@ function poi(item, lat, long, km_at, iri, rutting, texture, code, section, cost,
             }
         })
     }
+    var a = [];
+    a[0] = mname;
+    a[1] = sname;
+    return a;     
+}
+
+function poi(item, lat, long, km_at, iri, rutting, texture, code, section, cost, workdes, year) {
+    var fpoint = new OpenLayers.Geometry.Point(long, lat).transform(
+    new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+
+    var names = getNames();
+    var mname = names[0];
+    var sname = names[1];
+
+    var c_cond = $("[name='infotype']").val();
 
     if (c_cond == "roughness") {
         var attributes = {

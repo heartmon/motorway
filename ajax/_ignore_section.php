@@ -27,11 +27,12 @@ elseif($infotype == 'texture')
 //Select first section
 if($exptype == 1 && strrpos($section, "0000") !== false)
 {
-	$e = substr($section,0,2).'%';
+	$e = substr($section,0,2).'%M00%';
 	$lane = substr($section,-2);
 	//$sql = "SELECT section from {$infotype} where section LIKE '{$e}' AND subdistance >= {$kmstart} AND type = '{$exptype}' order by section limit 1";
-	$sql = "SELECT section from {$infotype} where section LIKE '{$e}' AND type = '{$exptype}' order by (subdistance-{$kmstart})^2, section limit 1";
-	//$s = retrieve($sql);
+	$sql = "SELECT section from {$infotype} where section LIKE '{$e}' AND type = '{$exptype}' 
+	AND (section NOT LIKE '%0102%' AND section NOT LIKE '%0302%') order by (subdistance-{$kmstart})^2, section limit 1";
+
 	$result = pg_query($sql);
 	$s = pg_fetch_assoc($result);
 	//echo $sql;
@@ -39,6 +40,7 @@ if($exptype == 1 && strrpos($section, "0000") !== false)
 	//echo $s[0]['section'];
 	$prefix = substr($s['section'],0,9);
 	$section = $prefix.$lane;
+
 }
 
 

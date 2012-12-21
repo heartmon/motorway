@@ -11,8 +11,9 @@ function Controller(){
 		g_hdm4search_click = false;
 		var kmstart = $('#fix_range input[name=kmstart]').val();
 		var kmend   = $('#fix_range input[name=kmend]').val();
+        var infotype = $('#toolbox input[name=infotype]:checked').val();
         //g_search_info.infotype = $('#toolbox input[name=infotype]:checked').val();
-		if(_formValidation(kmstart,kmend))
+		if(_formValidation(kmstart,kmend,infotype))
 		{
 			$('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css('border', '').css('background-color', '');
 			g_search_info.expressway = $('#toolbox select[name=expressway]').val();
@@ -74,6 +75,13 @@ function Controller(){
             }
             else
             {
+                g_search_info_level2['kmstart'] = '';
+                g_search_info_level2['kmend'] = '';
+                g_all_result_all_lane = {};
+                g_all_result = {};
+
+                $("#video-map-display").hide();
+
                 $('#pavement_lane').html('');
                 if(g_search_info['exptype'] == "1" || g_search_info['exptype'] == "3")
                 {
@@ -84,10 +92,10 @@ function Controller(){
                 }
                 this.searchPavement(sectionCode);
             }
+
 		}
 	}
 
-    
 
     this.searchPavement = function(sectionCode){
         model.getPavement();
@@ -95,13 +103,20 @@ function Controller(){
     }
 
     this.setupPavement = function(data){
-        qtip.removeAllFeatures();
-        
+
         var headers = {'ตอนควบคุม: ': g_search_info_level2.currentcode+' ('+g_search_info_level2.currentsection+')', 'สายทาง: ':toExpressName(g_search_info.expressway)};
         var columns = ['ระยะทาง','Lat','Long','รอยแตกหนังจระเข้','รอยแตกตามยาว','รอยร่องล้อ','ผิวหลุดร่อน','หลุม บ่อ','ผิวยุบตัวเป็นแอ่ง','ปะซ่อมผิว'];
         view.createPavement(data,headers);
         //$('#pavement').show();
         showdata($('#pavement'));
+        qtip.removeAllFeatures();
+        qtipPavement.removeAllFeatures();
+        addPointsPavement(g_pavement);
+        zoomCoor();
+        var text = g_search_info_level2.currentcode + ' ' ;
+        if(g_search_info.exptype == 1 || g_search_info.exptype == 3)
+            text +=  toDir(g_search_info_level2['currentsection'].slice(-2))+' เลน '+g_search_info_level2['currentsection'].slice(-2);
+        updateBreadCrumb(expcodeToExpressway(g_search_info.expressway),text,$('input[name=infotype][value='+g_search_info.infotype+']').next().html(),'');
     }
 
 	this.searchBySectionName = function(sectionCode) {
@@ -373,21 +388,22 @@ function Controller(){
 
         //If Damage Search then create slider, chart, datatable and image thumbnail
        if (!g_hdm4search_click) {
+            
             $('#current_linedata').hide();
             setStartEndIndex(0, g_linedata.length - 1);
             view.createSlider('slider-range', 'range');
             _createGraph();
             view.createDataTable();
-            $('#search-input .expressway').html(expcodeToExpressway(g_search_info['expressway']));
-            $('#search-input .infotype').html($('input[name=infotype][value='+g_search_info.infotype+']').next().html());
-            $('#search-input .rangekm').html(toKm(g_data['kmstart']) + ' - ' + toKm(g_data['kmend']));
+            
             var text = g_search_info_level2.currentcode + ' ' ;
             if(g_search_info.exptype == 1 || g_search_info.exptype == 3)
                 text +=  toDir(g_search_info_level2['currentsection'].slice(-2))+' เลน '+g_search_info_level2['currentsection'].slice(-2);
-            $('.fullname').html(text);
+            updateBreadCrumb(expcodeToExpressway(g_search_info.expressway),text,$('input[name=infotype][value='+g_search_info.infotype+']').next().html(),toKm(g_search_info_level2.kmstart) + ' - ' + toKm(g_search_info_level2.kmend));
+           // $('.fullname').html(text);
             hideLoading();
 
             this.settingImage();
+
 
             //if(g_search_info_level2['kmfreq'] > 100 && Math.ceil(g_all_result['usedlength']/(g_search_info_level2['kmfreq']/5)) <= 20)
             //  reelSetup();
@@ -721,7 +737,8 @@ function Controller(){
         g_hdm4_search['section'] = g_hdm4_result[0]['section'].substr(0,9);
         view.updateHDM4metadata();
         view.createHDM4table(g_hdm4_result, totalcost);
-        
+        var text = g_hdm4_search['code'] + ' ' ;
+        updateBreadCrumb(expcodeToExpressway(g_hdm4_search.expressway),text,'แผนการซ่อมบำรุง: '+$('#hdm4result .hdm4type').html(),'');
     }
 
     //====== GEOLOCATION ACTION
@@ -774,6 +791,7 @@ function Controller(){
 
     this.setNearestOnMap = function(current){
         qtip.removeAllFeatures();
+        qtipPavement.removeAllFeatures();
         if(current){
             addPoints(current);
         }
@@ -901,7 +919,7 @@ function Controller(){
         g_search_info_level2['kmfreq'] = '';
 	}
 
-	_formValidation = function(temp_kms,temp_kme) {
+	_formValidation = function(temp_kms,temp_kme,infotype) {
 		//form validation
 		var valid = true;
 		if($('#fix_range').is(":visible"))
@@ -940,6 +958,9 @@ function Controller(){
     	            valid = false;
     	            $('#fix_range input[name=kmstart], #fix_range input[name=kmend]').css(notvalid);
     	        }
+                if (infotype == null){
+                    alert('yeah');
+                }
             }
   		}
         return valid;

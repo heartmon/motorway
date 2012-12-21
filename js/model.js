@@ -20,7 +20,7 @@ function Model()
                    // console.log(data);
                 } 
                 else {
-                    errorReport(data['error']);
+                    //errorReport(data['error']);
                     controller.setupPavement(data);
                 }
             }
