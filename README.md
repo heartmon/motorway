@@ -60,3 +60,6 @@ v1.0
 
 - bug fixed
 
+v1.2
+- overall complete
+
