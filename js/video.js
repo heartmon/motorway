@@ -54,7 +54,7 @@ function updateVideoData() {
 
 			$('#videoinfo #current_image').html(filename);		
 			$('#videoinfo #frameno').html(index);			
-			$('#videoinfo #saveimage').prop('href',"asset_images/"+getImageDirectory(g_search_info_level2['currentsection'])+"/"+filename);
+			$('#videoinfo #saveimage').prop('href',prefix_url + "asset_images/"+getImageDirectory(g_search_info_level2['currentsection'])+"/"+filename);
 		}
 }
 
@@ -84,7 +84,7 @@ function updateVideoRange()
 		var fromImage = parseInt(g_video['first_image']);
 		var toImage = fromImage+((g_video['length']-1)*5);
 	
-		var folderImage = "asset_images/"+getImageDirectory(g_search_info_level2['currentsection'])+"/";
+		var folderImage = prefix_url + "asset_images/"+getImageDirectory(g_search_info_level2['currentsection'])+"/";
 
 		var step = 5;
 		

@@ -4,12 +4,12 @@ include("_opz.php");
 ini_set('display_errors', '1');
 //$dbh = connect();
 $d = "hdm4"; // *
-$tbl = "hdm4_limited_half"; // **
+$tbl = "hdm4_limited_full"; // **
 $hdm4_cols = "(abb_exp,dir,lane,kmstart,kmend,year,workdes,npv,cost,section)";
 //$csv_img = "C:/Program Files (x86)/PostgreSQL/EnterpriseDB-ApachePHP/apache/www/run_db/";
 $csv_img = "/home/asset/public_html/motorway/run_db/";
 
-	$fp = "csv_hdm4_othercase/";
+	$fp = "csv_hdm4_full/";
 	$fs = d2a($fp,true);
 	foreach($fs as $k => $v) {
 		$q = "COPY " . $tbl . " " 

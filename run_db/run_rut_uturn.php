@@ -21,7 +21,7 @@ $csv_img = "/home/asset/public_html/motorway/run_db/";
 	
 	$q = "update {$tbl} set mark = 'start' where subdistance = 0";
 	retrieve($q);
-	$q = "update {$tbl} set type = '3' where type is null";
+	$q = "update {$tbl} set type = '2' where type is null";
 	retrieve($q);
 	$q = "update {$tbl} set the_geom = ST_GeometryFromText('SRID=4326;POINT(' || long || ' ' || lat || ')') where the_geom is null";
 	retrieve($q);

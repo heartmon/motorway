@@ -531,7 +531,7 @@ $(function () {
 // ========================== Reel ==============================
     //Reel Setup
     function reelSetup() {
-        var imgpath = "asset_images/" + g_search_info_level2['currentsection'] + "/";
+        var imgpath = prefix_url + "asset_images/" + g_search_info_level2['currentsection'] + "/";
         var length = Math.ceil(Math.abs((parseFloat(g_linedata[0][0]) * 1000 - parseFloat(g_linedata[g_linedata.length - 1][0]) * 1000) / 5));
         $.ajax({
             url: 'ajax/_reel.php',
@@ -778,7 +778,7 @@ $(function () {
             var wait = setInterval(function () {
                 if (finish_getimage) {
                     clearInterval(wait);
-                    var imgpath = "asset_images/" + g_imageset[index_image]['section'] + "/" + g_imageset[index_image]['filename'].replace("\\", '');
+                    var imgpath = prefix_url + "asset_images/" + g_imageset[index_image]['section'] + "/" + g_imageset[index_image]['filename'].replace("\\", '');
 
                     $('#video-player #thumbnail img').attr("src", imgpath);
                     //  console.log(imgpath);
@@ -787,7 +787,7 @@ $(function () {
 
             $("#video-player #thumbnail img").error(function () {
                 $(this).attr("src", "images/imgerror.gif");
-                var imgpath = "asset_images/" + g_imageset[index_image]['section'] + "/" + g_imageset[index_image]['filename'].replace("\\", '');
+                var imgpath = prefix_url + "asset_images/" + g_imageset[index_image]['section'] + "/" + g_imageset[index_image]['filename'].replace("\\", '');
                 //alert('Image not found:\n'+'Location: '+imgpath);
                 errorReport('Image not found:\n' + 'Location: ' + imgpath);
             });

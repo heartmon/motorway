@@ -1,4 +1,6 @@
 //GLOBAL VAR
+var mobile;  // True or False
+var browser; //Broswer Name
 var plot;
 var startIndex;
 var endIndex;
@@ -76,8 +78,12 @@ var model = new Model();
 var mdata;
 var sync = false;
 
-$(function (){
 
+$(function (){
+	mobile = (/(iphone|ipod|ipad)/.test(navigator.userAgent.toLowerCase()));
+	browser = navigator.userAgent.toLowerCase();
+	if(mobile)
+		$("#search-input").append(" (Mobile)");
     init();
 
      $("#video-map-display").hide();
@@ -149,6 +155,12 @@ $(function (){
             });
             return false;
         });
+        //mobile = true;
+        if(mobile)
+        {
+            $('#version').show();
+            $('#videocontrol').show();
+        }
     }
 
     $('.damagesearch_but').bind('click', function () {
@@ -202,7 +214,7 @@ $(function (){
         }
     });
 
-    $('#geolocation').bind('hover', function(){
+    //$('#geolocation').bind('hover', function(){
         $('#geolocation').qtip({
         overwrite: true,
         content: {
@@ -223,23 +235,19 @@ $(function (){
             my: 'bottom center', // Position my top left...
             at: 'bottom center' // at the bottom right of...
         },
-        show: {
-            ready: true,
-        },
         hide: {
             event: 'unfocus',
             target: $(this)
         },
         events: {
             show: function () {
-                // $(document).one("click", function () {
-                //     $(".qtip").qtip('hide');
-                // });
-
+                $(document).one("click", function () {
+                    $(".qtip").qtip('hide');
+                });
             }
         }
         });
-    });
+    //});
 
     $('.geolocation_type li').live('click',function(index) {
         var index = $(this).index();
@@ -267,7 +275,7 @@ $(function (){
     //Maximize map
     $('#maximize-map-display').toggle(function () {
         if ($('#container_map').hasClass('mapclose')) $('#toggle-map-display').addClass('fromClose').click();
-        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display, #geolocation').addClass('maximize');
+        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display, #geolocation, #mapicon').addClass('maximize');
         $('#container_map').parent().css('height', '368px');
         $(this).children().removeClass('icon-resize-full').addClass('icon-resize-small')
         $(this).attr('title', 'ย่อแผนที่');
@@ -284,7 +292,7 @@ $(function (){
         $("#maptoolbox").hide();
         $("#search-input").show();
         $(".errorreport").show();
-        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display, #geolocation').removeClass('maximize');
+        $('#container_map, #maximize-map-display, #toggle-map-display, #video-map-display, #geolocation, #mapicon').removeClass('maximize');
         $('#container_map, #map').css('width', '');
         $('#container_map, #map').css('height', '');
         $(this).children().removeClass('icon-resize-small').addClass('icon-resize-full')
@@ -298,7 +306,7 @@ $(function (){
         }
     });
 
-    $('#container_map, #toggle-map-display, #maximize-map-display, #video-map-display, #geolocation').hover(function () {
+ /*   $('#container_map, #toggle-map-display, #maximize-map-display, #video-map-display, #geolocation').hover(function () {
         if ($('#toggle-map-display i').hasClass('icon-chevron-up')) $('#toggle-map-display').stop().animate({
             opacity: 0.8
         });
@@ -360,7 +368,7 @@ if ($('#toggle-map-display i').hasClass('icon-chevron-up')) $('#toggle-map-displ
         });
            }
        }
-    );
+    );*/
 
     //Minimize map
     $('#toggle-map-display').toggle(function () {
@@ -374,7 +382,7 @@ if ($('#toggle-map-display i').hasClass('icon-chevron-up')) $('#toggle-map-displ
         $('#map').stop().animate({
             top: -325
         }, 'fast');
-        $('#toggle-map-display, #maximize-map-display, #video-map-display, #geolocation').css('bottom', '15px');
+        $('#toggle-map-display, #maximize-map-display, #video-map-display, #geolocation, #mapicon').css('bottom', '15px');
         $(this).attr('title', 'เปิดแผนที่');
         $(this).children().removeClass('icon-chevron-up').addClass('icon-chevron-down')
     }, function () {
@@ -395,7 +403,7 @@ if ($('#toggle-map-display i').hasClass('icon-chevron-up')) $('#toggle-map-displ
         }
         $(this).children().removeClass('icon-chevron-down').addClass('icon-chevron-up');
         $(this).attr('title', 'เก็บแผนที่');
-        $('#toggle-map-display, #maximize-map-display, #video-map-display, #geolocation').css('bottom', '');
+        $('#toggle-map-display, #maximize-map-display, #video-map-display, #geolocation, #mapicon').css('bottom', '');
     });
 
 
@@ -988,12 +996,16 @@ function updateVideo(index) {
 
         var directory = g_search_info_level2.currentsection;
         if(g_search_info.exptype == "1")
+        {
             directory = getImageDirectory(g_search_info_level2.currentsection);
+        }
+
+        
 
         var wait = setInterval(function () {
             if (finish_getimage) {
                 clearInterval(wait);
-                var imgpath = "asset_images/" + directory + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
+                var imgpath = prefix_url + "asset_images/" + directory + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
                 console.log(imgpath);
                 $('#video-player #thumbnail img').attr("src", imgpath);
             }
@@ -1001,7 +1013,7 @@ function updateVideo(index) {
 
         $("#video-player #thumbnail img").error(function () {
             $(this).attr("src", "images/imgerror.gif");
-            var imgpath = "asset_images/" + directory + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
+            var imgpath = prefix_url + "asset_images/" + directory + "/" + (parseInt(g_video['first_image'])+index_image) + ".jpg";
             //alert('Image not found:\n'+'Location: '+imgpath);
             errorReport('Image not found:\n' + 'Location: ' + imgpath);
         });
@@ -1123,6 +1135,7 @@ function getImageDirectory(section){
     var exp = section.substr(0,2);
     var suffix = section.substr(6);
     var sstr = section.substr(2,4);
+    //console.log(sstr);
     if(sstr == "0200"){
         return exp+"0101"+suffix;
 	} 
@@ -1138,16 +1151,12 @@ function getImageDirectory(section){
 	if(sstr == "0402") {
         if(exp == "07")
             return exp+"0401"+suffix;
-        else
-            return section;
-	}
-	
-	if(sstr == "0402") {
-        if(exp == "09")
+        else if(exp == "09")
             return exp+"0401"+suffix;
         else
             return section;
 	}
+
 
     if(sstr == "0301") {
         if(exp == "07")

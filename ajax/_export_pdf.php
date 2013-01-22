@@ -92,7 +92,7 @@ class MYPDF extends TCPDF {
         $this->SetFont('thsarabun', 'B', 18);
  		$this->setCellMargins(18.3, '', '', '');
         //Tital English
-        $this->Cell(0, 15, 'Department of Highway', 0, false, 'L', 0, '', 0, false, 'M', 'M');
+        $this->Cell(0, 15, 'Department of Highways', 0, false, 'L', 0, '', 0, false, 'M', 'M');
         //Add Horizontal Line
         $style = array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', '', 'phase' => 10, 'color' => array(0, 0, 0));
     	$this->Line(10, 27, 200, 27, $style);
@@ -114,10 +114,10 @@ $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('EXAT');
-$pdf->SetTitle('EXAT');
-$pdf->SetSubject('EXAT');
-$pdf->SetKeywords('EXAT');
+$pdf->SetAuthor('Motorway');
+$pdf->SetTitle('Motorway');
+$pdf->SetSubject('Motorway');
+$pdf->SetKeywords('Motorway');
 
 // set default header data
 $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
@@ -157,7 +157,9 @@ if($pdftype == "damage")
 
     $pdf->Ln(4);
     //html
-    $html = '<table border="0" cellpadding="1">
+    $html = '
+	<div style="clear:both;float:right">หน่วย : </div>
+	<table border="0" cellpadding="1">
     	<tr style="line-height:4px;">
     		<td width="130"><b>ข้อมูลแสดง</b></td>
     		<td width="10">:</td>

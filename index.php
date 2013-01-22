@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
@@ -37,6 +37,7 @@
 	<!--<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>-->
 	<script type="text/javascript" src="js/openlayer/OpenLayers.js"></script>
 	<script defer="defer" type="text/javascript" src="js/gis.js"></script>
+	<script defer="defer" type="text/javascript" src="js/image_path.js"></script>
 
 	<script type="text/javascript" src="js/controller.js"></script>
 	<script type="text/javascript" src="js/view.js"></script>
@@ -58,6 +59,7 @@
 		<a href="#"><img id="logo" src="images/logo.png" alt="การทางพิเศษแห่งประเทศไทย"></img></a>
 		<div id="header-dashboard">
 		</div>
+
 	</div>
 
 <div id="wrapper">
@@ -92,9 +94,10 @@
 		}
 	</style>
 	<div class="container">
+		<div id="version">
+			<span class="btn btn-primary disabled">Mobile Version</span>
+		</div>
 		<div id="loading" class="misc alert">Loading <img src="css/img/ajax-loader.gif"></div>
-		
-		
 		<!-- ======= MAP ========== -->
 		<div class="row" style="position: relative;">
 			<div class="span12">	
@@ -116,15 +119,15 @@
 			</div>
 			<div id="mapstatus"></div>
 			<div id="mapicon">
-				<a class="btn btn-inverse normal" title="เก็บแผนที่" id="toggle-map-display" ><i class="icon-chevron-up icon-white"></i></a>
-				<a class="btn btn-inverse normal" title="ขยายแผนที่" id="maximize-map-display" ><i class="icon-resize-full icon-white"></i></a>
 				<a href="#videodialog" class="btn btn-inverse normal video_lightbox" title="ดูวิดีโอ" id="video-map-display" ><i class="icon-facetime-video icon-white"></i></a>
 				<a class="btn btn-inverse normal" title="ดูตำแหน่งปัจจุบัน" id="geolocation" ><i class="icon-map-marker icon-white"></i></a>
+				<a class="btn btn-inverse normal" title="ขยายแผนที่" id="maximize-map-display" ><i class="icon-resize-full icon-white"></i></a>
+				<a class="btn btn-inverse normal" title="เก็บแผนที่" id="toggle-map-display" ><i class="icon-chevron-up icon-white"></i></a>
 			</div>
 		</div>
 	<div>
 		<div id="search-input" class="alert alert-warning font16">
-			<span class="expressway"></span> • <span class="fullname"></span> • <span class="infotype"></span> • <span class="rangekm"></span>
+			<span class="expressway">เลือกสายทาง</span> • <span class="fullname">กำหนดเงื่อนไขการค้นหา</span> • <span class="infotype">เลือกประเภทความเสียหาย</span> • <span class="rangekm">คลิกปุ่ม "เรียกดู"</span>
 		</div>
 	</div>
 		<div class="row">
@@ -190,27 +193,16 @@
 							<select name="accessname07" class="input-spanall accessname seclist">
 							<!--	<option value="">ทางแยกต่างระดับศรีนครินทร์</option>
 								<option value="">ทางแยกต่างระดับวัดสลุด</option> -->
-								<option value="0101B01">ทางแยกต่างระดับร่มเกล้า</option>
-							<!--	<option value="">สะพานลอยทางเข้า-ออก ท่าอากาศยานสุวรรณภูมิ</option>
-								<option value="">สะพานลอยทางเข้า-ออก สถานีขนส่งสินค้าร่มเกล้า</option>
-								<option value="">ทางแยกต่างระดับลาดกระบัง</option>
-								<option value="">ทางแยกต่างระดับบางบ่อ</option>
-								<option value="">ทางแยกต่างระดับบางควาย</option>
-								<option value="">ทางแยกต่างระดับบางปะกง</option>
-								<option value="">ทางแยกต่างระดับพานทอง</option>
-								<option value="">ทางแยกต่างระดับชลบุรี</option>
-								<option value="">ทางแยกต่างระดับบางพระ</option>	-->									
+								<option value="0101B01">ทางแยกต่างระดับร่มเกล้า</option>								
 							</select>
 							<select name="accessname09" class="input-spanall accessname seclist">
-							<!--	<option value="">ทางแยกต่างระดับบางปะอิน</option>
-								<option value="">สะพานลอยทางเข้า-ออก สถานีขนส่งสินค้าคลองหลวง</option>
-								<option value="">สะพาน OVERPASS และทางแยก อ.คลองหลวง</option> -->
+
 								<option value="0402B01">ทางแยกต่างระดับธัญบุรี</option>	
 								<option value="0402B02">ทางแยกต่างระดับลำลูกกา</option>	
-							<!--	<option value="">ทางแยกต่างระดับรามอินทรา</option>	-->
-								<option value="0500B01">ทางแยกต่างระดับคลองกุ่ม</option>	
-								<option value="0500B02">ทางแยกต่างระดับสุขาภิบาล 3</option>	
-								<option value="0500B03">ทางแยกต่างระดับทับช้าง</option>	
+								<option value="0500B01">ทางแยกต่างระดับรามอินทรา</option>
+								<option value="0500B02">ทางแยกต่างระดับคลองกุ่ม</option>
+								<option value="0500B03">ทางแยกต่างระดับสุขาภิบาล 3</option>	
+								<!-- <option value="0500B04">ทางแยกต่างระดับทับช้าง</option>	 -->
 							</select>
 							<select name="enexname07" class="input-spanall enexname seclist">
 								<option value="0101U01">สะพานลอยกลับรถ กม.เริ่มต้นที่ 1.5 - 1.7</option>
@@ -236,8 +228,10 @@
 								<option value="0101132F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาเข้า ชลบุรี-รามคำแหง</option>
 								<option value="0101134F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก ชลบุรี-บางนา</option>
 								<option value="0101143F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาเข้า บางนา-ชลบุรี</option>	
-								<!--<option value="0101141F1">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก บางนา-กรุงเทพฯ</option>-->									
-																						
+
+								<option value="0101123F2">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก รามคำแหง-ชลบุรี</option>
+								<option value="0101134F2">ทางแยกต่างระดับศรีนครินทร์ ถนนฝั่งขาออก ชลบุรี-บางนา</option>
+
 								<option value="0101212F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาออก กรุงเทพ-มีนบุรี </option>
 								<option value="0101214F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาเข้า กรุงเทพ-ลาดกระบัง</option>
 								<option value="0101221F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาเข้า มีนบุรี-กรุงเทพ</option>
@@ -245,46 +239,67 @@
 								<option value="0101234F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาออก ชลบุรี-ลาดกระบัง</option> 
 								<option value="0101241F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาออก ลาดกระบัง-กรุงเทพ</option>
 								<option value="0101243F1">ทางแยกต่างระดับร่มเกล้า ถนนฝั่งขาเข้า ลาดกระบัง-ชลบุรี</option>
+
+								<option value="0101214F2">ทางแยกต่างระดับร่มเกล้า  ถนนฝั่งขาเข้า กรุงเทพ-ลาดกระบัง</option>
+								<option value="0101212F2">ทางแยกต่างระดับร่มเกล้า  ถนนฝั่งขาออก กรุงเทพ-มีนบุรี</option>
+								<option value="0101221F2">ทางแยกต่างระดับร่มเกล้า  ถนนฝั่งขาเข้า มีนบุรี-กรุงเทพ</option>
+								<option value="0101223F2">ทางแยกต่างระดับร่มเกล้า  ถนนฝั่งขาออก มีนบุรี-ชลบุรี</option>
 											
 								<option value="0101314F1">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาออก กรุงเทพ-สนามบินสุวรรณภูมิ </option>
 								<option value="0101334F1">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาออก ชลบุรี- สถานีขนส่งสินค้าร่มเกล้า</option>
 								<option value="0101341F1">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ สนามบินสุวรรณภูมื-กรุงเทพ</option>
 
+								<option value="0101341F2">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาเข้า ชลบุรี-สนามบินสุวรรณภูมิ</option>
+								<option value="0101343F2">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาออก สนามบินสุวรรณภูมิ-ชลบุรี</option>
+								<option value="0101314F2">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาออก กรุงเทพ-สนามบินสุวรรณภูมิ</option>
+								<option value="0101341F3">ทางแยกต่างระดับเข้า-ออกสนามบินสุวรรณภูมิ ถนนฝั่งขาเข้า ชลบุรี-สนามบินสุวรรณภูมิ</option>
+
 								<option value="0101412F1">ทางแยกต่างระดับลาดกระบัง</option> 
 								<option value="0101421F1">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก มีนบุรี-กรุงเทพ</option>
 								<option value="0101434F1">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก ชลบุรี-อ่อนนุช</option>
 
+								<option value="0101434F2">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก ชลบุรี-อ่อนนุช</option>
+								<option value="0101412F2">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก กรุงเทพ-มีนบุรี</option>
+								<option value="0101421F2">ทางแยกต่างระดับลาดกระบัง ถนนฝั่งขาออก มีนบุรี-กรุงเทพ</option>
+
+
 								<option value="0302114F2">ทางแยกต่างระดับบางควาย ถนนฝั่งขาออก กรุงเทพ-บางนา ตราด</option>
-								<option value="0302143F1">ทางแยกต่างระดับบางควาย ถนนฝั่งขาเข้า บางนา ตราด-ชลบุรี</option>
 								<option value="0302134F1">ทางแยกต่างระดับบางควาย ถนนฝั่งขาออก ชลบุรี- บางนาตราด</option>
 								<option value="0302141F1">ทางแยกต่างระดับบางควาย ถนนฝั่งขาเข้า บางนา ตราด-กรุงเทพ</option>
+
+								<option value="0302141F2">ทางแยกต่างระดับบางควาย ถนนฝั่งขาเข้า บางนา ตราด-กรุงเทพ</option>
 								
 								<option value="0302212F1">ทางแยกต่างระดับบางบ่อ ถนนฝั่งขาออก กรุงเทพ-ชลบุรี(สายใหม่)-ชลบุร</option>
 								<option value="0302231F1">ทางแยกต่างระดับบางบ่อ ถนนฝั่งขาเข้า ชลบุรี-กรุงเทพ-ชลบุรี(สายใหม่) </option>
 								<option value="0302214F1">ทางแยกต่างระดับบางบ่อ ถนนฝั่งขาเข้า กรุงเทพ-ชลบุรี(สายใหม่)- กรุงเทพ</option>								
 								<option value="0302241F1">ทางแยกต่างระดับบางบ่อ</option>
 
-								<!--<option value="0301112F1">ทางแยกต่างระดับบางประกง ถนนฝั่งขาออก กรุงเทพ-บางประกง </option>
-								<option value="0301123F1">ทางแยกต่างระดับบางประกง ถนนฝั่งขาออก บางประกง-ชลบุรี</option>
-								<option value="0301134F1">ทางแยกต่างระดับบางประกง ถนนฝั่งขาเข้า ชลบุรี-สุขุมวิท</option>
-								<option value="0301141F1">ทางแยกต่างระดับบางประกง ถนนฝั่งขาเข้า สุขุมวิท-กรุงเทพ</option>
-								<option value="0301114F1">ทางแยกต่างระดับบางประกง ถนนฝั่งขาออก กรุงเทพ-สุขุมวิท</option>
-								<option value="0301121F1">ทางแยกต่างระดับบางประกง ถนนฝั่งขาเข้า บางประกง-กรุงเทพ</option>-->
+								<option value="0302214F1">ถนนฝั่งขาเข้า กรุงเทพ-ชลบุรี(สายใหม่)- กรุงเทพ</option>
+								<option value="0302231F2">ถนนฝั่งขาเข้า ชลบุรี-กรุงเทพ-ชลบุรี(สายใหม่)</option>
+
+
+
 
 								<option value="0401123F1">ทางแยกต่างระดับพานทอง</option>
 								<option value="0302143F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-ชลบุรี</option>
-								<option value="0302141F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-กรุงเทพ</option>
-								<option value="0302134F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
+								<!-- <option value="0302141F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-กรุงเทพ</option> -->
+								<!-- <option value="0302134F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option> -->
 					
 					
 								<option value="0401212F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาออก กรุงเทพ-บ้านบึง</option>
 								<option value="0401223F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาออก บ้านบึง-ชลบุรี</option>
 								
 								<option value="0401234F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาออก ชลบุรี-ชลบุรี</option>
-								<option value="0401241F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
 								
 								<option value="0401241F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า ชลบุรี-กรุงเทพ</option>
 								<option value="0401221F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า บ้านบึง-กรุงเทพ</option>
+								<option value="0401243F1">ทางแยกต่างระดับชลบุรี ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
+
+								<option value="0401134F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
+								<option value="0401134F2">ทางแยกต่างระดับพานทอง ถนนฝั่งขาเข้า ชลบุรี-ชลบุรี</option>
+								<option value="0401141F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-กรุงเทพ</option>
+								<option value="0401143F1">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-ชลบุรี</option>
+								<option value="0401143F2">ทางแยกต่างระดับพานทอง ถนนฝั่งขาออก ชลบุรี-ชลบุรี</option>
 		
 							</select>
 
@@ -293,6 +308,11 @@
 								<option value="0401132F1">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาออก บางพลี-สระบุรี </option>
 								<option value="0401123F1">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาเข้า สระบุรี-บางพลี </option>
 								<option value="0401134F1">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาออก บางพลี-กรุงเทพ</option>
+								
+								<option value="0401132F2">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาออก บางพลี-สระบุรี</option>
+								<option value="0401132F3">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาออก บางพลี-สระบุรี</option>
+								<option value="0401123F2">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาเข้า สระบุรี-บางพลี</option>
+								<option value="0401134F2">ทางแยกต่างระดับบางปะอิน ถนนฝั่งขาออก บางพลี-กรุงเทพฯ</option>
 								
 								<option value="0402112F1">คลองหลวง ถนนฝั่งขาเข้า บางประอิน-หนองเสือ</option>
 								<option value="0402123F1">คลองหลวง ถนนฝั่งขาเข้า หนองเสือ-บางพลี </option>
@@ -312,6 +332,9 @@
 								<option value="0402341F1">ทางแยกต่างระดับลำลูกกา ถนนฝั่งขาออก ดอนเมือง-บางประอิน </option>
 								<option value="0402343F1">ทางแยกต่างระดับลำลูกกา ถนนฝั่งขาเข้า บางประอิน-ดอนเมือง </option>							
 								<option value="0402321F1">ทางแยกต่างระดับลำลูกกา ถนนฝั่งขาออก ลำลูกกา-บางประอิน </option>
+
+								<option value="0402141F2">คลองหลวง ถนนฝั่งขาออก คลองหลวง-บางประอิน</option>
+								<option value="0402334F2">ทางแยกต่างระดับลำลูกกา ถนนฝั่งขาออก บางพลี-ดอนเมือง</option>
 																
 								<option value="0500112F1">ทางแยกต่างระดับรามอินทรา ถนนฝั่งขาเข้า บางประอิน-มีนบุรี</option>
 								<option value="0500121F1">ทางแยกต่างระดับรามอินทรา ถนนฝั่งขาออก มีนบุรี-บางประอิน</option>
@@ -349,6 +372,19 @@
 								<option value="0500534F1">ทางแยกต่างระดับอ่อนนุช ถนนฝั่งขาออก บางพลี-ศรีนครินทร์</option>
 								<option value="0500541F1">ทางแยกต่างระดับอ่อนนุช ถนนฝั่งขาออก ศรีนครินทร์-บางประอินทร์</option>
 								<option value="0500532F1">ทางแยกต่างระดับอ่อนนุช ถนนฝั่งขาออก บางพลี-ลาดกระบัง</option>
+
+								<option value="0500121F1">ทางแยกต่างระดับคลองกุ่ท กิโลเมตรที่ 46+922 090500121F1</option>
+								<option value="0500134F2">ทางแยกต่างระดับรามอินทรา ถนนฝั่งขาออก บางพลี-หลักสี่</option>
+								<option value="0500143F2">ทางแยกต่างระดับรามอินทรา ถนนฝั่งขาเข้า หลักสี่-บางพลี</option>
+								<option value="0500214F2">ทางแยกต่างระดับคลองกุ่ม ถนนฝั่งขาเข้า บางประอิน-บางกะปิ</option>
+								<option value="0500241F2">ทางแยกต่างระดับคลองกุ่ม ถนนฝั่งขาออก บางกะปิ-บางปะอิน</option>
+								<option value="0500312F2">ทางแยกต่างระดับสุขาภิบาล3ถนนฝั่งขาเข้า บางประอิน-มีนบุรี</option>
+								<option value="0500314F2">ทางแยกต่างระดับสุขาภิบาล3 ถนนฝั่งขาเข้า บางประอิน-บางกะปิ</option>
+								<option value="0500334F1">ทางแยกต่างระดับสุขาภิบาล3 ถนนฝั่งขาออก บางพลี-บางกะปิ</option>
+								<option value="0500341F2">ทางแยกต่างระดับสุขาภิบาล3 ถนนฝั่งขาออก บางกะปิ-บางปะอิน</option>
+								<option value="0500523F2">ทางแยกต่างระดับอ่อนนุช ถนนฝั่งขาเข้า ลาดกระบัง-บางพลี</option>
+								<option value="0500421F2">ทางแยกต่างระดับทับช้าง ถนนฝั่งขาออก ชลบุรี-บางประอิน</option>
+								<option value="0500441F2">ทางแยกต่างระดับทับช้าง ถนนฝั่งขาออก ศรีนครินทร์-บางปะอิน</option>
 								
 								<option value="0600112F1">ทางแยกต่างระดับวัดสลุด ถนนฝั่งขาเข้า บางประอิน-ชลบุรี</option>
 								<option value="0600123F1">ทางแยกต่างระดับวัดสลุด ถนนฝั่งขาออก ชลบุรี-สมุทรปราการ</option>

@@ -7,7 +7,7 @@ $d = "iri"; // *
 $tbl = "roughness"; // **
 $iri_cols = "(section,distance,subdistance,iri_right,iri_left,iri_avg,speed,events,lat,long)";
 //$csv_img = "C:/Program Files (x86)/PostgreSQL/EnterpriseDB-ApachePHP/apache/www/run_db/";
-$csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
+$csv_img = "/home/asset/public_html/motorway/run_db/";
 
 	$fp = "csv_iri/";
 	$fs = d2a($fp,true);

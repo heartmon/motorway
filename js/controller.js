@@ -746,8 +746,8 @@ function Controller(){
         //alert(lat);
         //alert(longitude);
 
-        lat = 13.7374042;
-        longitude =100.6610667;
+        //lat = 13.7374042;
+        //longitude =100.6610667;
         g_geolocation['lat'] = lat;
         g_geolocation['longitude'] = longitude;
         //lat = 13.7304618;
@@ -789,11 +789,14 @@ function Controller(){
          
     }
 
-    this.setNearestOnMap = function(current){
+    this.setNearestOnMap = function(current,isPave){
         qtip.removeAllFeatures();
         qtipPavement.removeAllFeatures();
         if(current){
-            addPoints(current);
+            if(isPave)
+                addPointsPavement(current);
+            else
+                addPoints(current);
         }
     }
 

@@ -108,13 +108,22 @@ textarea {
 	height:330px;
 	/*background: pink;*/
 }
+
+#mapicon, #mapicon.normal
+{
+	position:absolute;
+	right:14px;
+	bottom:32px;
+	z-index: 1001;
+}
+
 #toggle-map-display, #maximize-map-display, #video-map-display, #geolocation
 {
 	width:20px;
 	height:25px;
-	opacity: 0;
-	-moz-opacity: 0;
-	filter:alpha(opacity=0);
+	/*opacity: 0.8;*/
+	/*-moz-opacity: 0.8;*/
+	/*filter:alpha(opacity=0.8);*/
 	text-align:center;
 	z-index:1001;
 }
@@ -124,53 +133,60 @@ textarea {
 	}
 #geolocation.normal
 {
-	right:100px;
-	bottom:30px;
-	position:absolute;
+	/*right:100px;*/
+	/*bottom:30px;*/
+	/*position:absolute;*/
 }
 #video-map-display.normal 
 {
-	right:145px;
+	/*right:145px;
 	bottom:30px;
-	position: absolute;
+	position: absolute;*/
 }
 #toggle-map-display.normal
 {
-	right:10px;
+	/*right:10px;
 	bottom:30px;
-	position: absolute;
+	position: absolute;*/
 }
 #geolocation.maximize
 {
-	position:fixed;
+	/*position:fixed;
 	right:115px;
+	bottom:25px;*/
+}
+
+#mapicon.maximize
+{
+	position: fixed;
+	right:25px;
 	bottom:25px;
 }
 #video-map-display.maximize
 {
-	position:fixed;
+	/*position:fixed;
 	right:160px;
-	bottom:25px;
+	bottom:25px;*/
 }
 #toggle-map-display.maximize
 {
-	position:fixed;
+	/*position:fixed;
 	right:25px;
-	bottom:25px;
+	bottom:25px;*/
 }
 #maximize-map-display.normal
 {
-	right:55px;
+	/*right:55px;
 	-moz-opacity: 0;
 	filter:alpha(opacity=0);
 	bottom:30px;
-	position:absolute;
+	position:absolute;*/
 }
 #maximize-map-display.maximize
 {
-	position:fixed;
+	/*position:fixed;
 	right:70px;
-	bottom:25px;
+	bottom:25px;*/
 }
 #toolbox
 {
@@ -477,13 +493,13 @@ a.dropdown-toggle
 			position:absolute;
 			bottom:0px;
 			right:0px;
-			display:none;
+			/*display:none;*/
 			transition: opacity 2s;
 			-moz-transition: opacity 2s; /* Firefox 4 */
 			-webkit-transition: opacity 2s; /* Safari and Chrome */
 			-o-transition: opacity 2s; /* Opera */
 			background: rgba(205,205,205,0.6);
-			//opacity: 0.0;
+			/*opacity: 0.0;*/
 			padding:5px;
 		}
 			#videocontrol .btn-group
@@ -498,11 +514,11 @@ a.dropdown-toggle
 				margin-left: 10px;
 				padding-top:7px;
 			}
-			#videoplayer:hover #videocontrol
+			/*#videoplayer:hover #videocontrol
 			{
 				display:block;
 				opacity: 1.0;
-			}
+			}*/
 			#videoplayer .ui-slider .ui-slider-handle {
 				width:0.8em;
 				height:1.4em;
@@ -764,4 +780,14 @@ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 
 .tablescroll_head,.tablescroll_wrapper,#table1 {
 	width:290px;
+}
+
+#version{
+	position:absolute;
+	right:0px;
+	top:-55px;
+	color:black;
+	text-shadow:#666666 0px 1px 2px;
+	display: none;
+	z-index: 1001;
 }

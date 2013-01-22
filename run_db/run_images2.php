@@ -8,7 +8,8 @@ $tbl = "images"; // **
 $imgcp_cols =  '("section","frameno","interlat","interlong","interalt","framenocal","subdis","measure","ref","lat","long","gps_po","filename")';
 $img_cols = '("section","frameno","lat","long","filename","gid","the_geom","dummycol","code")';
 //$csv_img = "C:/Program Files (x86)/PostgreSQL/EnterpriseDB-ApachePHP/apache/www/run_db/";
-$csv_img = "C:/WAPP/apache2/htdocs/ddd/run_db/";
+//$csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
+$csv_img = "/home/asset/public_html/motorway/run_db/";
 
 if($tbl == "images") {
 	//Get All Distinct Section

@@ -10,6 +10,7 @@
 		$kmstart = $_GET['kmstart'];
 		$kmend = $_GET['kmend'];
 		$section = $_GET['section'];
+		$hdm4_geo = $_GET['hdm4_geo'];
 		
 		$q = "SELECT ST_AsText(ST_Envelope(ST_Collect(the_geom))) as geo ".
 			"FROM {$infotype} WHERE ST_IsEmpty(the_geom) is false ";
@@ -17,10 +18,10 @@
 		if(isset($_GET['exptype']) and $infotype != "pavement") {
 			$q .= "AND type = '{$exptype}' ";
 		}
-		if(isset($kmstart) and $kmstart !='' and $infotype != "pavement") {
+		if(isset($kmstart) and $kmstart !='' and $infotype != "pavement" and $hdm4_geo != 1) {
 			$q .= "AND subdistance >= {$kmstart} ";
 		} 
-		if(isset($kmend) and $kmend !='' and $infotype != "pavement") {
+		if(isset($kmend) and $kmend !='' and $infotype != "pavement" and $hdm4_geo != 1) {
 			$q .= "AND subdistance <= {$kmend} ";
 		}
 		$q .= "GROUP BY section";

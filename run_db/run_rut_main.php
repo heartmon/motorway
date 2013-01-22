@@ -6,9 +6,9 @@ ini_set('display_errors', '1');
 $d = "rut"; // *
 $tbl = "rutting"; // **
 $rut_cols = "(section,distance,subdistance,rut_right,rut_left,rut_lane,speed,events,lat,long)";
-$csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
+$csv_img = "/home/asset/public_html/motorway/run_db/";
 
-	$fp = "csv_iri/";
+	$fp = "csv_rutting/";
 	$fs = d2a($fp,true);
 	foreach($fs as $k => $v) {
 		$q = "COPY " . $tbl . " " 

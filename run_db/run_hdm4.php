@@ -7,7 +7,7 @@ $d = "hdm4"; // *
 $tbl = "hdm4_unlimited"; // **
 $hdm4_cols = "(abb_exp,dir,lane,kmstart,kmend,year,workdes,npv,cost,section)";
 //$csv_img = "C:/Program Files (x86)/PostgreSQL/EnterpriseDB-ApachePHP/apache/www/run_db/";
-$csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
+$csv_img = "/home/asset/public_html/motorway/run_db/";
 
 	$fp = "csv_hdm4/";
 	$fs = d2a($fp,true);
@@ -24,7 +24,7 @@ $csv_img = "/Applications/MAMP/htdocs/motorway/run_db/";
 	
 	$q = "update {$tbl} set expressway = substring(section from 0 for 3) where expressway is null";
 	retrieve($q);
-	$q = "update {$tbl} set type = '2' where type is null";
+	$q = "update {$tbl} set type = '1' where type is null";
 	retrieve($q);
 	$q = "update {$tbl} set section = substring(section from 0 for 12)";
 	retrieve($q);

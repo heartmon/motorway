@@ -1,87 +1,15 @@
-$.fn.exists = function () {
-    return this.length !== 0;
-}
-$(function() {
-	$("#hdm4graph").hide();
-    $("#geolocation").hide()
-	$("#placeholder").hide()
+$(function () {
+    $("#placeholder").hide()
     $("#search_hdm4_button").click(function () {
         qtip.removeAllFeatures();
-		qtipPavement.removeAllFeatures();
     });
-	 $(".damagesearch_but").click(function () {
-        qtip.removeAllFeatures();
-		qtipPavement.removeAllFeatures();
-    });
-	
     $(".alert-error").click(function(){
         $(this).remove();
     });
-/*
-    $("[type='submit']").click(function(){
-        if(g_hdm4search_click) {
-            var template = {
-                pointRadius: "${getSize}", // using context.getSize(feature)
-                fillColor: "${getColor}", // using context.getColor(feature)
-                fillOpacity: 0.5,
-                stroke: true,
-                strokeColor: "${getColor}",
-                strokeWidth: 1,
-            };
-                        var context_hdm4 = {
-                getColor: function (feature) {
-                    var c_var = feature.attributes['var'];
-                    var sec = feature.attributes['section'];
-                    //console.log(c_var);
-                    var cond = c_var.substr(0, 4);
-                    if (sec.substr(0, 2) != "01") {
-                        if (cond == "RM00") {
-                            region = 0;
-                        } else if (cond == "SS02") {
-                            region = 1;
-                        } else if (cond == "RP05") {
-                            region = 2;
-                        }
-                    } else {
-                        if (cond == "RP04") {
-                            region = 3;
-                        } else if (cond == "RP08") {
-                            region = 4;
-                        }
-                    }
-                    return colors[region];
-                },
-                getSize: function (feature) {
-                    return 3;
-                }
-            };
-
-            var styleHDM4 = new OpenLayers.Style(template, {
-                            context: context_hdm4
-                        });
-
-            var smHDM4 = new OpenLayers.StyleMap({
-                'default': styleHDM4,
-                'select': {
-                    strokeColor: "blue",
-                    strokeWidth: 2,
-                    cursor: "pointer",
-                    fillColor: "blue",
-                    fillOpacity: 0.3
-                }
-            });
-            qtip = new OpenLayers.Layer.Vector('HDM4', {
-                styleMap: smHDM4,
-                numZoomLevels: null, minZoomLevel: 12, maxZoomLevel: 19 
-            });
-        }
-    })
-*/
-
 });
 
 var qtip;
-var qtipPavement;
+var qtippavement;
 var map;
 var selectController;
 var selectControllerPavement;
@@ -91,7 +19,7 @@ var init = function () {
 var fixSize = function() {
     window.scrollTo(0,0);
     document.body.style.height = '100%';
-    if (!(/(iphone|ipod|ipad)/.test(navigator.userAgent.toLowerCase()))) {
+    if (!(/(iphone|ipod)/.test(navigator.userAgent.toLowerCase()))) {
         if (document.body.parentNode) {
             document.body.parentNode.style.height = '100%';
         }
@@ -112,7 +40,7 @@ var options = {
     maxResolution: 156543.0339,
     maxExtent: new OpenLayers.Bounds(-20037508.34, - 20037508.34,
     20037508.34, 20037508.34),
-    numZoomLevels: 22,
+    numZoomLevels: 20,
     wrapDateLine: false,
     controls: [
         new OpenLayers.Control.Navigation(),
@@ -131,15 +59,11 @@ var options = {
             
             new OpenLayers.Layer.Google(
                 "Google Streets", // the default
-                {
-                    numZoomLevels: 20
-                }
+                {numZoomLevels: 20}
             ),
             new OpenLayers.Layer.Google(
                 "Google Hybrid",
-                {type: google.maps.MapTypeId.HYBRID, 
-                    numZoomLevels: 20
-                }
+                {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
             ),
             new OpenLayers.Layer.Google(
                 "Google Satellite",
@@ -458,53 +382,48 @@ var plaza = new OpenLayers.Layer.Vector("plaza", {
 });
 
 var feature;
-var colors = ["#00bb00", "#ffcc00", "#dc0000", "#4f81bd", "#c0504d"];
-//var colors = ["#006100", "#8e5c00", "#a41118", "#4f81bd", "#c0504d"];
+var colors = ["#00bb00", "#ffcc00", "#dc0000", "#0000ff", "#252525"];
 var context = {
     getColor: function (feature) {
         var c_var = feature.attributes['var'];
-		//console.log(c_var);
+        if(c_var == null)
+            var hdm4_cond = '';
+        else
+            var hdm4_cond = c_var.substr(0, 4);
         var c_cond = $("[name='infotype']:checked").val();
         var sec = feature.attributes['section'];
-		if(g_hdm4search_click) {
-			if(c_var == "RM00") {
-					region = 0;
-			} else if(c_var == "SS02") {
-					region = 1;
-			} else if(c_var == "SS03") {
-					region = 2;
-			} else if(c_var == "OL05") {
-					region = 3;
-			} else if(c_var == "OL01") {
-					region = 4;
-			} else {
-				region = 0;
-			}
-		} else { 
-			if (c_cond == "roughness") {
-				if (c_var < 2.68) {
-					var region = 0;
-				} else if (c_var >= 2.68 && c_var < 3.5) {
-					var region = 1;
-				} else if (c_var >= 3.5) {
-					var region = 2;
-				}
-			} else if (c_cond == "rutting") {
-				var region = 0;
-			} else if (c_cond == "texture") {
-				//var region = 0;
+        //console.log(sec + " " + hdm4_cond);
+        if (hdm4_cond == "RM00") {
+            region = 0;
+        } else if (hdm4_cond == "SS02") {
+            region = 1;
+        } else if (hdm4_cond == "RP05") {
+            region = 2;
+        } else if (hdm4_cond == "RP04") {
+            region = 3;
+        } else if (hdm4_cond == "RP08") {
+            region = 4;
+        }
+        if (c_cond == "roughness") {
+            if (c_var < 2.68) {
+                var region = 0;
+            } else if (c_var >= 2.68 && c_var < 3.5) {
+                var region = 1;
+            } else if (c_var >= 3.5) {
+                var region = 2;
+            }
+        } else if (c_cond == "rutting") {
+            var region = 0;
+        } else if (c_cond == "texture") {
+            //var region = 0;
 
-				if (c_var > 0.3) {
-					var region = 0;
-				} else if (c_var <= 0.3) {
-					var region = 2;
-				}
+            if (c_var > 0.3) {
+                var region = 0;
+            } else if (c_var <= 0.3) {
+                var region = 2;
+            }
 
-			}
-		
-		}
-		//console.log(region);
-		
+        }
         return colors[region];
     },
     getSize: function (feature) {
@@ -512,7 +431,33 @@ var context = {
     }
 };
 
-
+var context_hdm4 = {
+    getColor: function (feature) {
+        var c_var = feature.attributes['var'];
+        var sec = feature.attributes['section'];
+        //console.log(c_var);
+        var cond = c_var.substr(0, 4);
+        if (sec.substr(0, 2) != "01") {
+            if (cond == "RM00") {
+                region = 0;
+            } else if (cond == "SS02") {
+                region = 1;
+            } else if (cond == "RP05") {
+                region = 2;
+            }
+        } else {
+            if (cond == "RP04") {
+                region = 3;
+            } else if (cond == "RP08") {
+                region = 4;
+            }
+        }
+        return colors[region];
+    },
+    getSize: function (feature) {
+        return 3;
+    }
+};
 
 var colorsPavement = ["#FFFFFF","#FF0000","#FF7F00","#FFFF00","#00FF00","#0000FF","#6600FF","#8B00FF"];
 
@@ -535,9 +480,7 @@ var contextPavement = {
             region = 6;
         } else if(feature.attributes['patching'] != 0) {
             region = 7;
-        } else {
-			region = 0;
-		}
+        }
 
         return colorsPavement[region];
     },
@@ -568,8 +511,6 @@ var style = new OpenLayers.Style(template, {
     context: context
 });
 
-
-
 var stylePavement = new OpenLayers.Style(templatePavement, {
     context: contextPavement
 });
@@ -592,8 +533,6 @@ var sm = new OpenLayers.StyleMap({
         fillOpacity: 0.3
     }
 });
-
-
 
 var smPavement = new OpenLayers.StyleMap({
     'default': stylePavement,
@@ -820,28 +759,14 @@ function addPoints(all_result) {
     selectController.activate();
     selectControllerPavement.deactivate();
     $.each(all_result, function (index, value) {
-		//console.log(value['workdes']);
-        var cost = '';
-        var workdes = '';
-        var year = '';
-		var hdm4_plan;
-		if($(".table_highlight td").eq(6).exists()) {
-			if($(".table_highlight td").eq(6).html().substr(4,1) != ":")
-				hdm4_plan = $(".table_highlight td").eq(5).html().substr(0,4);
-			else 
-				hdm4_plan = $(".table_highlight td").eq(6).html().substr(0,4);
-		} else {
-			hdm4_plan = '';
-		}
-		//console.log(hdm4_plan);
-		
-		if(!g_hdm4search_click) {
-			cost = '';
-			workdes = '';
-			year = '';
-		} else {
-			workdes = hdm4_plan;
-		}
+
+        var cost;
+        var workdes;
+        var year;
+
+    cost = '';
+    workdes = '';
+    year = '';
 
         var feature = poi(index, value['lat'], value['long'], value['subdistance'], value['iri_avg'], value['rut_lane'], value['mpd'], value['code'], value['section'], cost, workdes, year);
         qtip.addFeatures(feature);
@@ -858,7 +783,6 @@ function addPointsPavement(all_result) {
             value['bleeding'], value['raveling'], value['phole'], value['deformation'], value['pacthing']);
         qtipPavement.addFeatures(feature);
      });
-
 }
 
 function showQtipPavement(olEvent) {
@@ -887,7 +811,7 @@ function showQtipPavement(olEvent) {
             c_var += columns[7] + ": " + data['pacthing'] + " ตร.ม.";
         }
 
-        //console.log(data);
+        console.log(data);
 
     $(elem).qtip({
         overwrite: true,
@@ -936,15 +860,8 @@ function showQtip(olEvent) {
     var qcolor = "green";
     var c_cond = $("[name='infotype']:checked").val();
     var year = parseInt(data['year']);
-
-
-
     if (g_hdm4search_click) {
-        $("#hdm4table tr").click(function(){
-            console.log($(this).html())
-        });
-        c_var = "";
-        //c_var = "แผนการซ่อม: " + data['workdes'] + "<br/>" + "งบประมาณ: " + data['cost'] + " ลบ. (ปี " + year + ")<br/>" + "IRI: " + data['iri'] + "<br/>" + "Rutting: " + data['rutting'] + "<br/>" + "MPD: " + data['texture'] + "<br/>";
+        c_var = "แผนการซ่อม: " + data['workdes'] + "<br/>" + "งบประมาณ: " + data['cost'] + " ลบ. (ปี " + year + ")<br/>" + "IRI: " + data['iri'] + "<br/>" + "Rutting: " + data['rutting'] + "<br/>" + "MPD: " + data['texture'] + "<br/>";
 
     } else if (c_cond == "roughness") {
         c_var = "IRI: " + data['var'];
@@ -965,44 +882,41 @@ function showQtip(olEvent) {
             qcolor = "green";
         }
     }
-
-    if (!g_hdm4search_click) {
-        $(elem).qtip({
-            overwrite: true,
-            content: {
-                title: {
-                    text: "<span class='etitle'>" + data['ename'] + "</span>" + "<br/>" + "<span class='edesc'>[" + data['code'] + "]</span>"
-                },
-                text: c_var + "<br />" + "KM: " + data['km_at'] + "<br />" + "Lat: " + data['latitude'] + "<br />" + "Long: " + data['longitude'],
-                button: 'Close'
+    $(elem).qtip({
+        overwrite: true,
+        content: {
+            title: {
+                text: "<span class='etitle'>" + data['ename'] + "</span>" + "<br/>" + "<span class='edesc'>[" + data['code'] + "]</span>"
             },
-            style: {
-                classes: 'ui-tooltip-' + qcolor + ' ui-tooltip-shadow myqtip'
+            text: c_var + "<br />" + "KM: " + data['km_at'] + "<br />" + "Lat: " + data['latitude'] + "<br />" + "Long: " + data['longitude'],
+            button: 'Close'
+        },
+        style: {
+            classes: 'ui-tooltip-' + qcolor + ' ui-tooltip-shadow myqtip'
+        },
+        position: {
+            adjust: {
+                x: 0,
+                y: -15
             },
-            position: {
-                adjust: {
-                    x: 0,
-                    y: -15
-                },
-                my: 'bottom center', // Position my top left...
-                at: 'bottom center' // at the bottom right of...
-            },
-            show: {
-                ready: true,
-            },
-            hide: {
-                event: 'unfocus',
-                target: $(this)
-            },
-            events: {
-                show: function () {
-                    $(document).one("click", function () {
-                        $(".qtip").qtip('hide');
-                    });
-                }
+            my: 'bottom center', // Position my top left...
+            at: 'bottom center' // at the bottom right of...
+        },
+        show: {
+            ready: true,
+        },
+        hide: {
+            event: 'unfocus',
+            target: $(this)
+        },
+        events: {
+            show: function () {
+                $(document).one("click", function () {
+                    $(".qtip").qtip('hide');
+                });
             }
-        });
-    }
+        }
+    });
     //.qtip('show');
     map.layers[0].redraw();
 }
@@ -1035,21 +949,18 @@ function poiPavement(item, lat, long, sta, crack_aca, crack_act, bleeding, ravel
 
 function getNames(){
     var mname = $('.expressway option:selected').html();
-    var sname = '';
-    var set = false;
-    if($("[name='exptype']").val() == "1" ) {
+    var sname = ''
+    if($("[name='exptype']").val() == "1") {
         $.each($('#option1 select'),function(){
-            if($(this).css("display") != 'none' && !set) {
+            if($(this).css("display") != 'none') {
                 sname += "" + $(this).find('option:selected').html();
-                set = true;
             }
         })
         
     } else {
         $.each($('#option2 select'),function(){
-            if($(this).css("display") != 'none' && !set) {
+            if($(this).css("display") != 'none') {
                 sname += $(this).find("option:selected").html();
-                set = true;
             }
         })
     }
@@ -1068,54 +979,50 @@ function poi(item, lat, long, km_at, iri, rutting, texture, code, section, cost,
     var sname = names[1];
 
     var c_cond = $("[name='infotype']").val();
-	if(g_hdm4search_click) {
-		var attributes = {
-				'name': item,
-				'km_at': km_at,
-				'longitude': long,
-				'latitude': lat,
-				'var': workdes,
-				'code': sname,
-				'ename': mname,
-				'section': section
-			};
-	} else {
-		
-		if (c_cond == "roughness") {
-			var attributes = {
-				'name': item,
-				'km_at': km_at,
-				'longitude': long,
-				'latitude': lat,
-				'var': iri,
-				'code': sname,
-				'ename': mname,
-				'section': section
-			};
-		} else if (c_cond == "rutting") {
-			var attributes = {
-				'name': item,
-				'km_at': km_at,
-				'longitude': long,
-				'latitude': lat,
-				'var': rutting,
-				'code': sname,
-				'ename': mname,
-				'section': section
-			};
-		} else if (c_cond == "texture") {
-			var attributes = {
-				'name': item,
-				'km_at': km_at,
-				'longitude': long,
-				'latitude': lat,
-				'var': texture,
-				'code': sname,
-				'ename': mname,
-				'section': section
-			};
-		} 
-	}
+
+    if (c_cond == "roughness") {
+        var attributes = {
+            'name': item,
+            'km_at': km_at,
+            'longitude': long,
+            'latitude': lat,
+            'var': iri,
+            'code': sname,
+            'ename': mname,
+            'section': section,
+            'cost': cost,
+            'workdes': workdes,
+            'year': year
+        };
+    } else if (c_cond == "rutting") {
+        var attributes = {
+            'name': item,
+            'km_at': km_at,
+            'longitude': long,
+            'latitude': lat,
+            'var': rutting,
+            'code': sname,
+            'ename': mname,
+            'section': section,
+            'cost': cost,
+            'workdes': workdes,
+            'year': year
+        };
+    } else if (c_cond == "texture") {
+        var attributes = {
+            'name': item,
+            'km_at': km_at,
+            'longitude': long,
+            'latitude': lat,
+            'var': texture,
+            'code': sname,
+            'ename': mname,
+            'section': section,
+            'cost': cost,
+            'workdes': workdes,
+            'year': year
+        };
+    } 
     var feature = new OpenLayers.Feature.Vector(fpoint, attributes);
     feature.id = "POI_" + item;
     return feature;
@@ -1137,9 +1044,8 @@ function zoomCoor() {
         })
     }
     section += "%";
-	var hdm4_geo = "";
-	if(g_hdm4search_click)
-		hdm4_geo = 1; 
+
+    
     //console.log(section);
 
     $.ajax({
@@ -1152,8 +1058,7 @@ function zoomCoor() {
             infotype: g_search_info['infotype'],
             exptype: g_search_info['exptype'],
             searchtype: g_search_info['searchtype'],
-            section: g_search_info_level2['currentsection'],
-			hdm4_geo: hdm4_geo
+            section: g_search_info_level2['currentsection']
         },
         dataType: 'jsonp',
         dataCharset: 'jsonp',

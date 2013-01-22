@@ -183,7 +183,7 @@ function Model()
                     if(activate)
                     {
                         zoomMap(data[0][0].geo);
-                        controller.setNearestOnMap(g_geolocation[lane]);
+                        controller.setNearestOnMap(g_geolocation[lane],true);
                     }
                     //controller.getGeoLeft(lat,longitude);
                 } else { 
